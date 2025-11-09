@@ -1,8 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 
-// Since base is empty string in config, use root path directly
-const img = (path: string) => `/${path}`;
+// Import hero and feature images
+import heroBg from '../assets/hero-bg.jpg';
+import feature1 from '../assets/feature-1.jpg';
+import feature2 from '../assets/feature-2.jpg';
+import feature3 from '../assets/feature-3.jpg';
+import appScreenshot from '../assets/app-screenshot.png';
+
+// Import fish species images
+import torsk from '../assets/torsk.png';
+import kveite from '../assets/kveite.png';
+import uer from '../assets/uer.png';
+import steinbit from '../assets/steinbit.png';
+import sei from '../assets/sei.png';
 ---
 
 <Layout
@@ -13,7 +25,7 @@ const img = (path: string) => `/${path}`;
   <section class="relative pt-40 pb-24 px-4 text-white overflow-hidden" aria-labelledby="hero-heading">
     <!-- Background Image -->
     <div class="absolute inset-0" aria-hidden="true">
-      <img src={img('hero-bg.jpg')} alt="" class="w-full h-full object-cover" />
+      <Image src={heroBg} alt="" class="w-full h-full object-cover" widths={[640, 1024, 1280, 1920]} sizes="100vw" />
       <div class="absolute inset-0 bg-gradient-to-br from-primary/90 to-primary-active/90"></div>
     </div>
 
@@ -89,7 +101,7 @@ const img = (path: string) => `/${path}`;
         <!-- Feature 1 -->
         <article class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
           <div class="h-48 relative overflow-hidden">
-            <img src={img('feature-3.jpg')} alt="Fishing boat" class="w-full h-full object-cover" />
+            <Image src={feature3} alt="Fishing boat" class="w-full h-full object-cover" width={800} height={600} />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20"></div>
           </div>
           <div class="p-6">
@@ -103,7 +115,7 @@ const img = (path: string) => `/${path}`;
         <!-- Feature 2 -->
         <article class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
           <div class="h-48 relative overflow-hidden">
-            <img src={img('feature-1.jpg')} alt="Fishing experience" class="w-full h-full object-cover" />
+            <Image src={feature1} alt="Fishing experience" class="w-full h-full object-cover" width={800} height={600} />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20"></div>
           </div>
           <div class="p-6">
@@ -117,7 +129,7 @@ const img = (path: string) => `/${path}`;
         <!-- Feature 3 -->
         <article class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
           <div class="h-48 relative overflow-hidden">
-            <img src={img('feature-2.jpg')} alt="Happy fishing tourists" class="w-full h-full object-cover" />
+            <Image src={feature2} alt="Happy fishing tourists" class="w-full h-full object-cover" width={800} height={600} />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20"></div>
           </div>
           <div class="p-6">
@@ -195,10 +207,12 @@ const img = (path: string) => `/${path}`;
               <div class="bg-white rounded-[2.5rem] overflow-hidden">
                 <!-- App Screenshot -->
                 <div class="aspect-[9/19] bg-white flex items-start justify-center">
-                  <img
-                    src={img('app-screenshot.png')}
+                  <Image
+                    src={appScreenshot}
                     alt="export.fish app screenshot"
                     class="w-full h-auto object-contain"
+                    width={320}
+                    height={676}
                   />
                 </div>
               </div>
@@ -293,27 +307,27 @@ const img = (path: string) => `/${path}`;
         </p>
         <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
           <div class="text-center p-4 md:p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all transform hover:scale-105">
-            <img src={img('torsk.png')} alt="Torsk" class="mx-auto mb-3 w-20 h-20 object-contain" />
+            <Image src={torsk} alt="Torsk" class="mx-auto mb-3 w-20 h-20 object-contain" width={80} height={80} />
             <div class="font-bold text-lg text-gray-800">Torsk</div>
           </div>
 
           <div class="text-center p-4 md:p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all transform hover:scale-105">
-            <img src={img('kveite.png')} alt="Kveite" class="mx-auto mb-3 w-20 h-20 object-contain" />
+            <Image src={kveite} alt="Kveite" class="mx-auto mb-3 w-20 h-20 object-contain" width={80} height={80} />
             <div class="font-bold text-lg text-gray-800">Kveite</div>
           </div>
 
           <div class="text-center p-4 md:p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all transform hover:scale-105">
-            <img src={img('uer.png')} alt="Uer" class="mx-auto mb-3 w-20 h-20 object-contain" />
+            <Image src={uer} alt="Uer" class="mx-auto mb-3 w-20 h-20 object-contain" width={80} height={80} />
             <div class="font-bold text-lg text-gray-800">Uer</div>
           </div>
 
           <div class="text-center p-4 md:p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all transform hover:scale-105">
-            <img src={img('steinbit.png')} alt="Steinbit" class="mx-auto mb-3 w-20 h-20 object-contain" />
+            <Image src={steinbit} alt="Steinbit" class="mx-auto mb-3 w-20 h-20 object-contain" width={80} height={80} />
             <div class="font-bold text-lg text-gray-800">Steinbit</div>
           </div>
 
           <div class="text-center p-4 md:p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all transform hover:scale-105">
-            <img src={img('sei.png')} alt="Sei" class="mx-auto mb-3 w-20 h-20 object-contain" />
+            <Image src={sei} alt="Sei" class="mx-auto mb-3 w-20 h-20 object-contain" width={80} height={80} />
             <div class="font-bold text-lg text-gray-800">Sei</div>
           </div>
         </div>
