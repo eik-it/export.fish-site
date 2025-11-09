@@ -49,10 +49,11 @@
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             intent-classifier
+            # Astro marketing site dependencies
+            nodejs
             # Common development tools
             # Add more tools based on your stack:
             # go, gopls, gotools (for Go)
-            # nodejs, typescript (for Node.js/TypeScript)
             # python3, python3Packages.pip (for Python)
             # rustc, cargo (for Rust)
           ];
