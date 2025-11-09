@@ -1,0 +1,53 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Enkel fangstrapportering for turistfiskebedrifter' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <!-- Fixed Navigation -->
+    <header class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50">
+      <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="/" class="flex items-center gap-3 group">
+          <img src="https://test.export.fish/static/images/logo.png" alt="export.fish logo" class="h-16 w-16 md:h-20 md:w-20 transition-transform group-hover:scale-110" />
+          <span class="text-2xl md:text-3xl font-bold text-primary">Eksportfiske</span>
+        </a>
+        <div class="hidden md:flex space-x-8">
+          <a href="#fordeler" class="text-gray-600 hover:text-primary transition">Fordeler</a>
+          <a href="#hvordan-det-virker" class="text-gray-600 hover:text-primary transition">Hvordan det virker</a>
+          <a href="#kontakt" class="text-gray-600 hover:text-primary transition">Kontakt</a>
+        </div>
+        <a href="https://test.export.fish" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primary-hover text-white px-6 py-2 rounded-lg transition-colors font-semibold">
+          Test gratis
+        </a>
+      </nav>
+    </header>
+    <slot />
+  </body>
+</html>

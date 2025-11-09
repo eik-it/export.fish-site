@@ -1,0 +1,554 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Eksportfiske.no - Enkel fangstrapportering for turistfiskebedrifter"
+  description="Export.fish er en enkel app der turistene selv registrerer fangst. Oppfyll kravene fra Fiskeridirektoratet med minimal innsats. Gratis for tidlige brukere."
+>
+  <!-- Hero Section -->
+  <section class="relative pt-40 pb-24 px-4 text-white overflow-hidden" aria-labelledby="hero-heading">
+    <!-- Background Image -->
+    <div class="absolute inset-0" aria-hidden="true">
+      <img src="/hero-bg.jpg" alt="" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-br from-primary/90 to-primary-active/90"></div>
+    </div>
+
+    <div class="container mx-auto text-center max-w-5xl relative z-10">
+      <div class="inline-block bg-blue-800/50 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+        <span class="text-sm font-semibold text-blue-100">✓ Godkjent av Fiskeridirektoratet</span>
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight" id="hero-heading">
+        Spar timer hver uke på fangstrapportering
+      </h1>
+
+      <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-blue-50 font-light leading-relaxed">
+        La turistene registrere fangst selv – på engelsk eller tysk. Automatisk rapportering til Fiskeridirektoratet. Ingen papirskjemaer. Ingen manuell inntasting.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          class="relative overflow-hidden bg-white text-blue-900 hover:bg-blue-50 font-semibold text-lg px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-xl"
+          href="https://test.export.fish"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span class="relative z-10">Test gratis nå - ingen registrering</span>
+        </a>
+        <a
+          class="bg-blue-700 hover:bg-blue-600 text-white font-semibold text-lg px-8 py-4 rounded-lg border-2 border-white/30 transition-colors"
+          href="#hvordan-det-virker"
+        >
+          Se hvordan det virker
+        </a>
+      </div>
+
+      <div class="mt-10 flex flex-wrap justify-center gap-6 text-sm text-blue-100">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path>
+          </svg>
+          <span>Godkjent av Fiskeridirektoratet</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path>
+          </svg>
+          <span>Ingen installasjon</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path>
+          </svg>
+          <span>Engelsk og tysk</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wave Divider -->
+    <div class="absolute bottom-0 left-0 w-full">
+      <svg class="w-full h-auto" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z" fill="#F9FAFB"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="fordeler" class="py-20 bg-gray-50 px-4">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">Hvorfor velge vår appløsning?</h2>
+      <p class="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+        Enkel løsning for turistfiskebedrifter som oppfyller alle lovkrav
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <article class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+          <div class="h-48 relative overflow-hidden">
+            <img src="/feature-3.jpg" alt="Fishing boat" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3 text-gray-900">Spar flere timer hver uke</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Turistene registrerer fangsten selv - på engelsk eller tysk. Du slipper å oversette, taste inn data og håndtere papirskjemaer.
+            </p>
+          </div>
+        </article>
+
+        <!-- Feature 2 -->
+        <article class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+          <div class="h-48 relative overflow-hidden">
+            <img src="/feature-1.jpg" alt="Fishing experience" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3 text-gray-900">Aldri mer bekymring for kontroll</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Godkjent rapporteringssystem som automatisk sender all nødvendig informasjon til Fiskeridirektoratet. Alltid i orden ved inspeksjon.
+            </p>
+          </div>
+        </article>
+
+        <!-- Feature 3 -->
+        <article class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+          <div class="h-48 relative overflow-hidden">
+            <img src="/feature-2.jpg" alt="Happy fishing tourists" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3 text-gray-900">Fornøyde turister</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Turistene får appen på sitt eget språk (engelsk, tysk). De setter pris på det profesjonelle inntrykket - og du slipper språkforvirring.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Preview Section -->
+  <section class="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-primary-light">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Appen som gjør rapportering enkelt</h2>
+          <p class="text-lg sm:text-xl text-gray-600 mb-6">
+            export.fish er en moderne PWA (Progressive Web App) som fungerer på alle enheter uten nedlasting fra app-butikk. Turistene får tilgang via e-post og kan registrere fangst selv.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <strong class="block text-lg text-gray-900">Fungerer på mobil, nettbrett og PC</strong>
+                <span class="text-gray-600">Tilgjengelig på alle enheter med nettleser</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+              </div>
+              <div>
+                <strong class="block text-lg text-gray-900">Ingen installasjon nødvendig</strong>
+                <span class="text-gray-600">Åpnes direkte i nettleseren - ingen app-butikk</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <strong class="block text-lg text-gray-900">E-post-basert tilgang</strong>
+                <span class="text-gray-600">Ingen passord å huske - tilgang via unik lenke</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+                </svg>
+              </div>
+              <div>
+                <strong class="block text-lg text-gray-900">Automatisk oversettelse til engelsk og tysk</strong>
+                <span class="text-gray-600">Turistene ser alt på sitt eget språk</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="relative mt-8 md:mt-0">
+          <!-- Phone Mockup -->
+          <div class="relative mx-auto w-[240px] sm:w-[280px] md:w-[320px]">
+            <!-- Phone Frame -->
+            <div class="relative bg-gray-900 rounded-[3rem] p-3 shadow-2xl">
+              <div class="bg-white rounded-[2.5rem] overflow-hidden">
+                <!-- App Screenshot -->
+                <div class="aspect-[9/19] bg-white flex items-start justify-center">
+                  <img
+                    src="/app-screenshot.png"
+                    alt="export.fish app screenshot"
+                    class="w-full h-auto object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Decorative elements -->
+            <div class="absolute -z-10 -top-4 -right-4 w-24 h-24 bg-primary-pale rounded-full blur-3xl opacity-50"></div>
+            <div class="absolute -z-10 -bottom-4 -left-4 w-32 h-32 bg-primary-pale rounded-full blur-3xl opacity-50"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 px-4 bg-white border-y border-gray-200">
+    <div class="container mx-auto max-w-6xl">
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-bold text-primary mb-2">100%</div>
+          <div class="text-gray-600">Oppfyller Fiskeridirektoratets krav</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-primary mb-2">2</div>
+          <div class="text-sm text-gray-600">Språk støttet<br />🇬🇧 · 🇩🇪</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-primary mb-2">0 kr</div>
+          <div class="text-gray-600">For å teste appen - ingen binding</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="hvordan-det-virker" class="py-20 px-4 bg-gradient-to-br from-blue-50 to-blue-100">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">Hvordan det virker</h2>
+      <p class="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+        Kom i gang på tre enkle steg
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <article class="text-center">
+          <div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6">
+            1
+          </div>
+          <h3 class="text-2xl font-semibold mb-4">Opprett fiskeperiode</h3>
+          <p class="text-gray-600">
+            Turisten oppretter fiskeperiode og får tilgang til sitt dashbord for rapportering av fangst via unik lenke på e-post.
+          </p>
+        </article>
+
+        <article class="text-center">
+          <div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6">
+            2
+          </div>
+          <h3 class="text-2xl font-semibold mb-4">Registrer fangst</h3>
+          <p class="text-gray-600">
+            Turisten registrerer fangst dag for dag i rapporteringsverktøyet og etter endt opphold ferdigstiller perioden.
+          </p>
+        </article>
+
+        <article class="text-center">
+          <div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6">
+            3
+          </div>
+          <h3 class="text-2xl font-semibold mb-4">Ferdig rapportert</h3>
+          <p class="text-gray-600">
+            All fangst blir automatisk rapportert til Fiskeridirektoratet. Etter endt fiskeperiode får turistene tilsendt nødvendig dokumentasjon for utførelseskvote av fisk i henhold til lovverket.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance Section -->
+  <section class="py-20 px-4 bg-white" id="lovkrav">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
+          <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+        </div>
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Oppfyller Fiskeridirektoratets krav</h2>
+      </div>
+
+      <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 md:p-12 shadow-lg mb-8">
+        <h3 class="text-2xl font-bold mb-3 text-gray-900 text-center">Arter som skal rapporteres</h3>
+        <p class="text-center text-gray-600 mb-6 max-w-2xl mx-auto">
+          Disse artene er <strong>obligatoriske å rapportere</strong>. Appen støtter også rapportering av andre fiskearter.
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+          <div class="text-center p-4 md:p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all transform hover:scale-105">
+            <img src="/torsk.png" alt="Torsk" class="mx-auto mb-3 w-20 h-20 object-contain" />
+            <div class="font-bold text-lg text-gray-800">Torsk</div>
+          </div>
+
+          <div class="text-center p-4 md:p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all transform hover:scale-105">
+            <img src="/kveite.png" alt="Kveite" class="mx-auto mb-3 w-20 h-20 object-contain" />
+            <div class="font-bold text-lg text-gray-800">Kveite</div>
+          </div>
+
+          <div class="text-center p-4 md:p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all transform hover:scale-105">
+            <img src="/uer.png" alt="Uer" class="mx-auto mb-3 w-20 h-20 object-contain" />
+            <div class="font-bold text-lg text-gray-800">Uer</div>
+          </div>
+
+          <div class="text-center p-4 md:p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all transform hover:scale-105">
+            <img src="/steinbit.png" alt="Steinbit" class="mx-auto mb-3 w-20 h-20 object-contain" />
+            <div class="font-bold text-lg text-gray-800">Steinbit</div>
+          </div>
+
+          <div class="text-center p-4 md:p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all transform hover:scale-105">
+            <img src="/sei.png" alt="Sei" class="mx-auto mb-3 w-20 h-20 object-contain" />
+            <div class="font-bold text-lg text-gray-800">Sei</div>
+          </div>
+        </div>
+
+        <p class="text-gray-700 mt-8 text-center max-w-2xl mx-auto">
+          Fangsten skal rapporteres som antall fisk, uavhengig av om fisken er hel, filletert eller på annen måte bearbeidet. Fisketurer uten fangst skal også rapporteres.
+        </p>
+      </div>
+
+      <div class="bg-green-50 border-l-4 border-green-500 rounded-lg p-6 flex items-start gap-4">
+        <div class="flex-shrink-0">
+          <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg text-green-900 mb-2">Godkjent rapporteringssystem</h4>
+          <p class="text-green-800">
+            I henhold til Forskrift om rapportering av fangst fra turistfiskevirksomhet (2017-07-05-1141) er det påbudt med daglig fangstrapportering for turistfiskebedrifter.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 px-4 bg-gray-50">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">Ofte stilte spørsmål</h2>
+      <p class="text-xl text-gray-600 text-center mb-12">
+        Alt du trenger å vite om export.fish
+      </p>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <details class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden group">
+          <summary class="cursor-pointer px-6 py-5 font-semibold text-lg text-gray-900 hover:bg-gray-50 transition-colors list-none flex justify-between items-center">
+            <span>Er dette virkelig godkjent av Fiskeridirektoratet?</span>
+            <svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </summary>
+          <div class="px-6 py-4 text-gray-600 border-t border-gray-100">
+            <p>
+              Ja, export.fish er et godkjent elektronisk rapporteringssystem som fullt ut oppfyller kravene i
+              <strong>Forskrift om rapportering av fangst fra turistfiskevirksomhet (2017-07-05-1141)</strong>.
+              Systemet rapporterer automatisk all nødvendig informasjon til Fiskeridirektoratet på riktig måte.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden group">
+          <summary class="cursor-pointer px-6 py-5 font-semibold text-lg text-gray-900 hover:bg-gray-50 transition-colors list-none flex justify-between items-center">
+            <span>Hva hvis turistene ikke bruker appen?</span>
+            <svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </summary>
+          <div class="px-6 py-4 text-gray-600 border-t border-gray-100">
+            <p>
+              Du har alltid tilgang til administrasjonsportalen hvor du kan registrere fangst manuelt hvis nødvendig.
+              Men erfaring viser at turistene setter pris på å bruke appen - det er enkelt, det er på deres språk,
+              og det gir dem en oversikt over egen fangst.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden group">
+          <summary class="cursor-pointer px-6 py-5 font-semibold text-lg text-gray-900 hover:bg-gray-50 transition-colors list-none flex justify-between items-center">
+            <span>Må turistene installere en app?</span>
+            <svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </summary>
+          <div class="px-6 py-4 text-gray-600 border-t border-gray-100">
+            <p>
+              Nei! Export.fish er en progressiv webapp som fungerer direkte i nettleseren. Turistene kan velge å installere den
+              på hjemskjermen for enklere tilgang, men det er helt valgfritt. De trenger bare å åpne lenken du gir dem.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden group">
+          <summary class="cursor-pointer px-6 py-5 font-semibold text-lg text-gray-900 hover:bg-gray-50 transition-colors list-none flex justify-between items-center">
+            <span>Hvilke språk støttes?</span>
+            <svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </summary>
+          <div class="px-6 py-4 text-gray-600 border-t border-gray-100">
+            <p>
+              Appen støtter for øyeblikket <strong>norsk, engelsk og tysk</strong>. Turistene velger språk automatisk
+              basert på telefonens innstillinger, eller kan bytte manuelt i appen. Administrasjonsportalen er tilgjengelig på norsk.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden group">
+          <summary class="cursor-pointer px-6 py-5 font-semibold text-lg text-gray-900 hover:bg-gray-50 transition-colors list-none flex justify-between items-center">
+            <span>Hvordan håndteres personvern?</span>
+            <svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </summary>
+          <div class="px-6 py-4 text-gray-600 border-t border-gray-100">
+            <p>
+              Vi tar personvern på alvor. Export.fish samler kun inn den informasjonen som er nødvendig for fangstrapportering
+              i henhold til Fiskeridirektoratets krav. All data behandles i Norge og er GDPR-kompatibel.
+              Turistene registrerer bare fangst - ingen personopplysninger utover det som er påkrevd.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 6 -->
+        <details class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden group">
+          <summary class="cursor-pointer px-6 py-5 font-semibold text-lg text-gray-900 hover:bg-gray-50 transition-colors list-none flex justify-between items-center">
+            <span>Hva koster det?</span>
+            <svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </summary>
+          <div class="px-6 py-4 text-gray-600 border-t border-gray-100">
+            <p>
+              Export.fish er for øyeblikket under testing og er <strong>helt gratis for tidlige brukere</strong>.
+              Du kan teste alle funksjoner uten noen forpliktelser. Vi vil varsle i god tid før eventuell prising
+              introduseres for eksisterende brukere.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 7 -->
+        <details class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden group">
+          <summary class="cursor-pointer px-6 py-5 font-semibold text-lg text-gray-900 hover:bg-gray-50 transition-colors list-none flex justify-between items-center">
+            <span>Fungerer appen offline?</span>
+            <svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </summary>
+          <div class="px-6 py-4 text-gray-600 border-t border-gray-100">
+            <p>
+              Appen krever internettilkobling for å synkronisere data og sende rapporter til Fiskeridirektoratet.
+              Men turistene kan registrere fangst når de har mobildekning - de trenger ikke være på wifi.
+              De fleste registrerer fangsten når de kommer tilbake til brygga eller hytta.
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="get-started" class="bg-gray-900 text-white py-12 sm:py-16 md:py-20">
+    <div class="container mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Klar til å gjøre rapportering enklere?</h2>
+      <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto px-4">
+        Prøv export.fish gratis og se hvor enkelt det kan være når turistene gjør jobben selv.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="https://test.export.fish"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-hover transition"
+        >
+          Prøv appen nå
+        </a>
+        <a
+          href="mailto:kontakt@eksportfiske.no"
+          class="border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition"
+        >
+          Kontakt oss
+        </a>
+      </div>
+      <p class="text-sm text-gray-400 mt-4">Appen er under testing. Gratis for tidlige brukere.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="kontakt" class="bg-gray-900 text-gray-300 py-12 sm:py-16">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <!-- Company Info -->
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <img src="https://test.export.fish/static/images/logo.png" alt="export.fish logo" class="h-10 w-10" />
+            <span class="text-xl font-bold text-white">Eksportfiske</span>
+          </div>
+          <p class="text-sm text-gray-400">
+            Enkel fangstrapportering for turistfiskebedrifter. Godkjent av Fiskeridirektoratet.
+          </p>
+        </div>
+
+        <!-- Product -->
+        <div>
+          <h3 class="text-white font-semibold mb-4">Produkt</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#fordeler" class="hover:text-primary transition">Fordeler</a></li>
+            <li><a href="#hvordan-det-virker" class="hover:text-primary transition">Hvordan det virker</a></li>
+            <li><a href="#lovkrav" class="hover:text-primary transition">Lovkrav</a></li>
+            <li><a href="https://test.export.fish" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition">Test appen</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <h3 class="text-white font-semibold mb-4">Ressurser</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="https://www.fiskeridir.no/turistfiske/rapportering-for-turistfiskebedrifter" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition">Fiskeridirektoratet</a></li>
+            <li><a href="https://lovdata.no/dokument/SF/forskrift/2017-07-05-1141" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition">Forskrift om rapportering</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-white font-semibold mb-4">Kontakt</h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="mailto:kontakt@eksportfiske.no" class="hover:text-primary transition">
+                kontakt@eksportfiske.no
+              </a>
+            </li>
+            <li class="text-gray-400">
+              Vi svarer innen 24 timer
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+        <p>&copy; {new Date().getFullYear()} Eksportfiske.no. Alle rettigheter reservert.</p>
+      </div>
+    </div>
+  </footer>
+</Layout>
