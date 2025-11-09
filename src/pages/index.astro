@@ -22,7 +22,7 @@ import sei from '../assets/sei.png';
   description="Export.fish er en enkel app der turistene selv registrerer fangst. Oppfyll kravene fra Fiskeridirektoratet med minimal innsats. Gratis for tidlige brukere."
 >
   <!-- Hero Section -->
-  <section class="relative pt-40 pb-24 text-white overflow-hidden" aria-labelledby="hero-heading">
+  <section class="relative pt-40 pb-32 md:pb-40 text-white overflow-hidden" aria-labelledby="hero-heading">
     <!-- Background Image -->
     <div class="absolute inset-0" aria-hidden="true">
       <Image src={heroBg} alt="" class="w-full h-full object-cover" widths={[640, 1024, 1280, 1920]} sizes="100vw" />
@@ -30,10 +30,6 @@ import sei from '../assets/sei.png';
     </div>
 
     <div class="w-full mx-auto text-center max-w-5xl relative z-10 px-4">
-      <div class="inline-block bg-blue-800/50 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-        <span class="text-sm font-semibold text-blue-100">✓ Godkjent av Fiskeridirektoratet</span>
-      </div>
-
       <h1 class="text-4xl md:text-7xl font-bold mb-6 leading-tight break-words" id="hero-heading">
         Spar timer hver uke på fangstrapportering
       </h1>
@@ -42,24 +38,7 @@ import sei from '../assets/sei.png';
         La turistene registrere fangst selv – på engelsk eller tysk. Automatisk rapportering til Fiskeridirektoratet. Ingen papirskjemaer. Ingen manuell inntasting.
       </p>
 
-      <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-full w-full">
-        <a
-          class="relative overflow-hidden bg-white text-blue-900 hover:bg-blue-50 font-semibold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all transform hover:scale-105 shadow-xl text-center"
-          href="https://test.export.fish"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <span class="relative z-10">Test gratis nå - ingen registrering</span>
-        </a>
-        <a
-          class="bg-blue-700 hover:bg-blue-600 text-white font-semibold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-lg border-2 border-white/30 transition-colors text-center"
-          href="#hvordan-det-virker"
-        >
-          Se hvordan det virker
-        </a>
-      </div>
-
-      <div class="mt-10 flex flex-wrap justify-center gap-6 text-sm text-blue-100">
+      <div class="mb-8 flex flex-wrap justify-center gap-6 text-sm text-blue-100">
         <div class="flex items-center gap-2">
           <svg class="w-5 h-5 text-white" viewBox="0 0 20 20" fill="currentColor">
             <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path>
@@ -78,6 +57,23 @@ import sei from '../assets/sei.png';
           </svg>
           <span>Engelsk og tysk</span>
         </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-full w-full">
+        <a
+          class="bg-blue-700 hover:bg-blue-600 text-white font-semibold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-lg border-2 border-white/30 transition-colors text-center"
+          href="#hvordan-det-virker"
+        >
+          Se hvordan det virker
+        </a>
+        <a
+          class="relative overflow-hidden bg-white text-blue-900 hover:bg-blue-50 font-semibold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all transform hover:scale-105 shadow-xl text-center"
+          href="https://test.export.fish"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span class="relative z-10">Test gratis nå - ingen registrering</span>
+        </a>
       </div>
     </div>
 
