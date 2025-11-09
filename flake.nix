@@ -4,58 +4,21 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    skeletons.url = "github:netbrain/skeletons";  # ← Add this
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
+  outputs = { self, nixpkgs, flake-utils, skeletons }:  # ← Add skeletons here
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-
-        # Build intent-classifier from GitHub
-        intent-classifier = pkgs.buildGoModule {
-          pname = "intent-classifier";
-          version = "0.1.0";
-
-          src = pkgs.fetchFromGitHub {
-            owner = "netbrain";
-            repo = "skeletons";
-            rev = "5cbc29cc08aa97f9a2c2666b16f92c198c8e9d06";
-            hash = "sha256-zJrHRFtXM2UOVZ6ak0EY0k9+vbH5MsihfqkUwgF4Low=";
-          };
-
-          sourceRoot = "source/utils/intent-classifier";
-
-          vendorHash = "sha256-Ks1NEdhqgDRUgN9t3rAv71EmZtxHqUnXP+V+ewRBvoU=";
-
-          buildInputs = [ pkgs.libffi ];
-
-          nativeBuildInputs = [ pkgs.makeWrapper ];
-
-          # Skip tests during build (tests require writable home directory for cache)
-          doCheck = false;
-
-          # Set LD_LIBRARY_PATH during build
-          preBuild = ''
-            export LD_LIBRARY_PATH=${pkgs.lib.makeLibraryPath [ pkgs.libffi pkgs.stdenv.cc.cc.lib ]}
-          '';
-
-          postInstall = ''
-            wrapProgram $out/bin/intent-classifier \
-              --prefix LD_LIBRARY_PATH : ${pkgs.lib.makeLibraryPath [ pkgs.libffi pkgs.stdenv.cc.cc.lib ]}
-          '';
-        };
       in
       {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
-            intent-classifier
+            skeletons.packages.${system}.intent-classifier  # ← Use this instead
             # Astro marketing site dependencies
             nodejs
-            # Common development tools
-            # Add more tools based on your stack:
-            # go, gopls, gotools (for Go)
-            # python3, python3Packages.pip (for Python)
-            # rustc, cargo (for Rust)
+            # Add more tools based on your stack
           ];
 
           shellHook = ''
