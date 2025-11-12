@@ -25,3 +25,11 @@ pnpm-debug.log*
 
 # direnv
 .direnv/
+
+# playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# but DO commit screenshots for visual regression
+!screenshots/*.png
