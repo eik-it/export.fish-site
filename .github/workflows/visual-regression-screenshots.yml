@@ -1,0 +1,72 @@
+name: Generate Visual Regression Screenshots
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'e2e/**'
+      - 'astro.config.mjs'
+      - 'tailwind.config.*'
+      - 'playwright.config.ts'
+jobs:
+  generate-screenshots:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Build Astro site
+        run: npm run build
+
+      - name: Generate visual regression screenshots
+        run: npm run test:e2e:visual
+        env:
+          BASE_URL: http://localhost:4321
+
+      - name: Check for screenshot changes
+        id: check_changes
+        run: |
+          # Check for both modified AND untracked files in screenshots/
+          if [ -z "$(git status --porcelain screenshots/)" ]; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push screenshots
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add screenshots/
+          git commit -m "Update visual regression screenshots"
+          git push
+
+      - name: Confirm PR commit
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          echo '✅ Visual regression screenshots have been automatically generated and committed to this PR.'
+
+      - name: No changes needed
+        if: steps.check_changes.outputs.has_changes == 'false'
+        run: |
+          echo '✅ Visual regression screenshots are up to date. No changes needed.'

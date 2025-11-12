@@ -18,6 +18,8 @@
             skeletons.packages.${system}.intent-classifier  # ← Use this instead
             # Astro marketing site dependencies
             nodejs
+            playwright-driver.browsers
+            gh
             # Add more tools based on your stack
           ];
 
@@ -26,6 +28,9 @@
             if [ -d .claude ]; then
               find .claude -name "*.sh" -type f -exec chmod +x {} \; 2>/dev/null
             fi
+
+            export PLAYWRIGHT_BROWSERS_PATH=${pkgs.playwright-driver.browsers}
+            export PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=true
 
             echo "🤖 Claude Code environment with intelligent skills & agents"
             echo ""
