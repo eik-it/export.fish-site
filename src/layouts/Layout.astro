@@ -51,6 +51,111 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
 
     <link rel="icon" type="image/svg+xml" href={favicon} />
     <title>{title}</title>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "export.fish",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "NOK"
+        },
+        "description": "Fangstrapportering for turistfiskebedrifter. Godkjent av Fiskeridirektoratet.",
+        "url": "https://eksportfiske.no",
+        "inLanguage": "no",
+        "featureList": [
+          "Automatisk rapportering til Fiskeridirektoratet",
+          "Flerspråklig støtte (norsk, engelsk, tysk)",
+          "PWA - fungerer på alle enheter",
+          "Ingen installasjon nødvendig"
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Er dette virkelig godkjent av Fiskeridirektoratet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, export.fish er et godkjent elektronisk rapporteringssystem som fullt ut oppfyller kravene i Forskrift om rapportering av fangst fra turistfiskevirksomhet (2017-07-05-1141). Systemet rapporterer automatisk all nødvendig informasjon til Fiskeridirektoratet på riktig måte."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hva hvis turistene ikke bruker appen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Du har alltid tilgang til administrasjonsportalen hvor du kan registrere fangst manuelt hvis nødvendig. Men erfaring viser at turistene setter pris på å bruke appen - det er enkelt, det er på deres språk, og det gir dem en oversikt over egen fangst."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Må turistene installere en app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nei! Export.fish er en progressiv webapp som fungerer direkte i nettleseren. Turistene kan velge å installere den på hjemskjermen for enklere tilgang, men det er helt valgfritt. De trenger bare å åpne lenken du gir dem."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hvilke språk støttes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Appen støtter for øyeblikket norsk, engelsk og tysk. Turistene velger språk automatisk basert på telefonens innstillinger, eller kan bytte manuelt i appen. Administrasjonsportalen er tilgjengelig på norsk."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hvordan håndteres personvern?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vi tar personvern på alvor. Export.fish samler kun inn den informasjonen som er nødvendig for fangstrapportering i henhold til Fiskeridirektoratets krav. All data behandles i Norge og er GDPR-kompatibel. Turistene registrerer bare fangst - ingen personopplysninger utover det som er påkrevd."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hva koster det?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Export.fish er for øyeblikket under testing og er helt gratis for tidlige brukere. Du kan teste alle funksjoner uten noen forpliktelser. Vi vil varsle i god tid før eventuell prising introduseres for eksisterende brukere."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Fungerer appen offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Appen krever internettilkobling for å synkronisere data og sende rapporter til Fiskeridirektoratet. Men turistene kan registrere fangst når de har mobildekning - de trenger ikke være på wifi. De fleste registrerer fangsten når de kommer tilbake til brygga eller hytta."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Eksportfiske.no",
+        "url": "https://eksportfiske.no",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "kontakt@eksportfiske.no",
+          "contactType": "customer service",
+          "availableLanguage": ["Norwegian"]
+        }
+      }
+    </script>
   </head>
   <body class="bg-gray-50 text-gray-900">
     <!-- Fixed Navigation -->
