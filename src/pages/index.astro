@@ -15,6 +15,9 @@ import kveite from '../assets/kveite.png';
 import uer from '../assets/uer.png';
 import steinbit from '../assets/steinbit.png';
 import sei from '../assets/sei.png';
+
+// Import logo
+import logo from '../assets/logo.png';
 ---
 
 <Layout
@@ -514,7 +517,7 @@ import sei from '../assets/sei.png';
         <!-- Company Info -->
         <div>
           <div class="flex items-center gap-2 mb-4">
-            <img src="https://test.export.fish/static/images/logo.png" alt="export.fish logo" class="h-10 w-10" />
+            <Image src={logo} alt="export.fish logo" class="h-10 w-10" width={40} height={40} />
             <span class="text-xl font-bold text-white">Eksportfiske</span>
           </div>
           <p class="text-sm text-gray-400">
