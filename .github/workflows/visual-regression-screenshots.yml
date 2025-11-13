@@ -245,8 +245,8 @@ jobs:
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: Commit and push screenshots
-        if: steps.check_changes.outputs.has_changes == 'true'
+      - name: Temporarily commit diffs for PR comment
+        if: steps.generate_diffs.outputs.has_diffs == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
@@ -255,13 +255,8 @@ jobs:
           ORIGINAL_MSG=$(git log -1 --pretty=%B)
           ORIGINAL_AUTHOR=$(git log -1 --pretty=format:"%an <%ae>")
 
-          # Remove diffs directory from git tracking if it exists
-          # Diffs are only for PR comments, never committed
-          git rm -r --cached screenshots/diffs/ 2>/dev/null || true
-          rm -rf screenshots/diffs/
-
-          # Stage only base screenshot changes
-          git add screenshots/*.png
+          # Temporarily commit diffs so they can be referenced in PR comment URLs
+          git add screenshots/
 
           # Amend the existing commit, preserving original message and author
           git commit --amend --no-edit --author="$ORIGINAL_AUTHOR"
@@ -300,7 +295,7 @@ jobs:
             echo "✅ Rebased successfully"
           fi
 
-          # Force push with lease after verification/rebase
+          # Push with diffs temporarily included
           git push --force-with-lease
 
       - name: Generate and post PR comment with visual diffs
@@ -348,6 +343,79 @@ jobs:
 
           # Post comment to PR
           echo -e "$COMMENT" | gh pr comment ${{ github.event.pull_request.number }} --body-file -
+
+      - name: Remove diffs from commit
+        if: steps.generate_diffs.outputs.has_diffs == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # Get the original commit message and author to preserve them
+          ORIGINAL_MSG=$(git log -1 --pretty=%B)
+          ORIGINAL_AUTHOR=$(git log -1 --pretty=format:"%an <%ae>")
+
+          # Remove diffs directory
+          rm -rf screenshots/diffs/
+
+          # Re-amend without diffs
+          git add screenshots/
+          git commit --amend --no-edit --author="$ORIGINAL_AUTHOR"
+
+          # Force push the cleaned commit
+          git push --force
+
+      - name: Commit and push screenshots only
+        if: steps.check_changes.outputs.has_changes == 'true' && steps.generate_diffs.outputs.has_diffs != 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # Get the original commit message and author to preserve them
+          ORIGINAL_MSG=$(git log -1 --pretty=%B)
+          ORIGINAL_AUTHOR=$(git log -1 --pretty=format:"%an <%ae>")
+
+          # Stage only base screenshot changes (no diffs directory)
+          git add screenshots/*.png
+
+          # Amend the existing commit, preserving original message and author
+          git commit --amend --no-edit --author="$ORIGINAL_AUTHOR"
+
+          # Safety check: Verify remote hasn't changed before force push
+          git fetch origin ${{ github.head_ref }}
+          REMOTE_HASH=$(git rev-parse origin/${{ github.head_ref }})
+          LOCAL_BASE=$(git rev-parse HEAD~1)
+
+          if [ "$REMOTE_HASH" != "$LOCAL_BASE" ]; then
+            echo "⚠️  Remote branch has new commits. Rebasing..."
+            echo "Remote: $REMOTE_HASH"
+            echo "Expected: $LOCAL_BASE"
+
+            # Reset to pre-amend state and unstage screenshots
+            git reset --soft HEAD~1
+            git reset HEAD screenshots/
+
+            # Stash the screenshots temporarily
+            git stash push -u screenshots/
+
+            # Pull latest changes with rebase
+            git pull --rebase origin ${{ github.head_ref }}
+
+            # Restore the screenshots
+            git stash pop
+
+            # Get the new commit info after rebase
+            ORIGINAL_MSG=$(git log -1 --pretty=%B)
+            ORIGINAL_AUTHOR=$(git log -1 --pretty=format:"%an <%ae>")
+
+            # Re-stage and re-amend with screenshots
+            git add screenshots/*.png
+            git commit --amend --no-edit --author="$ORIGINAL_AUTHOR"
+
+            echo "✅ Rebased successfully"
+          fi
+
+          # Force push with lease after verification/rebase
+          git push --force-with-lease
 
       - name: Confirm PR commit
         if: steps.check_changes.outputs.has_changes == 'true'
