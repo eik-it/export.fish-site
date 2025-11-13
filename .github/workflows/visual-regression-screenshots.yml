@@ -239,97 +239,111 @@ jobs:
         run: |
           # Check for both modified AND untracked files in screenshots/ (excluding diffs/)
           # Diffs are only for PR comments, not committed
-          if [ -z "$(git status --porcelain screenshots/*.png)" ]; then
+          if [ ! -d screenshots ]; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          elif [ -z "$(git status --porcelain screenshots)" ]; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
-
-      - name: Commit and push screenshots
-        if: steps.check_changes.outputs.has_changes == 'true'
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-
-          # Remove diffs directory - diffs are only for PR comments, never committed
-          rm -rf screenshots/diffs/
-
-          # Get the original commit message and author to preserve them
-          ORIGINAL_MSG=$(git log -1 --pretty=%B)
-          ORIGINAL_AUTHOR=$(git log -1 --pretty=format:"%an <%ae>")
-
-          # Stage only base screenshot changes (no diffs directory)
-          git add screenshots/*.png
-
-          # Amend the existing commit, preserving original message and author
-          git commit --amend --no-edit --author="$ORIGINAL_AUTHOR"
-
-          # Safety check: Verify remote hasn't changed before force push
-          git fetch origin ${{ github.head_ref }}
-          REMOTE_HASH=$(git rev-parse origin/${{ github.head_ref }})
-          LOCAL_BASE=$(git rev-parse HEAD~1)
-
-          if [ "$REMOTE_HASH" != "$LOCAL_BASE" ]; then
-            echo "⚠️  Remote branch has new commits. Rebasing..."
-            echo "Remote: $REMOTE_HASH"
-            echo "Expected: $LOCAL_BASE"
-
-            # Reset to pre-amend state and unstage screenshots
-            git reset --soft HEAD~1
-            git reset HEAD screenshots/
-
-            # Stash the screenshots temporarily
-            git stash push -u screenshots/
-
-            # Pull latest changes with rebase
-            git pull --rebase origin ${{ github.head_ref }}
-
-            # Restore the screenshots
-            git stash pop
-
-            # Get the new commit info after rebase
-            ORIGINAL_MSG=$(git log -1 --pretty=%B)
-            ORIGINAL_AUTHOR=$(git log -1 --pretty=format:"%an <%ae>")
-
-            # Re-stage and re-amend with screenshots
-            git add screenshots/*.png
-            git commit --amend --no-edit --author="$ORIGINAL_AUTHOR"
-
-            echo "✅ Rebased successfully"
-          fi
-
-          # Force push with lease after verification/rebase
-          git push --force-with-lease
 
       - name: Generate and post PR comment with visual diffs
         if: steps.generate_diffs.outputs.has_diffs == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Helper function to upload image to GitHub and get URL
+          # Function to upload image to _ci branch with content-addressed storage
+          # Uses git worktree to completely isolate _ci branch operations from PR branch
           upload_image() {
             local IMAGE_PATH="$1"
-            local IMAGE_NAME=$(basename "$IMAGE_PATH")
 
-            # Upload image to GitHub's asset server using the REST API
-            # The API endpoint for uploading assets is specific to issues/PRs
-            local RESPONSE=$(curl -sS -X POST \
-              -H "Authorization: Bearer $GH_TOKEN" \
-              -H "Accept: application/vnd.github+json" \
-              -H "Content-Type: application/octet-stream" \
-              -H "X-GitHub-Api-Version: 2022-11-28" \
-              --data-binary @"$IMAGE_PATH" \
-              "https://uploads.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/assets?name=${IMAGE_NAME}")
+            echo ">>> Uploading: $IMAGE_PATH" >&2
 
-            # Debug: show response
-            echo "Upload response for $IMAGE_NAME:" >&2
-            echo "$RESPONSE" >&2
+            # Calculate SHA256 hash of the image for content-addressed storage (deduplication)
+            local HASH=$(sha256sum "$IMAGE_PATH" | cut -d' ' -f1)
+            local EXTENSION="${IMAGE_PATH##*.}"
+            local FILENAME="${HASH}.${EXTENSION}"
 
-            # Extract URL from JSON response - GitHub returns the asset URL in the "url" field
-            echo "$RESPONSE" | jq -r '.url // empty'
+            echo ">>> Hash: $HASH, Filename: $FILENAME" >&2
+
+            # Check if image already exists on remote (avoid unnecessary uploads)
+            if curl -sf -o /dev/null "https://raw.githubusercontent.com/${{ github.repository }}/_ci/${FILENAME}"; then
+              echo ">>> Image already exists on remote: ${FILENAME}" >&2
+              echo "https://raw.githubusercontent.com/${{ github.repository }}/_ci/${FILENAME}"
+              return 0
+            fi
+
+            echo ">>> Image not found on remote, uploading..." >&2
+
+            # Use absolute path for image
+            local ABSOLUTE_IMAGE_PATH="$(pwd)/${IMAGE_PATH}"
+
+            # Create worktree for _ci branch in /tmp (completely isolated from PR branch)
+            local WORKTREE_DIR="/tmp/_ci_worktree_$$"
+            echo ">>> Creating worktree at: $WORKTREE_DIR" >&2
+
+            # Fetch _ci branch or create it if it doesn't exist
+            if git ls-remote --heads origin _ci | grep -q _ci; then
+              echo ">>> _ci branch exists on remote, fetching..." >&2
+              git fetch origin _ci:_ci --depth=1 >&2
+              git worktree add "$WORKTREE_DIR" _ci >&2
+            else
+              echo ">>> Creating new _ci branch..." >&2
+              # Create orphan branch in worktree
+              git worktree add --detach "$WORKTREE_DIR" >&2
+              cd "$WORKTREE_DIR"
+              git checkout --orphan _ci >&2
+              git rm -rf . 2>/dev/null || true
+
+              # Create README
+              echo "# CI Artifacts Storage" > README.md
+              echo "" >> README.md
+              echo "This branch stores content-addressed CI artifacts (visual regression diff images)." >> README.md
+              echo "" >> README.md
+              echo "## Structure" >> README.md
+              echo "- All images stored at root level" >> README.md
+              echo "- Filenames: \`<sha256-hash>.<extension>\` (e.g., \`a3dbc947...png\`)" >> README.md
+              echo "- Automatic deduplication via content addressing" >> README.md
+              echo "" >> README.md
+              echo "## Retention" >> README.md
+              echo "- Images referenced in open PRs: Kept indefinitely" >> README.md
+              echo "- Images from closed PRs: Kept for 7 days" >> README.md
+              echo "- Unreferenced images: Kept for 90 days" >> README.md
+              echo "" >> README.md
+              echo "## Cleanup" >> README.md
+              echo "Automated cleanup runs weekly via \`.github/workflows/cleanup-ci-artifacts.yml\`" >> README.md
+
+              git add README.md >&2
+              git config user.name "github-actions[bot]" >&2
+              git config user.email "github-actions[bot]@users.noreply.github.com" >&2
+              git commit -m "Initialize _ci branch for artifacts" >&2
+              git push origin _ci >&2
+              cd - >/dev/null
+            fi
+
+            # Copy image to worktree and commit
+            echo ">>> Copying image to worktree..." >&2
+            cp "$ABSOLUTE_IMAGE_PATH" "$WORKTREE_DIR/${FILENAME}"
+
+            cd "$WORKTREE_DIR"
+            git config user.name "github-actions[bot]" >&2
+            git config user.email "github-actions[bot]@users.noreply.github.com" >&2
+            git add "${FILENAME}" >&2
+            git commit -m "Add artifact ${FILENAME} for PR #${{ github.event.pull_request.number }}" >&2
+            git push origin _ci >&2
+            cd - >/dev/null
+
+            # Clean up worktree
+            echo ">>> Cleaning up worktree..." >&2
+            git worktree remove "$WORKTREE_DIR" >&2
+
+            # Return the raw.githubusercontent.com URL
+            local URL="https://raw.githubusercontent.com/${{ github.repository }}/_ci/${FILENAME}"
+            echo ">>> Upload complete: $URL" >&2
+            echo "$URL"
           }
 
-          # Build the comment markdown header
+          # Build the comment markdown
           COMMENT="## 📸 Visual Regression Changes Detected\n\n"
           COMMENT+="The following screenshots show visual differences compared to the base branch.\n\n"
           COMMENT+="**Legend:**\n"
@@ -338,42 +352,81 @@ jobs:
           COMMENT+="- **Diff**: Visual difference highlighted (cropped to changed area)\n\n"
           COMMENT+="---\n\n"
 
-          # Process each diff and upload images
+          # Process each diff
           for DIFF_CROP in screenshots/diffs/*-diff-crop.png; do
             if [ -f "$DIFF_CROP" ]; then
               # Extract base filename
               BASENAME=$(basename "$DIFF_CROP" | sed 's/-diff-crop\.png$//')
 
-              # Get corresponding images
+              # Upload cropped images to _ci branch and get URLs
               BASE_CROP="screenshots/diffs/${BASENAME}-base-crop.png"
               NEW_CROP="screenshots/diffs/${BASENAME}-new-crop.png"
 
-              echo "Uploading images for $BASENAME..."
-
-              # Upload images and get URLs
               BASE_CROP_URL=$(upload_image "$BASE_CROP")
               NEW_CROP_URL=$(upload_image "$NEW_CROP")
               DIFF_CROP_URL=$(upload_image "$DIFF_CROP")
 
-              echo "  Base: $BASE_CROP_URL"
-              echo "  New: $NEW_CROP_URL"
-              echo "  Diff: $DIFF_CROP_URL"
-
-              # Add to comment
+              # Add to comment (use HTML table for better control over alignment)
               COMMENT+="<details>\n"
               COMMENT+="<summary>📄 <strong>${BASENAME}.png</strong> (click to expand)</summary>\n\n"
-              COMMENT+="| Original | New | Diff |\n"
-              COMMENT+="|----------|-----|------|\n"
-              COMMENT+="| ![original](${BASE_CROP_URL}) | ![new](${NEW_CROP_URL}) | ![diff](${DIFF_CROP_URL}) |\n\n"
+              COMMENT+="<table>\n"
+              COMMENT+="<tr>\n"
+              COMMENT+="  <th>Original</th>\n"
+              COMMENT+="  <th>New</th>\n"
+              COMMENT+="  <th>Diff</th>\n"
+              COMMENT+="</tr>\n"
+              COMMENT+="<tr>\n"
+              COMMENT+="  <td valign=\"top\"><img src=\"${BASE_CROP_URL}\" alt=\"original\"></td>\n"
+              COMMENT+="  <td valign=\"top\"><img src=\"${NEW_CROP_URL}\" alt=\"new\"></td>\n"
+              COMMENT+="  <td valign=\"top\"><img src=\"${DIFF_CROP_URL}\" alt=\"diff\"></td>\n"
+              COMMENT+="</tr>\n"
+              COMMENT+="</table>\n\n"
               COMMENT+="</details>\n\n"
             fi
           done
 
           COMMENT+="---\n\n"
-          COMMENT+="*Images show only the changed region with 50px padding. Full screenshots are available in \`screenshots/\` directory.*"
+          COMMENT+="*Images show only the changed region with 10px padding. Full screenshots are available in \`screenshots/\` directory.*"
 
-          # Post comment to PR
-          echo -e "$COMMENT" | gh pr comment ${{ github.event.pull_request.number }} --body-file -
+          # Post comment to PR (use printf to interpret escape sequences)
+          printf "%b" "$COMMENT" | gh pr comment ${{ github.event.pull_request.number }} --body-file -
+
+      - name: Commit and push screenshots
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # Clean up any worktree remnants and ensure clean state
+          git worktree prune
+          git branch -D _ci 2>/dev/null || true
+
+          # Remove diffs directory - these are only for PR comments, never committed
+          rm -rf screenshots/diffs/
+
+          # Stash any uncommitted changes (screenshots)
+          git stash push -u screenshots/
+
+          # Fetch and rebase to latest
+          git fetch origin ${{ github.head_ref }}
+          git rebase origin/${{ github.head_ref }}
+
+          # Restore screenshots
+          git stash pop
+
+          # Get the original commit message and author from current HEAD
+          ORIGINAL_MSG=$(git log -1 --pretty=%B)
+          ORIGINAL_AUTHOR=$(git log -1 --pretty=format:"%an <%ae>")
+
+          # Stage screenshot changes
+          git add screenshots/
+
+          # Amend the existing commit with screenshots
+          git commit --amend --no-edit --author="$ORIGINAL_AUTHOR"
+
+          # Force push with lease
+          git push --force-with-lease origin ${{ github.head_ref }}
+
       - name: Confirm PR commit
         if: steps.check_changes.outputs.has_changes == 'true'
         run: |
