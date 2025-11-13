@@ -143,47 +143,72 @@ jobs:
 
                 # Get diff lines from odiff to find Y offset of changes
                 # Use parsable output and output-diff-lines to get line numbers with differences
+                # Format: diffCount;diffPercentage;line1,line2,line3,...
                 DIFF_OUTPUT=$(odiff "$BASE_IMG" "$NEW_IMG" "$DIFF_MASK" --diff-mask --threshold 0.1 --antialiasing --parsable-stdout --output-diff-lines 2>&1 || true)
 
-                echo "DEBUG: odiff parsable output:"
-                echo "$DIFF_OUTPUT"
+                echo "DEBUG: odiff parsable output (first 200 chars):"
+                echo "$DIFF_OUTPUT" | head -c 200
+                echo ""
 
-                # Extract the first and last changed line numbers from the output
-                # The output should contain line numbers, we'll parse them
-                FIRST_LINE=$(echo "$DIFF_OUTPUT" | grep -oP 'diffLines.*?\[\K[0-9]+' | head -1 || echo "0")
-                LAST_LINE=$(echo "$DIFF_OUTPUT" | grep -oP '[0-9]+(?=\])' | tail -1 || echo "1000")
+                # Parse CSV format: diffCount;diffPercentage;line1,line2,line3,...
+                # Extract the third field (line numbers) and get first and last
+                DIFF_LINES=$(echo "$DIFF_OUTPUT" | cut -d';' -f3)
+                FIRST_LINE=$(echo "$DIFF_LINES" | cut -d',' -f1)
+                LAST_LINE=$(echo "$DIFF_LINES" | rev | cut -d',' -f1 | rev)
 
                 echo "DEBUG: FIRST_LINE=$FIRST_LINE LAST_LINE=$LAST_LINE"
 
+                # Configuration for cropping
+                PADDING=50          # Vertical padding in pixels
+                MIN_HEIGHT=300      # Minimum crop height
+
+                # Get image dimensions
+                IMG_WIDTH=$(identify -format "%w" "$NEW_IMG")
+                IMG_HEIGHT=$(identify -format "%h" "$NEW_IMG")
+
                 # If we couldn't parse diff lines, fall back to alpha extract method
-                if [ -z "$FIRST_LINE" ] || [ "$FIRST_LINE" = "0" ]; then
+                if [ -z "$FIRST_LINE" ] || [ ! "$FIRST_LINE" -eq "$FIRST_LINE" ] 2>/dev/null; then
+                  echo "Failed to parse diff lines, falling back to alpha extract method"
                   BBOX=$(convert "$DIFF_MASK" -alpha extract -trim -format "%wx%h+%X+%Y" info:)
-                  WIDTH=$(echo $BBOX | cut -d'x' -f1)
-                  HEIGHT=$(echo $BBOX | cut -d'x' -f2 | cut -d'+' -f1)
-                  X=$(echo $BBOX | cut -d'+' -f2)
                   Y=$(echo $BBOX | cut -d'+' -f3)
+                  HEIGHT=$(echo $BBOX | cut -d'x' -f2 | cut -d'+' -f1)
                 else
                   # Calculate bounding box from diff lines
+                  # Always use full width, only crop height
                   Y=$FIRST_LINE
                   HEIGHT=$((LAST_LINE - FIRST_LINE + 1))
-                  # Get image width for X dimension
-                  IMG_WIDTH=$(identify -format "%w" "$NEW_IMG")
-                  X=0
-                  WIDTH=$IMG_WIDTH
+                  echo "Calculated from diff lines: Y=$Y, HEIGHT=$HEIGHT"
                 fi
 
                 # Clean up mask after getting bounding box
                 rm -f "$DIFF_MASK"
 
-                # WIDTH, HEIGHT, X, Y are already set above, proceed to padding calculation
+                # Apply padding and minimum height
+                Y_PAD=$((Y > PADDING ? Y - PADDING : 0))
+                HEIGHT_WITH_PADDING=$((HEIGHT + PADDING * 2))
 
-                # Calculate padded dimensions (ensuring we don't go negative or exceed image bounds)
-                X_PAD=$((X > 10 ? X - 10 : 0))
-                Y_PAD=$((Y > 10 ? Y - 10 : 0))
-                WIDTH_PAD=$((WIDTH + 20))
-                HEIGHT_PAD=$((HEIGHT + 20))
+                # Ensure minimum height
+                if [ $HEIGHT_WITH_PADDING -lt $MIN_HEIGHT ]; then
+                  HEIGHT_WITH_PADDING=$MIN_HEIGHT
+                fi
 
-                CROP_SPEC="${WIDTH_PAD}x${HEIGHT_PAD}+${X_PAD}+${Y_PAD}"
+                # Ensure we don't exceed image bounds
+                MAX_Y=$((IMG_HEIGHT - HEIGHT_WITH_PADDING))
+                if [ $Y_PAD -gt $MAX_Y ]; then
+                  Y_PAD=$MAX_Y
+                fi
+
+                # If crop would exceed bottom, adjust
+                CROP_BOTTOM=$((Y_PAD + HEIGHT_WITH_PADDING))
+                if [ $CROP_BOTTOM -gt $IMG_HEIGHT ]; then
+                  HEIGHT_WITH_PADDING=$((IMG_HEIGHT - Y_PAD))
+                fi
+
+                # Always use full width (no X cropping)
+                X_PAD=0
+                WIDTH_PAD=$IMG_WIDTH
+
+                CROP_SPEC="${WIDTH_PAD}x${HEIGHT_WITH_PADDING}+${X_PAD}+${Y_PAD}"
 
                 # Crop all three images to the change area
                 BASE_CROP="screenshots/diffs/${FILENAME%.png}-base-crop.png"
