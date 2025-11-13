@@ -130,13 +130,13 @@ jobs:
             DIFF_IMG="screenshots/diffs/${FILENAME%.png}-diff.png"
 
             # Run odiff with threshold of 0.1 (10% tolerance)
-            # Exit code: 0 = identical, 21 = different, other = error
+            # Exit code: 0 = identical, 22 = pixel differences, 21 = layout difference (with --fail-on-layout)
             if odiff "$BASE_IMG" "$NEW_IMG" "$DIFF_IMG" --threshold 0.1 > /dev/null 2>&1; then
               echo "No visual changes in $FILENAME"
               rm -f "$DIFF_IMG"
             else
               EXIT_CODE=$?
-              if [ $EXIT_CODE -eq 21 ]; then
+              if [ $EXIT_CODE -eq 22 ]; then
                 echo "Visual changes detected in $FILENAME"
                 HAS_DIFFS=true
 
