@@ -186,11 +186,18 @@ jobs:
             echo "Remote: $REMOTE_HASH"
             echo "Expected: $LOCAL_BASE"
 
-            # Reset to pre-amend state
+            # Reset to pre-amend state and unstage screenshots
             git reset --soft HEAD~1
+            git reset HEAD screenshots/
+
+            # Stash the screenshots temporarily
+            git stash push -u screenshots/
 
             # Pull latest changes with rebase
             git pull --rebase origin ${{ github.head_ref }}
+
+            # Restore the screenshots
+            git stash pop
 
             # Get the new commit info after rebase
             ORIGINAL_MSG=$(git log -1 --pretty=%B)
