@@ -143,7 +143,8 @@ jobs:
 
                 # Generate diff mask (only changed pixels over transparent background)
                 # Note: odiff will return exit code 22 (differences found), which we ignore
-                odiff "$BASE_IMG" "$NEW_IMG" "$DIFF_MASK" --diff-mask --threshold 0.1 > /dev/null 2>&1 || true
+                # Using --antialiasing to ignore antialiased pixels that cause false positives
+                odiff "$BASE_IMG" "$NEW_IMG" "$DIFF_MASK" --diff-mask --threshold 0.1 --antialiasing > /dev/null 2>&1 || true
 
                 # Get bounding box of changes using ImageMagick on the transparent mask
                 # This finds the smallest rectangle containing all non-transparent pixels
