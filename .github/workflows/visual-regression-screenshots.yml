@@ -128,6 +128,7 @@ jobs:
 
             # Generate diff with odiff
             DIFF_IMG="screenshots/diffs/${FILENAME%.png}-diff.png"
+            DIFF_MASK="screenshots/diffs/${FILENAME%.png}-diff-mask.png"
 
             # Run odiff with threshold of 0.1 (10% tolerance)
             # Exit code: 0 = identical, 22 = pixel differences, 21 = layout difference (with --fail-on-layout)
@@ -140,9 +141,15 @@ jobs:
                 echo "Visual changes detected in $FILENAME"
                 HAS_DIFFS=true
 
-                # Get bounding box of changes using ImageMagick
+                # Generate diff mask (only changed pixels over transparent background)
+                odiff "$BASE_IMG" "$NEW_IMG" "$DIFF_MASK" --diff-mask --threshold 0.1 > /dev/null 2>&1
+
+                # Get bounding box of changes using ImageMagick on the transparent mask
                 # This finds the smallest rectangle containing all non-transparent pixels
-                BBOX=$(convert "$DIFF_IMG" -trim +repage -format "%wx%h+%X+%Y" info:)
+                BBOX=$(convert "$DIFF_MASK" -trim +repage -format "%wx%h+%X+%Y" info:)
+
+                # Clean up mask after getting bounding box
+                rm -f "$DIFF_MASK"
 
                 # Add 10px padding to bounding box
                 WIDTH=$(echo $BBOX | cut -d'x' -f1)
