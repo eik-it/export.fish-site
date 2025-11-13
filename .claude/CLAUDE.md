@@ -70,3 +70,61 @@ As recommended by https://docs.astro.build/en/guides/build-with-ai/:
 - Verify newer features (sessions, actions, etc.) with the MCP server
 
 The MCP server is configured in `.mcp.json` and enabled in `.claude/settings.json`.
+
+## CRITICAL: Force Push Safety Protocol
+
+Before ANY force push operation, you MUST follow this safety protocol to prevent data loss:
+
+### Pre-Force-Push Verification Steps
+
+1. **Fetch latest remote state:**
+   ```bash
+   git fetch origin <branch-name>
+   ```
+
+2. **Check remote commit hash:**
+   ```bash
+   REMOTE_HASH=$(git rev-parse origin/<branch-name>)
+   LOCAL_BASE=$(git merge-base HEAD origin/<branch-name>)
+   ```
+
+3. **Verify remote hasn't changed:**
+   ```bash
+   if [ "$REMOTE_HASH" != "$LOCAL_BASE" ]; then
+     echo "❌ ERROR: Remote branch has new commits!"
+     echo "Remote: $REMOTE_HASH"
+     echo "Expected: $LOCAL_BASE"
+     echo "Someone else has pushed changes. You must incorporate them first."
+     exit 1
+   fi
+   ```
+
+4. **Only after verification, force push:**
+   ```bash
+   git push --force-with-lease origin <branch-name>
+   ```
+
+### When Remote Has Changed
+
+If the remote has new commits:
+1. **DO NOT force push**
+2. Rebase your changes onto the new remote state:
+   ```bash
+   git fetch origin <branch-name>
+   git rebase origin/<branch-name>
+   ```
+3. Resolve any conflicts
+4. Then push (may still need --force-with-lease if you rewrote history)
+
+### Key Rules
+
+- ❌ NEVER use `git push --force` without verification
+- ✅ ALWAYS use `git push --force-with-lease` after verification
+- ✅ ALWAYS check remote state before force pushing
+- ❌ NEVER force push if remote has unexpected commits
+
+This protocol applies to:
+- Manual git operations
+- Automated workflows (GitHub Actions)
+- Agent operations
+- Any scenario involving force push
