@@ -141,23 +141,41 @@ jobs:
                 echo "Visual changes detected in $FILENAME"
                 HAS_DIFFS=true
 
-                # Generate diff mask (only changed pixels over transparent background)
-                # Note: odiff will return exit code 22 (differences found), which we ignore
-                # Using --antialiasing to ignore antialiased pixels that cause false positives
-                odiff "$BASE_IMG" "$NEW_IMG" "$DIFF_MASK" --diff-mask --threshold 0.1 --antialiasing > /dev/null 2>&1 || true
+                # Get diff lines from odiff to find Y offset of changes
+                # Use parsable output and output-diff-lines to get line numbers with differences
+                DIFF_OUTPUT=$(odiff "$BASE_IMG" "$NEW_IMG" "$DIFF_MASK" --diff-mask --threshold 0.1 --antialiasing --parsable-stdout --output-diff-lines 2>&1 || true)
 
-                # Get bounding box of changes using ImageMagick on the transparent mask
-                # Extract alpha channel and trim to find the smallest rectangle containing changes
-                BBOX=$(convert "$DIFF_MASK" -alpha extract -trim -format "%wx%h+%X+%Y" info:)
+                echo "DEBUG: odiff parsable output:"
+                echo "$DIFF_OUTPUT"
+
+                # Extract the first and last changed line numbers from the output
+                # The output should contain line numbers, we'll parse them
+                FIRST_LINE=$(echo "$DIFF_OUTPUT" | grep -oP 'diffLines.*?\[\K[0-9]+' | head -1 || echo "0")
+                LAST_LINE=$(echo "$DIFF_OUTPUT" | grep -oP '[0-9]+(?=\])' | tail -1 || echo "1000")
+
+                echo "DEBUG: FIRST_LINE=$FIRST_LINE LAST_LINE=$LAST_LINE"
+
+                # If we couldn't parse diff lines, fall back to alpha extract method
+                if [ -z "$FIRST_LINE" ] || [ "$FIRST_LINE" = "0" ]; then
+                  BBOX=$(convert "$DIFF_MASK" -alpha extract -trim -format "%wx%h+%X+%Y" info:)
+                  WIDTH=$(echo $BBOX | cut -d'x' -f1)
+                  HEIGHT=$(echo $BBOX | cut -d'x' -f2 | cut -d'+' -f1)
+                  X=$(echo $BBOX | cut -d'+' -f2)
+                  Y=$(echo $BBOX | cut -d'+' -f3)
+                else
+                  # Calculate bounding box from diff lines
+                  Y=$FIRST_LINE
+                  HEIGHT=$((LAST_LINE - FIRST_LINE + 1))
+                  # Get image width for X dimension
+                  IMG_WIDTH=$(identify -format "%w" "$NEW_IMG")
+                  X=0
+                  WIDTH=$IMG_WIDTH
+                fi
 
                 # Clean up mask after getting bounding box
                 rm -f "$DIFF_MASK"
 
-                # Add 10px padding to bounding box
-                WIDTH=$(echo $BBOX | cut -d'x' -f1)
-                HEIGHT=$(echo $BBOX | cut -d'x' -f2 | cut -d'+' -f1)
-                X=$(echo $BBOX | cut -d'+' -f2)
-                Y=$(echo $BBOX | cut -d'+' -f3)
+                # WIDTH, HEIGHT, X, Y are already set above, proceed to padding calculation
 
                 # Calculate padded dimensions (ensuring we don't go negative or exceed image bounds)
                 X_PAD=$((X > 10 ? X - 10 : 0))
