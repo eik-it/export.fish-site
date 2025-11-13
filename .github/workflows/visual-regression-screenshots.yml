@@ -305,11 +305,6 @@ jobs:
         run: |
           echo '✅ Visual regression screenshots have been automatically generated and committed to this PR.'
 
-          # Add a comment to the PR
-          gh pr comment ${{ github.event.pull_request.number }} --body "📸 Visual regression screenshots automatically updated by GitHub Actions"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: No changes needed
         if: steps.check_changes.outputs.has_changes == 'false'
         run: |
