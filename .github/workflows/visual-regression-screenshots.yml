@@ -21,6 +21,7 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0  # Fetch all history to access base branch
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -31,8 +32,40 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install odiff and ImageMagick
+        run: |
+          # Install odiff via npm
+          npm install -g odiff-bin
+
+          # Install ImageMagick for cropping
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
+
+      - name: Fetch base branch screenshots for comparison
+        id: fetch_base
+        run: |
+          # Create directory for base screenshots
+          mkdir -p screenshots-base
+
+          # Try to fetch screenshots from base branch
+          BASE_REF="${{ github.base_ref }}"
+          if git show "origin/${BASE_REF}:screenshots/" > /dev/null 2>&1; then
+            git checkout "origin/${BASE_REF}" -- screenshots/ 2>/dev/null || true
+            if [ -d "screenshots" ]; then
+              mv screenshots/* screenshots-base/ 2>/dev/null || true
+              echo "has_base=true" >> $GITHUB_OUTPUT
+            else
+              echo "has_base=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "has_base=false" >> $GITHUB_OUTPUT
+          fi
+
+          # Restore to PR branch state
+          git checkout ${{ github.head_ref }} -- screenshots/ 2>/dev/null || true
 
       - name: Build Astro site
         run: npm run build
@@ -41,6 +74,81 @@ jobs:
         run: npm run test:e2e:visual
         env:
           BASE_URL: http://localhost:4321
+
+      - name: Compare screenshots and generate diffs
+        if: steps.fetch_base.outputs.has_base == 'true'
+        id: generate_diffs
+        run: |
+          mkdir -p screenshots/diffs
+          DIFF_COMMENT=""
+          HAS_DIFFS=false
+
+          # Compare each screenshot
+          for NEW_IMG in screenshots/*.png; do
+            FILENAME=$(basename "$NEW_IMG")
+            BASE_IMG="screenshots-base/$FILENAME"
+
+            # Skip if base doesn't exist (new screenshot)
+            if [ ! -f "$BASE_IMG" ]; then
+              echo "New screenshot detected: $FILENAME"
+              continue
+            fi
+
+            # Generate diff with odiff
+            DIFF_IMG="screenshots/diffs/${FILENAME%.png}-diff.png"
+
+            # Run odiff with threshold of 0.1 (10% tolerance)
+            # Exit code: 0 = identical, 21 = different, other = error
+            if odiff "$BASE_IMG" "$NEW_IMG" "$DIFF_IMG" --threshold 0.1 > /dev/null 2>&1; then
+              echo "No visual changes in $FILENAME"
+              rm -f "$DIFF_IMG"
+            else
+              EXIT_CODE=$?
+              if [ $EXIT_CODE -eq 21 ]; then
+                echo "Visual changes detected in $FILENAME"
+                HAS_DIFFS=true
+
+                # Get bounding box of changes using ImageMagick
+                # This finds the smallest rectangle containing all non-transparent pixels
+                BBOX=$(convert "$DIFF_IMG" -trim +repage -format "%wx%h+%X+%Y" info:)
+
+                # Add 10px padding to bounding box
+                WIDTH=$(echo $BBOX | cut -d'x' -f1)
+                HEIGHT=$(echo $BBOX | cut -d'x' -f2 | cut -d'+' -f1)
+                X=$(echo $BBOX | cut -d'+' -f2)
+                Y=$(echo $BBOX | cut -d'+' -f3)
+
+                # Calculate padded dimensions (ensuring we don't go negative or exceed image bounds)
+                X_PAD=$((X > 10 ? X - 10 : 0))
+                Y_PAD=$((Y > 10 ? Y - 10 : 0))
+                WIDTH_PAD=$((WIDTH + 20))
+                HEIGHT_PAD=$((HEIGHT + 20))
+
+                CROP_SPEC="${WIDTH_PAD}x${HEIGHT_PAD}+${X_PAD}+${Y_PAD}"
+
+                # Crop all three images to the change area
+                BASE_CROP="screenshots/diffs/${FILENAME%.png}-base-crop.png"
+                NEW_CROP="screenshots/diffs/${FILENAME%.png}-new-crop.png"
+                DIFF_CROP="screenshots/diffs/${FILENAME%.png}-diff-crop.png"
+
+                convert "$BASE_IMG" -crop "$CROP_SPEC" +repage "$BASE_CROP"
+                convert "$NEW_IMG" -crop "$CROP_SPEC" +repage "$NEW_CROP"
+                convert "$DIFF_IMG" -crop "$CROP_SPEC" +repage "$DIFF_CROP"
+
+                # Keep the full diff too for reference
+                echo "Cropped changes in $FILENAME to $CROP_SPEC"
+              else
+                echo "Error running odiff on $FILENAME (exit code: $EXIT_CODE)"
+                rm -f "$DIFF_IMG"
+              fi
+            fi
+          done
+
+          if [ "$HAS_DIFFS" = "true" ]; then
+            echo "has_diffs=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_diffs=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Check for screenshot changes
         id: check_changes
@@ -62,7 +170,7 @@ jobs:
           ORIGINAL_MSG=$(git log -1 --pretty=%B)
           ORIGINAL_AUTHOR=$(git log -1 --pretty=format:"%an <%ae>")
 
-          # Stage screenshot changes
+          # Stage screenshot changes (including diffs if present)
           git add screenshots/
 
           # Amend the existing commit, preserving original message and author
@@ -83,6 +191,52 @@ jobs:
 
           # Force push with lease after verification
           git push --force-with-lease
+
+      - name: Generate and post PR comment with visual diffs
+        if: steps.generate_diffs.outputs.has_diffs == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Build the comment markdown
+          COMMENT="## 📸 Visual Regression Changes Detected\n\n"
+          COMMENT+="The following screenshots show visual differences compared to the base branch.\n\n"
+          COMMENT+="**Legend:**\n"
+          COMMENT+="- **Original**: Screenshot from base branch (\`${{ github.base_ref }}\`)\n"
+          COMMENT+="- **New**: Screenshot from this PR\n"
+          COMMENT+="- **Diff**: Visual difference highlighted (cropped to changed area)\n\n"
+          COMMENT+="---\n\n"
+
+          # Get the commit SHA for image URLs
+          COMMIT_SHA=$(git rev-parse HEAD)
+          REPO="${{ github.repository }}"
+          BRANCH="${{ github.head_ref }}"
+
+          # Process each diff
+          for DIFF_CROP in screenshots/diffs/*-diff-crop.png; do
+            if [ -f "$DIFF_CROP" ]; then
+              # Extract base filename
+              BASENAME=$(basename "$DIFF_CROP" | sed 's/-diff-crop\.png$//')
+
+              # Construct image URLs (using raw.githubusercontent.com for direct image access)
+              BASE_CROP_URL="https://raw.githubusercontent.com/${REPO}/${BRANCH}/screenshots/diffs/${BASENAME}-base-crop.png"
+              NEW_CROP_URL="https://raw.githubusercontent.com/${REPO}/${BRANCH}/screenshots/diffs/${BASENAME}-new-crop.png"
+              DIFF_CROP_URL="https://raw.githubusercontent.com/${REPO}/${BRANCH}/screenshots/diffs/${BASENAME}-diff-crop.png"
+
+              # Add to comment
+              COMMENT+="<details>\n"
+              COMMENT+="<summary>📄 <strong>${BASENAME}.png</strong> (click to expand)</summary>\n\n"
+              COMMENT+="| Original | New | Diff |\n"
+              COMMENT+="|----------|-----|------|\n"
+              COMMENT+="| ![original](${BASE_CROP_URL}) | ![new](${NEW_CROP_URL}) | ![diff](${DIFF_CROP_URL}) |\n\n"
+              COMMENT+="</details>\n\n"
+            fi
+          done
+
+          COMMENT+="---\n\n"
+          COMMENT+="*Images show only the changed region with 10px padding. Full screenshots are available in \`screenshots/\` directory.*"
+
+          # Post comment to PR
+          echo -e "$COMMENT" | gh pr comment ${{ github.event.pull_request.number }} --body-file -
 
       - name: Confirm PR commit
         if: steps.check_changes.outputs.has_changes == 'true'
