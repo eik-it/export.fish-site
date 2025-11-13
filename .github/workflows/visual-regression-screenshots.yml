@@ -116,8 +116,9 @@ jobs:
 
               # Extend canvas to max dimensions (gravity NorthWest = extend right/bottom)
               # -background white fills new areas with white
-              convert "$BASE_IMG" -background white -gravity NorthWest -extent "${MAX_W}x${MAX_H}" "$BASE_IMG"
-              convert "$NEW_IMG" -background white -gravity NorthWest -extent "${MAX_W}x${MAX_H}" "$NEW_IMG"
+              # Use mogrify to modify files in-place
+              mogrify -background white -gravity NorthWest -extent "${MAX_W}x${MAX_H}" "$BASE_IMG"
+              mogrify -background white -gravity NorthWest -extent "${MAX_W}x${MAX_H}" "$NEW_IMG"
             fi
 
             # Generate diff with odiff
