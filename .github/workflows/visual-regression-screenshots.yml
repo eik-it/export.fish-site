@@ -237,8 +237,9 @@ jobs:
       - name: Check for screenshot changes
         id: check_changes
         run: |
-          # Check for both modified AND untracked files in screenshots/
-          if [ -z "$(git status --porcelain screenshots/)" ]; then
+          # Check for both modified AND untracked files in screenshots/ (excluding diffs/)
+          # Diffs are only for PR comments, not committed
+          if [ -z "$(git status --porcelain screenshots/*.png)" ]; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
             echo "has_changes=true" >> $GITHUB_OUTPUT
@@ -254,8 +255,8 @@ jobs:
           ORIGINAL_MSG=$(git log -1 --pretty=%B)
           ORIGINAL_AUTHOR=$(git log -1 --pretty=format:"%an <%ae>")
 
-          # Stage screenshot changes (including diffs if present)
-          git add screenshots/
+          # Stage only base screenshot changes, NOT the diffs (diffs are only for PR comments)
+          git add screenshots/*.png
 
           # Amend the existing commit, preserving original message and author
           git commit --amend --no-edit --author="$ORIGINAL_AUTHOR"
