@@ -94,6 +94,32 @@ jobs:
               continue
             fi
 
+            # Get dimensions of both images
+            BASE_DIMS=$(identify -format "%wx%h" "$BASE_IMG")
+            NEW_DIMS=$(identify -format "%wx%h" "$NEW_IMG")
+
+            # If dimensions differ, resize to match (extend canvas with white background)
+            if [ "$BASE_DIMS" != "$NEW_DIMS" ]; then
+              echo "Dimension mismatch for $FILENAME: base=$BASE_DIMS new=$NEW_DIMS"
+
+              # Get individual dimensions
+              BASE_W=$(echo $BASE_DIMS | cut -d'x' -f1)
+              BASE_H=$(echo $BASE_DIMS | cut -d'x' -f2)
+              NEW_W=$(echo $NEW_DIMS | cut -d'x' -f1)
+              NEW_H=$(echo $NEW_DIMS | cut -d'x' -f2)
+
+              # Calculate max dimensions
+              MAX_W=$((BASE_W > NEW_W ? BASE_W : NEW_W))
+              MAX_H=$((BASE_H > NEW_H ? BASE_H : NEW_H))
+
+              echo "Resizing both images to ${MAX_W}x${MAX_H}"
+
+              # Extend canvas to max dimensions (gravity NorthWest = extend right/bottom)
+              # -background white fills new areas with white
+              convert "$BASE_IMG" -background white -gravity NorthWest -extent "${MAX_W}x${MAX_H}" "$BASE_IMG"
+              convert "$NEW_IMG" -background white -gravity NorthWest -extent "${MAX_W}x${MAX_H}" "$NEW_IMG"
+            fi
+
             # Generate diff with odiff
             DIFF_IMG="screenshots/diffs/${FILENAME%.png}-diff.png"
 
