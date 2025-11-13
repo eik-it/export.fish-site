@@ -147,8 +147,8 @@ jobs:
                 odiff "$BASE_IMG" "$NEW_IMG" "$DIFF_MASK" --diff-mask --threshold 0.1 --antialiasing > /dev/null 2>&1 || true
 
                 # Get bounding box of changes using ImageMagick on the transparent mask
-                # This finds the smallest rectangle containing all non-transparent pixels
-                BBOX=$(convert "$DIFF_MASK" -trim +repage -format "%wx%h+%X+%Y" info:)
+                # Extract alpha channel and trim to find the smallest rectangle containing changes
+                BBOX=$(convert "$DIFF_MASK" -alpha extract -trim -format "%wx%h+%X+%Y" info:)
 
                 # Clean up mask after getting bounding box
                 rm -f "$DIFF_MASK"
