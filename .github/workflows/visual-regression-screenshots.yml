@@ -245,51 +245,6 @@ jobs:
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: Generate and post PR comment with visual diffs
-        if: steps.generate_diffs.outputs.has_diffs == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # Build the comment markdown with base64-encoded images
-          COMMENT="## 📸 Visual Regression Changes Detected\n\n"
-          COMMENT+="The following screenshots show visual differences compared to the base branch.\n\n"
-          COMMENT+="**Legend:**\n"
-          COMMENT+="- **Original**: Screenshot from base branch (\`${{ github.base_ref }}\`)\n"
-          COMMENT+="- **New**: Screenshot from this PR\n"
-          COMMENT+="- **Diff**: Visual difference highlighted (cropped to changed area)\n\n"
-          COMMENT+="---\n\n"
-
-          # Process each diff
-          for DIFF_CROP in screenshots/diffs/*-diff-crop.png; do
-            if [ -f "$DIFF_CROP" ]; then
-              # Extract base filename
-              BASENAME=$(basename "$DIFF_CROP" | sed 's/-diff-crop\.png$//')
-
-              # Get corresponding images
-              BASE_CROP="screenshots/diffs/${BASENAME}-base-crop.png"
-              NEW_CROP="screenshots/diffs/${BASENAME}-new-crop.png"
-
-              # Encode images to base64
-              BASE64_BASE=$(base64 -w 0 "$BASE_CROP")
-              BASE64_NEW=$(base64 -w 0 "$NEW_CROP")
-              BASE64_DIFF=$(base64 -w 0 "$DIFF_CROP")
-
-              # Add to comment with inline base64 images
-              COMMENT+="<details>\n"
-              COMMENT+="<summary>📄 <strong>${BASENAME}.png</strong> (click to expand)</summary>\n\n"
-              COMMENT+="| Original | New | Diff |\n"
-              COMMENT+="|----------|-----|------|\n"
-              COMMENT+="| <img src=\"data:image/png;base64,${BASE64_BASE}\" alt=\"original\" /> | <img src=\"data:image/png;base64,${BASE64_NEW}\" alt=\"new\" /> | <img src=\"data:image/png;base64,${BASE64_DIFF}\" alt=\"diff\" /> |\n\n"
-              COMMENT+="</details>\n\n"
-            fi
-          done
-
-          COMMENT+="---\n\n"
-          COMMENT+="*Images show only the changed region with 50px padding. Full screenshots are available in \`screenshots/\` directory.*"
-
-          # Post comment to PR
-          echo -e "$COMMENT" | gh pr comment ${{ github.event.pull_request.number }} --body-file -
-
       - name: Commit and push screenshots
         if: steps.check_changes.outputs.has_changes == 'true'
         run: |
@@ -346,6 +301,79 @@ jobs:
           # Force push with lease after verification/rebase
           git push --force-with-lease
 
+      - name: Generate and post PR comment with visual diffs
+        if: steps.generate_diffs.outputs.has_diffs == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Helper function to upload image to GitHub and get URL
+          upload_image() {
+            local IMAGE_PATH="$1"
+            local IMAGE_NAME=$(basename "$IMAGE_PATH")
+
+            # Upload image to GitHub's asset server using the REST API
+            # The API endpoint for uploading assets is specific to issues/PRs
+            local RESPONSE=$(curl -sS -X POST \
+              -H "Authorization: Bearer $GH_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              -H "Content-Type: application/octet-stream" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              --data-binary @"$IMAGE_PATH" \
+              "https://uploads.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/assets?name=${IMAGE_NAME}")
+
+            # Debug: show response
+            echo "Upload response for $IMAGE_NAME:" >&2
+            echo "$RESPONSE" >&2
+
+            # Extract URL from JSON response - GitHub returns the asset URL in the "url" field
+            echo "$RESPONSE" | jq -r '.url // empty'
+          }
+
+          # Build the comment markdown header
+          COMMENT="## 📸 Visual Regression Changes Detected\n\n"
+          COMMENT+="The following screenshots show visual differences compared to the base branch.\n\n"
+          COMMENT+="**Legend:**\n"
+          COMMENT+="- **Original**: Screenshot from base branch (\`${{ github.base_ref }}\`)\n"
+          COMMENT+="- **New**: Screenshot from this PR\n"
+          COMMENT+="- **Diff**: Visual difference highlighted (cropped to changed area)\n\n"
+          COMMENT+="---\n\n"
+
+          # Process each diff and upload images
+          for DIFF_CROP in screenshots/diffs/*-diff-crop.png; do
+            if [ -f "$DIFF_CROP" ]; then
+              # Extract base filename
+              BASENAME=$(basename "$DIFF_CROP" | sed 's/-diff-crop\.png$//')
+
+              # Get corresponding images
+              BASE_CROP="screenshots/diffs/${BASENAME}-base-crop.png"
+              NEW_CROP="screenshots/diffs/${BASENAME}-new-crop.png"
+
+              echo "Uploading images for $BASENAME..."
+
+              # Upload images and get URLs
+              BASE_CROP_URL=$(upload_image "$BASE_CROP")
+              NEW_CROP_URL=$(upload_image "$NEW_CROP")
+              DIFF_CROP_URL=$(upload_image "$DIFF_CROP")
+
+              echo "  Base: $BASE_CROP_URL"
+              echo "  New: $NEW_CROP_URL"
+              echo "  Diff: $DIFF_CROP_URL"
+
+              # Add to comment
+              COMMENT+="<details>\n"
+              COMMENT+="<summary>📄 <strong>${BASENAME}.png</strong> (click to expand)</summary>\n\n"
+              COMMENT+="| Original | New | Diff |\n"
+              COMMENT+="|----------|-----|------|\n"
+              COMMENT+="| ![original](${BASE_CROP_URL}) | ![new](${NEW_CROP_URL}) | ![diff](${DIFF_CROP_URL}) |\n\n"
+              COMMENT+="</details>\n\n"
+            fi
+          done
+
+          COMMENT+="---\n\n"
+          COMMENT+="*Images show only the changed region with 50px padding. Full screenshots are available in \`screenshots/\` directory.*"
+
+          # Post comment to PR
+          echo -e "$COMMENT" | gh pr comment ${{ github.event.pull_request.number }} --body-file -
       - name: Confirm PR commit
         if: steps.check_changes.outputs.has_changes == 'true'
         run: |
