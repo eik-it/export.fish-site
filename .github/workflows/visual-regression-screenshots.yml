@@ -182,14 +182,28 @@ jobs:
           LOCAL_BASE=$(git rev-parse HEAD~1)
 
           if [ "$REMOTE_HASH" != "$LOCAL_BASE" ]; then
-            echo "❌ ERROR: Remote branch has new commits since we started!"
+            echo "⚠️  Remote branch has new commits. Rebasing..."
             echo "Remote: $REMOTE_HASH"
             echo "Expected: $LOCAL_BASE"
-            echo "Someone else has pushed changes. Aborting to prevent data loss."
-            exit 1
+
+            # Reset to pre-amend state
+            git reset --soft HEAD~1
+
+            # Pull latest changes with rebase
+            git pull --rebase origin ${{ github.head_ref }}
+
+            # Get the new commit info after rebase
+            ORIGINAL_MSG=$(git log -1 --pretty=%B)
+            ORIGINAL_AUTHOR=$(git log -1 --pretty=format:"%an <%ae>")
+
+            # Re-stage and re-amend with screenshots
+            git add screenshots/
+            git commit --amend --no-edit --author="$ORIGINAL_AUTHOR"
+
+            echo "✅ Rebased successfully"
           fi
 
-          # Force push with lease after verification
+          # Force push with lease after verification/rebase
           git push --force-with-lease
 
       - name: Generate and post PR comment with visual diffs
