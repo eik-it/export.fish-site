@@ -119,6 +119,11 @@ jobs:
               # Use mogrify to modify files in-place
               mogrify -background white -gravity NorthWest -extent "${MAX_W}x${MAX_H}" "$BASE_IMG"
               mogrify -background white -gravity NorthWest -extent "${MAX_W}x${MAX_H}" "$NEW_IMG"
+
+              # Verify dimensions after resize
+              BASE_DIMS_AFTER=$(identify -format "%wx%h" "$BASE_IMG")
+              NEW_DIMS_AFTER=$(identify -format "%wx%h" "$NEW_IMG")
+              echo "After resize: base=$BASE_DIMS_AFTER new=$NEW_DIMS_AFTER"
             fi
 
             # Generate diff with odiff
