@@ -255,7 +255,12 @@ jobs:
           ORIGINAL_MSG=$(git log -1 --pretty=%B)
           ORIGINAL_AUTHOR=$(git log -1 --pretty=format:"%an <%ae>")
 
-          # Stage only base screenshot changes, NOT the diffs (diffs are only for PR comments)
+          # Remove diffs directory from git tracking if it exists
+          # Diffs are only for PR comments, never committed
+          git rm -r --cached screenshots/diffs/ 2>/dev/null || true
+          rm -rf screenshots/diffs/
+
+          # Stage only base screenshot changes
           git add screenshots/*.png
 
           # Amend the existing commit, preserving original message and author
