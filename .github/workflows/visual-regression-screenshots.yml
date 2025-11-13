@@ -245,65 +245,12 @@ jobs:
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: Temporarily commit diffs for PR comment
-        if: steps.generate_diffs.outputs.has_diffs == 'true'
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-
-          # Get the original commit message and author to preserve them
-          ORIGINAL_MSG=$(git log -1 --pretty=%B)
-          ORIGINAL_AUTHOR=$(git log -1 --pretty=format:"%an <%ae>")
-
-          # Temporarily commit diffs so they can be referenced in PR comment URLs
-          git add screenshots/
-
-          # Amend the existing commit, preserving original message and author
-          git commit --amend --no-edit --author="$ORIGINAL_AUTHOR"
-
-          # Safety check: Verify remote hasn't changed before force push
-          git fetch origin ${{ github.head_ref }}
-          REMOTE_HASH=$(git rev-parse origin/${{ github.head_ref }})
-          LOCAL_BASE=$(git rev-parse HEAD~1)
-
-          if [ "$REMOTE_HASH" != "$LOCAL_BASE" ]; then
-            echo "⚠️  Remote branch has new commits. Rebasing..."
-            echo "Remote: $REMOTE_HASH"
-            echo "Expected: $LOCAL_BASE"
-
-            # Reset to pre-amend state and unstage screenshots
-            git reset --soft HEAD~1
-            git reset HEAD screenshots/
-
-            # Stash the screenshots temporarily
-            git stash push -u screenshots/
-
-            # Pull latest changes with rebase
-            git pull --rebase origin ${{ github.head_ref }}
-
-            # Restore the screenshots
-            git stash pop
-
-            # Get the new commit info after rebase
-            ORIGINAL_MSG=$(git log -1 --pretty=%B)
-            ORIGINAL_AUTHOR=$(git log -1 --pretty=format:"%an <%ae>")
-
-            # Re-stage and re-amend with screenshots
-            git add screenshots/
-            git commit --amend --no-edit --author="$ORIGINAL_AUTHOR"
-
-            echo "✅ Rebased successfully"
-          fi
-
-          # Push with diffs temporarily included
-          git push --force-with-lease
-
       - name: Generate and post PR comment with visual diffs
         if: steps.generate_diffs.outputs.has_diffs == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Build the comment markdown
+          # Build the comment markdown with base64-encoded images
           COMMENT="## 📸 Visual Regression Changes Detected\n\n"
           COMMENT+="The following screenshots show visual differences compared to the base branch.\n\n"
           COMMENT+="**Legend:**\n"
@@ -312,63 +259,45 @@ jobs:
           COMMENT+="- **Diff**: Visual difference highlighted (cropped to changed area)\n\n"
           COMMENT+="---\n\n"
 
-          # Get the commit SHA for image URLs
-          COMMIT_SHA=$(git rev-parse HEAD)
-          REPO="${{ github.repository }}"
-          BRANCH="${{ github.head_ref }}"
-
           # Process each diff
           for DIFF_CROP in screenshots/diffs/*-diff-crop.png; do
             if [ -f "$DIFF_CROP" ]; then
               # Extract base filename
               BASENAME=$(basename "$DIFF_CROP" | sed 's/-diff-crop\.png$//')
 
-              # Construct image URLs (using raw.githubusercontent.com for direct image access)
-              BASE_CROP_URL="https://raw.githubusercontent.com/${REPO}/${BRANCH}/screenshots/diffs/${BASENAME}-base-crop.png"
-              NEW_CROP_URL="https://raw.githubusercontent.com/${REPO}/${BRANCH}/screenshots/diffs/${BASENAME}-new-crop.png"
-              DIFF_CROP_URL="https://raw.githubusercontent.com/${REPO}/${BRANCH}/screenshots/diffs/${BASENAME}-diff-crop.png"
+              # Get corresponding images
+              BASE_CROP="screenshots/diffs/${BASENAME}-base-crop.png"
+              NEW_CROP="screenshots/diffs/${BASENAME}-new-crop.png"
 
-              # Add to comment
+              # Encode images to base64
+              BASE64_BASE=$(base64 -w 0 "$BASE_CROP")
+              BASE64_NEW=$(base64 -w 0 "$NEW_CROP")
+              BASE64_DIFF=$(base64 -w 0 "$DIFF_CROP")
+
+              # Add to comment with inline base64 images
               COMMENT+="<details>\n"
               COMMENT+="<summary>📄 <strong>${BASENAME}.png</strong> (click to expand)</summary>\n\n"
               COMMENT+="| Original | New | Diff |\n"
               COMMENT+="|----------|-----|------|\n"
-              COMMENT+="| ![original](${BASE_CROP_URL}) | ![new](${NEW_CROP_URL}) | ![diff](${DIFF_CROP_URL}) |\n\n"
+              COMMENT+="| <img src=\"data:image/png;base64,${BASE64_BASE}\" alt=\"original\" /> | <img src=\"data:image/png;base64,${BASE64_NEW}\" alt=\"new\" /> | <img src=\"data:image/png;base64,${BASE64_DIFF}\" alt=\"diff\" /> |\n\n"
               COMMENT+="</details>\n\n"
             fi
           done
 
           COMMENT+="---\n\n"
-          COMMENT+="*Images show only the changed region with 10px padding. Full screenshots are available in \`screenshots/\` directory.*"
+          COMMENT+="*Images show only the changed region with 50px padding. Full screenshots are available in \`screenshots/\` directory.*"
 
           # Post comment to PR
           echo -e "$COMMENT" | gh pr comment ${{ github.event.pull_request.number }} --body-file -
 
-      - name: Remove diffs from commit
-        if: steps.generate_diffs.outputs.has_diffs == 'true'
+      - name: Commit and push screenshots
+        if: steps.check_changes.outputs.has_changes == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
 
-          # Get the original commit message and author to preserve them
-          ORIGINAL_MSG=$(git log -1 --pretty=%B)
-          ORIGINAL_AUTHOR=$(git log -1 --pretty=format:"%an <%ae>")
-
-          # Remove diffs directory
+          # Remove diffs directory - diffs are only for PR comments, never committed
           rm -rf screenshots/diffs/
-
-          # Re-amend without diffs
-          git add screenshots/
-          git commit --amend --no-edit --author="$ORIGINAL_AUTHOR"
-
-          # Force push the cleaned commit
-          git push --force
-
-      - name: Commit and push screenshots only
-        if: steps.check_changes.outputs.has_changes == 'true' && steps.generate_diffs.outputs.has_diffs != 'true'
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
 
           # Get the original commit message and author to preserve them
           ORIGINAL_MSG=$(git log -1 --pretty=%B)
