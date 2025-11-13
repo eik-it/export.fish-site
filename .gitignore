@@ -33,3 +33,6 @@ playwright/.cache/
 
 # but DO commit screenshots for visual regression
 !screenshots/*.png
+
+# NEVER commit diff images (only for PR comments)
+screenshots/diffs/
