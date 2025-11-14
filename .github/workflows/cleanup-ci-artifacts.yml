@@ -116,20 +116,19 @@ jobs:
           # Stage all files
           git add -A
 
-          # Create single commit
-          git commit -m "_ci cleanup of viz reg files
-
-Automated weekly maintenance of visual regression artifacts.
-
-Cleanup summary:
-- Total artifacts before: $TOTAL_FILES
-- Artifacts deleted (>$RETENTION_DAYS days): $DELETED_FILES
-- Remaining artifacts: $REMAINING_FILES
-- Cutoff date: $CUTOFF_DATE
-- Retention period: $RETENTION_DAYS days
-
-This branch stores diff and crop images from visual regression tests.
-Images are content-addressed using SHA256 hashing for deduplication."
+          # Create single commit using multiple -m flags for multiline message
+          git commit \
+            -m "_ci cleanup of viz reg files" \
+            -m "Automated weekly maintenance of visual regression artifacts." \
+            -m "Cleanup summary:" \
+            -m "- Total artifacts before: $TOTAL_FILES" \
+            -m "- Artifacts deleted (>$RETENTION_DAYS days): $DELETED_FILES" \
+            -m "- Remaining artifacts: $REMAINING_FILES" \
+            -m "- Cutoff date: $CUTOFF_DATE" \
+            -m "- Retention period: $RETENTION_DAYS days" \
+            -m "" \
+            -m "This branch stores diff and crop images from visual regression tests." \
+            -m "Images are content-addressed using SHA256 hashing for deduplication."
 
           # Replace the cleanup branch with the squashed version
           git branch -D "$CLEANUP_BRANCH"
