@@ -345,12 +345,6 @@ jobs:
 
           # Build the comment markdown
           COMMENT="## 📸 Visual Regression Changes Detected\n\n"
-          COMMENT+="The following screenshots show visual differences compared to the base branch.\n\n"
-          COMMENT+="**Legend:**\n"
-          COMMENT+="- **Original**: Screenshot from base branch (\`${{ github.base_ref }}\`)\n"
-          COMMENT+="- **New**: Screenshot from this PR\n"
-          COMMENT+="- **Diff**: Visual difference highlighted (cropped to changed area)\n\n"
-          COMMENT+="---\n\n"
 
           # Process each diff
           for DIFF_CROP in screenshots/diffs/*-diff-crop.png; do
@@ -386,7 +380,7 @@ jobs:
           done
 
           COMMENT+="---\n\n"
-          COMMENT+="*Images show only the changed region with 10px padding. Full screenshots are available in \`screenshots/\` directory.*"
+          COMMENT+="*Images show full width with vertical cropping to the changed region (50px padding above/below, minimum 300px height). Full-page screenshots are available in \`screenshots/\` directory.*"
 
           # Post comment to PR (use printf to interpret escape sequences)
           printf "%b" "$COMMENT" | gh pr comment ${{ github.event.pull_request.number }} --body-file -
