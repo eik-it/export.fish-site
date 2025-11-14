@@ -13,8 +13,7 @@ on:
         type: number
 
 permissions:
-  contents: write # Need write permission to push to cleanup branch
-  pull-requests: write # Need write permission to create PRs
+  contents: write # Need write permission to push to _ci branch
 
 jobs:
   cleanup:
@@ -26,17 +25,10 @@ jobs:
           ref: _ci
           fetch-depth: 0 # Need full history to check commit dates
 
-      - name: Create cleanup branch from _ci
+      - name: Setup git config
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-
-          # Create cleanup branch name with timestamp
-          CLEANUP_BRANCH="_ci-cleanup-$(date +%Y%m%d)"
-          echo "CLEANUP_BRANCH=$CLEANUP_BRANCH" >> $GITHUB_ENV
-
-          # Create new branch from _ci
-          git checkout -b "$CLEANUP_BRANCH"
 
       - name: Clean up artifacts older than retention period
         id: cleanup
@@ -99,7 +91,7 @@ jobs:
             echo "has_changes=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Squash all commits into one
+      - name: Squash all commits into one and push
         if: steps.cleanup.outputs.has_changes == 'true'
         run: |
           # Get list of all files currently in the branch
@@ -108,6 +100,7 @@ jobs:
           # Count commits in _ci branch
           COMMIT_COUNT=$(git rev-list --count HEAD)
           echo "Current commits in branch: $COMMIT_COUNT"
+          echo "Squashing $COMMIT_COUNT commits into one..."
 
           # Create orphan branch with same content but only one commit
           TEMP_BRANCH="_ci-squashed-temp"
@@ -130,62 +123,14 @@ jobs:
             -m "This branch stores diff and crop images from visual regression tests." \
             -m "Images are content-addressed using SHA256 hashing for deduplication."
 
-          # Replace the cleanup branch with the squashed version
-          git branch -D "$CLEANUP_BRANCH"
-          git branch -m "$CLEANUP_BRANCH"
+          # Force push to _ci branch (replaces entire history)
+          echo "Force pushing squashed commit to _ci branch..."
+          git push -f origin HEAD:_ci
 
-      - name: Push cleanup branch and create PR
-        if: steps.cleanup.outputs.has_changes == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          # Push the cleanup branch
-          git push -f origin "$CLEANUP_BRANCH"
-
-          # Create PR body
-          PR_BODY="$(cat <<EOF
-          ## 🧹 Weekly _ci Branch Maintenance
-          
-          This automated PR cleans up old visual regression artifacts and squashes the \`_ci\` branch history to a single commit.
-          
-          ### Cleanup Summary
-          - **Total artifacts before cleanup**: $TOTAL_FILES
-          - **Artifacts deleted** (older than $RETENTION_DAYS days): $DELETED_FILES
-          - **Remaining artifacts**: $REMAINING_FILES
-          - **Retention period**: $RETENTION_DAYS days
-          - **Cutoff date**: $CUTOFF_DATE
-          
-          ### Changes
-          1. **Deleted old artifacts**: Removed PNG files with commit dates before $CUTOFF_DATE (retention: $RETENTION_DAYS days)
-          2. **Squashed history**: Reduced all commits to a single commit for cleaner history
-          
-          ### Why Squash?
-          The \`_ci\` branch stores temporary visual regression artifacts (diffs/crops). We don't need the full history of every artifact addition. Squashing:
-          - Reduces repository bloat
-          - Keeps \`_ci\` branch lean and fast
-          - Maintains current artifacts while cleaning history
-          
-          ### Manual Cleanup
-          To run cleanup manually with custom retention period:
-          \`\`\`bash
-          gh workflow run cleanup-ci-artifacts.yml -f retention_days=30
-          \`\`\`
-          
-          ### Review
-          - ✅ Verify deleted files are indeed older than $RETENTION_DAYS days
-          - ✅ Check remaining artifacts look correct
-          - ✅ Merge when ready
-          
-          This PR is safe to merge - it only affects the \`_ci\` branch which stores temporary artifacts.
-          EOF
-          )"
-
-          # Create PR using gh CLI
-          gh pr create \
-            --base _ci \
-            --head "$CLEANUP_BRANCH" \
-            --title "🧹 Weekly _ci cleanup: Remove $DELETED_FILES old artifacts and squash history" \
-            --body "$PR_BODY"
+          echo "✅ Cleanup complete!"
+          echo "   - Deleted: $DELETED_FILES files"
+          echo "   - Remaining: $REMAINING_FILES files"
+          echo "   - Commits squashed: $COMMIT_COUNT → 1"
 
       - name: No changes needed
         if: steps.cleanup.outputs.has_changes == 'false'
