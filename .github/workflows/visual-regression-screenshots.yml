@@ -221,7 +221,7 @@ jobs:
                 convert "$NEW_IMG" -crop "$CROP_SPEC" +repage "$NEW_CROP"
 
                 # Combine images horizontally: Original | Diff | New
-                magick "$BASE_CROP" "$DIFF_CROP" "$NEW_CROP" +append "$COMBINED"
+                convert "$BASE_CROP" "$DIFF_CROP" "$NEW_CROP" +append "$COMBINED"
 
                 echo "Created combined image: $COMBINED (${CROP_SPEC})"
               else
