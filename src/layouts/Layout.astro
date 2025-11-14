@@ -39,6 +39,10 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="export.fish - Fangstrapportering for turistfiske" />
+    <meta property="og:image:type" content="image/webp" />
     <meta property="og:site_name" content="Eksportfiske.no" />
     <meta property="og:locale" content="nb_NO" />
 
@@ -48,6 +52,7 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageURL} />
+    <meta name="twitter:image:alt" content="export.fish app for fangstrapportering" />
 
     <link rel="icon" type="image/svg+xml" href={favicon} />
     <title>{title}</title>
