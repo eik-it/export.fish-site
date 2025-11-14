@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { captureScreenshot } from './helpers';
+import { captureScreenshot, waitForAllImagesToLoad } from './helpers';
 
 /**
  * Visual Regression Test Suite for eksportfiske.no
@@ -22,8 +22,8 @@ test.describe('Visual Regression - Full Page Screenshots @visual', () => {
     // Use default desktop viewport (1280x720)
     await page.goto('/');
 
-    // Wait for images to load
-    await page.waitForSelector('img', { state: 'visible' });
+    // Wait for network to settle and all images to finish loading
+    await waitForAllImagesToLoad(page);
 
     // Expand all FAQ items to show full content in screenshots
     await page.evaluate(() => {
@@ -41,8 +41,8 @@ test.describe('Visual Regression - Full Page Screenshots @visual', () => {
 
     await page.goto('/');
 
-    // Wait for images to load
-    await page.waitForSelector('img', { state: 'visible' });
+    // Wait for network to settle and all images to finish loading
+    await waitForAllImagesToLoad(page);
 
     // Expand all FAQ items to show full content in screenshots
     await page.evaluate(() => {
@@ -60,8 +60,8 @@ test.describe('Visual Regression - Full Page Screenshots @visual', () => {
 
     await page.goto('/');
 
-    // Wait for images to load
-    await page.waitForSelector('img', { state: 'visible' });
+    // Wait for network to settle and all images to finish loading
+    await waitForAllImagesToLoad(page);
 
     // Expand all FAQ items to show full content in screenshots
     await page.evaluate(() => {
