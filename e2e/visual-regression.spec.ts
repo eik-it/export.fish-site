@@ -25,6 +25,13 @@ test.describe('Visual Regression - Full Page Screenshots @visual', () => {
     // Wait for images to load
     await page.waitForSelector('img', { state: 'visible' });
 
+    // Expand all FAQ items to show full content in screenshots
+    await page.evaluate(() => {
+      document.querySelectorAll('details').forEach(details => {
+        details.open = true;
+      });
+    });
+
     await captureScreenshot(page, 'desktop-full-page');
   });
 
@@ -37,6 +44,13 @@ test.describe('Visual Regression - Full Page Screenshots @visual', () => {
     // Wait for images to load
     await page.waitForSelector('img', { state: 'visible' });
 
+    // Expand all FAQ items to show full content in screenshots
+    await page.evaluate(() => {
+      document.querySelectorAll('details').forEach(details => {
+        details.open = true;
+      });
+    });
+
     await captureScreenshot(page, 'mobile-full-page');
   });
 
@@ -48,6 +62,13 @@ test.describe('Visual Regression - Full Page Screenshots @visual', () => {
 
     // Wait for images to load
     await page.waitForSelector('img', { state: 'visible' });
+
+    // Expand all FAQ items to show full content in screenshots
+    await page.evaluate(() => {
+      document.querySelectorAll('details').forEach(details => {
+        details.open = true;
+      });
+    });
 
     await captureScreenshot(page, 'tablet-full-page');
   });
