@@ -1,0 +1,191 @@
+name: Cleanup and squash _ci branch
+
+on:
+  schedule:
+    # Run weekly on Sundays at 00:00 UTC
+    - cron: '0 0 * * 0'
+  workflow_dispatch: # Allow manual trigger
+    inputs:
+      retention_days:
+        description: 'Number of days to retain artifacts (default: 30)'
+        required: false
+        default: '30'
+        type: number
+
+permissions:
+  contents: write # Need write permission to push to cleanup branch
+  pull-requests: write # Need write permission to create PRs
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout _ci branch
+        uses: actions/checkout@v4
+        with:
+          ref: _ci
+          fetch-depth: 0 # Need full history to check commit dates
+
+      - name: Create cleanup branch from _ci
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # Create cleanup branch name with timestamp
+          CLEANUP_BRANCH="_ci-cleanup-$(date +%Y%m%d)"
+          echo "CLEANUP_BRANCH=$CLEANUP_BRANCH" >> $GITHUB_ENV
+
+          # Create new branch from _ci
+          git checkout -b "$CLEANUP_BRANCH"
+
+      - name: Clean up artifacts older than retention period
+        id: cleanup
+        run: |
+          # Get retention days from input or use default
+          RETENTION_DAYS="${{ github.event.inputs.retention_days || '30' }}"
+          echo "Retention period: $RETENTION_DAYS days"
+
+          # Calculate cutoff date
+          CUTOFF_DATE=$(date -d "$RETENTION_DAYS days ago" +%s)
+          echo "Cutoff date: $(date -d '@$CUTOFF_DATE' '+%Y-%m-%d %H:%M:%S')"
+
+          # Track statistics
+          TOTAL_FILES=0
+          DELETED_FILES=0
+
+          # Get list of all PNG files with their commit dates
+          echo "Analyzing files in _ci branch..."
+
+          for FILE in *.png; do
+            if [ ! -f "$FILE" ]; then
+              continue
+            fi
+
+            TOTAL_FILES=$((TOTAL_FILES + 1))
+
+            # Get the commit date for this file (when it was added)
+            COMMIT_DATE=$(git log -1 --format=%ct -- "$FILE")
+
+            if [ -z "$COMMIT_DATE" ]; then
+              echo "Warning: Could not get commit date for $FILE, skipping"
+              continue
+            fi
+
+            # Compare dates
+            if [ "$COMMIT_DATE" -lt "$CUTOFF_DATE" ]; then
+              DELETED_FILES=$((DELETED_FILES + 1))
+              echo "Deleting old artifact: $FILE ($(date -d "@$COMMIT_DATE" '+%Y-%m-%d'))"
+              git rm "$FILE"
+            fi
+          done
+
+          echo ""
+          echo "=== Cleanup Summary ==="
+          echo "Total artifacts: $TOTAL_FILES"
+          echo "Deleted artifacts: $DELETED_FILES"
+          echo "Remaining artifacts: $((TOTAL_FILES - DELETED_FILES))"
+
+          # Export variables for PR body
+          echo "TOTAL_FILES=$TOTAL_FILES" >> $GITHUB_ENV
+          echo "DELETED_FILES=$DELETED_FILES" >> $GITHUB_ENV
+          echo "REMAINING_FILES=$((TOTAL_FILES - DELETED_FILES))" >> $GITHUB_ENV
+          echo "CUTOFF_DATE=$(date -d '@$CUTOFF_DATE' '+%Y-%m-%d')" >> $GITHUB_ENV
+          echo "RETENTION_DAYS=$RETENTION_DAYS" >> $GITHUB_ENV
+
+          # Set output to indicate if changes were made
+          if [ "$DELETED_FILES" -gt 0 ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Squash all commits into one
+        if: steps.cleanup.outputs.has_changes == 'true'
+        run: |
+          # Get list of all files currently in the branch
+          git add -A
+
+          # Count commits in _ci branch
+          COMMIT_COUNT=$(git rev-list --count HEAD)
+          echo "Current commits in branch: $COMMIT_COUNT"
+
+          # Create orphan branch with same content but only one commit
+          TEMP_BRANCH="_ci-squashed-temp"
+          git checkout --orphan "$TEMP_BRANCH"
+
+          # Stage all files
+          git add -A
+
+          # Create single commit
+          git commit -m "_ci cleanup of viz reg files
+
+Automated weekly maintenance of visual regression artifacts.
+
+Cleanup summary:
+- Total artifacts before: $TOTAL_FILES
+- Artifacts deleted (>$RETENTION_DAYS days): $DELETED_FILES
+- Remaining artifacts: $REMAINING_FILES
+- Cutoff date: $CUTOFF_DATE
+- Retention period: $RETENTION_DAYS days
+
+This branch stores diff and crop images from visual regression tests.
+Images are content-addressed using SHA256 hashing for deduplication."
+
+          # Replace the cleanup branch with the squashed version
+          git branch -D "$CLEANUP_BRANCH"
+          git branch -m "$CLEANUP_BRANCH"
+
+      - name: Push cleanup branch and create PR
+        if: steps.cleanup.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Push the cleanup branch
+          git push -f origin "$CLEANUP_BRANCH"
+
+          # Create PR body
+          PR_BODY="## 🧹 Weekly _ci Branch Maintenance
+
+This automated PR cleans up old visual regression artifacts and squashes the \`_ci\` branch history to a single commit.
+
+### Cleanup Summary
+- **Total artifacts before cleanup**: $TOTAL_FILES
+- **Artifacts deleted** (older than $RETENTION_DAYS days): $DELETED_FILES
+- **Remaining artifacts**: $REMAINING_FILES
+- **Retention period**: $RETENTION_DAYS days
+- **Cutoff date**: $CUTOFF_DATE
+
+### Changes
+1. **Deleted old artifacts**: Removed PNG files with commit dates before $CUTOFF_DATE (retention: $RETENTION_DAYS days)
+2. **Squashed history**: Reduced all commits to a single commit for cleaner history
+
+### Why Squash?
+The \`_ci\` branch stores temporary visual regression artifacts (diffs/crops). We don't need the full history of every artifact addition. Squashing:
+- Reduces repository bloat
+- Keeps \`_ci\` branch lean and fast
+- Maintains current artifacts while cleaning history
+
+### Manual Cleanup
+To run cleanup manually with custom retention period:
+\`\`\`bash
+gh workflow run cleanup-ci-artifacts.yml -f retention_days=30
+\`\`\`
+
+### Review
+- ✅ Verify deleted files are indeed older than $RETENTION_DAYS days
+- ✅ Check remaining artifacts look correct
+- ✅ Merge when ready
+
+This PR is safe to merge - it only affects the \`_ci\` branch which stores temporary artifacts."
+
+          # Create PR using gh CLI
+          gh pr create \
+            --base _ci \
+            --head "$CLEANUP_BRANCH" \
+            --title "🧹 Weekly _ci cleanup: Remove $DELETED_FILES old artifacts and squash history" \
+            --body "$PR_BODY"
+
+      - name: No changes needed
+        if: steps.cleanup.outputs.has_changes == 'false'
+        run: |
+          echo "✅ No old artifacts to clean up - _ci branch is already clean!"
