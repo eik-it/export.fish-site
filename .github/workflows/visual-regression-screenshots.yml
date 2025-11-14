@@ -63,3 +63,4 @@ jobs:
           mode: compare
           ci-branch-name: '_ci'
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          imgbb-api-key: ${{ secrets.IMGBB_API_KEY }}
