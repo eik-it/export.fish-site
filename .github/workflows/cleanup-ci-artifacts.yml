@@ -143,39 +143,42 @@ jobs:
           git push -f origin "$CLEANUP_BRANCH"
 
           # Create PR body
-          PR_BODY="## 🧹 Weekly _ci Branch Maintenance
-
-This automated PR cleans up old visual regression artifacts and squashes the \`_ci\` branch history to a single commit.
-
-### Cleanup Summary
-- **Total artifacts before cleanup**: $TOTAL_FILES
-- **Artifacts deleted** (older than $RETENTION_DAYS days): $DELETED_FILES
-- **Remaining artifacts**: $REMAINING_FILES
-- **Retention period**: $RETENTION_DAYS days
-- **Cutoff date**: $CUTOFF_DATE
-
-### Changes
-1. **Deleted old artifacts**: Removed PNG files with commit dates before $CUTOFF_DATE (retention: $RETENTION_DAYS days)
-2. **Squashed history**: Reduced all commits to a single commit for cleaner history
-
-### Why Squash?
-The \`_ci\` branch stores temporary visual regression artifacts (diffs/crops). We don't need the full history of every artifact addition. Squashing:
-- Reduces repository bloat
-- Keeps \`_ci\` branch lean and fast
-- Maintains current artifacts while cleaning history
-
-### Manual Cleanup
-To run cleanup manually with custom retention period:
-\`\`\`bash
-gh workflow run cleanup-ci-artifacts.yml -f retention_days=30
-\`\`\`
-
-### Review
-- ✅ Verify deleted files are indeed older than $RETENTION_DAYS days
-- ✅ Check remaining artifacts look correct
-- ✅ Merge when ready
-
-This PR is safe to merge - it only affects the \`_ci\` branch which stores temporary artifacts."
+          PR_BODY="$(cat <<EOF
+          ## 🧹 Weekly _ci Branch Maintenance
+          
+          This automated PR cleans up old visual regression artifacts and squashes the \`_ci\` branch history to a single commit.
+          
+          ### Cleanup Summary
+          - **Total artifacts before cleanup**: $TOTAL_FILES
+          - **Artifacts deleted** (older than $RETENTION_DAYS days): $DELETED_FILES
+          - **Remaining artifacts**: $REMAINING_FILES
+          - **Retention period**: $RETENTION_DAYS days
+          - **Cutoff date**: $CUTOFF_DATE
+          
+          ### Changes
+          1. **Deleted old artifacts**: Removed PNG files with commit dates before $CUTOFF_DATE (retention: $RETENTION_DAYS days)
+          2. **Squashed history**: Reduced all commits to a single commit for cleaner history
+          
+          ### Why Squash?
+          The \`_ci\` branch stores temporary visual regression artifacts (diffs/crops). We don't need the full history of every artifact addition. Squashing:
+          - Reduces repository bloat
+          - Keeps \`_ci\` branch lean and fast
+          - Maintains current artifacts while cleaning history
+          
+          ### Manual Cleanup
+          To run cleanup manually with custom retention period:
+          \`\`\`bash
+          gh workflow run cleanup-ci-artifacts.yml -f retention_days=30
+          \`\`\`
+          
+          ### Review
+          - ✅ Verify deleted files are indeed older than $RETENTION_DAYS days
+          - ✅ Check remaining artifacts look correct
+          - ✅ Merge when ready
+          
+          This PR is safe to merge - it only affects the \`_ci\` branch which stores temporary artifacts.
+          EOF
+          )"
 
           # Create PR using gh CLI
           gh pr create \
