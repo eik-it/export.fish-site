@@ -30,7 +30,6 @@ jobs:
           mode: capture
           playwright-command: 'npm run build && npx playwright test'
           artifact-name: screenshots-${{ matrix.branch }}
-          imgbb-api-key: ${{ secrets.IMGBB_API_KEY }}
 
       - name: Upload screenshots
         uses: actions/upload-artifact@v4
@@ -63,4 +62,10 @@ jobs:
           mode: compare
           ci-branch-name: '_ci'
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          imgbb-api-key: ${{ secrets.IMGBB_API_KEY }}
+          r2-account-id: ${{ secrets.R2_ACCOUNT_ID }}
+          r2-access-key-id: ${{ secrets.R2_ACCESS_KEY_ID }}
+          r2-secret-access-key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          r2-bucket-name: ${{ secrets.R2_BUCKET_NAME }}
+          r2-public-url: ${{ secrets.R2_PUBLIC_URL }}
+          output-format: 'animated-gif'
+          gif-frame-delay: '500'
