@@ -25,7 +25,7 @@ jobs:
           ref: ${{ matrix.branch == 'base' && github.event.pull_request.base.ref || github.head_ref }}
 
       - name: Capture screenshots
-        uses: netbrain/visual-regression-action@v2
+        uses: netbrain/visual-regression-action@v1
         with:
           mode: capture
           playwright-command: 'npm run build && npx playwright test'
@@ -57,10 +57,9 @@ jobs:
           path: screenshots-pr
 
       - name: Compare screenshots
-        uses: netbrain/visual-regression-action@v2
+        uses: netbrain/visual-regression-action@v1
         with:
           mode: compare
-          ci-branch-name: '_ci'
           github-token: ${{ secrets.GITHUB_TOKEN }}
           r2-account-id: ${{ secrets.R2_ACCOUNT_ID }}
           r2-access-key-id: ${{ secrets.R2_ACCESS_KEY_ID }}
