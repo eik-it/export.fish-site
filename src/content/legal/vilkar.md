@@ -129,33 +129,68 @@ Ved oppsigelse:
 - Rapporterte data oppbevares i henhold til lovkrav
 - Ingen refusjon av forhåndsbetalte tjenester (hvis aktuelt)
 
-## 9. Endringer i vilkår
+## 9. Priser og betaling
 
-### 9.1 Varsel om endringer
+### 9.1 Månedlig abonnement
+Tjenesten leveres som et månedlig abonnement til en pris på **99,- NOK per måned (eksklusiv merverdiavgift)** per turistfiskebedrift.
+
+### 9.2 Fakturering
+- Faktureringen starter når bedriften aktiveres og kan ta i bruk tjenesten
+- Faktura sendes månedlig til registrert driftskontakt via e-post
+- Betalingsfrist er 14 dager fra fakturadato
+- Betaling skjer via faktura eller avtalt betalingsløsning
+
+### 9.3 Merverdiavgift
+Alle priser er oppgitt eksklusiv merverdiavgift (mva). Gjeldende norsk mva-sats legges til på faktura.
+
+### 9.4 Prisendringer
+Vi forbeholder oss retten til å justere prisene med 30 dagers skriftlig varsel. Ved prisøkning har du rett til å si opp abonnementet før den nye prisen trer i kraft.
+
+### 9.5 Forsinket betaling
+Ved forsinket betaling:
+- Påløper forsinkelsesrente i henhold til norsk lov
+- Kan tilgangen til tjenesten suspenderes inntil betaling er mottatt
+- Kan inkassosak iverksettes for ubetalt faktura
+
+### 9.6 Ingen bindingstid
+Abonnementet har ingen bindingstid. Du kan si opp abonnementet når som helst med virkning fra neste faktureringsperiode.
+
+### 9.7 Hva er inkludert
+Månedsprisen inkluderer:
+- Ubegrenset antall turistperioder og fangstregistreringer
+- Automatisk rapportering til Fiskeridirektoratet
+- Flerspråklig turistapp (norsk, engelsk, tysk)
+- Generering av utførselsdokumentasjon
+- Support på norsk via e-post
+- Alle oppdateringer og vedlikehold av tjenesten
+
+## 10. Endringer i vilkår
+
+### 10.1 Varsel om endringer
 Vi kan endre disse vilkårene med 30 dagers skriftlig varsel via e-post til registrert kontaktperson.
 
-### 9.2 Vesentlige endringer
+### 10.2 Vesentlige endringer
 Ved vesentlige endringer som reduserer dine rettigheter, gis mulighet til å si opp avtalen før endringene trer i kraft.
 
-### 9.3 Fortsatt bruk
+### 10.3 Fortsatt bruk
 Fortsatt bruk av tjenesten etter at endringer har trådt i kraft utgjør aksept av de nye vilkårene.
 
-## 10. Lovvalg og jurisdiksjon
+## 11. Lovvalg og jurisdiksjon
 
-### 10.1 Norsk rett
+### 11.1 Norsk rett
 Disse vilkårene reguleres av norsk rett.
 
-### 10.2 Tvisteløsning
+### 11.2 Tvisteløsning
 Tvister søkes løst i minnelighet. Dersom minnelig løsning ikke oppnås, skal tvisten løses ved alminnelig norsk domstol med tingstedet der Eksportfiske.no har sitt forretningssted.
 
-### 10.3 Gjeldende forskrifter
+### 11.3 Gjeldende forskrifter
 Tjenesten er utformet for å oppfylle:
 - Forskrift om rapportering av fangst fra turistfiskevirksomhet (2017-07-05-1141)
 - Personopplysningsloven og GDPR
 - Arkivloven
 - Øvrig relevant lovgivning
 
-## 11. Kontaktinformasjon
+## 12. Kontaktinformasjon
 
 For spørsmål om disse vilkårene, tjenesten eller databehandling, kontakt oss på:
 
