@@ -12,7 +12,6 @@ Tjenesten omfatter:
 - Webbasert registreringsverktøy for turister (Progressive Web App)
 - Flerspråklig brukergrensesnitt (norsk, engelsk, tysk)
 - Automatisk rapportering til Fiskeridirektoratet
-- Administrasjonsportal for turistfiskebedrifter
 - Generering av utførselsdokumentasjon for turister
 
 ## 2. Aksept av vilkår
@@ -125,9 +124,9 @@ Vi kan avslutte din tilgang til tjenesten ved:
 
 ### 8.3 Følger av oppsigelse
 Ved oppsigelse:
-- Stoppes tilgangen til administrasjonsportalen umiddelbart
+- Stoppes tilgangen til tjenesten umiddelbart
 - Rapporterte data oppbevares i henhold til lovkrav
-- Ingen refusjon av forhåndsbetalte tjenester (hvis aktuelt)
+- Ingen refusjon av forhåndsbetalte tjenester
 
 ## 9. Priser og betaling
 
