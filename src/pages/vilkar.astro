@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+// Get the ToS content using Astro content collections
+const tosEntry = await getEntry('legal', 'vilkar');
+const { Content } = await tosEntry.render();
+---
+
+<Layout
+  title="Vilkår for bruk - export.fish"
+  description="Vilkår for bruk av export.fish tjenesten for fangstrapportering. Les om dine rettigheter og plikter som turistfiskebedrift."
+>
+  <!-- Hero Section -->
+  <section class="pt-40 pb-16 bg-gradient-to-br from-blue-50 to-blue-100">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Vilkår for bruk
+      </h1>
+      <p class="text-lg text-gray-600">
+        Sist oppdatert: {new Date().toLocaleDateString('no-NO', { year: 'numeric', month: 'long', day: 'numeric' })}
+      </p>
+    </div>
+  </section>
+
+  <!-- Terms Content Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <!-- Table of Contents -->
+      <nav class="bg-blue-50 rounded-xl p-6 mb-12" aria-label="Innholdsfortegnelse">
+        <h2 class="text-xl font-bold text-gray-900 mb-4">Innholdsfortegnelse</h2>
+        <ol class="space-y-2 text-gray-700">
+          <li><a href="#tjenestebeskrivelse" class="hover:text-primary transition-colors">1. Tjenestebeskrivelse</a></li>
+          <li><a href="#aksept-av-vilkar" class="hover:text-primary transition-colors">2. Aksept av vilkår</a></li>
+          <li><a href="#brukerens-ansvar" class="hover:text-primary transition-colors">3. Brukerens ansvar</a></li>
+          <li><a href="#databehandling" class="hover:text-primary transition-colors">4. Databehandling og personvern</a></li>
+          <li><a href="#immaterielle-rettigheter" class="hover:text-primary transition-colors">5. Immaterielle rettigheter</a></li>
+          <li><a href="#ansvarsbegrensning" class="hover:text-primary transition-colors">6. Ansvarsbegrensning</a></li>
+          <li><a href="#tjenestetilgjengelighet" class="hover:text-primary transition-colors">7. Tjenestetilgjengelighet</a></li>
+          <li><a href="#oppsigelse" class="hover:text-primary transition-colors">8. Oppsigelse og avslutning</a></li>
+          <li><a href="#endringer" class="hover:text-primary transition-colors">9. Endringer i vilkår</a></li>
+          <li><a href="#lovvalg" class="hover:text-primary transition-colors">10. Lovvalg og jurisdiksjon</a></li>
+          <li><a href="#kontakt" class="hover:text-primary transition-colors">11. Kontaktinformasjon</a></li>
+        </ol>
+      </nav>
+
+      <!-- Terms Content -->
+      <article class="prose prose-lg max-w-none">
+        <Content />
+      </article>
+
+      <!-- Back to Registration -->
+      <div class="mt-12 text-center">
+        <a
+          href="/registrer"
+          class="inline-block bg-primary hover:bg-primary-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+        >
+          Tilbake til registrering
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Typography styles for legal content */
+  .prose {
+    color: #374151;
+  }
+
+  .prose h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111827;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .prose p {
+    margin-bottom: 1rem;
+    line-height: 1.75;
+  }
+
+  .prose ul,
+  .prose ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .prose li {
+    margin-bottom: 0.5rem;
+  }
+
+  .prose strong {
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .prose a {
+    color: #2196f3;
+    text-decoration: underline;
+  }
+
+  .prose a:hover {
+    color: #1e88e5;
+  }
+
+  /* Print styles */
+  @media print {
+    .prose {
+      font-size: 12pt;
+      line-height: 1.5;
+    }
+
+    .prose h2 {
+      page-break-after: avoid;
+      font-size: 18pt;
+    }
+
+    .prose h3 {
+      page-break-after: avoid;
+      font-size: 14pt;
+    }
+
+    header,
+    footer,
+    nav,
+    .no-print {
+      display: none;
+    }
+  }
+</style>

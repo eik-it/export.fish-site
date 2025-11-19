@@ -1,0 +1,423 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FormField from '../components/forms/FormField.astro';
+import OrgNumberField from '../components/forms/OrgNumberField.astro';
+import CheckboxField from '../components/forms/CheckboxField.astro';
+
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+---
+
+<Layout
+  title="Registrer din turistfiskebedrift - export.fish"
+  description="Kom i gang med digital fangstrapportering. Spar tid ved å la turistene registrere fangst selv på engelsk eller tysk. Godkjent av Fiskeridirektoratet."
+>
+  <!-- Hero Section -->
+  <section class="pt-40 pb-16 bg-gradient-to-br from-blue-50 to-blue-100">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Registrer din turistfiskebedrift
+      </h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
+        Fyll ut skjemaet under for å komme i gang med export.fish. Vi setter opp alt du trenger for digital fangstrapportering.
+      </p>
+
+      <!-- Benefits List -->
+      <div class="bg-white rounded-xl shadow-md p-6 max-w-3xl mx-auto mt-8">
+        <h2 class="text-lg font-semibold text-gray-900 mb-4">Dette får du:</h2>
+        <ul class="grid md:grid-cols-2 gap-4 text-left text-gray-700">
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path>
+            </svg>
+            <span>Eget subdomene (f.eks. dittfirma.export.fish)</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path>
+            </svg>
+            <span>Administrasjonsportal for din bedrift</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path>
+            </svg>
+            <span>Automatisk rapportering til Fiskeridirektoratet</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path>
+            </svg>
+            <span>Support på norsk</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Form Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-2xl">
+      <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
+        <form id="registration-form" class="space-y-6">
+          <!-- Organization Number -->
+          <OrgNumberField required />
+
+          <!-- Company Name -->
+          <FormField
+            label="Bedriftsnavn"
+            name="companyName"
+            type="text"
+            required
+            placeholder="f.eks. Nordlys Turistfiske AS"
+            helpText="Fylles automatisk ut når du oppgir organisasjonsnummer"
+            autocomplete="organization"
+          />
+
+          <!-- Contact Name -->
+          <FormField
+            label="Kontaktperson"
+            name="contactName"
+            type="text"
+            required
+            placeholder="f.eks. Ola Nordmann"
+            autocomplete="name"
+            helpText="Fullt navn på hovedkontakt for bedriften"
+          />
+
+          <!-- Email -->
+          <FormField
+            label="E-postadresse"
+            name="email"
+            type="email"
+            required
+            placeholder="f.eks. post@bedrift.no"
+            autocomplete="email"
+            inputMode="email"
+            helpText="Vi sender innloggingsinformasjon og viktige oppdateringer til denne adressen"
+          />
+
+          <!-- Phone -->
+          <FormField
+            label="Telefonnummer"
+            name="phone"
+            type="tel"
+            required
+            placeholder="f.eks. 12345678"
+            autocomplete="tel"
+            inputMode="tel"
+            maxlength={8}
+            helpText="8-sifret norsk telefonnummer"
+          />
+
+          <!-- Terms of Service -->
+          <CheckboxField
+            label="Jeg godtar"
+            name="acceptedTerms"
+            required
+            linkText="vilkårene for bruk"
+            linkHref="/vilkar"
+          />
+
+          <!-- Turnstile (if configured) -->
+          {
+            turnstileSiteKey && (
+              <div id="turnstile-container" class="flex justify-center">
+                <div
+                  class="cf-turnstile"
+                  data-sitekey={turnstileSiteKey}
+                  data-theme="light"
+                  data-size="normal"
+                />
+              </div>
+            )
+          }
+
+          <!-- Error/Success Messages -->
+          <div
+            id="form-error"
+            class="hidden p-4 bg-red-50 border border-red-200 rounded-lg"
+            role="alert"
+            aria-live="polite"
+          >
+            <div class="flex items-start gap-3">
+              <svg
+                class="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <div>
+                <h3 class="font-semibold text-red-900">Registrering feilet</h3>
+                <p id="form-error-message" class="text-sm text-red-800 mt-1">
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="form-success"
+            class="hidden p-4 bg-green-50 border border-green-200 rounded-lg"
+            role="status"
+            aria-live="polite"
+          >
+            <div class="flex items-start gap-3">
+              <svg
+                class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <div>
+                <h3 class="font-semibold text-green-900">
+                  Registrering vellykket!
+                </h3>
+                <p id="form-success-message" class="text-sm text-green-800 mt-1">
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            id="submit-button"
+            class="w-full bg-primary hover:bg-primary-hover text-white font-semibold py-3 px-6 rounded-lg transition-colors focus:ring-4 focus:ring-primary/20 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Fullfør registrering
+          </button>
+
+          <p class="text-sm text-gray-500 text-center">
+            Ved registrering får du tilgang til ditt eget export.fish-subdomene og administrasjonsportal.
+          </p>
+        </form>
+      </div>
+
+      <!-- Help Section -->
+      <div class="mt-8 text-center">
+        <p class="text-gray-600">
+          Trenger du hjelp?
+          <a
+            href="mailto:kontakt@eksportfiske.no"
+            class="text-primary hover:text-primary-hover underline"
+          >
+            Kontakt oss
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<!-- Load Turnstile script if configured -->
+{
+  turnstileSiteKey && (
+    <script
+      is:inline
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+      async
+      defer
+    />
+  )
+}
+
+<script>
+  import { z } from 'zod';
+
+  // Import validation schema (inlined for client-side use)
+  const registrationSchema = z.object({
+    organizationNumber: z
+      .string()
+      .regex(/^\d{9}$/, 'Organisasjonsnummer må være nøyaktig 9 siffer')
+      .transform((val) => val.replace(/\s/g, '')),
+    companyName: z
+      .string()
+      .min(2, 'Bedriftsnavn er påkrevd')
+      .max(200, 'Bedriftsnavnet er for langt'),
+    contactName: z
+      .string()
+      .min(2, 'Kontaktperson må være minst 2 tegn')
+      .max(100, 'Navnet er for langt'),
+    email: z
+      .string()
+      .email('Vennligst oppgi en gyldig e-postadresse')
+      .max(100, 'E-postadressen er for lang'),
+    phone: z
+      .string()
+      .regex(
+        /^(\+47|0047)?[2-9]\d{7}$/,
+        'Vennligst oppgi et gyldig norsk telefonnummer (8 siffer)'
+      )
+      .transform((val) => val.replace(/^(\+47|0047)/, '')),
+    acceptedTerms: z
+      .boolean()
+      .refine((val) => val === true, 'Du må godta vilkårene for bruk'),
+    turnstileToken: z.string().optional(),
+  });
+
+  const form = document.getElementById('registration-form') as HTMLFormElement;
+  const submitButton = document.getElementById(
+    'submit-button'
+  ) as HTMLButtonElement;
+  const formError = document.getElementById('form-error');
+  const formErrorMessage = document.getElementById('form-error-message');
+  const formSuccess = document.getElementById('form-success');
+  const formSuccessMessage = document.getElementById('form-success-message');
+
+  // Clear field error on input
+  form?.querySelectorAll('input').forEach((input) => {
+    input.addEventListener('input', () => {
+      clearFieldError(input.name);
+    });
+  });
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Hide previous messages
+    formError?.classList.add('hidden');
+    formSuccess?.classList.add('hidden');
+
+    // Clear all field errors
+    form.querySelectorAll('input').forEach((input) => {
+      clearFieldError(input.name);
+    });
+
+    // Get form data
+    const formData = new FormData(form);
+    const data: Record<string, any> = {
+      organizationNumber: formData.get('organizationNumber'),
+      companyName: formData.get('companyName'),
+      contactName: formData.get('contactName'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      acceptedTerms: formData.get('acceptedTerms') === 'on',
+    };
+
+    // Get Turnstile token if configured
+    if ((window as any).turnstile) {
+      const turnstileResponse = (window as any).turnstile.getResponse();
+      if (turnstileResponse) {
+        data.turnstileToken = turnstileResponse;
+      }
+    }
+
+    // Validate data
+    const validated = registrationSchema.safeParse(data);
+    if (!validated.success) {
+      // Show validation errors
+      validated.error.errors.forEach((error) => {
+        const fieldName = error.path.join('.');
+        showFieldError(fieldName, error.message);
+      });
+
+      if (formError && formErrorMessage) {
+        formErrorMessage.textContent =
+          'Vennligst rett feilene over og prøv igjen.';
+        formError.classList.remove('hidden');
+      }
+
+      return;
+    }
+
+    // Submit form directly to export.fish backend
+    try {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Registrerer...';
+
+      const response = await fetch(
+        'https://api.export.fish/v1/business-owners/register',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(validated.data),
+        }
+      );
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Registrering feilet');
+      }
+
+      // Show success message
+      if (formSuccess && formSuccessMessage) {
+        formSuccessMessage.textContent =
+          result.message ||
+          'Din registrering er mottatt! Vi kontakter deg snart med tilgangsinformasjon.';
+        formSuccess.classList.remove('hidden');
+      }
+
+      // Reset form
+      form.reset();
+
+      // Reset Turnstile if configured
+      if ((window as any).turnstile) {
+        (window as any).turnstile.reset();
+      }
+
+      // Scroll to success message
+      formSuccess?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } catch (error) {
+      console.error('Registration error:', error);
+      if (formError && formErrorMessage) {
+        formErrorMessage.textContent =
+          error instanceof Error
+            ? error.message
+            : 'En uventet feil oppstod. Vennligst prøv igjen.';
+        formError.classList.remove('hidden');
+      }
+
+      // Reset Turnstile if configured
+      if ((window as any).turnstile) {
+        (window as any).turnstile.reset();
+      }
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Fullfør registrering';
+    }
+  });
+
+  function showFieldError(fieldName: string, message: string) {
+    const input = form?.querySelector(
+      `[name="${fieldName}"]`
+    ) as HTMLInputElement;
+    const errorEl = document.getElementById(`field-${fieldName}-error`);
+
+    if (input) {
+      input.classList.add('error');
+      input.setAttribute('aria-invalid', 'true');
+    }
+
+    if (errorEl) {
+      errorEl.textContent = message;
+      errorEl.classList.remove('hidden');
+    }
+  }
+
+  function clearFieldError(fieldName: string) {
+    const input = form?.querySelector(
+      `[name="${fieldName}"]`
+    ) as HTMLInputElement;
+    const errorEl = document.getElementById(`field-${fieldName}-error`);
+
+    if (input) {
+      input.classList.remove('error');
+      input.setAttribute('aria-invalid', 'false');
+    }
+
+    if (errorEl) {
+      errorEl.textContent = '';
+      errorEl.classList.add('hidden');
+    }
+  }
+</script>

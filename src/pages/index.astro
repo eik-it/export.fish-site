@@ -64,18 +64,18 @@ import logo from '../assets/logo.png';
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-full w-full">
         <a
-          class="bg-blue-700 hover:bg-blue-600 text-white font-semibold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-lg border-2 border-white/30 transition-colors text-center"
-          href="#hvordan-det-virker"
+          class="relative overflow-hidden bg-white text-blue-900 hover:bg-blue-50 font-semibold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all transform hover:scale-105 shadow-xl text-center"
+          href="/registrer"
         >
-          Se hvordan det virker
+          <span class="relative z-10">Bestill nå</span>
         </a>
         <a
-          class="relative overflow-hidden bg-white text-blue-900 hover:bg-blue-50 font-semibold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all transform hover:scale-105 shadow-xl text-center"
+          class="bg-blue-700 hover:bg-blue-600 text-white font-semibold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-lg border-2 border-white/30 transition-colors text-center"
           href="https://test.export.fish"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <span class="relative z-10">Test gratis nå - ingen registrering</span>
+          Test gratis - ingen registrering
         </a>
       </div>
     </div>
@@ -138,6 +138,16 @@ import logo from '../assets/logo.png';
             </p>
           </div>
         </article>
+      </div>
+
+      <!-- CTA after features -->
+      <div class="text-center mt-12">
+        <a
+          href="/registrer"
+          class="inline-block bg-primary hover:bg-primary-hover text-white font-semibold text-lg px-8 py-4 rounded-lg transition-colors shadow-lg transform hover:scale-105"
+        >
+          Kom i gang med export.fish
+        </a>
       </div>
     </div>
   </section>
@@ -241,6 +251,19 @@ import logo from '../assets/logo.png';
           <div class="text-4xl font-bold text-primary mb-2">0 kr</div>
           <div class="text-gray-600">For å teste appen - ingen binding</div>
         </div>
+      </div>
+
+      <!-- CTA after stats/pricing -->
+      <div class="text-center mt-12">
+        <a
+          href="/registrer"
+          class="inline-block bg-primary hover:bg-primary-hover text-white font-semibold text-lg px-8 py-4 rounded-lg transition-colors shadow-lg"
+        >
+          Registrer din bedrift nå
+        </a>
+        <p class="text-sm text-gray-500 mt-3">
+          Kom i gang på få minutter
+        </p>
       </div>
     </div>
   </section>
@@ -691,6 +714,22 @@ import logo from '../assets/logo.png';
           </div>
         </details>
       </div>
+
+      <!-- CTA after FAQ -->
+      <div class="text-center mt-12 pt-8 border-t border-gray-200">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">
+          Klar til å komme i gang?
+        </h3>
+        <p class="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+          Spar timer hver uke og la turistene registrere fangst selv
+        </p>
+        <a
+          href="/registrer"
+          class="inline-block bg-primary hover:bg-primary-hover text-white font-semibold text-lg px-8 py-4 rounded-lg transition-colors shadow-lg transform hover:scale-105"
+        >
+          Bestill nå
+        </a>
+      </div>
     </div>
   </section>
 
@@ -703,12 +742,18 @@ import logo from '../assets/logo.png';
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
+          href="/registrer"
+          class="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition transform hover:scale-105 shadow-xl"
+        >
+          Bestill nå
+        </a>
+        <a
           href="https://test.export.fish"
           target="_blank"
           rel="noopener noreferrer"
           class="bg-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-hover transition"
         >
-          Prøv appen nå
+          Prøv appen gratis
         </a>
         <a
           href="mailto:kontakt@eksportfiske.no"
