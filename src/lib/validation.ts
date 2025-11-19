@@ -6,35 +6,35 @@ import { z } from 'zod';
 export const registrationSchema = z.object({
   organizationNumber: z
     .string()
-    .regex(/^\d{9}$/, 'Organization number must be exactly 9 digits')
+    .regex(/^\d{9}$/, 'Organisasjonsnummer må være nøyaktig 9 siffer')
     .transform((val) => val.replace(/\s/g, '')), // Remove any spaces
 
   companyName: z
     .string()
-    .min(2, 'Company name is required')
-    .max(200, 'Company name is too long'),
+    .min(2, 'Bedriftsnavn er påkrevd')
+    .max(200, 'Bedriftsnavn er for langt'),
 
   contactName: z
     .string()
-    .min(2, 'Contact name must be at least 2 characters')
-    .max(100, 'Contact name is too long'),
+    .min(2, 'Kontaktperson må være minst 2 tegn')
+    .max(100, 'Kontaktperson er for langt'),
 
   email: z
     .string()
-    .email('Please enter a valid email address')
-    .max(100, 'Email is too long'),
+    .email('Vennligst oppgi en gyldig e-postadresse')
+    .max(100, 'E-postadresse er for lang'),
 
   phone: z
     .string()
     .regex(
       /^(\+47|0047)?[2-9]\d{7}$/,
-      'Please enter a valid Norwegian phone number (8 digits)'
+      'Vennligst oppgi et gyldig norsk telefonnummer (8 siffer)'
     )
     .transform((val) => val.replace(/^(\+47|0047)/, '')), // Normalize to 8 digits
 
   acceptedTerms: z
     .boolean()
-    .refine((val) => val === true, 'You must accept the terms of service'),
+    .refine((val) => val === true, 'Du må godta vilkårene for bruk'),
 
   turnstileToken: z.string().optional(),
 });
@@ -46,5 +46,5 @@ export type RegistrationData = z.infer<typeof registrationSchema>;
  */
 export const orgNumberSchema = z
   .string()
-  .regex(/^\d{9}$/, 'Organization number must be exactly 9 digits')
+  .regex(/^\d{9}$/, 'Organisasjonsnummer må være nøyaktig 9 siffer')
   .transform((val) => val.replace(/\s/g, ''));
