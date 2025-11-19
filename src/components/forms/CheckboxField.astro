@@ -1,0 +1,68 @@
+---
+/**
+ * Checkbox field component with label and error display
+ */
+interface Props {
+  label: string;
+  name: string;
+  required?: boolean;
+  linkText?: string;
+  linkHref?: string;
+}
+
+const { label, name, required = false, linkText, linkHref } = Astro.props;
+
+const id = `field-${name}`;
+---
+
+<div class="form-field">
+  <div class="flex items-start">
+    <div class="flex items-center h-5">
+      <input
+        type="checkbox"
+        id={id}
+        name={name}
+        required={required}
+        class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+        aria-describedby={`${id}-label`}
+        aria-invalid="false"
+      />
+    </div>
+    <div class="ml-3 text-sm">
+      <label id={`${id}-label`} for={id} class="text-gray-700">
+        {label}
+        {required && <span class="text-red-500 ml-1">*</span>}
+        {
+          linkText && linkHref && (
+            <a
+              href={linkHref}
+              class="text-primary hover:text-primary-hover underline ml-1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {linkText}
+            </a>
+          )
+        }
+      </label>
+    </div>
+  </div>
+
+  <p
+    id={`${id}-error`}
+    class="text-sm text-red-600 mt-1 ml-7 hidden"
+    role="alert"
+    aria-live="polite"
+  >
+  </p>
+</div>
+
+<style>
+  .form-field input.error {
+    border-color: #ef4444;
+  }
+
+  .form-field input:focus.error {
+    ring-color: #ef4444;
+  }
+</style>

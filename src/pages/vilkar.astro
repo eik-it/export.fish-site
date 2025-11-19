@@ -1,0 +1,224 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+// Get the ToS content using Astro content collections
+const tosEntry = await getEntry('legal', 'vilkar');
+const { Content } = await tosEntry.render();
+---
+
+<Layout
+  title="Vilkår for bruk - export.fish"
+  description="Vilkår for bruk av export.fish tjenesten for fangstrapportering. Les om dine rettigheter og plikter som turistfiskebedrift."
+>
+  <!-- Hero Section -->
+  <section class="pt-32 md:pt-40 pb-12 md:pb-16 bg-gradient-to-br from-primary-light via-blue-50 to-white">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="text-center mb-8">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+          Vilkår for bruk
+        </h1>
+        <p class="text-base md:text-lg text-gray-600">
+          Sist oppdatert: {new Date().toLocaleDateString('no-NO', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Terms Content Section -->
+  <section class="py-8 md:py-12 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="grid lg:grid-cols-[280px_1fr] gap-8 lg:gap-12">
+        <!-- Sticky Table of Contents -->
+        <aside class="lg:sticky lg:top-28 lg:self-start">
+          <nav class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 md:p-6" aria-label="Innholdsfortegnelse">
+            <h2 class="text-lg font-bold text-gray-900 mb-4 pb-3 border-b border-gray-200">Innhold</h2>
+            <ol class="space-y-2.5 text-sm">
+              <li><a href="#tjenestebeskrivelse" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">1. Tjenestebeskrivelse</a></li>
+              <li><a href="#aksept-av-vilkar" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">2. Aksept av vilkår</a></li>
+              <li><a href="#brukerens-ansvar" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">3. Brukerens ansvar</a></li>
+              <li><a href="#databehandling" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">4. Databehandling</a></li>
+              <li><a href="#immaterielle-rettigheter" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">5. Immaterielle rettigheter</a></li>
+              <li><a href="#ansvarsbegrensning" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">6. Ansvarsbegrensning</a></li>
+              <li><a href="#tjenestetilgjengelighet" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">7. Tjenestetilgjengelighet</a></li>
+              <li><a href="#oppsigelse" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">8. Oppsigelse</a></li>
+              <li><a href="#priser" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">9. Priser og betaling</a></li>
+              <li><a href="#endringer" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">10. Endringer i vilkår</a></li>
+              <li><a href="#lovvalg" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">11. Lovvalg</a></li>
+              <li><a href="#kontakt" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">12. Kontaktinformasjon</a></li>
+            </ol>
+          </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div>
+          <!-- Terms Content -->
+          <article class="legal-content bg-white rounded-xl shadow-sm border border-gray-200 p-6 md:p-10 lg:p-12">
+            <Content />
+          </article>
+
+          <!-- Back to Registration -->
+          <div class="mt-8 text-center">
+            <a
+              href="/registrer"
+              class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow-md hover:shadow-lg"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              Tilbake til registrering
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Typography styles for legal content */
+  .legal-content {
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  /* Hide the duplicate H1 from markdown content */
+  .legal-content > :global(h1:first-child) {
+    display: none;
+  }
+
+  /* Main section headings (H2) */
+  .legal-content :global(h2) {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111827;
+    margin-top: 3rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #e5e7eb;
+    scroll-margin-top: 120px;
+  }
+
+  .legal-content :global(h2:first-of-type) {
+    margin-top: 0;
+  }
+
+  /* Subsection headings (H3) */
+  .legal-content :global(h3) {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    scroll-margin-top: 120px;
+  }
+
+  /* Paragraphs */
+  .legal-content :global(p) {
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+    color: #4b5563;
+  }
+
+  .legal-content :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  /* Lists */
+  .legal-content :global(ul),
+  .legal-content :global(ol) {
+    margin-bottom: 1.5rem;
+    padding-left: 1.75rem;
+    color: #4b5563;
+  }
+
+  .legal-content :global(li) {
+    margin-bottom: 0.625rem;
+    line-height: 1.75;
+  }
+
+  .legal-content :global(li::marker) {
+    color: #2196f3;
+    font-weight: 600;
+  }
+
+  /* Strong/Bold text */
+  .legal-content :global(strong) {
+    font-weight: 600;
+    color: #111827;
+  }
+
+  /* Links */
+  .legal-content :global(a) {
+    color: #2196f3;
+    text-decoration: underline;
+    text-decoration-color: #99d3ef;
+    text-underline-offset: 3px;
+    transition: all 0.2s ease;
+  }
+
+  .legal-content :global(a:hover) {
+    color: #1e88e5;
+    text-decoration-color: #2196f3;
+  }
+
+  /* Horizontal rules */
+  .legal-content :global(hr) {
+    margin: 2.5rem 0;
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  /* Smooth scroll offset for anchor links */
+  .legal-content :global([id]) {
+    scroll-margin-top: 120px;
+  }
+
+  /* Print styles */
+  @media print {
+    body {
+      background: white !important;
+    }
+
+    .legal-content {
+      font-size: 11pt;
+      line-height: 1.6;
+      box-shadow: none !important;
+      border: none !important;
+      padding: 0 !important;
+    }
+
+    .legal-content :global(h2) {
+      page-break-after: avoid;
+      font-size: 16pt;
+      margin-top: 24pt;
+      border-bottom: 1pt solid #000;
+    }
+
+    .legal-content :global(h3) {
+      page-break-after: avoid;
+      font-size: 13pt;
+      margin-top: 16pt;
+    }
+
+    .legal-content :global(p),
+    .legal-content :global(li) {
+      orphans: 3;
+      widows: 3;
+    }
+
+    header,
+    footer,
+    nav,
+    aside,
+    .no-print {
+      display: none !important;
+    }
+
+    section {
+      background: white !important;
+      padding: 0 !important;
+    }
+  }
+</style>
