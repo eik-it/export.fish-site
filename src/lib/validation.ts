@@ -43,6 +43,17 @@ export const registrationSchema = z.object({
       .transform((val) => val.replace(/^(\+47|0047)/, '')), // Normalize to 8 digits
   }),
 
+  subdomain: z
+    .string()
+    .min(3, 'Subdomene må være minst 3 tegn')
+    .max(63, 'Subdomene kan ikke være lengre enn 63 tegn')
+    .regex(
+      /^[a-z0-9][a-z0-9-]*[a-z0-9]$/,
+      'Subdomene kan kun inneholde små bokstaver, tall og bindestreker, og må starte og slutte med en bokstav eller tall'
+    )
+    .optional()
+    .or(z.literal('')),
+
   acceptedTerms: z
     .boolean()
     .refine((val) => val === true, 'Du må godta vilkårene for bruk'),

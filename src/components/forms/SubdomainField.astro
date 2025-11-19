@@ -1,0 +1,117 @@
+---
+/**
+ * Subdomain field with smart placeholder generation from company name
+ */
+interface Props {
+  required?: boolean;
+}
+
+const { required = false } = Astro.props;
+
+const id = 'field-subdomain';
+---
+
+<div class="form-field">
+  <label for={id} class="block text-sm font-medium text-gray-700 mb-1">
+    Ønsket subdomene
+    {required && <span class="text-red-500 ml-1">*</span>}
+  </label>
+
+  <div class="relative">
+    <input
+      type="text"
+      id={id}
+      name="subdomain"
+      required={required}
+      placeholder="bedriftsnavn.export.fish"
+      class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors font-mono text-sm"
+      aria-describedby={`${id}-help`}
+      aria-invalid="false"
+      pattern="[a-z0-9][a-z0-9-]*[a-z0-9]"
+      minlength="3"
+      maxlength="63"
+    />
+  </div>
+
+  <p id={`${id}-help`} class="text-sm text-gray-500 mt-1">
+    Dette blir din bedrifts URL for fangstrapportering. Oppdateres automatisk basert på bedriftsnavn.
+  </p>
+
+  <p
+    id={`${id}-error`}
+    class="text-sm text-red-600 mt-1 hidden"
+    role="alert"
+    aria-live="polite"
+  >
+  </p>
+</div>
+
+<style>
+  .form-field input.error {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+  }
+
+  .form-field input:focus.error {
+    ring-color: #ef4444;
+  }
+</style>
+
+<script>
+  /**
+   * Convert company name to URL-friendly subdomain format
+   * Example: "Nordland Fiske AS" → "nordland-fiske-as"
+   */
+  function generateSubdomain(companyName: string): string {
+    return companyName
+      .toLowerCase()
+      .trim()
+      // Replace Norwegian characters
+      .replace(/æ/g, 'ae')
+      .replace(/ø/g, 'o')
+      .replace(/å/g, 'aa')
+      // Replace spaces and special chars with hyphens
+      .replace(/[^a-z0-9]+/g, '-')
+      // Remove leading/trailing hyphens
+      .replace(/^-+|-+$/g, '')
+      // Collapse multiple hyphens
+      .replace(/-+/g, '-');
+  }
+
+  // Auto-update subdomain placeholder when company name changes
+  const companyNameInput = document.querySelector(
+    '[name="companyName"]'
+  ) as HTMLInputElement;
+  const subdomainInput = document.querySelector(
+    '[name="subdomain"]'
+  ) as HTMLInputElement;
+
+  if (companyNameInput && subdomainInput) {
+    // Track if user has manually edited the subdomain
+    let userEdited = false;
+
+    subdomainInput.addEventListener('input', () => {
+      if (subdomainInput.value.trim()) {
+        userEdited = true;
+      }
+    });
+
+    companyNameInput.addEventListener('input', () => {
+      // Only auto-update if user hasn't manually edited
+      if (!userEdited && companyNameInput.value.trim()) {
+        const subdomain = generateSubdomain(companyNameInput.value);
+        subdomainInput.placeholder = subdomain
+          ? `${subdomain}.export.fish`
+          : 'bedriftsnavn.export.fish';
+      }
+    });
+
+    // Reset userEdited flag when company name is cleared
+    companyNameInput.addEventListener('change', () => {
+      if (!companyNameInput.value.trim()) {
+        userEdited = false;
+        subdomainInput.placeholder = 'bedriftsnavn.export.fish';
+      }
+    });
+  }
+</script>

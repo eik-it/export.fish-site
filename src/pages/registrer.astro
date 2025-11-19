@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import FormField from '../components/forms/FormField.astro';
 import OrgNumberField from '../components/forms/OrgNumberField.astro';
+import SubdomainField from '../components/forms/SubdomainField.astro';
 import CheckboxField from '../components/forms/CheckboxField.astro';
 
 const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
@@ -72,6 +73,9 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
             helpText="Fylles automatisk ut når du oppgir organisasjonsnummer"
             autocomplete="organization"
           />
+
+          <!-- Subdomain -->
+          <SubdomainField />
 
           <!-- Reporting Contact Section -->
           <div class="mt-8 pt-6 border-t border-gray-200">
@@ -319,6 +323,16 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       .string()
       .min(2, 'Bedriftsnavn er påkrevd')
       .max(200, 'Bedriftsnavnet er for langt'),
+    subdomain: z
+      .string()
+      .min(3, 'Subdomene må være minst 3 tegn')
+      .max(63, 'Subdomene kan ikke være lengre enn 63 tegn')
+      .regex(
+        /^[a-z0-9][a-z0-9-]*[a-z0-9]$/,
+        'Subdomene kan kun inneholde små bokstaver, tall og bindestreker, og må starte og slutte med en bokstav eller tall'
+      )
+      .optional()
+      .or(z.literal('')),
     reportingContact: z.object({
       name: z
         .string()
@@ -385,6 +399,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
     const data: Record<string, any> = {
       organizationNumber: formData.get('organizationNumber'),
       companyName: formData.get('companyName'),
+      subdomain: formData.get('subdomain') || '',
       reportingContact: {
         name: formData.get('reportingContact.name'),
         email: formData.get('reportingContact.email'),

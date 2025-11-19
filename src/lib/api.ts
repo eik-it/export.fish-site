@@ -61,6 +61,7 @@ export async function lookupCompany(
 export interface RegistrationPayload {
   organizationNumber: string;
   companyName: string;
+  subdomain?: string;
   reportingContact: {
     name: string;
     email: string;
