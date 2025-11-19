@@ -73,41 +73,79 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
             autocomplete="organization"
           />
 
-          <!-- Contact Name -->
-          <FormField
-            label="Kontaktperson"
-            name="contactName"
-            type="text"
-            required
-            placeholder="f.eks. Ola Nordmann"
-            autocomplete="name"
-            helpText="Fullt navn på hovedkontakt for bedriften"
-          />
+          <!-- Reporting Contact Section -->
+          <div class="mt-8 pt-6 border-t border-gray-200">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+              Rapporteringsansvarlig
+            </h3>
+            <p class="text-sm text-gray-600 mb-4">
+              Person med juridisk ansvar for fangstrapportering
+            </p>
 
-          <!-- Email -->
-          <FormField
-            label="E-postadresse"
-            name="email"
-            type="email"
-            required
-            placeholder="f.eks. post@bedrift.no"
-            autocomplete="email"
-            inputMode="email"
-            helpText="Vi sender innloggingsinformasjon og viktige oppdateringer til denne adressen"
-          />
+            <div class="space-y-4">
+              <FormField
+                label="Navn"
+                name="reportingContact.name"
+                type="text"
+                required
+                placeholder="f.eks. Ola Nordmann"
+                autocomplete="name"
+              />
 
-          <!-- Phone -->
-          <FormField
-            label="Telefonnummer"
-            name="phone"
-            type="tel"
-            required
-            placeholder="f.eks. 12345678"
-            autocomplete="tel"
-            inputMode="tel"
-            maxlength={8}
-            helpText="8-sifret norsk telefonnummer"
-          />
+              <FormField
+                label="E-postadresse"
+                name="reportingContact.email"
+                type="email"
+                required
+                placeholder="f.eks. ola@bedrift.no"
+                autocomplete="email"
+                inputMode="email"
+              />
+            </div>
+          </div>
+
+          <!-- Business Contact Section -->
+          <div class="mt-8 pt-6 border-t border-gray-200">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+              Driftskontakt
+            </h3>
+            <p class="text-sm text-gray-600 mb-4">
+              Person som håndterer daglig drift og fakturering
+            </p>
+
+            <div class="space-y-4">
+              <FormField
+                label="Navn"
+                name="businessContact.name"
+                type="text"
+                required
+                placeholder="f.eks. Kari Nordmann"
+                autocomplete="name"
+              />
+
+              <FormField
+                label="E-postadresse"
+                name="businessContact.email"
+                type="email"
+                required
+                placeholder="f.eks. kari@bedrift.no"
+                autocomplete="email"
+                inputMode="email"
+              />
+
+              <FormField
+                label="Telefonnummer"
+                name="businessContact.phone"
+                type="tel"
+                required
+                placeholder="f.eks. 12345678"
+                autocomplete="tel"
+                inputMode="tel"
+                maxlength={8}
+                helpText="8-sifret norsk telefonnummer"
+              />
+            </div>
+          </div>
 
           <!-- Terms of Service -->
           <CheckboxField
@@ -241,21 +279,33 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       .string()
       .min(2, 'Bedriftsnavn er påkrevd')
       .max(200, 'Bedriftsnavnet er for langt'),
-    contactName: z
-      .string()
-      .min(2, 'Kontaktperson må være minst 2 tegn')
-      .max(100, 'Navnet er for langt'),
-    email: z
-      .string()
-      .email('Vennligst oppgi en gyldig e-postadresse')
-      .max(100, 'E-postadressen er for lang'),
-    phone: z
-      .string()
-      .regex(
-        /^(\+47|0047)?[2-9]\d{7}$/,
-        'Vennligst oppgi et gyldig norsk telefonnummer (8 siffer)'
-      )
-      .transform((val) => val.replace(/^(\+47|0047)/, '')),
+    reportingContact: z.object({
+      name: z
+        .string()
+        .min(2, 'Navn må være minst 2 tegn')
+        .max(100, 'Navnet er for langt'),
+      email: z
+        .string()
+        .email('Vennligst oppgi en gyldig e-postadresse')
+        .max(100, 'E-postadressen er for lang'),
+    }),
+    businessContact: z.object({
+      name: z
+        .string()
+        .min(2, 'Navn må være minst 2 tegn')
+        .max(100, 'Navnet er for langt'),
+      email: z
+        .string()
+        .email('Vennligst oppgi en gyldig e-postadresse')
+        .max(100, 'E-postadressen er for lang'),
+      phone: z
+        .string()
+        .regex(
+          /^(\+47|0047)?[2-9]\d{7}$/,
+          'Vennligst oppgi et gyldig norsk telefonnummer (8 siffer)'
+        )
+        .transform((val) => val.replace(/^(\+47|0047)/, '')),
+    }),
     acceptedTerms: z
       .boolean()
       .refine((val) => val === true, 'Du må godta vilkårene for bruk'),
@@ -295,9 +345,15 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
     const data: Record<string, any> = {
       organizationNumber: formData.get('organizationNumber'),
       companyName: formData.get('companyName'),
-      contactName: formData.get('contactName'),
-      email: formData.get('email'),
-      phone: formData.get('phone'),
+      reportingContact: {
+        name: formData.get('reportingContact.name'),
+        email: formData.get('reportingContact.email'),
+      },
+      businessContact: {
+        name: formData.get('businessContact.name'),
+        email: formData.get('businessContact.email'),
+        phone: formData.get('businessContact.phone'),
+      },
       acceptedTerms: formData.get('acceptedTerms') === 'on',
     };
 

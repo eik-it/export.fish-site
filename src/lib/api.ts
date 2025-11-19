@@ -61,9 +61,15 @@ export async function lookupCompany(
 export interface RegistrationPayload {
   organizationNumber: string;
   companyName: string;
-  contactName: string;
-  email: string;
-  phone: string;
+  reportingContact: {
+    name: string;
+    email: string;
+  };
+  businessContact: {
+    name: string;
+    email: string;
+    phone: string;
+  };
   acceptedTerms: boolean;
   turnstileToken?: string;
 }
