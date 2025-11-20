@@ -27,7 +27,7 @@ import logo from '../assets/logo.png';
   <!-- Hero Section -->
   <section class="relative pt-40 pb-32 md:pb-40 text-white overflow-hidden" aria-labelledby="hero-heading">
     <!-- Background Image -->
-    <div class="absolute inset-0" aria-hidden="true">
+    <div class="absolute inset-0 opacity-0 transition-opacity duration-1000 ease-out hero-bg-loaded" aria-hidden="true">
       <Image src={heroBg} alt="" class="w-full h-full object-cover" widths={[640, 1024, 1280, 1920]} sizes="100vw" />
       <div class="absolute inset-0 bg-gradient-to-br from-blue-400/75 via-blue-500/80 to-blue-600/85"></div>
     </div>
@@ -782,4 +782,19 @@ import logo from '../assets/logo.png';
     </div>
   </footer>
 </Layout>
+
+<script>
+  // Fade in hero background on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    const heroBg = document.querySelector('.hero-bg-loaded');
+    if (heroBg) {
+      // Small delay to ensure smooth transition
+      setTimeout(() => {
+        heroBg.classList.remove('opacity-0');
+        heroBg.classList.add('opacity-100');
+      }, 100);
+    }
+  });
+</script>
+
 <!-- Trigger visual regression -->
