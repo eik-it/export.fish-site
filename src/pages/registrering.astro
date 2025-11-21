@@ -7,76 +7,8 @@ import Layout from '../layouts/Layout.astro';
   description="Sjekk om du må registrere deg som turistfiskebedrift. Veileder for registrering hos Fiskeridirektoratet og krav til fangstrapportering."
 >
 
-  <!-- Definisjon av turistfiskebedrift -->
-  <section class="pt-32 pb-12 px-4 bg-white">
-    <div class="container mx-auto max-w-4xl">
-      <div class="text-center mb-8">
-        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Hva er en turistfiskebedrift?</h1>
-      </div>
-
-      <div class="bg-gradient-to-br from-blue-50 to-slate-50 rounded-2xl p-8 border border-blue-200 mb-6">
-        <p class="text-lg text-gray-700 leading-relaxed mb-6">
-          En <strong>turistfiskebedrift</strong> er definert i forskriften som en virksomhet som:
-        </p>
-        <ul class="space-y-4 mb-6">
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <span class="text-gray-700">Tilbyr overnatting og fiskemuligheter fra fartøy (båt) mot betaling</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <span class="text-gray-700">Har en årlig omsetning på over 50 000 kr fra denne virksomheten</span>
-          </li>
-        </ul>
-        <p class="text-gray-600 text-sm">
-          <strong>Kilde:</strong> <a href="https://lovdata.no/dokument/SF/forskrift/2017-12-20-2445" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">Forskrift om turistfiskevirksomheter</a>
-        </p>
-      </div>
-
-      <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 border border-orange-200">
-        <h2 class="text-xl font-bold text-gray-900 mb-4">Registreringskrav</h2>
-        <p class="text-lg text-gray-700 leading-relaxed mb-4">
-          Turistfiskebedrifter <strong>må registrere seg</strong> hos Fiskeridirektoratet og oppfylle følgende krav:
-        </p>
-        <ul class="space-y-4 mb-6">
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-orange-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <span class="text-gray-700">Ha gyldig organisasjonsnummer</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-orange-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <span class="text-gray-700">Være registrert i MVA-registeret</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-orange-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <span class="text-gray-700">Føre daglig digital fangstrapportering til Fiskeridirektoratet</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-orange-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <span class="text-gray-700">Utstede utførselsdokument til gjester som skal eksportere fisk</span>
-          </li>
-        </ul>
-        <p class="text-gray-600 text-sm">
-          <strong>Kilde:</strong> <a href="https://lovdata.no/dokument/SF/forskrift/2017-12-20-2445" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">Forskrift om turistfiskevirksomheter (§ 4, § 5)</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
   <!-- Registration Requirements Quiz Section -->
-  <section id="skal-jeg-registrere" class="py-16 px-4 bg-gradient-to-br from-blue-50 to-slate-50">
+  <section id="skal-jeg-registrere" class="pt-32 pb-16 px-4 bg-gradient-to-br from-blue-50 to-slate-50">
     <div class="container mx-auto max-w-5xl">
       <div id="quiz-card" class="bg-white rounded-2xl shadow-xl overflow-hidden border border-blue-200">
         <!-- Dynamic Header -->
@@ -88,7 +20,7 @@ import Layout from '../layouts/Layout.astro';
               </svg>
             </div>
             <div>
-              <h2 id="quiz-header-title" class="text-3xl font-bold text-white">Gjelder registreringskravet deg?</h2>
+              <h2 id="quiz-header-title" class="text-3xl font-bold text-white">Har du en turistfiskebedrift uten å vite det?</h2>
               <p id="quiz-header-subtitle" class="text-blue-100 text-lg mt-1">Sjekk om du må registrere turistfiskebedrift</p>
             </div>
           </div>
@@ -218,7 +150,7 @@ import Layout from '../layouts/Layout.astro';
           quizHeaderIcon.innerHTML = `<svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>`;
-          quizHeaderTitle.textContent = 'Gjelder registreringskravet deg?';
+          quizHeaderTitle.textContent = 'Har du en turistfiskebedrift uten å vite det?';
           quizHeaderSubtitle.textContent = 'Sjekk om du må registrere turistfiskebedrift';
           quizHeaderSubtitle.className = 'text-blue-100 text-lg mt-1';
         }
