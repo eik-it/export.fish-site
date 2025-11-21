@@ -184,6 +184,9 @@ import logo from '../assets/logo.png';
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const checkboxes = document.querySelectorAll('.quiz-checkbox');
+      const cb1 = checkboxes[0]; // Fartøy for utleie
+      const cb2 = checkboxes[1]; // Over 50 000 kr
+      const cb3 = checkboxes[2]; // Turister tar med fisk over grensen
       const resultJa = document.getElementById('quiz-result-ja');
       const resultNei = document.getElementById('quiz-result-nei');
       const hint = document.getElementById('quiz-hint');
@@ -193,12 +196,25 @@ import logo from '../assets/logo.png';
       function updateResult() {
         const anyChecked = Array.from(checkboxes).some(cb => cb.checked);
 
-        if (anyChecked) {
-          hint?.classList.add('hidden');
+        if (!anyChecked) {
+          hint?.classList.remove('hidden');
+          resultJa?.classList.add('hidden');
+          resultNei?.classList.add('hidden');
+          return;
+        }
+
+        hint?.classList.add('hidden');
+
+        // Logic:
+        // - If cb3 (fish export) is checked -> must register
+        // - If both cb1 AND cb2 are checked -> must register
+        // - Otherwise (only cb1 OR only cb2) -> not required
+        const mustRegister = cb3?.checked || (cb1?.checked && cb2?.checked);
+
+        if (mustRegister) {
           resultJa?.classList.remove('hidden');
           resultNei?.classList.add('hidden');
         } else {
-          hint?.classList.add('hidden');
           resultNei?.classList.remove('hidden');
           resultJa?.classList.add('hidden');
         }
