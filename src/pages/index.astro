@@ -97,34 +97,134 @@ import logo from '../assets/logo.png';
     </div>
   </section>
 
-  <!-- Registration Requirements Section -->
+  <!-- Registration Requirements Section - Interactive Quiz -->
   <section id="skal-jeg-registrere" class="py-16 px-4 bg-white">
     <div class="container mx-auto max-w-4xl">
       <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">Gjelder registreringskravet deg?</h2>
       <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 md:p-12 shadow-lg">
-        <p class="text-lg text-gray-700 leading-relaxed mb-6">
-          Tjener du over 50 000 kr årlig på utleie av opphold med båt? Markedsfører du fiskemuligheter aktivt? Og er du mva-registrert? Hvis svaret er ja på alle disse, da må du sannsynligvis registrere deg som turistfiskebedrift hos Fiskeridirektoratet.
-        </p>
-        <div class="bg-white rounded-xl p-6 border border-blue-200">
-          <p class="text-gray-700 font-medium mb-3">Som registrert turistfiskebedrift kan du tilby gjestene dine:</p>
-          <ul class="text-gray-700 space-y-2">
-            <li class="flex items-start gap-2">
-              <span class="text-green-600 mt-1">✓</span>
-              <span>Mulighet til å ta med fisk hjem over grensen (ihht. gjeldende eksportkvote)</span>
+
+        <!-- Quiz Questions -->
+        <div id="quiz-questions">
+          <ul class="text-lg text-gray-700 space-y-3 mb-6">
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 mt-1">&#8226;</span>
+              <span>Disponerer du fartøy for utleie eller tar turister med ut på fiske?</span>
             </li>
-            <li class="flex items-start gap-2">
-              <span class="text-green-600 mt-1">✓</span>
-              <span>Godkjent eksportdokumentasjon som tollvesenet aksepterer</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-green-600 mt-1">✓</span>
-              <span>En profesjonell opplevelse som gir bedre anmeldelser og flere bookinger</span>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 mt-1">&#8226;</span>
+              <span>Tjener du over 50 000 kr i året?</span>
             </li>
           </ul>
+
+          <p class="text-lg text-gray-700 mb-3">Eller har du:</p>
+          <ul class="text-lg text-gray-700 space-y-3 mb-8">
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 mt-1">&#8226;</span>
+              <span>Turister som ønsker å ta med fisk hjem (over grensen) etter endt opphold?</span>
+            </li>
+          </ul>
+
+          <!-- Quiz Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              id="quiz-ja-btn"
+              class="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-bold text-lg rounded-xl shadow-lg transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-300"
+            >
+              Ja
+            </button>
+            <button
+              id="quiz-nei-btn"
+              class="px-8 py-4 bg-gray-500 hover:bg-gray-600 text-white font-bold text-lg rounded-xl shadow-lg transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-gray-300"
+            >
+              Nei
+            </button>
+          </div>
         </div>
+
+        <!-- Result: Ja (hidden by default) -->
+        <div id="quiz-result-ja" class="hidden">
+          <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border-2 border-green-300">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-green-800 mb-3">Du må registrere deg</h3>
+                <p class="text-gray-700 leading-relaxed">
+                  Du må registrere deg som turistfiskebedrift hos Fiskeridirektoratet. Du må ha organisasjonsnummer og være mva-registrert. Du må implementere daglig digital fangstrapportering. Med dette på plass kan du tilby gjester lovlig fiskeksport, og bedriften følger lovverket.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button id="quiz-reset-ja" class="mt-6 text-blue-600 hover:text-blue-800 font-medium underline">
+            Ta testen på nytt
+          </button>
+        </div>
+
+        <!-- Result: Nei (hidden by default) -->
+        <div id="quiz-result-nei" class="hidden">
+          <div class="bg-gradient-to-br from-blue-50 to-slate-100 rounded-xl p-6 border-2 border-blue-300">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-blue-800 mb-3">Ikke nødvendig med registrering</h3>
+                <p class="text-gray-700 leading-relaxed">
+                  Ikke nødvendig med registrering som turistfiskebedrift. Du kan drive som privat utleie uten organisasjonsnummer (hvis ingen annen næringsvirksomhet). Men du må informere gjester om at de IKKE kan eksportere fisk.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button id="quiz-reset-nei" class="mt-6 text-blue-600 hover:text-blue-800 font-medium underline">
+            Ta testen på nytt
+          </button>
+        </div>
+
       </div>
     </div>
   </section>
+
+  <!-- Quiz Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const questions = document.getElementById('quiz-questions');
+      const resultJa = document.getElementById('quiz-result-ja');
+      const resultNei = document.getElementById('quiz-result-nei');
+      const jaBtn = document.getElementById('quiz-ja-btn');
+      const neiBtn = document.getElementById('quiz-nei-btn');
+      const resetJaBtn = document.getElementById('quiz-reset-ja');
+      const resetNeiBtn = document.getElementById('quiz-reset-nei');
+
+      function showResult(result) {
+        questions.classList.add('hidden');
+        if (result === 'ja') {
+          resultJa.classList.remove('hidden');
+        } else {
+          resultNei.classList.remove('hidden');
+        }
+      }
+
+      function resetQuiz() {
+        questions.classList.remove('hidden');
+        resultJa.classList.add('hidden');
+        resultNei.classList.add('hidden');
+      }
+
+      jaBtn?.addEventListener('click', () => showResult('ja'));
+      neiBtn?.addEventListener('click', () => showResult('nei'));
+      resetJaBtn?.addEventListener('click', resetQuiz);
+      resetNeiBtn?.addEventListener('click', resetQuiz);
+    });
+  </script>
 
   <!-- Fish Export Requirements Section -->
   <section class="py-16 px-4 bg-gradient-to-br from-blue-50 to-slate-50">
