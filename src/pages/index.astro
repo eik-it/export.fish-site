@@ -100,17 +100,18 @@ import logo from '../assets/logo.png';
   <!-- Registration Requirements Quiz Section -->
   <section id="skal-jeg-registrere" class="py-16 px-4 bg-gradient-to-br from-blue-50 to-slate-50">
     <div class="container mx-auto max-w-5xl">
-      <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-blue-200">
-        <div class="bg-gradient-to-r from-blue-600 to-blue-700 px-8 py-6">
+      <div id="quiz-card" class="bg-white rounded-2xl shadow-xl overflow-hidden border border-blue-200">
+        <!-- Dynamic Header -->
+        <div id="quiz-header" class="bg-gradient-to-r from-blue-600 to-blue-700 px-8 py-6 transition-all duration-300">
           <div class="flex items-center gap-4">
-            <div class="flex-shrink-0">
+            <div id="quiz-header-icon" class="flex-shrink-0">
               <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
             </div>
             <div>
-              <h2 class="text-3xl font-bold text-white">Gjelder registreringskravet deg?</h2>
-              <p class="text-blue-100 text-lg mt-1">Sjekk om du må registrere turistfiskebedrift</p>
+              <h2 id="quiz-header-title" class="text-3xl font-bold text-white">Gjelder registreringskravet deg?</h2>
+              <p id="quiz-header-subtitle" class="text-blue-100 text-lg mt-1">Sjekk om du må registrere turistfiskebedrift</p>
             </div>
           </div>
         </div>
@@ -147,74 +148,41 @@ import logo from '../assets/logo.png';
 
           <!-- Result: Ja (hidden by default) -->
           <div id="quiz-result-ja" class="hidden">
-            <div class="bg-gradient-to-br from-orange-50 to-amber-100 rounded-xl p-6 border-2 border-orange-300 mb-6">
-              <div class="flex items-start gap-4">
-                <div class="flex-shrink-0">
-                  <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
-                    </svg>
-                  </div>
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold text-orange-800 mb-3">Du må registrere deg</h3>
-                  <p class="text-gray-700 leading-relaxed">
-                    Du må registrere deg som turistfiskebedrift hos Fiskeridirektoratet. Du må ha organisasjonsnummer og være mva-registrert. Du må implementere daglig digital fangstrapportering. Med dette på plass kan du tilby gjester lovlig fiskeksport, og bedriften følger lovverket.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">
+              Du må registrere deg som turistfiskebedrift hos Fiskeridirektoratet. Du må ha organisasjonsnummer og være mva-registrert. Du må implementere daglig digital fangstrapportering. Med dette på plass kan du tilby gjester lovlig fiskeksport, og bedriften følger lovverket.
+            </p>
 
-            <!-- Krav til fangstrapportering info (shown after must-register result) -->
-            <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
-              <p class="text-gray-800 text-lg leading-relaxed">
-                Har du bookinger hvor gjestene ønsker å ta med fisk hjem over grensen, må du være registrert turistfiskebedrift. Det er lovpålagt at du fører digital fangstrapportering på vegne av dine leietakere. Uten dette kan turistene ilegges bøter på 8 000 kr pluss 200 kr per kg fisk, samt konfiskering av fangsten.
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">
+              Har du bookinger hvor gjestene ønsker å ta med fisk hjem over grensen, må du være registrert turistfiskebedrift. Det er lovpålagt at du fører digital fangstrapportering på vegne av dine leietakere. Uten dette kan turistene ilegges bøter på 8 000 kr pluss 200 kr per kg fisk, samt konfiskering av fangsten.
+            </p>
+
+            <div class="bg-slate-50 border-l-4 border-orange-400 rounded-lg p-6 mb-6">
+              <p class="text-gray-900 font-semibold mb-1">Godt å vite:</p>
+              <p class="text-gray-700">
+                Alle som leier ut til turistfiske må rapportere, også fritidsboligeiere som kun leier ut noen få uker i året.
+                Regelverket er tydelig: Utleie mot betaling kombinert med fiske gir rapporteringsplikt – dette gjelder også norske gjester, ikke bare utenlandske.
               </p>
             </div>
 
-            <div class="bg-slate-50 border-l-4 border-blue-500 rounded-lg p-6 mb-6">
-              <div class="flex items-start gap-4">
-                <div class="flex-shrink-0">
-                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <p class="text-gray-900 font-semibold mb-1">Godt å vite:</p>
-                  <p class="text-gray-700">
-                    Alle som leier ut til turistfiske må rapportere, også fritidsboligeiere som kun leier ut noen få uker i året.
-                    Regelverket er tydelig: Utleie mot betaling kombinert med fiske gir rapporteringsplikt – dette gjelder også norske gjester, ikke bare utenlandske.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <button id="quiz-reset-ja" class="cursor-pointer text-blue-600 hover:text-blue-800 font-medium underline">
+            <button id="quiz-reset-ja" class="cursor-pointer text-orange-600 hover:text-orange-800 font-medium underline">
               Ta testen på nytt
             </button>
           </div>
 
           <!-- Result: Nei (hidden by default) -->
           <div id="quiz-result-nei" class="hidden">
-            <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border-2 border-green-300 mb-6">
-              <div class="flex items-start gap-4">
-                <div class="flex-shrink-0">
-                  <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                  </div>
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold text-green-800 mb-3">Ikke nødvendig med registrering</h3>
-                  <p class="text-gray-700 leading-relaxed">
-                    Ikke nødvendig med registrering som turistfiskebedrift. Du kan drive som privat utleie uten organisasjonsnummer (hvis ingen annen næringsvirksomhet). Men du må informere gjester om at de IKKE kan eksportere fisk.
-                  </p>
-                </div>
-              </div>
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">
+              Du trenger ikke registrere deg som turistfiskebedrift. Du kan drive som privat utleie uten organisasjonsnummer (hvis ingen annen næringsvirksomhet).
+            </p>
+
+            <div class="bg-slate-50 border-l-4 border-green-500 rounded-lg p-6 mb-6">
+              <p class="text-gray-900 font-semibold mb-1">Viktig:</p>
+              <p class="text-gray-700">
+                Du må informere gjester om at de IKKE kan eksportere fisk over grensen uten gyldig dokumentasjon fra en registrert turistfiskebedrift.
+              </p>
             </div>
 
-            <button id="quiz-reset-nei" class="cursor-pointer text-blue-600 hover:text-blue-800 font-medium underline">
+            <button id="quiz-reset-nei" class="cursor-pointer text-green-600 hover:text-green-800 font-medium underline">
               Ta testen på nytt
             </button>
           </div>
@@ -237,11 +205,48 @@ import logo from '../assets/logo.png';
       const resetJaBtn = document.getElementById('quiz-reset-ja');
       const resetNeiBtn = document.getElementById('quiz-reset-nei');
 
+      // Header elements
+      const quizCard = document.getElementById('quiz-card');
+      const quizHeader = document.getElementById('quiz-header');
+      const quizHeaderIcon = document.getElementById('quiz-header-icon');
+      const quizHeaderTitle = document.getElementById('quiz-header-title');
+      const quizHeaderSubtitle = document.getElementById('quiz-header-subtitle');
+
+      function updateHeader(state) {
+        if (state === 'ja') {
+          // Orange/warning state
+          quizHeader.className = 'bg-gradient-to-r from-orange-500 to-amber-500 px-8 py-6 transition-all duration-300';
+          quizCard.className = 'bg-white rounded-2xl shadow-xl overflow-hidden border border-orange-300';
+          quizHeaderIcon.innerHTML = `<svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+          </svg>`;
+          quizHeaderTitle.textContent = 'Du må registrere deg';
+          quizHeaderSubtitle.textContent = 'Registrering som turistfiskebedrift er påkrevd';
+          quizHeaderSubtitle.className = 'text-orange-100 text-lg mt-1';
+        } else if (state === 'nei') {
+          // Green/success state
+          quizHeader.className = 'bg-gradient-to-r from-green-500 to-emerald-500 px-8 py-6 transition-all duration-300';
+          quizCard.className = 'bg-white rounded-2xl shadow-xl overflow-hidden border border-green-300';
+          quizHeaderIcon.innerHTML = `<svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>`;
+          quizHeaderTitle.textContent = 'Ikke nødvendig med registrering';
+          quizHeaderSubtitle.textContent = 'Du trenger ikke registrere turistfiskebedrift';
+          quizHeaderSubtitle.className = 'text-green-100 text-lg mt-1';
+        } else {
+          // Default blue state
+          quizHeader.className = 'bg-gradient-to-r from-blue-600 to-blue-700 px-8 py-6 transition-all duration-300';
+          quizCard.className = 'bg-white rounded-2xl shadow-xl overflow-hidden border border-blue-200';
+          quizHeaderIcon.innerHTML = `<svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>`;
+          quizHeaderTitle.textContent = 'Gjelder registreringskravet deg?';
+          quizHeaderSubtitle.textContent = 'Sjekk om du må registrere turistfiskebedrift';
+          quizHeaderSubtitle.className = 'text-blue-100 text-lg mt-1';
+        }
+      }
+
       function showResult() {
-        // Logic:
-        // - If cb3 (fish export) is checked -> must register
-        // - If both cb1 AND cb2 are checked -> must register
-        // - Otherwise (no checkbox or only cb1 OR only cb2) -> not required
         const mustRegister = cb3?.checked || (cb1?.checked && cb2?.checked);
 
         questions?.classList.add('hidden');
@@ -249,9 +254,11 @@ import logo from '../assets/logo.png';
         if (mustRegister) {
           resultJa?.classList.remove('hidden');
           resultNei?.classList.add('hidden');
+          updateHeader('ja');
         } else {
           resultNei?.classList.remove('hidden');
           resultJa?.classList.add('hidden');
+          updateHeader('nei');
         }
       }
 
@@ -260,6 +267,7 @@ import logo from '../assets/logo.png';
         questions?.classList.remove('hidden');
         resultJa?.classList.add('hidden');
         resultNei?.classList.add('hidden');
+        updateHeader('default');
       }
 
       submitBtn?.addEventListener('click', showResult);
