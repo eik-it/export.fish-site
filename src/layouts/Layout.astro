@@ -70,14 +70,16 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
           "price": "0",
           "priceCurrency": "NOK"
         },
-        "description": "Fangstrapportering for turistfiskebedrifter. Godkjent av Fiskeridirektoratet.",
+        "description": "Lovpålagt fangstrapportering for turistfiskebedrifter og fritidsboligeiere som leier ut hytte med båt. Godkjent av Fiskeridirektoratet. Hjelper tyskere og andre turister med å eksportere fisk fra Norge lovlig.",
         "url": "https://eksportfiske.no",
         "inLanguage": "no",
         "featureList": [
-          "Automatisk rapportering til Fiskeridirektoratet",
-          "Flerspråklig støtte (norsk, engelsk, tysk)",
-          "PWA - fungerer på alle enheter",
-          "Ingen installasjon nødvendig"
+          "Automatisk daglig rapportering til Fiskeridirektoratet",
+          "Lovpålagt fangstrapportering for utleie av hytte med båt",
+          "Flerspråklig støtte (norsk, engelsk, tysk) - perfekt for tyske turister",
+          "Eksportdokumentasjon for turister som skal ta med fisk hjem",
+          "PWA - fungerer på alle enheter uten installasjon",
+          "Unngå bøter på opptil 50 000 kr"
         ]
       }
     </script>
@@ -142,6 +144,22 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
               "@type": "Answer",
               "text": "Appen krever internettilkobling for å synkronisere data og sende rapporter til Fiskeridirektoratet. Men turistene kan registrere fangst når de har mobildekning - de trenger ikke være på wifi. De fleste registrerer fangsten når de kommer tilbake til brygga eller hytta."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Kan tyskere og andre turister eksportere fisk fra Norge?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, turister kan eksportere fisk fra Norge dersom de har bodd hos en registrert turistfiskebedrift og fangsten er korrekt rapportert. Export.fish genererer automatisk den nødvendige eksportdokumentasjonen som turistene trenger for å ta med fisken hjem. Uten gyldig dokumentasjon risikerer turistene bøter på 8 000 kr + 200 kr per kg, samt konfiskering av fangsten."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Må jeg registrere meg som turistfiskebedrift hvis jeg leier ut fritidsbolig med båt?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, hvis du leier ut hytte eller fritidsbolig med båt til gjester som fisker og tar med seg fisk hjem, må du sannsynligvis registrere deg som turistfiskebedrift hos Fiskeridirektoratet. Dette gjelder uansett om det er direkte eller indirekte utleie. Lovpålagt fangstrapportering er obligatorisk, og manglende rapportering kan gi bøter på opptil 50 000 kr."
+            }
           }
         ]
       }
@@ -191,7 +209,7 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
           <a href="/#kontakt" class="text-gray-600 hover:text-primary transition">Kontakt</a>
         </div>
         <a href="https://test.export.fish" target="_blank" rel="noopener noreferrer" class="hidden md:inline-block bg-primary hover:bg-primary-hover text-white px-6 py-2 rounded-lg transition-colors font-semibold">
-          Test gratis
+          Prøv appen!
         </a>
       </nav>
     </header>
