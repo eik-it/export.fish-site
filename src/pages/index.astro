@@ -110,7 +110,7 @@ import logo from '../assets/logo.png';
           <ul class="text-gray-700 space-y-2">
             <li class="flex items-start gap-2">
               <span class="text-green-600 mt-1">✓</span>
-              <span>Mulighet til å ta med fisk hjem over grensen (inntil 18 kg)</span>
+              <span>Mulighet til å ta med fisk hjem over grensen (ihht. gjeldende eksportkvote)</span>
             </li>
             <li class="flex items-start gap-2">
               <span class="text-green-600 mt-1">✓</span>
@@ -135,7 +135,7 @@ import logo from '../assets/logo.png';
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
           </svg>
         </div>
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Slik beskytter Eksportfiske.no din virksomhet</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Slik hjelper appen vår din virksomhet</h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
           Alt du trenger for å oppfylle de nye 2025-kravene – automatisk og uten ekstra arbeid
         </p>
@@ -176,92 +176,8 @@ import logo from '../assets/logo.png';
               <p class="text-gray-600">Det nye regelverket krever rapportering før du kan utstede dokumenter</p>
             </div>
           </li>
-          <li class="flex items-start gap-4">
-            <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-              <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-            </div>
-            <div>
-              <p class="font-semibold text-gray-900 text-lg">Historikk og dokumentasjon hvis Fiskeridirektoratet krever innsyn</p>
-              <p class="text-gray-600">Alt lagres trygt og kan enkelt hentes frem ved kontroll</p>
-            </div>
-          </li>
-          <li class="flex items-start gap-4">
-            <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-              <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-            </div>
-            <div>
-              <p class="font-semibold text-gray-900 text-lg">Automatiske varslinger om nullfangst-rapportering</p>
-              <p class="text-gray-600">Du glemmer aldri å rapportere – også på dager uten fangst</p>
-            </div>
-          </li>
         </ul>
 
-        <div class="mt-8 pt-6 border-t border-gray-200 text-center">
-          <a href="/registrer" class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition transform hover:scale-105 shadow-lg">
-            <span>Kom i gang nå</span>
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-            </svg>
-          </a>
-                  </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section id="fordeler" class="py-20 bg-gray-50 px-4">
-    <div class="container mx-auto max-w-6xl">
-      <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">Hvorfor velge vår appløsning?</h2>
-      <p class="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">
-        Enkel løsning for turistfiskebedrifter som oppfyller alle lovkrav
-      </p>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Feature 1 -->
-        <article class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-          <div class="h-48 relative overflow-hidden">
-            <Image src={feature3} alt="Turistfiskebåt ved norsk fjord - fangstrapportering eksportfiske.no" class="w-full h-full object-cover" width={800} height={600} />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20"></div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-3 text-gray-900">Spar flere timer hver uke</h3>
-            <p class="text-gray-600 leading-relaxed">
-              Turistene registrerer fangsten selv - på engelsk eller tysk. Du slipper å oversette, taste inn data og håndtere papirskjemaer.
-            </p>
-          </div>
-        </article>
-
-        <!-- Feature 2 -->
-        <article class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-          <div class="h-48 relative overflow-hidden">
-            <Image src={feature1} alt="Turistfiske opplevelse med digital fangstrapportering" class="w-full h-full object-cover" width={800} height={600} />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20"></div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-3 text-gray-900">Aldri mer bekymring for kontroll</h3>
-            <p class="text-gray-600 leading-relaxed">
-              Godkjent rapporteringssystem som automatisk sender all nødvendig informasjon til Fiskeridirektoratet. Alltid i orden ved inspeksjon.
-            </p>
-          </div>
-        </article>
-
-        <!-- Feature 3 -->
-        <article class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-          <div class="h-48 relative overflow-hidden">
-            <Image src={feature2} alt="Fornøyde fisketurister bruker export.fish rapporteringsapp" class="w-full h-full object-cover" width={800} height={600} />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20"></div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-3 text-gray-900">Fornøyde turister</h3>
-            <p class="text-gray-600 leading-relaxed">
-              Turistene får appen på sitt eget språk (engelsk, tysk). De setter pris på det profesjonelle inntrykket - og du slipper språkforvirring.
-            </p>
-          </div>
-        </article>
       </div>
     </div>
   </section>
@@ -508,6 +424,60 @@ import logo from '../assets/logo.png';
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="fordeler" class="py-20 bg-gray-50 px-4">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">Hvorfor velge vår appløsning?</h2>
+      <p class="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+        Enkel løsning for turistfiskebedrifter som oppfyller alle lovkrav
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <article class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+          <div class="h-48 relative overflow-hidden">
+            <Image src={feature3} alt="Turistfiskebåt ved norsk fjord - fangstrapportering eksportfiske.no" class="w-full h-full object-cover" width={800} height={600} />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3 text-gray-900">Spar flere timer hver uke</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Du slipper å forholde deg til fangstregistrering annet enn å opplyse turistene om registreringsplikt.
+            </p>
+          </div>
+        </article>
+
+        <!-- Feature 2 -->
+        <article class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+          <div class="h-48 relative overflow-hidden">
+            <Image src={feature1} alt="Turistfiske opplevelse med digital fangstrapportering" class="w-full h-full object-cover" width={800} height={600} />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3 text-gray-900">Aldri mer bekymring for kontroll</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Godkjent rapporteringssystem som automatisk sender all nødvendig informasjon til Fiskeridirektoratet. Alltid i orden.
+            </p>
+          </div>
+        </article>
+
+        <!-- Feature 3 -->
+        <article class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+          <div class="h-48 relative overflow-hidden">
+            <Image src={feature2} alt="Fornøyde fisketurister bruker export.fish rapporteringsapp" class="w-full h-full object-cover" width={800} height={600} />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3 text-gray-900">Fornøyde turister</h3>
+            <p class="text-gray-600 leading-relaxed">
+              De setter pris på det profesjonelle uttrykket og at de får alt av eksportdokumentasjon i orden for utførelse av fisk.
+            </p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
