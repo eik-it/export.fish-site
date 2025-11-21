@@ -125,7 +125,12 @@ import logo from '../assets/logo.png';
             </label>
           </div>
 
-          <p id="quiz-hint" class="text-center text-gray-500 italic">Kryss av for å se om du må registrere deg</p>
+          <div class="text-center mt-6">
+            <button id="quiz-submit-btn" class="hidden cursor-pointer px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg rounded-xl shadow-lg transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300">
+              Se resultat
+            </button>
+            <p id="quiz-hint" class="text-gray-500 italic">Kryss av for å se om du må registrere deg</p>
+          </div>
         </div>
 
         <!-- Result: Ja (hidden by default) -->
@@ -187,29 +192,34 @@ import logo from '../assets/logo.png';
       const cb1 = checkboxes[0]; // Fartøy for utleie
       const cb2 = checkboxes[1]; // Over 50 000 kr
       const cb3 = checkboxes[2]; // Turister tar med fisk over grensen
+      const questions = document.getElementById('quiz-questions');
       const resultJa = document.getElementById('quiz-result-ja');
       const resultNei = document.getElementById('quiz-result-nei');
       const hint = document.getElementById('quiz-hint');
+      const submitBtn = document.getElementById('quiz-submit-btn');
       const resetJaBtn = document.getElementById('quiz-reset-ja');
       const resetNeiBtn = document.getElementById('quiz-reset-nei');
 
-      function updateResult() {
+      function updateButtonVisibility() {
         const anyChecked = Array.from(checkboxes).some(cb => cb.checked);
 
-        if (!anyChecked) {
+        if (anyChecked) {
+          submitBtn?.classList.remove('hidden');
+          hint?.classList.add('hidden');
+        } else {
+          submitBtn?.classList.add('hidden');
           hint?.classList.remove('hidden');
-          resultJa?.classList.add('hidden');
-          resultNei?.classList.add('hidden');
-          return;
         }
+      }
 
-        hint?.classList.add('hidden');
-
+      function showResult() {
         // Logic:
         // - If cb3 (fish export) is checked -> must register
         // - If both cb1 AND cb2 are checked -> must register
         // - Otherwise (only cb1 OR only cb2) -> not required
         const mustRegister = cb3?.checked || (cb1?.checked && cb2?.checked);
+
+        questions?.classList.add('hidden');
 
         if (mustRegister) {
           resultJa?.classList.remove('hidden');
@@ -222,12 +232,15 @@ import logo from '../assets/logo.png';
 
       function resetQuiz() {
         checkboxes.forEach(cb => cb.checked = false);
+        questions?.classList.remove('hidden');
         resultJa?.classList.add('hidden');
         resultNei?.classList.add('hidden');
+        submitBtn?.classList.add('hidden');
         hint?.classList.remove('hidden');
       }
 
-      checkboxes.forEach(cb => cb.addEventListener('change', updateResult));
+      checkboxes.forEach(cb => cb.addEventListener('change', updateButtonVisibility));
+      submitBtn?.addEventListener('click', showResult);
       resetJaBtn?.addEventListener('click', resetQuiz);
       resetNeiBtn?.addEventListener('click', resetQuiz);
     });
