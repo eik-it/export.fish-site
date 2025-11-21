@@ -7,15 +7,35 @@ import Layout from '../layouts/Layout.astro';
   description="Sjekk om du må registrere deg som turistfiskebedrift. Veileder for registrering hos Fiskeridirektoratet og krav til fangstrapportering."
 >
 
-  <!-- Hero Section -->
-  <section class="relative pt-32 pb-16 text-white overflow-hidden bg-gradient-to-br from-blue-600 to-blue-700">
-    <div class="w-full mx-auto text-center max-w-5xl relative z-10 px-4">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-        Registrering som turistfiskebedrift
-      </h1>
-      <p class="text-xl md:text-2xl mb-6 max-w-3xl mx-auto text-blue-50 font-light leading-relaxed">
-        Alt du trenger å vite om krav, registrering og konsekvenser
-      </p>
+  <!-- Definisjon av turistfiskebedrift -->
+  <section class="pt-32 pb-12 px-4 bg-white">
+    <div class="container mx-auto max-w-4xl">
+      <div class="text-center mb-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Hva er en turistfiskebedrift?</h1>
+      </div>
+
+      <div class="bg-gradient-to-br from-blue-50 to-slate-50 rounded-2xl p-8 border border-blue-200">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          En <strong>turistfiskebedrift</strong> er definert i forskriften som en virksomhet som:
+        </p>
+        <ul class="space-y-4 mb-6">
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-gray-700">Tilbyr overnatting og fiskemuligheter fra fartøy (båt) mot betaling</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-gray-700">Har en årlig omsetning på over 50 000 kr fra denne virksomheten</span>
+          </li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          <strong>Kilde:</strong> <a href="https://lovdata.no/dokument/SF/forskrift/2017-12-20-2445" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">Forskrift om turistfiskevirksomheter</a>
+        </p>
+      </div>
     </div>
   </section>
 
