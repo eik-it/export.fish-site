@@ -113,7 +113,7 @@ Tjenesten krever:
 ## 8. Oppsigelse og avslutning
 
 ### 8.1 Kundens oppsigelse
-Du kan avslutte bruken av tjenesten når som helst ved skriftlig varsel til kontakt@eksportfiske.no.
+Du kan avslutte bruken av tjenesten når som helst ved skriftlig varsel via vårt [kontaktskjema](/kontakt).
 
 ### 8.2 Vår oppsigelse
 Vi kan avslutte din tilgang til tjenesten ved:
@@ -191,9 +191,7 @@ Tjenesten er utformet for å oppfylle:
 
 ## 12. Kontaktinformasjon
 
-For spørsmål om disse vilkårene, tjenesten eller databehandling, kontakt oss på:
-
-**E-post:** kontakt@eksportfiske.no
+For spørsmål om disse vilkårene, tjenesten eller databehandling, kontakt oss via vårt [kontaktskjema](/kontakt).
 
 **Organisasjon:** Eksportfiske.no
 **Organisasjonsnummer:** [Vil bli oppdatert ved lansering]
