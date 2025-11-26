@@ -363,7 +363,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
     acceptedTerms: z
       .boolean()
       .refine((val) => val === true, 'Du må godta vilkårene for bruk'),
-    turnstileToken: z.string().optional(),
+    captcha: z.string().optional(),
   });
 
   const form = document.getElementById('registration-form') as HTMLFormElement;
@@ -416,7 +416,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
     if ((window as any).turnstile) {
       const turnstileResponse = (window as any).turnstile.getResponse();
       if (turnstileResponse) {
-        data.turnstileToken = turnstileResponse;
+        data.captcha = turnstileResponse;
       }
     }
 

@@ -58,7 +58,7 @@ export const registrationSchema = z.object({
     .boolean()
     .refine((val) => val === true, 'Du må godta vilkårene for bruk'),
 
-  turnstileToken: z.string().optional(),
+  captcha: z.string().optional(),
 });
 
 export type RegistrationData = z.infer<typeof registrationSchema>;

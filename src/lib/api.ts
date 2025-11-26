@@ -72,7 +72,7 @@ export interface RegistrationPayload {
     phone: string;
   };
   acceptedTerms: boolean;
-  turnstileToken?: string;
+  captcha?: string;
 }
 
 /**
