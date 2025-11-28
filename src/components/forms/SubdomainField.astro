@@ -27,9 +27,7 @@ const id = 'field-subdomain';
       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors font-mono text-sm"
       aria-describedby={`${id}-help`}
       aria-invalid="false"
-      pattern="[a-z0-9][a-z0-9-]*[a-z0-9]"
-      minlength="3"
-      maxlength="63"
+      pattern="[a-z0-9][a-z0-9-]*[a-z0-9]\.export\.fish"
     />
   </div>
 
@@ -100,7 +98,7 @@ const id = 'field-subdomain';
       // Only auto-update if user hasn't manually edited
       if (!userEdited && companyNameInput.value.trim()) {
         const subdomain = generateSubdomain(companyNameInput.value);
-        subdomainInput.value = subdomain;
+        subdomainInput.value = subdomain + '.export.fish';
       }
     });
 
