@@ -100,9 +100,7 @@ const id = 'field-subdomain';
       // Only auto-update if user hasn't manually edited
       if (!userEdited && companyNameInput.value.trim()) {
         const subdomain = generateSubdomain(companyNameInput.value);
-        subdomainInput.placeholder = subdomain
-          ? `${subdomain}.export.fish`
-          : 'bedriftsnavn.export.fish';
+        subdomainInput.value = subdomain;
       }
     });
 
@@ -110,7 +108,7 @@ const id = 'field-subdomain';
     companyNameInput.addEventListener('change', () => {
       if (!companyNameInput.value.trim()) {
         userEdited = false;
-        subdomainInput.placeholder = 'bedriftsnavn.export.fish';
+        subdomainInput.value = '';
       }
     });
   }

@@ -75,7 +75,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
           />
 
           <!-- Subdomain -->
-          <SubdomainField />
+          <SubdomainField required />
 
           <!-- Reporting Contact Section -->
           <div class="mt-8 pt-6 border-t border-gray-200">
@@ -324,9 +324,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       .regex(
         /^[a-z0-9][a-z0-9-]*[a-z0-9]$/,
         'Subdomene kan kun inneholde små bokstaver, tall og bindestreker, og må starte og slutte med en bokstav eller tall'
-      )
-      .optional()
-      .or(z.literal('')),
+      ),
     reportingContact: z.object({
       name: z
         .string()
