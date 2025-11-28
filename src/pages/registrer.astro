@@ -105,6 +105,18 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
                 autocomplete="email"
                 inputMode="email"
               />
+
+              <FormField
+                label="Telefonnummer"
+                name="reportingContact.phone"
+                type="tel"
+                required
+                placeholder="f.eks. 12345678"
+                autocomplete="tel"
+                inputMode="tel"
+                maxlength={8}
+                helpText="8-sifret norsk telefonnummer"
+              />
             </div>
           </div>
 
@@ -333,6 +345,13 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
         .string()
         .email('Vennligst oppgi en gyldig e-postadresse')
         .max(100, 'E-postadressen er for lang'),
+      phone: z
+        .string()
+        .regex(
+          /^(\+47|0047)?[2-9]\d{7}$/,
+          'Vennligst oppgi et gyldig norsk telefonnummer (8 siffer)'
+        )
+        .transform((val) => val.replace(/^(\+47|0047)/, '')),
     }),
     businessContact: z.object({
       name: z
@@ -394,6 +413,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       reportingContact: {
         name: formData.get('reportingContact.name'),
         email: formData.get('reportingContact.email'),
+        phone: formData.get('reportingContact.phone'),
       },
       businessContact: {
         name: formData.get('businessContact.name'),
