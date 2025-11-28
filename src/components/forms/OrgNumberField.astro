@@ -85,6 +85,12 @@ const { required = true } = Astro.props;
   const companyNameInput = document.getElementById(
     'field-companyName'
   ) as HTMLInputElement;
+  const addressInput = document.getElementById(
+    'field-address'
+  ) as HTMLInputElement;
+  const municipalityInput = document.getElementById(
+    'field-municipality'
+  ) as HTMLInputElement;
   const spinner = document.getElementById('lookup-spinner');
   const errorEl = document.getElementById('field-organizationNumber-error');
   const successEl = document.getElementById(
@@ -131,9 +137,9 @@ const { required = true } = Astro.props;
 
       if (!response.ok) {
         if (response.status === 404) {
-          throw new Error('Company not found in Brønnøysundregistrene');
+          throw new Error('Fant ikke bedriften i Brønnøysundregistrene');
         }
-        throw new Error('Failed to lookup company');
+        throw new Error('Kunne ikke slå opp bedrift');
       }
 
       const data = await response.json();
@@ -144,21 +150,55 @@ const { required = true } = Astro.props;
         companyNameInput.dispatchEvent(new Event('input', { bubbles: true }));
       }
 
+      // Auto-fill address from forretningsadresse or postadresse
+      const addr = data.forretningsadresse || data.postadresse;
+      if (addr) {
+        // Fill address field (street, postal code, city)
+        if (addressInput) {
+          const addressParts: string[] = [];
+
+          // Add street address lines
+          if (addr.adresse && Array.isArray(addr.adresse)) {
+            addressParts.push(addr.adresse.join(', '));
+          }
+
+          // Add postal code and city
+          if (addr.postnummer && addr.poststed) {
+            addressParts.push(`${addr.postnummer} ${addr.poststed}`);
+          }
+
+          addressInput.value = addressParts.join(', ');
+          addressInput.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+
+        // Fill municipality
+        if (municipalityInput && addr.kommune) {
+          municipalityInput.value = addr.kommune;
+          municipalityInput.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+      }
+
       // Show success message
-      successEl.textContent = `Found: ${data.navn}`;
+      successEl.textContent = `Fant: ${data.navn}`;
       successEl.classList.remove('hidden');
     } catch (error) {
       console.error('Company lookup failed:', error);
       errorEl.textContent =
         error instanceof Error
           ? error.message
-          : 'Could not find company. Please check the organization number.';
+          : 'Kunne ikke finne bedrift. Vennligst sjekk organisasjonsnummeret.';
       errorEl.classList.remove('hidden');
       orgNumberInput?.classList.add('error');
 
-      // Clear company name if lookup failed
+      // Clear company name, address, and municipality if lookup failed
       if (companyNameInput) {
         companyNameInput.value = '';
+      }
+      if (addressInput) {
+        addressInput.value = '';
+      }
+      if (municipalityInput) {
+        municipalityInput.value = '';
       }
     } finally {
       spinner.classList.add('hidden');

@@ -74,6 +74,27 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
             autocomplete="organization"
           />
 
+          <!-- Address -->
+          <FormField
+            label="Adresse"
+            name="address"
+            type="text"
+            required
+            placeholder="f.eks. Havnegata 1, 0150 Oslo"
+            helpText="Fylles automatisk ut fra Brønnøysundregistrene"
+            autocomplete="street-address"
+          />
+
+          <!-- Municipality -->
+          <FormField
+            label="Kommune"
+            name="municipality"
+            type="text"
+            required
+            placeholder="f.eks. Oslo"
+            helpText="Fylles automatisk ut fra Brønnøysundregistrene"
+          />
+
           <!-- Subdomain -->
           <SubdomainField required />
 
@@ -329,6 +350,14 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       .string()
       .min(2, 'Bedriftsnavn er påkrevd')
       .max(200, 'Bedriftsnavnet er for langt'),
+    address: z
+      .string()
+      .min(5, 'Adresse er påkrevd')
+      .max(500, 'Adressen er for lang'),
+    municipality: z
+      .string()
+      .min(2, 'Kommune er påkrevd')
+      .max(100, 'Kommunenavnet er for langt'),
     subdomain: z
       .string()
       .regex(
@@ -386,9 +415,9 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
   const formSuccessMessage = document.getElementById('form-success-message');
 
   // Clear field error on input
-  form?.querySelectorAll('input').forEach((input) => {
+  form?.querySelectorAll('input, textarea').forEach((input) => {
     input.addEventListener('input', () => {
-      clearFieldError(input.name);
+      clearFieldError((input as HTMLInputElement).name);
     });
   });
 
@@ -400,8 +429,8 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
     formSuccess?.classList.add('hidden');
 
     // Clear all field errors
-    form.querySelectorAll('input').forEach((input) => {
-      clearFieldError(input.name);
+    form.querySelectorAll('input, textarea').forEach((input) => {
+      clearFieldError((input as HTMLInputElement).name);
     });
 
     // Get form data
@@ -409,6 +438,8 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
     const data: Record<string, any> = {
       organizationNumber: formData.get('organizationNumber'),
       companyName: formData.get('companyName'),
+      address: formData.get('address'),
+      municipality: formData.get('municipality'),
       subdomain: formData.get('subdomain') || '',
       reportingContact: {
         name: formData.get('reportingContact.name'),
@@ -511,7 +542,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
   function showFieldError(fieldName: string, message: string) {
     const input = form?.querySelector(
       `[name="${fieldName}"]`
-    ) as HTMLInputElement;
+    ) as HTMLInputElement | HTMLTextAreaElement;
     const errorEl = document.getElementById(`field-${fieldName}-error`);
 
     if (input) {
@@ -528,7 +559,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
   function clearFieldError(fieldName: string) {
     const input = form?.querySelector(
       `[name="${fieldName}"]`
-    ) as HTMLInputElement;
+    ) as HTMLInputElement | HTMLTextAreaElement;
     const errorEl = document.getElementById(`field-${fieldName}-error`);
 
     if (input) {

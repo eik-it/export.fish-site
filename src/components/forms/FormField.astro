@@ -5,13 +5,14 @@
 interface Props {
   label: string;
   name: string;
-  type?: 'text' | 'email' | 'tel' | 'number';
+  type?: 'text' | 'email' | 'tel' | 'number' | 'textarea';
   required?: boolean;
   placeholder?: string;
   helpText?: string;
   inputMode?: 'text' | 'email' | 'tel' | 'numeric';
   autocomplete?: string;
   maxlength?: number;
+  rows?: number;
 }
 
 const {
@@ -24,9 +25,12 @@ const {
   inputMode,
   autocomplete,
   maxlength,
+  rows = 3,
 } = Astro.props;
 
 const id = `field-${name}`;
+const isTextarea = type === 'textarea';
+const inputClasses = "w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors";
 ---
 
 <div class="form-field">
@@ -35,19 +39,34 @@ const id = `field-${name}`;
     {required && <span class="text-red-500 ml-1">*</span>}
   </label>
 
-  <input
-    type={type}
-    id={id}
-    name={name}
-    required={required}
-    placeholder={placeholder}
-    inputmode={inputMode}
-    autocomplete={autocomplete}
-    maxlength={maxlength}
-    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-    aria-describedby={helpText ? `${id}-help` : undefined}
-    aria-invalid="false"
-  />
+  {isTextarea ? (
+    <textarea
+      id={id}
+      name={name}
+      required={required}
+      placeholder={placeholder}
+      autocomplete={autocomplete}
+      maxlength={maxlength}
+      rows={rows}
+      class={inputClasses}
+      aria-describedby={helpText ? `${id}-help` : undefined}
+      aria-invalid="false"
+    />
+  ) : (
+    <input
+      type={type}
+      id={id}
+      name={name}
+      required={required}
+      placeholder={placeholder}
+      inputmode={inputMode}
+      autocomplete={autocomplete}
+      maxlength={maxlength}
+      class={inputClasses}
+      aria-describedby={helpText ? `${id}-help` : undefined}
+      aria-invalid="false"
+    />
+  )}
 
   {
     helpText && (
@@ -67,12 +86,14 @@ const id = `field-${name}`;
 </div>
 
 <style>
-  .form-field input.error {
+  .form-field input.error,
+  .form-field textarea.error {
     border-color: #ef4444;
     background-color: #fef2f2;
   }
 
-  .form-field input:focus.error {
+  .form-field input:focus.error,
+  .form-field textarea:focus.error {
     ring-color: #ef4444;
   }
 </style>
