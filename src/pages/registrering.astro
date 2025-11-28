@@ -186,6 +186,164 @@ import Layout from '../layouts/Layout.astro';
     });
   </script>
 
+  <!-- Comparison: Private Rental vs. Tourist Fishing Business -->
+  <section class="py-16 px-4 bg-white">
+    <div class="container mx-auto max-w-5xl">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Privat utleie eller turistfiskebedrift?</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Her ser du forskjellene mellom privat utleie og registrert turistfiskebedrift. Den viktigste forskjellen er gjestenes utførselskvote – uten registrering kan de ikke ta med fisk ut av Norge.
+        </p>
+      </div>
+
+      <!-- Comparison Table -->
+      <div class="overflow-x-auto">
+        <table class="w-full bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+          <thead>
+            <tr class="bg-gradient-to-r from-blue-600 to-blue-700">
+              <th class="px-6 py-4 text-left text-white font-bold text-lg">Hva det betyr</th>
+              <th class="px-6 py-4 text-left text-white font-bold text-lg">
+                <div class="flex items-center gap-2">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                  Privat utleie
+                </div>
+              </th>
+              <th class="px-6 py-4 text-left text-white font-bold text-lg">
+                <div class="flex items-center gap-2">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Registrert turistfiskebedrift
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <!-- Row 1: Export quota -->
+            <tr class="hover:bg-blue-50 transition-colors">
+              <td class="px-6 py-5 font-semibold text-gray-900">Gjestenes utførselskvote</td>
+              <td class="px-6 py-5">
+                <div class="flex items-center gap-3">
+                  <span class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                    <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                    </svg>
+                  </span>
+                  <span class="text-gray-700"><strong class="text-red-700">0 kg</strong></span>
+                </div>
+              </td>
+              <td class="px-6 py-5">
+                <div class="flex items-center gap-3">
+                  <span class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                    <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                  </span>
+                  <span class="text-gray-700"><strong class="text-green-700">18 kg (2025)</strong></span>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Row 2: Tax deductions -->
+            <tr class="hover:bg-blue-50 transition-colors">
+              <td class="px-6 py-5 font-semibold text-gray-900">Fradrag for utgifter</td>
+              <td class="px-6 py-5">
+                <div class="flex items-center gap-3">
+                  <span class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                    <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                    </svg>
+                  </span>
+                  <span class="text-gray-700">Nei</span>
+                </div>
+              </td>
+              <td class="px-6 py-5">
+                <div class="flex items-center gap-3">
+                  <span class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                    <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                  </span>
+                  <span class="text-gray-700"><strong>Ja</strong> (båt, utstyr, vedlikehold)</span>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Row 3: Tax model -->
+            <tr class="hover:bg-blue-50 transition-colors">
+              <td class="px-6 py-5 font-semibold text-gray-900">Skattemodell</td>
+              <td class="px-6 py-5">
+                <div class="flex items-center gap-3">
+                  <span class="flex-shrink-0 w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center">
+                    <svg class="w-5 h-5 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                    </svg>
+                  </span>
+                  <span class="text-gray-700">Sjablong<br/><span class="text-sm text-gray-500">(enklere, men høyere skatt)</span></span>
+                </div>
+              </td>
+              <td class="px-6 py-5">
+                <div class="flex items-center gap-3">
+                  <span class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                    <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                  </span>
+                  <span class="text-gray-700">Næring<br/><span class="text-sm text-gray-500">(fradragsmuligheter)</span></span>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Row 4: Competitiveness -->
+            <tr class="hover:bg-blue-50 transition-colors">
+              <td class="px-6 py-5 font-semibold text-gray-900">Konkurransekraft</td>
+              <td class="px-6 py-5">
+                <div class="flex items-center gap-3">
+                  <span class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                    <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                    </svg>
+                  </span>
+                  <span class="text-gray-700">Begrenset</span>
+                </div>
+              </td>
+              <td class="px-6 py-5">
+                <div class="flex items-center gap-3">
+                  <span class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                    <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                  </span>
+                  <span class="text-gray-700"><strong>Høy</strong><br/><span class="text-sm text-gray-500">(attraktivt for utenlandske gjester)</span></span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Call-out box -->
+      <div class="mt-8 bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500 rounded-lg p-6">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div>
+            <p class="text-gray-900 font-semibold mb-2">Nøkkelen er utførselskvoten</p>
+            <p class="text-gray-700">
+              For de fleste utleiere som har utenlandske gjester, er den største fordelen at gjestene kan ta med fisk hjem.
+              Uten registrering som turistfiskebedrift har gjestene <strong>null utførselskvote</strong> – de kan ikke ta med fisk ut av Norge, noe som gjør deg mindre attraktiv sammenlignet med konkurrentene.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Konsekvenser av å ikke registrere som turistfiskebedrift -->
   <section class="py-16 px-4 bg-white">
     <div class="container mx-auto max-w-5xl">
