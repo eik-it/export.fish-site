@@ -454,7 +454,6 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       // Show success message
       if (formSuccess && formSuccessMessage) {
         formSuccessMessage.textContent =
-          result.message ||
           'Din registrering er mottatt! Vi kontakter deg snart med tilgangsinformasjon.';
         formSuccess.classList.remove('hidden');
       }
