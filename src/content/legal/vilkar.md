@@ -48,10 +48,7 @@ Data behandles for å oppfylle lovpålagt rapporteringsplikt i henhold til Forsk
 ### 4.4 Datadeling
 Fangstdata rapporteres automatisk til Fiskeridirektoratet i henhold til lovkrav. Data deles ikke med andre tredjeparter uten ditt samtykke.
 
-### 4.5 Datalagring
-Data lagres i Norge og oppbevares i samsvar med arkivlovens bestemmelser og Fiskeridirektoratets krav.
-
-### 4.6 Brukerrettigheter
+### 4.5 Brukerrettigheter
 I henhold til GDPR har turistene rett til:
 - Innsyn i egne registrerte data
 - Retting av uriktige opplysninger
