@@ -33,11 +33,11 @@ import Layout from '../layouts/Layout.astro';
             <div class="space-y-4 mb-6">
               <label class="flex items-start gap-4 cursor-pointer group">
                 <input type="checkbox" class="quiz-checkbox mt-1 w-6 h-6 min-w-6 min-h-6 flex-shrink-0 rounded border-2 border-blue-400 text-blue-600 focus:ring-blue-500 cursor-pointer" />
-                <span class="text-lg text-gray-700 group-hover:text-gray-900">Disponerer du fartøy for utleie eller tar turister med ut på fiske?</span>
+                <span class="text-lg text-gray-700 group-hover:text-gray-900">Tilbyr du båt til gjestene dine (inkludert i leien eller mot ekstra betaling)?</span>
               </label>
               <label class="flex items-start gap-4 cursor-pointer group">
                 <input type="checkbox" class="quiz-checkbox mt-1 w-6 h-6 min-w-6 min-h-6 flex-shrink-0 rounded border-2 border-blue-400 text-blue-600 focus:ring-blue-500 cursor-pointer" />
-                <span class="text-lg text-gray-700 group-hover:text-gray-900">Tjener du over 50 000 kr i året?</span>
+                <span class="text-lg text-gray-700 group-hover:text-gray-900">Er din årlige inntekt fra utleien over 50 000 kr?</span>
               </label>
             </div>
 
@@ -45,7 +45,7 @@ import Layout from '../layouts/Layout.astro';
             <div class="space-y-4 mb-8">
               <label class="flex items-start gap-4 cursor-pointer group">
                 <input type="checkbox" class="quiz-checkbox mt-1 w-6 h-6 min-w-6 min-h-6 flex-shrink-0 rounded border-2 border-blue-400 text-blue-600 focus:ring-blue-500 cursor-pointer" />
-                <span class="text-lg text-gray-700 group-hover:text-gray-900">Har du turister som ønsker å ta med fisk hjem (over grensen) etter endt opphold?</span>
+                <span class="text-lg text-gray-700 group-hover:text-gray-900">Har du gjester som ønsker å ta med fisk ut av Norge?</span>
               </label>
             </div>
 
@@ -59,11 +59,11 @@ import Layout from '../layouts/Layout.astro';
           <!-- Result: Ja (hidden by default) -->
           <div id="quiz-result-ja" class="hidden">
             <p class="text-gray-700 text-lg leading-relaxed mb-6">
-              Du må registrere deg som turistfiskebedrift hos Fiskeridirektoratet. Du må ha organisasjonsnummer og være mva-registrert. Du må implementere daglig digital fangstrapportering. Med dette på plass kan du tilby gjester lovlig fiskeksport, og bedriften følger lovverket.
+              Du må registrere deg som turistfiskebedrift hos Fiskeridirektoratet. Dette krever organisasjonsnummer, mva-registrering og daglig digital fangstrapportering. Når dette er på plass, kan gjestene dine lovlig ta med fisk ut av Norge.
             </p>
 
             <p class="text-gray-700 text-lg leading-relaxed mb-6">
-              Har du bookinger hvor gjestene ønsker å ta med fisk hjem over grensen, må du være registrert turistfiskebedrift. Det er lovpålagt at du fører digital fangstrapportering på vegne av dine leietakere. Uten dette kan turistene ilegges bøter på 8 000 kr pluss 200 kr per kg fisk, samt konfiskering av fangsten.
+              Uten registrering har gjestene dine null utførselskvote – de kan ikke ta med fisk ut av Norge. Ved brudd risikerer de bot på 8 000 kr + 200 kr per kg, samt beslag av all fisk.
             </p>
 
             <div class="bg-slate-50 border-l-4 border-orange-400 rounded-lg p-6 mb-6">
@@ -82,13 +82,13 @@ import Layout from '../layouts/Layout.astro';
           <!-- Result: Nei (hidden by default) -->
           <div id="quiz-result-nei" class="hidden">
             <p class="text-gray-700 text-lg leading-relaxed mb-6">
-              Du trenger ikke registrere deg som turistfiskebedrift. Du kan drive som privat utleie uten organisasjonsnummer (hvis ingen annen næringsvirksomhet).
+              Du trenger ikke registrere deg som turistfiskebedrift. Du kan fortsette med privat utleie og bruke sjablongmetoden for beskatning.
             </p>
 
             <div class="bg-slate-50 border-l-4 border-green-500 rounded-lg p-6 mb-6">
               <p class="text-gray-900 font-semibold mb-1">Viktig:</p>
               <p class="text-gray-700">
-                Du må informere gjester om at de IKKE kan eksportere fisk over grensen uten gyldig dokumentasjon fra en registrert turistfiskebedrift.
+                Gjester som bor hos deg kan ikke ta med fisk ut av Norge uten dokumentasjon fra en registrert turistfiskebedrift. Informer dem om dette før de booker.
               </p>
             </div>
 
