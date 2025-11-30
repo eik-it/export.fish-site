@@ -1,7 +1,5 @@
 # Vilkår for bruk av export.fish
 
-**Sist oppdatert: 19. november 2025**
-
 Velkommen til export.fish. Disse vilkårene regulerer bruken av våre tjenester for fangstrapportering fra turistfiskevirksomhet. Ved å registrere din bedrift og ta i bruk tjenesten aksepterer du disse vilkårene.
 
 ## 1. Tjenestebeskrivelse
@@ -197,8 +195,8 @@ Tjenesten er utformet for å oppfylle:
 
 For spørsmål om disse vilkårene, tjenesten eller databehandling, kontakt oss via vårt [kontaktskjema](/kontakt).
 
-**Organisasjon:** Eksportfiske.no
-**Organisasjonsnummer:** [Vil bli oppdatert ved lansering]
+**Organisasjon:** EIK IT
+**Organisasjonsnummer:** 993981532
 
 ---
 
