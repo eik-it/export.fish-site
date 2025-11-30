@@ -171,9 +171,9 @@ import Layout from '../layouts/Layout.astro';
           updateHeader('nei');
         }
 
-        // Scroll to top of quiz container after header updates
+        // Scroll to quiz header after header updates
         setTimeout(() => {
-          quizCard?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          quizHeader?.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 100);
       }
 
