@@ -170,6 +170,11 @@ import Layout from '../layouts/Layout.astro';
           resultJa?.classList.add('hidden');
           updateHeader('nei');
         }
+
+        // Scroll to top of quiz container after header updates
+        setTimeout(() => {
+          quizCard?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
       }
 
       function resetQuiz() {
