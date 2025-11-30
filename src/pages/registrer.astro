@@ -438,7 +438,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
     const data: Record<string, any> = {
       organizationNumber: formData.get('organizationNumber'),
       companyName: formData.get('companyName'),
-      companyAddress: formData.get('address'),
+      address: formData.get('address'),
       municipality: formData.get('municipality'),
       subdomain: formData.get('subdomain') || '',
       reportingContact: {
@@ -485,6 +485,13 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       submitButton.disabled = true;
       submitButton.textContent = 'Registrerer...';
 
+      // Transform field names for backend
+      const payload = {
+        ...validated.data,
+        companyAddress: validated.data.address,
+      };
+      delete payload.address;
+
       const response = await fetch(
         'https://test.export.fish/v1/business-owners/register',
         {
@@ -492,7 +499,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(validated.data),
+          body: JSON.stringify(payload),
         }
       );
 
