@@ -438,7 +438,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
     const data: Record<string, any> = {
       organizationNumber: formData.get('organizationNumber'),
       companyName: formData.get('companyName'),
-      address: formData.get('address'),
+      companyAddress: formData.get('address'),
       municipality: formData.get('municipality'),
       subdomain: formData.get('subdomain') || '',
       reportingContact: {
