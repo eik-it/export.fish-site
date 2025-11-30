@@ -499,7 +499,12 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       const result = await response.json();
 
       if (!response.ok) {
-        throw new Error(result.error || 'Registrering feilet');
+        // Map backend error codes to Norwegian messages
+        const errorMessages: Record<string, string> = {
+          'errorOrgNumberNotInTuristfiske': 'Organisasjonen er ikke registrert som turistfiskebedrift hos Fiskeridirektoratet. Du må først registrere bedriften som turistfiskebedrift før du kan ta i bruk export.fish.',
+        };
+        const errorMessage = errorMessages[result.error] || result.error || 'Registrering feilet';
+        throw new Error(errorMessage);
       }
 
       // Show success message
