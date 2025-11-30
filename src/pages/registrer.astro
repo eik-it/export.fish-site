@@ -77,7 +77,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
           <!-- Address -->
           <FormField
             label="Adresse"
-            name="address"
+            name="companyAddress"
             type="text"
             required
             placeholder="f.eks. Havnegata 1, 0150 Oslo"
@@ -350,7 +350,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       .string()
       .min(2, 'Bedriftsnavn er påkrevd')
       .max(200, 'Bedriftsnavnet er for langt'),
-    address: z
+    companyAddress: z
       .string()
       .min(5, 'Adresse er påkrevd')
       .max(500, 'Adressen er for lang'),
@@ -438,7 +438,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
     const data: Record<string, any> = {
       organizationNumber: formData.get('organizationNumber'),
       companyName: formData.get('companyName'),
-      address: formData.get('address'),
+      companyAddress: formData.get('companyAddress'),
       municipality: formData.get('municipality'),
       subdomain: formData.get('subdomain') || '',
       reportingContact: {
@@ -485,13 +485,6 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       submitButton.disabled = true;
       submitButton.textContent = 'Registrerer...';
 
-      // Transform field names for backend
-      const payload = {
-        ...validated.data,
-        companyAddress: validated.data.address,
-      };
-      delete payload.address;
-
       const response = await fetch(
         'https://test.export.fish/v1/business-owners/register',
         {
@@ -499,7 +492,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(payload),
+          body: JSON.stringify(validated.data),
         }
       );
 
