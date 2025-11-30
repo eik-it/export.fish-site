@@ -292,132 +292,149 @@ import Layout from '../layouts/Layout.astro';
         </p>
       </div>
 
-      <!-- Comparison Table -->
-      <div class="overflow-x-auto">
-        <table class="w-full bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
-          <thead>
-            <tr class="bg-gradient-to-r from-blue-600 to-blue-700">
-              <th class="px-6 py-4 text-left text-white font-bold text-lg">Hva det betyr</th>
-              <th class="px-6 py-4 text-left text-white font-bold text-lg">
-                <div class="flex items-center gap-2">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      <!-- Comparison Cards -->
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Privat utleie Card -->
+        <div class="bg-white rounded-xl shadow-lg border-2 border-red-200 overflow-hidden">
+          <div class="bg-gradient-to-r from-red-500 to-orange-500 px-6 py-4">
+            <div class="flex items-center gap-2 text-white">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+              <h3 class="text-xl font-bold">Privat utleie</h3>
+            </div>
+          </div>
+          <div class="p-6 space-y-4">
+            <!-- Export quota -->
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-2">Gjestenes utførselskvote</h4>
+              <div class="flex items-center gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
                   </svg>
-                  Privat utleie
-                </div>
-              </th>
-              <th class="px-6 py-4 text-left text-white font-bold text-lg">
-                <div class="flex items-center gap-2">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </span>
+                <span class="text-gray-700"><strong class="text-red-700">0 kg</strong></span>
+              </div>
+            </div>
+
+            <!-- Tax deductions -->
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-2">Fradrag for utgifter</h4>
+              <div class="flex items-center gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
                   </svg>
-                  Registrert turistfiskebedrift
-                </div>
-              </th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-gray-200">
-            <!-- Row 1: Export quota -->
-            <tr class="hover:bg-blue-50 transition-colors">
-              <td class="px-6 py-5 font-semibold text-gray-900">Gjestenes utførselskvote</td>
-              <td class="px-6 py-5">
-                <div class="flex items-center gap-3">
-                  <span class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
-                    <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                    </svg>
-                  </span>
-                  <span class="text-gray-700"><strong class="text-red-700">0 kg</strong></span>
-                </div>
-              </td>
-              <td class="px-6 py-5">
-                <div class="flex items-center gap-3">
-                  <span class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                  </span>
-                  <span class="text-gray-700"><strong class="text-green-700">15 kg (2026)</strong></span>
-                </div>
-              </td>
-            </tr>
+                </span>
+                <span class="text-gray-700">Nei</span>
+              </div>
+            </div>
 
-            <!-- Row 2: Tax deductions -->
-            <tr class="hover:bg-blue-50 transition-colors">
-              <td class="px-6 py-5 font-semibold text-gray-900">Fradrag for utgifter</td>
-              <td class="px-6 py-5">
-                <div class="flex items-center gap-3">
-                  <span class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
-                    <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                    </svg>
-                  </span>
-                  <span class="text-gray-700">Nei</span>
+            <!-- Tax model -->
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-2">Skattemodell</h4>
+              <div class="flex items-center gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                <div>
+                  <span class="text-gray-700">Sjablong</span>
+                  <p class="text-sm text-gray-500">(enklere, men høyere skatt)</p>
                 </div>
-              </td>
-              <td class="px-6 py-5">
-                <div class="flex items-center gap-3">
-                  <span class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                  </span>
-                  <span class="text-gray-700"><strong>Ja</strong> (båt, utstyr, vedlikehold)</span>
-                </div>
-              </td>
-            </tr>
+              </div>
+            </div>
 
-            <!-- Row 3: Tax model -->
-            <tr class="hover:bg-blue-50 transition-colors">
-              <td class="px-6 py-5 font-semibold text-gray-900">Skattemodell</td>
-              <td class="px-6 py-5">
-                <div class="flex items-center gap-3">
-                  <span class="flex-shrink-0 w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center">
-                    <svg class="w-5 h-5 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
-                    </svg>
-                  </span>
-                  <span class="text-gray-700">Sjablong<br/><span class="text-sm text-gray-500">(enklere, men høyere skatt)</span></span>
-                </div>
-              </td>
-              <td class="px-6 py-5">
-                <div class="flex items-center gap-3">
-                  <span class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                  </span>
-                  <span class="text-gray-700">Næring<br/><span class="text-sm text-gray-500">(fradragsmuligheter)</span></span>
-                </div>
-              </td>
-            </tr>
+            <!-- Competitiveness -->
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-2">Konkurransekraft</h4>
+              <div class="flex items-center gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                <span class="text-gray-700">Begrenset</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <!-- Row 4: Competitiveness -->
-            <tr class="hover:bg-blue-50 transition-colors">
-              <td class="px-6 py-5 font-semibold text-gray-900">Konkurransekraft</td>
-              <td class="px-6 py-5">
-                <div class="flex items-center gap-3">
-                  <span class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
-                    <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                    </svg>
-                  </span>
-                  <span class="text-gray-700">Begrenset</span>
+        <!-- Registrert turistfiskebedrift Card -->
+        <div class="bg-white rounded-xl shadow-lg border-2 border-green-200 overflow-hidden">
+          <div class="bg-gradient-to-r from-green-500 to-emerald-500 px-6 py-4">
+            <div class="flex items-center gap-2 text-white">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <h3 class="text-xl font-bold">Registrert turistfiskebedrift</h3>
+            </div>
+          </div>
+          <div class="p-6 space-y-4">
+            <!-- Export quota -->
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-2">Gjestenes utførselskvote</h4>
+              <div class="flex items-center gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                <span class="text-gray-700"><strong class="text-green-700">15 kg (2026)</strong></span>
+              </div>
+            </div>
+
+            <!-- Tax deductions -->
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-2">Fradrag for utgifter</h4>
+              <div class="flex items-center gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                <div>
+                  <span class="text-gray-700"><strong>Ja</strong></span>
+                  <p class="text-sm text-gray-500">(båt, utstyr, vedlikehold)</p>
                 </div>
-              </td>
-              <td class="px-6 py-5">
-                <div class="flex items-center gap-3">
-                  <span class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                  </span>
-                  <span class="text-gray-700"><strong>Høy</strong><br/><span class="text-sm text-gray-500">(attraktivt for utenlandske gjester)</span></span>
+              </div>
+            </div>
+
+            <!-- Tax model -->
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-2">Skattemodell</h4>
+              <div class="flex items-center gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                <div>
+                  <span class="text-gray-700">Næring</span>
+                  <p class="text-sm text-gray-500">(fradragsmuligheter)</p>
                 </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+              </div>
+            </div>
+
+            <!-- Competitiveness -->
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-2">Konkurransekraft</h4>
+              <div class="flex items-center gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                <div>
+                  <span class="text-gray-700"><strong>Høy</strong></span>
+                  <p class="text-sm text-gray-500">(attraktivt for utenlandske gjester)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Call-out box -->
