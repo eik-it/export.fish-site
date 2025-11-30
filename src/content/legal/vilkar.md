@@ -117,6 +117,7 @@ Ved oppsigelse gjelder følgende:
 - Oppsigelsen trer i kraft umiddelbart og tilgangen til tjenesten avsluttes
 - Ingen refusjon gis for den gjenværende delen av den betalte perioden
 - Eksempel: Hvis du sier opp 15. mars og har betalt årsabonnement fra 1. januar, mister du umiddelbart tilgang til tjenesten uten refusjon for de gjenværende 9,5 månedene
+- Merk: Vi krangler ikke om du sier opp etter utstedt ny faktura, men før forfall
 
 ### 8.2 Vår oppsigelse
 Vi kan avslutte din tilgang til tjenesten ved:
