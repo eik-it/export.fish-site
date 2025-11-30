@@ -171,9 +171,14 @@ import Layout from '../layouts/Layout.astro';
           updateHeader('nei');
         }
 
-        // Scroll to quiz header after header updates
+        // Scroll to quiz header after header updates (with offset for fixed nav + banner)
         setTimeout(() => {
-          quizHeader?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          if (quizHeader) {
+            const headerOffset = 140; // banner (~40px) + nav (~100px)
+            const elementPosition = quizHeader.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - headerOffset;
+            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+          }
         }, 100);
       }
 
