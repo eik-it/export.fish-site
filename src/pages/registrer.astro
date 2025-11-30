@@ -88,7 +88,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
           <!-- Municipality -->
           <FormField
             label="Kommune"
-            name="municipality"
+            name="companyMunicipality"
             type="text"
             required
             placeholder="f.eks. Oslo"
@@ -354,7 +354,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       .string()
       .min(5, 'Adresse er påkrevd')
       .max(500, 'Adressen er for lang'),
-    municipality: z
+    companyMunicipality: z
       .string()
       .min(2, 'Kommune er påkrevd')
       .max(100, 'Kommunenavnet er for langt'),
@@ -439,7 +439,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       organizationNumber: formData.get('organizationNumber'),
       companyName: formData.get('companyName'),
       companyAddress: formData.get('companyAddress'),
-      municipality: formData.get('municipality'),
+      companyMunicipality: formData.get('companyMunicipality'),
       subdomain: formData.get('subdomain') || '',
       reportingContact: {
         name: formData.get('reportingContact.name'),
