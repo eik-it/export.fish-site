@@ -116,7 +116,7 @@ Ved oppsigelse gjelder følgende:
 - Du kan si opp abonnementet når som helst uten bindingstid
 - Oppsigelsen trer i kraft umiddelbart og tilgangen til tjenesten avsluttes
 - Ingen refusjon gis for den gjenværende delen av den betalte perioden
-- Eksempel: Hvis du sier opp 15. mars og har betalt for hele mars måned, mister du umiddelbart tilgang til tjenesten uten refusjon for de siste 16 dagene
+- Eksempel: Hvis du sier opp 15. mars og har betalt årsabonnement fra 1. januar, mister du umiddelbart tilgang til tjenesten uten refusjon for de gjenværende 9,5 månedene
 
 ### 8.2 Vår oppsigelse
 Vi kan avslutte din tilgang til tjenesten ved:
