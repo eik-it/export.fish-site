@@ -109,8 +109,14 @@ Tjenesten krever:
 
 ## 8. Oppsigelse og avslutning
 
-### 8.1 Kundens oppsigelse
+### 8.1 Kundens oppsigelse og oppsigelsesvilkår
 Du kan avslutte bruken av tjenesten når som helst ved skriftlig varsel via vårt [kontaktskjema](/kontakt).
+
+Ved oppsigelse gjelder følgende:
+- Du kan si opp abonnementet når som helst uten bindingstid
+- Oppsigelsen trer i kraft umiddelbart, men du beholder tilgang til tjenesten ut den betalte perioden
+- Ingen refusjon gis for den gjenværende delen av den betalte perioden
+- Eksempel: Hvis du sier opp 15. mars og har betalt for hele mars måned, beholder du tilgang til og med 31. mars, men får ingen refusjon for de siste 16 dagene
 
 ### 8.2 Vår oppsigelse
 Vi kan avslutte din tilgang til tjenesten ved:
