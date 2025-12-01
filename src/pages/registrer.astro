@@ -4,6 +4,7 @@ import FormField from '../components/forms/FormField.astro';
 import OrgNumberField from '../components/forms/OrgNumberField.astro';
 import SubdomainField from '../components/forms/SubdomainField.astro';
 import CheckboxField from '../components/forms/CheckboxField.astro';
+import SignatureField from '../components/forms/SignatureField.astro';
 
 const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 ---
@@ -137,6 +138,13 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
                 inputMode="tel"
                 maxlength={8}
                 helpText="8-sifret norsk telefonnummer"
+              />
+
+              <SignatureField
+                label="Signatur"
+                name="reportingContact.signature"
+                required
+                helpText="Denne signaturen brukes på utførselsdokumentasjon for turister"
               />
             </div>
           </div>
@@ -381,6 +389,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
           'Vennligst oppgi et gyldig norsk telefonnummer (8 siffer)'
         )
         .transform((val) => val.replace(/^(\+47|0047)/, '')),
+      signature: z.string().min(1, 'Signatur er påkrevd'),
     }),
     businessContact: z.object({
       name: z
@@ -445,6 +454,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
         name: formData.get('reportingContact.name'),
         email: formData.get('reportingContact.email'),
         phone: formData.get('reportingContact.phone'),
+        signature: formData.get('reportingContact.signature'),
       },
       businessContact: {
         name: formData.get('businessContact.name'),
