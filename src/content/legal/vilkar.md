@@ -46,7 +46,10 @@ Data behandles for å oppfylle lovpålagt rapporteringsplikt i henhold til Forsk
 ### 4.4 Datadeling
 Fangstdata rapporteres automatisk til Fiskeridirektoratet i henhold til lovkrav. Data deles ikke med andre tredjeparter uten ditt samtykke.
 
-### 4.5 Brukerrettigheter
+### 4.5 Bruk av signatur
+Den håndskrevne signaturen som samles inn under registrering brukes på utførselsdokumentasjon generert av tjenesten. Signaturen vil kun brukes til utstedelse av eksportdokumenter for turister. Annen bruk av signaturen er ikke tillatt.
+
+### 4.6 Brukerrettigheter
 I henhold til GDPR har turistene rett til:
 - Innsyn i egne registrerte data.
 - Retting av uriktige opplysninger.
