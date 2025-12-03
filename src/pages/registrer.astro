@@ -396,10 +396,10 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
     subdomain: z
       .string()
       .regex(
-        /^[a-z0-9][a-z0-9-]*[a-z0-9]\.export\.fish$/,
+        /^[a-z0-9][a-z0-9-]*[a-z0-9]\.(test\.)?export\.fish$/,
         'Subdomene må slutte med .export.fish og kun inneholde små bokstaver, tall og bindestreker'
       )
-      .transform((val) => val.replace(/\.export\.fish$/, '')),
+      .transform((val) => val.replace(/\.(test\.)?export\.fish$/, '')),
     reportingContact: z.object({
       name: z
         .string()
