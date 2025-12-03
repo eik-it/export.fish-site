@@ -27,7 +27,7 @@ const id = 'field-subdomain';
       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors font-mono text-sm"
       aria-describedby={`${id}-help`}
       aria-invalid="false"
-      pattern="[a-z0-9][a-z0-9-]*[a-z0-9]\.export\.fish"
+      pattern="[a-z0-9][a-z0-9-]*[a-z0-9]\.(test\.)?export\.fish"
     />
   </div>
 
@@ -76,6 +76,13 @@ const id = 'field-subdomain';
       .replace(/-+/g, '-');
   }
 
+  // Determine subdomain suffix based on API URL
+  const registrationForm = document.getElementById('registration-form');
+  const apiUrl = registrationForm?.getAttribute('data-api-url') || '';
+  const subdomainSuffix = apiUrl.includes('test.export.fish')
+    ? '.test.export.fish'
+    : '.export.fish';
+
   // Auto-update subdomain placeholder when company name changes
   const companyNameInput = document.querySelector(
     '[name="companyName"]'
@@ -83,6 +90,12 @@ const id = 'field-subdomain';
   const subdomainInput = document.querySelector(
     '[name="subdomain"]'
   ) as HTMLInputElement;
+
+  // Update placeholder to match the suffix
+  if (subdomainInput) {
+    const basePlaceholder = 'bedriftsnavn';
+    subdomainInput.placeholder = basePlaceholder + subdomainSuffix;
+  }
 
   if (companyNameInput && subdomainInput) {
     // Track if user has manually edited the subdomain
@@ -98,7 +111,7 @@ const id = 'field-subdomain';
       // Only auto-update if user hasn't manually edited
       if (!userEdited && companyNameInput.value.trim()) {
         const subdomain = generateSubdomain(companyNameInput.value);
-        subdomainInput.value = subdomain + '.export.fish';
+        subdomainInput.value = subdomain + subdomainSuffix;
       }
     });
 
