@@ -135,28 +135,35 @@ Ved oppsigelse:
 ### 9.1 Årlig abonnement
 Tjenesten leveres som et årlig abonnement til en pris på **990,- NOK per år (eksklusiv merverdiavgift)** per turistfiskebedrift.
 
-### 9.2 Fakturering
+### 9.2 Prøveperiode
+- Nye bedrifter får 1 måned gratis prøveperiode.
+- Full tilgang til alle funksjoner i prøveperioden.
+- Ingen betalingsforpliktelse i prøveperioden.
+- Første faktura sendes ved prøveperiodens slutt (30 dager etter aktivering).
+- For å avslutte før prøveperiodens slutt, kontakt oss via vårt [kontaktskjema](/kontakt).
+
+### 9.3 Fakturering
 - Faktureringen starter når bedriften aktiveres og kan ta i bruk tjenesten.
 - Faktura sendes årlig til registrert driftskontakt via e-post.
 - Betalingsfrist er 14 dager fra fakturadato.
 - Betaling skjer via faktura eller avtalt betalingsløsning.
 
-### 9.3 Merverdiavgift
+### 9.4 Merverdiavgift
 Alle priser er oppgitt eksklusiv merverdiavgift (mva). Gjeldende norsk mva-sats legges til på faktura.
 
-### 9.4 Prisendringer
+### 9.5 Prisendringer
 Vi forbeholder oss retten til å justere prisene med 30 dagers skriftlig varsel. Ved prisøkning har du rett til å si opp abonnementet før den nye prisen trer i kraft.
 
-### 9.5 Forsinket betaling
+### 9.6 Forsinket betaling
 Ved forsinket betaling:
 - Påløper forsinkelsesrente i henhold til norsk lov.
 - Kan tilgangen til tjenesten suspenderes inntil betaling er mottatt.
 - Kan inkassosak iverksettes for ubetalt faktura.
 
-### 9.6 Ingen bindingstid
+### 9.7 Ingen bindingstid
 Abonnementet har ingen bindingstid. Du kan si opp abonnementet når som helst med virkning fra neste faktureringsperiode.
 
-### 9.7 Hva er inkludert
+### 9.8 Hva er inkludert
 Årsprisen inkluderer:
 - Ubegrenset antall turistperioder og fangstregistreringer.
 - Automatisk rapportering til Fiskeridirektoratet.
