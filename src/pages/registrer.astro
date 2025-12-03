@@ -73,7 +73,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
   <section class="py-16 bg-white">
     <div class="max-w-3xl mx-auto px-4">
       <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
-        <form id="registration-form" class="space-y-6">
+        <form id="registration-form" class="space-y-6" data-api-url="https://test.export.fish/v1/business-owners/register">
           <!-- Organization Number -->
           <OrgNumberField required />
 
@@ -571,8 +571,9 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       submitButton.disabled = true;
       submitButton.textContent = 'Registrerer...';
 
+      const apiUrl = form.getAttribute('data-api-url') || 'https://export.fish/v1/business-owners/register';
       const response = await fetch(
-        'https://test.export.fish/v1/business-owners/register',
+        apiUrl,
         {
           method: 'POST',
           headers: {

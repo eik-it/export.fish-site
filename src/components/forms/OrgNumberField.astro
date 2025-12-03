@@ -125,6 +125,22 @@ const { required = true } = Astro.props;
   async function lookupCompany(orgNumber: string) {
     if (!spinner || !errorEl || !successEl) return;
 
+    // TEMPORARY: Whitelist test org numbers when posting to test.export.fish
+    // This can be removed once the form posts directly to export.fish backend
+    const TEST_ORG_NUMBERS = ['910337727', '315149762', '910337729'];
+
+    // Check if the form posts to test.export.fish (not production export.fish)
+    const registrationForm = document.getElementById('registration-form');
+    const apiUrl = registrationForm?.getAttribute('data-api-url') || '';
+    const isTestBackend = apiUrl.includes('test.export.fish');
+
+    if (isTestBackend && TEST_ORG_NUMBERS.includes(orgNumber)) {
+      // Skip Brreg lookup for whitelisted test organizations
+      successEl.textContent = `Test organisasjon: ${orgNumber}`;
+      successEl.classList.remove('hidden');
+      return;
+    }
+
     try {
       spinner.classList.remove('hidden');
       errorEl.classList.add('hidden');
