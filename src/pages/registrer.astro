@@ -158,6 +158,20 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
               Person som håndterer daglig drift og fakturering
             </p>
 
+            <!-- Checkbox to copy reporting contact info -->
+            <div class="mb-4">
+              <label class="flex items-start gap-3 cursor-pointer group">
+                <input
+                  type="checkbox"
+                  id="copy-reporting-contact"
+                  class="mt-0.5 w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary cursor-pointer"
+                />
+                <span class="text-sm text-gray-700 group-hover:text-gray-900">
+                  Samme kontaktinformasjon som Rapporteringsansvarlig
+                </span>
+              </label>
+            </div>
+
             <div class="space-y-4">
               <FormField
                 label="Navn"
@@ -428,6 +442,55 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
     input.addEventListener('input', () => {
       clearFieldError((input as HTMLInputElement).name);
     });
+  });
+
+  // Copy reporting contact to business contact functionality
+  const copyCheckbox = document.getElementById('copy-reporting-contact') as HTMLInputElement;
+  const reportingContactFields = {
+    name: document.querySelector('[name="reportingContact.name"]') as HTMLInputElement,
+    email: document.querySelector('[name="reportingContact.email"]') as HTMLInputElement,
+    phone: document.querySelector('[name="reportingContact.phone"]') as HTMLInputElement,
+  };
+  const businessContactFields = {
+    name: document.querySelector('[name="businessContact.name"]') as HTMLInputElement,
+    email: document.querySelector('[name="businessContact.email"]') as HTMLInputElement,
+    phone: document.querySelector('[name="businessContact.phone"]') as HTMLInputElement,
+  };
+
+  function copyReportingToBusiness() {
+    if (copyCheckbox?.checked) {
+      businessContactFields.name.value = reportingContactFields.name.value;
+      businessContactFields.email.value = reportingContactFields.email.value;
+      businessContactFields.phone.value = reportingContactFields.phone.value;
+
+      // Clear any errors on business contact fields
+      clearFieldError('businessContact.name');
+      clearFieldError('businessContact.email');
+      clearFieldError('businessContact.phone');
+    }
+  }
+
+  // Copy when checkbox is toggled
+  copyCheckbox?.addEventListener('change', copyReportingToBusiness);
+
+  // Keep business contact synced when checkbox is checked and reporting contact changes
+  reportingContactFields.name?.addEventListener('input', () => {
+    if (copyCheckbox?.checked) {
+      businessContactFields.name.value = reportingContactFields.name.value;
+      clearFieldError('businessContact.name');
+    }
+  });
+  reportingContactFields.email?.addEventListener('input', () => {
+    if (copyCheckbox?.checked) {
+      businessContactFields.email.value = reportingContactFields.email.value;
+      clearFieldError('businessContact.email');
+    }
+  });
+  reportingContactFields.phone?.addEventListener('input', () => {
+    if (copyCheckbox?.checked) {
+      businessContactFields.phone.value = reportingContactFields.phone.value;
+      clearFieldError('businessContact.phone');
+    }
   });
 
   form?.addEventListener('submit', async (e) => {
