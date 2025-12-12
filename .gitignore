@@ -36,3 +36,4 @@ playwright/.cache/
 
 # NEVER commit diff images (only for PR comments)
 screenshots/diffs/
+.dev/
