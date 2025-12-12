@@ -16,6 +16,9 @@ const {
 // Generate optimized OG image
 const ogImage = await getImage({ src: defaultOgImage, format: 'webp', width: 1200, height: 630 });
 
+// Generate hero image for preloading (largest responsive size)
+const heroPreload = await getImage({ src: defaultOgImage, format: 'webp', width: 1920 });
+
 const favicon = '/favicon.svg';
 const siteUrl = 'https://eksportfiske.no';
 const canonicalURL = new URL(Astro.url.pathname, siteUrl).href;
@@ -29,6 +32,9 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+
+    <!-- Preload hero image for LCP optimization -->
+    <link rel="preload" as="image" href={heroPreload.src} type="image/webp" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} />
