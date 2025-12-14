@@ -111,7 +111,7 @@ Tjenesten krever:
 ## 8. Oppsigelse og avslutning
 
 ### 8.1 Kundens oppsigelse og oppsigelsesvilkår
-Du kan avslutte bruken av tjenesten når som helst ved skriftlig varsel via vårt [kontaktskjema](/kontakt).
+Du kan avslutte bruken av tjenesten når som helst ved skriftlig varsel via e-post til [kontakt@eksportfiske.no](mailto:kontakt@eksportfiske.no).
 
 Ved oppsigelse gjelder følgende:
 - Du kan si opp abonnementet når som helst uten bindingstid.
@@ -143,7 +143,7 @@ Tjenesten leveres som et årlig abonnement til en pris på **990,- NOK per år (
 - Full tilgang til alle funksjoner i prøveperioden.
 - Ingen betalingsforpliktelse i prøveperioden.
 - Første faktura sendes ved prøveperiodens slutt (30 dager etter aktivering).
-- For å avslutte før prøveperiodens slutt, kontakt oss via vårt [kontaktskjema](/kontakt).
+- For å avslutte før prøveperiodens slutt, kontakt oss via e-post til [kontakt@eksportfiske.no](mailto:kontakt@eksportfiske.no).
 
 ### 9.3 Fakturering
 - Faktureringen starter når bedriften aktiveres og kan ta i bruk tjenesten.
@@ -203,7 +203,7 @@ Tjenesten er utformet for å oppfylle:
 
 ## 12. Kontaktinformasjon
 
-For spørsmål om disse vilkårene, tjenesten eller databehandling, kontakt oss via vårt [kontaktskjema](/kontakt).
+For spørsmål om disse vilkårene, tjenesten eller databehandling, kontakt oss via e-post til [kontakt@eksportfiske.no](mailto:kontakt@eksportfiske.no).
 
 **Organisasjon:** EIK IT
 **Organisasjonsnummer:** 993981532
