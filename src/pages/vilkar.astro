@@ -59,21 +59,33 @@ const { Content } = await tosEntry.render();
 
           <!-- Back to Registration -->
           <div class="mt-8 text-center">
-            <a
-              href="/registrer"
-              class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow-md hover:shadow-lg"
+            <button
+              id="back-to-registration"
+              class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow-md hover:shadow-lg cursor-pointer"
             >
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
               Tilbake til registrering
-            </a>
+            </button>
           </div>
         </div>
       </div>
     </div>
   </section>
 </Layout>
+
+<script>
+  document.getElementById('back-to-registration')?.addEventListener('click', () => {
+    // Check if the previous page was the registration form
+    if (document.referrer.includes('/registrer')) {
+      history.back();
+    } else {
+      // Fallback to direct navigation if not from registration
+      window.location.href = '/registrer';
+    }
+  });
+</script>
 
 <style>
   /* Typography styles for legal content */
