@@ -116,7 +116,7 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
             "name": "Hva hvis turistene ikke bruker appen?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Turistene setter som regel pris på å bruke appen - det er enkelt, det er på deres språk, og det gir dem en oversikt over egen fangst. De fleste turistfiskebedrifter opplever høy bruk når de informerer turistene om appen ved ankomst."
+              "text": "Erfaring viser at de fleste turister ønsker å være korrekte i forhold til norsk lov. I tillegg gir fullføring av fiskeperiode tilgang til utførelsesdokument, slik at all dokumentasjon for eksport er tilrettelagt. Brukeravtalen i appen påpeker også at det forventes at all fangst registreres."
             }
           },
           {
@@ -148,7 +148,15 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
             "name": "Hva koster det?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Export.fish er for øyeblikket under testing og er helt gratis for tidlige brukere. Du kan teste alle funksjoner uten noen forpliktelser. Vi vil varsle i god tid før eventuell prising introduseres for eksisterende brukere."
+              "text": "Tjenesten koster 990,- NOK per år (eks. mva) per turistfiskebedrift. Du kan teste appen gratis via test-nettstedet, men faktisk rapportering til Fiskeridirektoratet krever en registrert bedriftskonto."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hvordan fungerer prøveperioden?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Alle nye bedrifter får 1 måned gratis prøveperiode med full tilgang til alle funksjoner. Ingen betalingsforpliktelse i de første 30 dagene. Første faktura sendes automatisk etter 30 dager (990,- NOK eks. mva). Kan avsluttes når som helst via e-post til kontakt@eksportfiske.no."
             }
           },
           {
@@ -156,23 +164,23 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
             "name": "Fungerer appen offline?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Appen krever internettilkobling for å synkronisere data og sende rapporter til Fiskeridirektoratet. Men turistene kan registrere fangst når de har mobildekning - de trenger ikke være på wifi. De fleste registrerer fangsten når de kommer tilbake til brygga eller hytta."
+              "text": "Appen krever internettforbindelse for synkronisering, men virker med vanlig mobildekning. Turistene kan registrere fangst når de har mobilsignal - enten på båten (hvis det er dekning) eller når de kommer til land."
             }
           },
           {
             "@type": "Question",
-            "name": "Kan tyskere og andre turister eksportere fisk fra Norge?",
+            "name": "Hvor lang tid tar det å sette opp?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Ja, turister kan eksportere fisk fra Norge dersom de har bodd hos en registrert turistfiskebedrift og fangsten er korrekt rapportert. Export.fish genererer automatisk den nødvendige eksportdokumentasjonen som turistene trenger for å ta med fisken hjem. Uten gyldig dokumentasjon risikerer turistene bøter på 8 000 kr + 200 kr per kg, samt konfiskering av fangsten."
+              "text": "Så snart du er registrert i vårt faktureringssystem er appen klar til bruk. Du får en unik lenke til ditt eget subdomene (f.eks. ditt-firma.export.fish) som du deler med turistene. De kan starte med fangstrapportering umiddelbart - ingen opplæring eller konfigurasjon nødvendig."
             }
           },
           {
             "@type": "Question",
-            "name": "Må jeg registrere meg som turistfiskebedrift hvis jeg leier ut fritidsbolig med båt?",
+            "name": "Kan jeg bruke appen med flere båter/hytter samtidig?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Ja, hvis du leier ut hytte eller fritidsbolig med båt til gjester som fisker og tar med seg fisk hjem, må du sannsynligvis registrere deg som turistfiskebedrift hos Fiskeridirektoratet. Dette gjelder uansett om det er direkte eller indirekte utleie. Lovpålagt fangstrapportering er obligatorisk, og manglende rapportering kan gi bøter på opptil 50 000 kr."
+              "text": "Ja, absolutt! Systemet håndterer flere båter og hytter samtidig under samme turistfiskebedrift. All fangst rapporteres samlet for virksomheten din, uavhengig av hvilken båt eller hytte turistene bruker."
             }
           }
         ]
