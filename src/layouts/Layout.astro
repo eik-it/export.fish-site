@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import { getImage } from 'astro:assets';
 import defaultOgImage from '../assets/hero-bg.jpg';
+import CookieConsent from '../components/CookieConsent.astro';
 
 interface Props {
   title: string;
@@ -203,11 +204,22 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
       }
     </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH0VD36D5C"></script>
+    <!-- Google Consent Mode v2 -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+
+      // Set default consent to 'denied' (cookieless mode)
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH0VD36D5C"></script>
+    <script is:inline>
       gtag('js', new Date());
       gtag('config', 'G-TH0VD36D5C');
     </script>
@@ -256,6 +268,7 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
       </nav>
     </header>
     <slot />
+    <CookieConsent />
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const details = document.getElementById('mobile-menu');
