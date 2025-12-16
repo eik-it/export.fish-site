@@ -202,6 +202,16 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
         }
       }
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH0VD36D5C"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TH0VD36D5C');
+    </script>
+
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6674d462a18d4e0bb16ef63c13ace4a9"}'></script>
     <!-- End Cloudflare Web Analytics -->
