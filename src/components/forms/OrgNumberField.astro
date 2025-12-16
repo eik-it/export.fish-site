@@ -78,6 +78,8 @@ const { required = true } = Astro.props;
 </div>
 
 <script>
+  import { TEST_ORG_NUMBERS, getRegistrationEndpoint } from '../../lib/config';
+
   // Organization number lookup functionality
   const orgNumberInput = document.getElementById(
     'field-organizationNumber'
@@ -91,6 +93,7 @@ const { required = true } = Astro.props;
   const municipalityInput = document.getElementById(
     'field-companyMunicipality'
   ) as HTMLInputElement;
+  const registrationForm = document.getElementById('registration-form') as HTMLFormElement;
   const spinner = document.getElementById('lookup-spinner');
   const errorEl = document.getElementById('field-organizationNumber-error');
   const successEl = document.getElementById(
@@ -113,6 +116,12 @@ const { required = true } = Astro.props;
     if (successEl) successEl.classList.add('hidden');
     target.classList.remove('error');
 
+    // Update form API URL based on org number (even for incomplete entries)
+    if (value.length > 0 && registrationForm) {
+      const endpoint = getRegistrationEndpoint(value);
+      registrationForm.setAttribute('data-api-url', endpoint);
+    }
+
     // Only lookup if we have exactly 9 digits
     if (value.length === 9 && /^\d{9}$/.test(value)) {
       // Debounce lookup by 500ms
@@ -125,17 +134,8 @@ const { required = true } = Astro.props;
   async function lookupCompany(orgNumber: string) {
     if (!spinner || !errorEl || !successEl) return;
 
-    // TEMPORARY: Whitelist test org numbers when posting to test.export.fish
-    // This can be removed once the form posts directly to export.fish backend
-    const TEST_ORG_NUMBERS = ['910337727', '315149762', '910337729'];
-
-    // Check if the form posts to test.export.fish (not production export.fish)
-    const registrationForm = document.getElementById('registration-form');
-    const apiUrl = registrationForm?.getAttribute('data-api-url') || '';
-    const isTestBackend = apiUrl.includes('test.export.fish');
-
-    if (isTestBackend && TEST_ORG_NUMBERS.includes(orgNumber)) {
-      // Skip Brreg lookup for whitelisted test organizations
+    // Skip Brreg lookup for test organizations
+    if (TEST_ORG_NUMBERS.includes(orgNumber)) {
       successEl.textContent = `Test organisasjon: ${orgNumber}`;
       successEl.classList.remove('hidden');
       return;
