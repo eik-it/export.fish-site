@@ -269,33 +269,6 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
             </div>
           </div>
 
-          <div
-            id="form-success"
-            class="hidden p-4 bg-green-50 border border-green-200 rounded-lg"
-            role="status"
-            aria-live="polite"
-          >
-            <div class="flex items-start gap-3">
-              <svg
-                class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clip-rule="evenodd"></path>
-              </svg>
-              <div>
-                <h3 class="font-semibold text-green-900">
-                  Registrering vellykket!
-                </h3>
-                <p id="form-success-message" class="text-sm text-green-800 mt-1">
-                </p>
-              </div>
-            </div>
-          </div>
-
           <!-- Pricing Information -->
           <div class="bg-blue-50 border-l-4 border-primary rounded-lg p-6">
             <div class="flex items-start gap-4">
@@ -447,8 +420,6 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
   ) as HTMLButtonElement;
   const formError = document.getElementById('form-error');
   const formErrorMessage = document.getElementById('form-error-message');
-  const formSuccess = document.getElementById('form-success');
-  const formSuccessMessage = document.getElementById('form-success-message');
 
   // Clear field error on input
   form?.querySelectorAll('input, textarea').forEach((input) => {
@@ -509,9 +480,8 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Hide previous messages
+    // Hide previous error message
     formError?.classList.add('hidden');
-    formSuccess?.classList.add('hidden');
 
     // Clear all field errors
     form.querySelectorAll('input, textarea').forEach((input) => {
@@ -594,23 +564,8 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
         throw new Error(errorMessage);
       }
 
-      // Show success message
-      if (formSuccess && formSuccessMessage) {
-        formSuccessMessage.textContent =
-          'Din registrering er mottatt! Vi kontakter deg snart med tilgangsinformasjon.';
-        formSuccess.classList.remove('hidden');
-      }
-
-      // Reset form
-      form.reset();
-
-      // Reset Turnstile if configured
-      if ((window as any).turnstile) {
-        (window as any).turnstile.reset();
-      }
-
-      // Scroll to success message
-      formSuccess?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Redirect to thank you page
+      window.location.href = '/registrer/takk';
     } catch (error) {
       console.error('Registration error:', error);
       if (formError && formErrorMessage) {

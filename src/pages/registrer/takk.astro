@@ -1,0 +1,85 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Takk for din registrering - export.fish"
+  description="Din registrering er mottatt. Vi kontakter deg snart med tilgangsinformasjon."
+  noindex
+>
+  <!-- Hero Section -->
+  <section class="pt-52 pb-16 bg-gradient-to-br from-blue-50 to-blue-100">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <!-- Success Icon -->
+      <div class="mb-6">
+        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto">
+          <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+        </div>
+      </div>
+
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Takk for din registrering!
+      </h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Din registrering er mottatt og vi setter opp alt du trenger.
+      </p>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <!-- What happens next -->
+      <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 md:p-12">
+        <h2 class="text-xl font-semibold text-gray-900 mb-6">Hva skjer nå?</h2>
+        <ul class="space-y-6">
+          <li class="flex items-start gap-4">
+            <div class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="text-primary font-semibold text-sm">1</span>
+            </div>
+            <div>
+              <p class="font-medium text-gray-900">Vi setter opp din konto</p>
+              <p class="text-sm text-gray-600">Vi registrerer deg i vårt faktureringssystem. Dette er en manuell prosess som tar noen virkedager (litt lenger i ferieperioder).</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="text-primary font-semibold text-sm">2</span>
+            </div>
+            <div>
+              <p class="font-medium text-gray-900">Vi aktiverer din bedrift</p>
+              <p class="text-sm text-gray-600">Når aktiveringen er fullført, får du en e-post med din unike lenke (f.eks. ditt-firma.export.fish)</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="text-primary font-semibold text-sm">3</span>
+            </div>
+            <div>
+              <p class="font-medium text-gray-900">Klar til bruk</p>
+              <p class="text-sm text-gray-600">Del lenken med turistene og kom i gang. 1 måned gratis – første faktura sendes etter 30 dager</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact info -->
+      <div class="mt-12 text-center">
+        <p class="text-gray-600 mb-6">
+          Har du spørsmål i mellomtiden?
+        </p>
+        <a
+          href="/kontakt"
+          class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+        >
+          Kontakt oss
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
