@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://eksportfiske.no/sitemap.xml
+Sitemap: https://eksportfiske.no/sitemap-index.xml
 
 # Block build artifacts (if needed in future)
 Disallow: /_astro/
