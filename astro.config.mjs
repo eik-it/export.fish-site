@@ -15,6 +15,6 @@ export default defineConfig({
   },
 
   integrations: [sitemap({
-    filter: (page) => !page.includes('/registrer/takk')
+    filter: (page) => !page.includes('/registrer/takk') && !page.includes('/qr')
   })]
 });
