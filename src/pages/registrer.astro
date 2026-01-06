@@ -7,6 +7,14 @@ import CheckboxField from '../components/forms/CheckboxField.astro';
 import SignatureField from '../components/forms/SignatureField.astro';
 
 const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+
+// Extract campaign code from query parameter (backend validates if code is actually valid)
+const campaignCode = Astro.url.searchParams.get('kampanje') || '';
+const hasCampaign = campaignCode.length > 0;
+
+// Display values (actual validation happens on backend)
+const trialMonths = hasCampaign ? 3 : 1;
+const trialDays = hasCampaign ? 90 : 30;
 ---
 
 <Layout
@@ -29,7 +37,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
-          <h2 class="text-2xl font-bold">Prøv gratis i 1 måned</h2>
+          <h2 class="text-2xl font-bold">Prøv gratis i {trialMonths} {trialMonths === 1 ? 'måned' : 'måneder'}</h2>
         </div>
         <p class="text-center text-green-50 text-lg">
           Full tilgang til alle funksjoner – ingen binding, ingen betalingskort påkrevd
@@ -73,7 +81,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
   <section class="py-16 bg-white">
     <div class="max-w-3xl mx-auto px-4">
       <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
-        <form id="registration-form" class="space-y-6" data-api-url="https://export.fish/v1/business-owners/register">
+        <form id="registration-form" class="space-y-6" data-api-url="https://export.fish/v1/business-owners/register" data-campaign-code={campaignCode}>
           <!-- Organization Number -->
           <OrgNumberField required />
 
@@ -280,9 +288,9 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
                 </div>
               </div>
               <div>
-                <h4 class="font-bold text-lg text-gray-900 mb-2">1 måned gratis – deretter 990,- NOK per år (eks. mva)</h4>
+                <h4 class="font-bold text-lg text-gray-900 mb-2">{trialMonths} {trialMonths === 1 ? 'måned' : 'måneder'} gratis – deretter 990,- NOK per år (eks. mva)</h4>
                 <p class="text-gray-700 text-sm mb-2">
-                  Risikofritt å prøve! Første faktura sendes etter 30 dager. Tilsvarer kun 82,50 kr/mnd.
+                  Risikofritt å prøve! Første faktura sendes etter {trialDays} dager. Tilsvarer kun 82,50 kr/mnd.
                 </p>
                 <ul class="text-gray-700 text-sm space-y-1">
                   <li class="flex items-start gap-2">
@@ -509,6 +517,12 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       },
       acceptedTerms: formData.get('acceptedTerms') === 'on',
     };
+
+    // Include campaign code if present
+    const campaignCode = form.getAttribute('data-campaign-code');
+    if (campaignCode) {
+      data.campaignCode = campaignCode;
+    }
 
     // Get Turnstile token if configured
     if ((window as any).turnstile) {
