@@ -7,14 +7,6 @@ import CheckboxField from '../components/forms/CheckboxField.astro';
 import SignatureField from '../components/forms/SignatureField.astro';
 
 const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
-
-// Extract campaign code from query parameter (backend validates if code is actually valid)
-const campaignCode = Astro.url.searchParams.get('kampanje') || '';
-const hasCampaign = campaignCode.length > 0;
-
-// Display values (actual validation happens on backend)
-const trialMonths = hasCampaign ? 3 : 1;
-const trialDays = hasCampaign ? 90 : 30;
 ---
 
 <Layout
@@ -37,7 +29,7 @@ const trialDays = hasCampaign ? 90 : 30;
           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
-          <h2 class="text-2xl font-bold">Prøv gratis i {trialMonths} {trialMonths === 1 ? 'måned' : 'måneder'}</h2>
+          <h2 id="trial-hero" class="text-2xl font-bold">Prøv gratis i 1 måned</h2>
         </div>
         <p class="text-center text-green-50 text-lg">
           Full tilgang til alle funksjoner – ingen binding, ingen betalingskort påkrevd
@@ -81,7 +73,7 @@ const trialDays = hasCampaign ? 90 : 30;
   <section class="py-16 bg-white">
     <div class="max-w-3xl mx-auto px-4">
       <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
-        <form id="registration-form" class="space-y-6" data-api-url="https://export.fish/v1/business-owners/register" data-campaign-code={campaignCode}>
+        <form id="registration-form" class="space-y-6" data-api-url="https://export.fish/v1/business-owners/register">
           <!-- Organization Number -->
           <OrgNumberField required />
 
@@ -288,9 +280,9 @@ const trialDays = hasCampaign ? 90 : 30;
                 </div>
               </div>
               <div>
-                <h4 class="font-bold text-lg text-gray-900 mb-2">{trialMonths} {trialMonths === 1 ? 'måned' : 'måneder'} gratis – deretter 990,- NOK per år (eks. mva)</h4>
+                <h4 id="trial-pricing" class="font-bold text-lg text-gray-900 mb-2">1 måned gratis – deretter 990,- NOK per år (eks. mva)</h4>
                 <p class="text-gray-700 text-sm mb-2">
-                  Risikofritt å prøve! Første faktura sendes etter {trialDays} dager. Tilsvarer kun 82,50 kr/mnd.
+                  Risikofritt å prøve! Første faktura sendes etter <span id="trial-days">30</span> dager. Tilsvarer kun 82,50 kr/mnd.
                 </p>
                 <ul class="text-gray-700 text-sm space-y-1">
                   <li class="flex items-start gap-2">
@@ -429,6 +421,27 @@ const trialDays = hasCampaign ? 90 : 30;
   const formError = document.getElementById('form-error');
   const formErrorMessage = document.getElementById('form-error-message');
 
+  // Handle campaign code from URL query parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const campaignCodeParam = urlParams.get('kampanje');
+
+  if (campaignCodeParam) {
+    // Update trial period text for campaign visitors (backend validates the actual code)
+    const trialHero = document.getElementById('trial-hero');
+    const trialPricing = document.getElementById('trial-pricing');
+    const trialDays = document.getElementById('trial-days');
+
+    if (trialHero) {
+      trialHero.textContent = 'Prøv gratis i 3 måneder';
+    }
+    if (trialPricing) {
+      trialPricing.textContent = '3 måneder gratis – deretter 990,- NOK per år (eks. mva)';
+    }
+    if (trialDays) {
+      trialDays.textContent = '90';
+    }
+  }
+
   // Clear field error on input
   form?.querySelectorAll('input, textarea').forEach((input) => {
     input.addEventListener('input', () => {
@@ -518,8 +531,8 @@ const trialDays = hasCampaign ? 90 : 30;
       acceptedTerms: formData.get('acceptedTerms') === 'on',
     };
 
-    // Include campaign code if present
-    const campaignCode = form.getAttribute('data-campaign-code');
+    // Include campaign code if present (from URL query param)
+    const campaignCode = new URLSearchParams(window.location.search).get('kampanje');
     if (campaignCode) {
       data.campaignCode = campaignCode;
     }
