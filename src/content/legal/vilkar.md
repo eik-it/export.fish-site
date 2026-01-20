@@ -10,7 +10,7 @@ Tjenesten omfatter:
 - Webbasert registreringsverktøy for turister (Progressive Web App).
 - Flerspråklig brukergrensesnitt (norsk, engelsk, tysk).
 - Automatisk rapportering til Fiskeridirektoratet.
-- Generering av utførselsdokumentasjon for turister.
+- Utstedelse av utførselsdokumentasjon for turister.
 
 ## 2. Aksept av vilkår
 
@@ -171,7 +171,7 @@ Abonnementet har ingen bindingstid. Du kan si opp abonnementet når som helst me
 - Ubegrenset antall turistperioder og fangstregistreringer.
 - Automatisk rapportering til Fiskeridirektoratet.
 - Flerspråklig turistapp (norsk, engelsk, tysk).
-- Generering av utførselsdokumentasjon.
+- Utstedelse av utførselsdokumentasjon.
 - Support på norsk via e-post.
 - Alle oppdateringer og vedlikehold av tjenesten.
 

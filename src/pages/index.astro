@@ -47,7 +47,7 @@ import logo from '../assets/logo.png';
         <svg class="w-5 h-5 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
         </svg>
-        <span class="text-sm font-semibold text-green-100">Godkjent av Fiskeridirektoratet som offisielt rapporteringssystem</span>
+        <span class="text-sm font-semibold text-green-100">Godkjent rapporteringssystem fra Fiskeridirektoratet</span>
       </div>
 
       <div class="mb-8 flex flex-wrap justify-center gap-6 text-sm text-blue-100">
@@ -115,7 +115,7 @@ import logo from '../assets/logo.png';
           <div class="p-6">
             <h3 class="text-2xl font-bold mb-3 text-gray-900">Spar tid hver uke</h3>
             <p class="text-gray-600 leading-relaxed">
-              Du slipper å forholde deg til fangstregistrering annet enn å opplyse turistene om registreringsplikt.
+              Appen forenkler rapporteringen – turistene registrerer fangsten selv, mens du beholder oversikt og ansvar som turistfiskebedrift.
             </p>
           </div>
         </article>
@@ -186,7 +186,7 @@ import logo from '../assets/logo.png';
               </svg>
             </div>
             <div>
-              <p class="font-semibold text-gray-900 text-lg">Genererer godkjent eksportdokumentasjon med alle lovpålagte felt</p>
+              <p class="font-semibold text-gray-900 text-lg">Utsteder godkjent eksportdokumentasjon med alle lovpålagte felt</p>
               <p class="text-gray-600">Turistene får dokumentene de trenger for å ta med fisk hjem</p>
             </div>
           </li>
@@ -394,7 +394,7 @@ import logo from '../assets/logo.png';
             </div>
             <h4 class="text-2xl font-semibold mb-4">Ferdig rapportert</h4>
             <p class="text-gray-600">
-              All fangst blir automatisk rapportert daglig til Fiskeridirektoratet – dette skjer i bakgrunnen uten at verken du eller turistene trenger å gjøre noe ekstra. Etter endt fiskeperiode får turistene tilsendt nødvendig dokumentasjon for utførelseskvote av fisk i henhold til lovverket.
+              All fangst blir automatisk rapportert daglig til Fiskeridirektoratet – dette skjer i bakgrunnen uten at verken du eller turistene trenger å gjøre noe ekstra. Etter endt fiskeperiode utsteder du nødvendig dokumentasjon til turistene for utførelseskvote av fisk i henhold til lovverket. Dette skjer automatisk via appen.
             </p>
           </article>
         </div>
@@ -419,9 +419,9 @@ import logo from '../assets/logo.png';
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
             </svg>
           </div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Offisiell eksportdokumentasjon</h3>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Godkjent eksportdokumentasjon</h3>
           <p class="text-gray-700 text-center mb-4">
-            Turistene får automatisk offisiell dokumentasjon for utførselskvote - det de trenger for lovlig eksport av fisk hjem til sitt land.
+            Turistene får automatisk godkjent dokumentasjon for utførselskvote - det de trenger for lovlig eksport av fisk hjem til sitt land.
           </p>
           <ul class="space-y-2 text-gray-700">
             <li class="flex items-start gap-2">
@@ -490,7 +490,7 @@ import logo from '../assets/logo.png';
           <div>
             <h4 class="font-bold text-lg text-gray-900 mb-2">Derfor bruker turistene appen frivillig</h4>
             <p class="text-gray-700">
-              Turistene ser umiddelbart verdien: De får offisiell dokumentasjon de trenger for å ta fisken med hjem lovlig,
+              Turistene ser umiddelbart verdien: De får godkjent dokumentasjon de trenger for å ta fisken med hjem lovlig,
               og full oversikt over kvoten. Dette gjør dem trygge og motiverte til å registrere fangsten selv -
               på sitt eget språk .
             </p>
@@ -829,17 +829,14 @@ import logo from '../assets/logo.png';
         <!-- FAQ 13 -->
         <details class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden group">
           <summary class="cursor-pointer px-6 py-5 font-semibold text-lg text-gray-900 hover:bg-gray-50 transition-colors list-none flex justify-between items-center">
-            <span>Kan jeg se rapportene i sanntid?</span>
+            <span>Får jeg oversikt over rapportert fangst?</span>
             <svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </summary>
           <div class="px-6 py-4 text-gray-600 border-t border-gray-100">
             <p>
-              For øyeblikket har vi ikke et dashbord for turistfiskebedriften. Fokuset vårt er på å gjøre
-              registreringen så enkel som mulig for turistene, slik at både de og du kan fokusere på drift og fiske.
-              All fangst blir automatisk rapportert til Fiskeridirektoratet.
-              Du får derimot en e-post med oppsummert informasjon for hver avsluttede fiskeperiode utført av dine gjester, for din opplysning og kontroll.
+              Du får e-post med oppsummert informasjon for hver avsluttede fiskeperiode, slik at du har oversikt og kontroll over fangsten som rapporteres fra din bedrift. All fangst blir automatisk rapportert til Fiskeridirektoratet. Vi utvikler løpende forbedringer for å gi deg bedre verktøy for oversikt og oppfølging.
             </p>
           </div>
         </details>
@@ -854,8 +851,8 @@ import logo from '../assets/logo.png';
           </summary>
           <div class="px-6 py-4 text-gray-600 border-t border-gray-100">
             <p>
-              Ja, turister kan eksportere fisk fra Norge dersom de har bodd hos en registrert turistfiskebedrift og fangsten er korrekt rapportert.
-              Export.fish genererer automatisk den nødvendige eksportdokumentasjonen som turistene trenger for å ta med fisken hjem.
+              Ja, turister kan eksportere fisk fra Norge når fisket er utført i regi av en registrert turistfiskebedrift og fangsten er korrekt rapportert.
+              Med export.fish utsteder du som bedrift den nødvendige eksportdokumentasjonen automatisk via appen.
               Uten gyldig dokumentasjon risikerer turistene bøter på 8 000 kr + 200 kr per kg, samt konfiskering av fangsten.
             </p>
           </div>
