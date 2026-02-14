@@ -33,7 +33,7 @@ import Layout from '../layouts/Layout.astro';
             <div class="space-y-4 mb-6">
               <label class="flex items-start gap-4 cursor-pointer group">
                 <input type="checkbox" class="quiz-checkbox mt-1 w-6 h-6 min-w-6 min-h-6 flex-shrink-0 rounded border-2 border-blue-400 text-blue-600 focus:ring-blue-500 cursor-pointer" />
-                <span class="text-lg text-gray-700 group-hover:text-gray-900">Tilbyr du både overnatting og båt til gjestene dine (inkludert i leien eller mot ekstra betaling)?</span>
+                <span class="text-lg text-gray-700 group-hover:text-gray-900">Har du båt(er) tilgjengelig for utleie til fiskegjester, eller tar du gjester med på fiske?</span>
               </label>
               <label class="flex items-start gap-4 cursor-pointer group">
                 <input type="checkbox" class="quiz-checkbox mt-1 w-6 h-6 min-w-6 min-h-6 flex-shrink-0 rounded border-2 border-blue-400 text-blue-600 focus:ring-blue-500 cursor-pointer" />
@@ -59,7 +59,7 @@ import Layout from '../layouts/Layout.astro';
           <!-- Result: Ja (hidden by default) -->
           <div id="quiz-result-ja" class="hidden">
             <p class="text-gray-700 text-lg leading-relaxed mb-6">
-              Du må registrere deg som turistfiskebedrift hos Fiskeridirektoratet. Dette krever organisasjonsnummer, mva-registrering og daglig digital fangstrapportering. Når dette er på plass, kan gjestene dine lovlig ta med fisk ut av Norge.
+              Du bør registrere deg som turistfiskebedrift hos Fiskeridirektoratet. Dette krever et organisasjonsnummer og daglig digital fangstrapportering. Du trenger <strong>ikke</strong> være MVA-registrert – se <a href="#registreringsveier" class="text-blue-600 hover:text-blue-800 underline font-medium">de to registreringsveiene</a> lenger ned. Når du er registrert, kan gjestene dine lovlig ta med fisk ut av Norge.
             </p>
 
             <p class="text-gray-700 text-lg leading-relaxed mb-6">
@@ -82,10 +82,17 @@ import Layout from '../layouts/Layout.astro';
           <!-- Result: Nei (hidden by default) -->
           <div id="quiz-result-nei" class="hidden">
             <p class="text-gray-700 text-lg leading-relaxed mb-6">
-              Du trenger ikke registrere deg som turistfiskebedrift. Du kan fortsette med privat utleie og bruke sjablongmetoden for beskatning.
+              Basert på svarene dine er du ikke pålagt å registrere deg som turistfiskebedrift. Du kan fortsette med privat utleie og rapportere inntekt på selvangivelsen.
             </p>
 
-            <div class="bg-slate-50 border-l-4 border-green-500 rounded-lg p-6 mb-6">
+            <div class="bg-slate-50 border-l-4 border-blue-500 rounded-lg p-6 mb-6">
+              <p class="text-gray-900 font-semibold mb-1">Vurder frivillig registrering:</p>
+              <p class="text-gray-700">
+                Selv om du ikke er pålagt, kan du <a href="#registreringsveier" class="text-blue-600 hover:text-blue-800 underline font-medium">registrere deg frivillig</a>. Da får gjestene dine utførselskvote og du blir mer attraktiv for utenlandske gjester. Du trenger kun et organisasjonsnummer – et ENK er nok.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 border-l-4 border-orange-400 rounded-lg p-6 mb-6">
               <p class="text-gray-900 font-semibold mb-1">Viktig:</p>
               <p class="text-gray-700">
                 Gjester som bor hos deg kan ikke ta med fisk ut av Norge uten dokumentasjon fra en registrert turistfiskebedrift. Informer dem om dette før de booker.
@@ -195,6 +202,187 @@ import Layout from '../layouts/Layout.astro';
       resetNeiBtn?.addEventListener('click', resetQuiz);
     });
   </script>
+
+  <!-- To registreringsveier -->
+  <section id="registreringsveier" class="py-16 px-4 bg-gradient-to-br from-blue-50 to-slate-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">To registreringsveier</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Det finnes to måter å registrere seg som turistfiskebedrift på, avhengig av din virksomhetsform.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <!-- Obligatorisk registrering -->
+        <div class="bg-white rounded-xl shadow-lg border-2 border-orange-200 overflow-hidden">
+          <div class="bg-gradient-to-r from-orange-500 to-amber-500 px-6 py-4">
+            <div class="flex items-center gap-2 text-white">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+              </svg>
+              <h3 class="text-xl font-bold">1. Obligatorisk registrering</h3>
+            </div>
+            <p class="text-orange-100 text-sm mt-1">(§ 1, første ledd)</p>
+          </div>
+          <div class="p-6 space-y-4">
+            <p class="text-gray-700 font-semibold">Hvis du oppfyller ALLE disse kravene, MÅ du registrere deg:</p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center mt-0.5">
+                  <svg class="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                <span class="text-gray-700">Du er <strong>MVA-registrert</strong> (merverdiavgiftsregistrert)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center mt-0.5">
+                  <svg class="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                <span class="text-gray-700">Du har <strong>bruttoinntekt fra sjøturistfiske</strong> på minst 50 000 kr per år</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center mt-0.5">
+                  <svg class="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                <span class="text-gray-700">Du har <strong>fartøy tilgjengelig</strong> for gjestene</span>
+              </li>
+            </ul>
+            <div class="bg-orange-50 border border-orange-200 rounded-lg p-4 mt-4">
+              <p class="text-orange-900 font-semibold text-sm">
+                Dette er lovpålagt – du må registrere deg hos Fiskeridirektoratet.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frivillig registrering -->
+        <div class="bg-white rounded-xl shadow-lg border-2 border-blue-200 overflow-hidden">
+          <div class="bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-4">
+            <div class="flex items-center gap-2 text-white">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <h3 class="text-xl font-bold">2. Frivillig registrering</h3>
+            </div>
+            <p class="text-blue-100 text-sm mt-1">(§ 1, andre ledd)</p>
+          </div>
+          <div class="p-6 space-y-4">
+            <p class="text-gray-700 font-semibold">Selv om du IKKE er MVA-registrert, kan du velge å registrere deg frivillig hvis du:</p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
+                  <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                <span class="text-gray-700">Er registrert i <strong>Enhetsregisteret</strong> (har organisasjonsnummer)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
+                  <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                <span class="text-gray-700">Har <strong>inntekt fra turistfiske</strong></span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
+                  <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                <span class="text-gray-700">Har <strong>fartøy tilgjengelig</strong> for gjestene</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
+                  <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                <span class="text-gray-700">Søker om <strong>frivillig registrering</strong></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Viktig for fritidsboligeiere -->
+      <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 border-l-4 border-green-500">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">Viktig for fritidsboligeiere</h4>
+            <p class="text-gray-700 mb-3">
+              Selv om du ikke er MVA-registrert, kan du opprette et <strong>ENK (enkeltpersonforetak)</strong> uten aktivitet. Dette gir deg et organisasjonsnummer som kan brukes for frivillig registrering som turistfiskebedrift.
+            </p>
+            <p class="text-gray-700">
+              Du kan fortsatt rapportere inntekt fra utleie på din personlige <strong>selvangivelse</strong>, om du foretrekker det.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hvorfor velge frivillig registrering -->
+      <div class="mt-8 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl shadow-md p-6 md:p-8">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Hvorfor velge frivillig registrering?</h3>
+        <p class="text-gray-700 mb-4">
+          Selv om du ikke er pålagt å registrere deg, gir frivillig registrering viktige fordeler:
+        </p>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700"><strong>Gjestene dine får utførselskvote</strong> (15 kg, inntil 2 ganger i året)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700">Du kan <strong>trekke fra utgifter</strong> til båt, utstyr og vedlikehold</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700">Du blir <strong>mer attraktiv for utenlandske gjester</strong></span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700">Du unngår at gjester får <strong>bøter for ulovlig utførsel</strong> av fisk</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Kilder -->
+      <div class="mt-8 text-center">
+        <p class="text-sm text-gray-600">
+          <strong>Kilder:</strong>
+          <a href="https://www.fiskeridir.no/turistfiske/registrering-av-turistfiskebedrift" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline ml-2">
+            Fiskeridirektoratet
+          </a>
+          ·
+          <a href="https://lovdata.no/dokument/SF/forskrift/2017-07-05-1141" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline ml-2">
+            Forskrift om rapportering (§ 1)
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- Konsekvenser av å ikke registrere som turistfiskebedrift -->
   <section class="py-16 px-4 bg-white">
@@ -328,19 +516,6 @@ import Layout from '../layouts/Layout.astro';
               </div>
             </div>
 
-            <!-- Tax deductions -->
-            <div>
-              <h4 class="font-semibold text-gray-900 mb-2">Fradrag for utgifter</h4>
-              <div class="flex items-center gap-3">
-                <span class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
-                  <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                  </svg>
-                </span>
-                <span class="text-gray-700">Nei</span>
-              </div>
-            </div>
-
             <!-- Tax model -->
             <div>
               <h4 class="font-semibold text-gray-900 mb-2">Skattemodell</h4>
@@ -351,8 +526,8 @@ import Layout from '../layouts/Layout.astro';
                   </svg>
                 </span>
                 <div>
-                  <span class="text-gray-700">Sjablong</span>
-                  <p class="text-sm text-gray-500">(enklere, men høyere skatt)</p>
+                  <span class="text-gray-700">Selvangivelse / sjablong</span>
+                  <p class="text-sm text-gray-500">(ingen fradragsmuligheter for båt/utstyr)</p>
                 </div>
               </div>
             </div>
@@ -396,22 +571,6 @@ import Layout from '../layouts/Layout.astro';
               </div>
             </div>
 
-            <!-- Tax deductions -->
-            <div>
-              <h4 class="font-semibold text-gray-900 mb-2">Fradrag for utgifter</h4>
-              <div class="flex items-center gap-3">
-                <span class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                  <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                </span>
-                <div>
-                  <span class="text-gray-700"><strong>Ja</strong></span>
-                  <p class="text-sm text-gray-500">(båt, utstyr, vedlikehold)</p>
-                </div>
-              </div>
-            </div>
-
             <!-- Tax model -->
             <div>
               <h4 class="font-semibold text-gray-900 mb-2">Skattemodell</h4>
@@ -422,8 +581,8 @@ import Layout from '../layouts/Layout.astro';
                   </svg>
                 </span>
                 <div>
-                  <span class="text-gray-700">Næring</span>
-                  <p class="text-sm text-gray-500">(fradragsmuligheter)</p>
+                  <span class="text-gray-700">Valgfritt</span>
+                  <p class="text-sm text-gray-500">(kan beholde selvangivelse ved frivillig reg., eller næring med fradrag)</p>
                 </div>
               </div>
             </div>
