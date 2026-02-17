@@ -586,8 +586,15 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
         // Map backend error codes to Norwegian messages
         const errorMessages: Record<string, string> = {
           'errorOrgNumberNotInTuristfiske': 'Organisasjonen er ikke registrert som turistfiskebedrift hos Fiskeridirektoratet. Du må først registrere bedriften som turistfiskebedrift før du kan ta i bruk export.fish.',
+          'errorOrgNumberAlreadyRegistered': 'Dette organisasjonsnummeret er allerede registrert. Kontakt oss på kontakt@eksportfiske.no hvis du trenger hjelp.',
         };
-        const errorMessage = errorMessages[result.error] || result.error || 'Registrering feilet';
+
+        // Handle HTTP status codes without specific error codes
+        if (response.status === 503) {
+          throw new Error('Tjenesten er midlertidig utilgjengelig. Vennligst prøv igjen om noen minutter.');
+        }
+
+        const errorMessage = errorMessages[result.error] || 'Registrering feilet. Vennligst prøv igjen senere, eller kontakt oss på kontakt@eksportfiske.no.';
         throw new Error(errorMessage);
       }
 
