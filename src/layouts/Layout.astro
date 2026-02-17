@@ -3,6 +3,7 @@ import '../styles/global.css';
 import { getImage } from 'astro:assets';
 import defaultOgImage from '../assets/hero-bg.jpg';
 import CookieConsent from '../components/CookieConsent.astro';
+import logo from '../assets/logo.png';
 
 interface Props {
   title: string;
@@ -232,15 +233,11 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
     <!-- End Cloudflare Web Analytics -->
   </head>
   <body class="bg-gray-50 text-gray-900">
-    <!-- Development Banner -->
-    <div class="fixed top-0 w-full bg-amber-500 text-amber-950 text-center py-2 px-4 text-sm font-medium z-[60]">
-      Under utvikling – produktet er ikke lansert ennå
-    </div>
     <!-- Fixed Navigation -->
-    <header class="fixed top-10 w-full bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50">
+    <header class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50">
       <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="/" class="flex items-center gap-3 group">
-          <img src="https://test.export.fish/static/images/logo.png" alt="export.fish logo" class="h-16 w-16 md:h-20 md:w-20 transition-transform group-hover:scale-110" />
+          <img src={logo.src} alt="export.fish logo" class="h-16 w-16 md:h-20 md:w-20 transition-transform group-hover:scale-110" />
           <span class="text-2xl md:text-3xl font-bold text-primary">Eksportfiske</span>
         </a>
         <!-- Mobile menu (hamburger) -->
