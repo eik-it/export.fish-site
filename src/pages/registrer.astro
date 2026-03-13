@@ -219,6 +219,14 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
             </div>
           </div>
 
+          <!-- Campaign Code -->
+          <FormField
+            label="Kampanjekode"
+            name="campaignCode"
+            type="text"
+            helpText="Valgfritt – oppgi kampanjekode hvis du har mottatt en"
+          />
+
           <!-- Terms of Service -->
           <CheckboxField
             label="Jeg godtar"
@@ -412,6 +420,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       .boolean()
       .refine((val) => val === true, 'Du må godta vilkårene for bruk'),
     captcha: z.string().optional(),
+    campaignCode: z.string().max(50).optional(),
   });
 
   const form = document.getElementById('registration-form') as HTMLFormElement;
@@ -439,6 +448,12 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
     }
     if (trialDays) {
       trialDays.textContent = '90';
+    }
+
+    // Pre-populate campaign code field from URL param
+    const campaignCodeInput = document.querySelector('[name="campaignCode"]') as HTMLInputElement | null;
+    if (campaignCodeInput) {
+      campaignCodeInput.value = campaignCodeParam;
     }
   }
 
@@ -531,10 +546,10 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       acceptedTerms: formData.get('acceptedTerms') === 'on',
     };
 
-    // Include campaign code if present (from URL query param)
-    const campaignCode = new URLSearchParams(window.location.search).get('kampanje');
-    if (campaignCode) {
-      data.campaignCode = campaignCode;
+    // Include campaign code if present (from field or URL query param)
+    const campaignCodeValue = (formData.get('campaignCode') as string)?.trim();
+    if (campaignCodeValue) {
+      data.campaignCode = campaignCodeValue;
     }
 
     // Get Turnstile token if configured
