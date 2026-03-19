@@ -1,10 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import FormField from '../components/forms/FormField.astro';
-import OrgNumberField from '../components/forms/OrgNumberField.astro';
-import SubdomainField from '../components/forms/SubdomainField.astro';
-import CheckboxField from '../components/forms/CheckboxField.astro';
-import SignatureField from '../components/forms/SignatureField.astro';
+import Layout from '../../layouts/Layout.astro';
+import FormField from '../../components/forms/FormField.astro';
+import OrgNumberField from '../../components/forms/OrgNumberField.astro';
+import SubdomainField from '../../components/forms/SubdomainField.astro';
+import CheckboxField from '../../components/forms/CheckboxField.astro';
+import SignatureField from '../../components/forms/SignatureField.astro';
 
 const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 ---
@@ -12,6 +12,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 <Layout
   title="Registrer din turistfiskebedrift - export.fish"
   description="Kom i gang med digital fangstrapportering. Spar tid ved å la turistene registrere fangst selv på engelsk eller tysk. Godkjent av Fiskeridirektoratet."
+  noindex
 >
   <!-- Hero Section -->
   <section class="pt-52 pb-16 bg-gradient-to-br from-blue-50 to-blue-100">
@@ -430,9 +431,32 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
   const formError = document.getElementById('form-error');
   const formErrorMessage = document.getElementById('form-error-message');
 
-  // Handle campaign code from URL query parameter
+  // Handle pre-fill from URL query parameters (name, email, phone, kampanje)
   const urlParams = new URLSearchParams(window.location.search);
   const campaignCodeParam = urlParams.get('kampanje');
+  const nameParam = urlParams.get('name');
+  const emailParam = urlParams.get('email');
+  const phoneParam = urlParams.get('phone');
+
+  // Pre-populate contact fields from URL params
+  if (nameParam) {
+    const reportingName = document.querySelector('[name="reportingContact.name"]') as HTMLInputElement | null;
+    const businessName = document.querySelector('[name="businessContact.name"]') as HTMLInputElement | null;
+    if (reportingName) reportingName.value = nameParam;
+    if (businessName) businessName.value = nameParam;
+  }
+  if (emailParam) {
+    const reportingEmail = document.querySelector('[name="reportingContact.email"]') as HTMLInputElement | null;
+    const businessEmail = document.querySelector('[name="businessContact.email"]') as HTMLInputElement | null;
+    if (reportingEmail) reportingEmail.value = emailParam;
+    if (businessEmail) businessEmail.value = emailParam;
+  }
+  if (phoneParam) {
+    const reportingPhone = document.querySelector('[name="reportingContact.phone"]') as HTMLInputElement | null;
+    const businessPhone = document.querySelector('[name="businessContact.phone"]') as HTMLInputElement | null;
+    if (reportingPhone) reportingPhone.value = phoneParam;
+    if (businessPhone) businessPhone.value = phoneParam;
+  }
 
   if (campaignCodeParam) {
     // Update trial period text for campaign visitors (backend validates the actual code)
@@ -614,7 +638,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       }
 
       // Redirect to thank you page
-      window.location.href = '/registrer/takk';
+      window.location.href = '/registrer/takk?type=registrert';
     } catch (error) {
       console.error('Registration error:', error);
       if (formError && formErrorMessage) {

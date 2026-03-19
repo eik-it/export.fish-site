@@ -1,0 +1,356 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import FormField from '../../components/forms/FormField.astro';
+
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+---
+
+<Layout
+  title="Kom i gang med export.fish"
+  description="Meld din interesse for export.fish – digital fangstrapportering for turistfiskebedrifter. Vi tar kontakt og hjelper deg i gang."
+>
+  <!-- Hero Section -->
+  <section class="pt-52 pb-16 bg-gradient-to-br from-blue-50 to-blue-100">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Kom i gang med export.fish
+      </h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
+        Fyll ut skjemaet under, så tar vi kontakt og hjelper deg i gang med digital fangstrapportering.
+      </p>
+
+      <!-- Free Trial Banner -->
+      <div class="bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto mb-8">
+        <div class="flex items-center justify-center gap-3 mb-2">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <h2 id="trial-hero" class="text-2xl font-bold">Prøv gratis i 1 måned</h2>
+        </div>
+        <p class="text-center text-green-50 text-lg">
+          Full tilgang til alle funksjoner – ingen binding, ingen betalingskort påkrevd
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interest Form Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-2xl mx-auto px-4">
+      <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
+        <form id="interest-form" class="space-y-6" data-api-url="https://export.fish/v1/leads/register">
+
+          <!-- Name -->
+          <FormField
+            label="Navn"
+            name="name"
+            type="text"
+            required
+            placeholder="f.eks. Ola Nordmann"
+            autocomplete="name"
+          />
+
+          <!-- Email -->
+          <FormField
+            label="E-postadresse"
+            name="email"
+            type="email"
+            required
+            placeholder="f.eks. ola@bedrift.no"
+            autocomplete="email"
+            inputMode="email"
+          />
+
+          <!-- Phone (optional) -->
+          <FormField
+            label="Telefonnummer"
+            name="phone"
+            type="tel"
+            placeholder="f.eks. 12345678"
+            autocomplete="tel"
+            inputMode="tel"
+            maxlength={8}
+            helpText="Valgfritt – 8-sifret norsk telefonnummer"
+          />
+
+          <!-- Campaign Code (optional) -->
+          <FormField
+            label="Kampanjekode"
+            name="campaignCode"
+            type="text"
+            helpText="Valgfritt – oppgi kampanjekode hvis du har mottatt en"
+          />
+
+          <!-- Turnstile (if configured) -->
+          {
+            turnstileSiteKey && (
+              <div id="turnstile-container" class="flex justify-center">
+                <div
+                  class="cf-turnstile"
+                  data-sitekey={turnstileSiteKey}
+                  data-theme="light"
+                  data-size="normal"
+                  data-language="nb"
+                />
+              </div>
+            )
+          }
+
+          <!-- Error Message -->
+          <div
+            id="form-error"
+            class="hidden p-4 bg-red-50 border border-red-200 rounded-lg"
+            role="alert"
+            aria-live="polite"
+          >
+            <div class="flex items-start gap-3">
+              <svg
+                class="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <div>
+                <h3 class="font-semibold text-red-900">Innsending feilet</h3>
+                <p id="form-error-message" class="text-sm text-red-800 mt-1"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            id="submit-button"
+            class="w-full bg-primary hover:bg-primary-hover text-white font-semibold py-3 px-6 rounded-lg transition-colors focus:ring-4 focus:ring-primary/20 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Send inn
+          </button>
+
+          <p class="text-sm text-gray-500 text-center">
+            Vi tar kontakt med deg for å fullføre oppsettet av din konto.
+          </p>
+        </form>
+      </div>
+
+      <!-- Help Section -->
+      <div class="mt-8 text-center">
+        <p class="text-gray-600">
+          Trenger du hjelp?
+          <a
+            href="/kontakt"
+            class="text-primary hover:text-primary-hover underline"
+          >
+            Kontakt oss
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<!-- Load Turnstile script if configured -->
+{
+  turnstileSiteKey && (
+    <script
+      is:inline
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+      async
+      defer
+    />
+  )
+}
+
+<script>
+  import { z } from 'zod';
+
+  const interestSchema = z.object({
+    name: z
+      .string()
+      .min(2, 'Navn må være minst 2 tegn')
+      .max(100, 'Navnet er for langt'),
+    email: z
+      .string()
+      .email('Vennligst oppgi en gyldig e-postadresse')
+      .max(100, 'E-postadressen er for lang'),
+    phone: z
+      .string()
+      .regex(
+        /^(\+47|0047)?[2-9]\d{7}$/,
+        'Vennligst oppgi et gyldig norsk telefonnummer (8 siffer)'
+      )
+      .transform((val) => val.replace(/^(\+47|0047)/, ''))
+      .optional()
+      .or(z.literal('')),
+    campaignCode: z.string().max(50).optional(),
+    captcha: z.string().optional(),
+  });
+
+  const form = document.getElementById('interest-form') as HTMLFormElement;
+  const submitButton = document.getElementById('submit-button') as HTMLButtonElement;
+  const formError = document.getElementById('form-error');
+  const formErrorMessage = document.getElementById('form-error-message');
+
+  // Handle query parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const campaignCodeParam = urlParams.get('kampanje');
+  const nameParam = urlParams.get('name');
+  const emailParam = urlParams.get('email');
+  const phoneParam = urlParams.get('phone');
+
+  // Pre-populate fields from URL params
+  if (nameParam) {
+    const nameInput = document.querySelector('[name="name"]') as HTMLInputElement | null;
+    if (nameInput) nameInput.value = nameParam;
+  }
+  if (emailParam) {
+    const emailInput = document.querySelector('[name="email"]') as HTMLInputElement | null;
+    if (emailInput) emailInput.value = emailParam;
+  }
+  if (phoneParam) {
+    const phoneInput = document.querySelector('[name="phone"]') as HTMLInputElement | null;
+    if (phoneInput) phoneInput.value = phoneParam;
+  }
+
+  if (campaignCodeParam) {
+    // Update trial period text for campaign visitors
+    const trialHero = document.getElementById('trial-hero');
+    if (trialHero) {
+      trialHero.textContent = 'Prøv gratis i 3 måneder';
+    }
+
+    // Pre-populate campaign code field
+    const campaignCodeInput = document.querySelector('[name="campaignCode"]') as HTMLInputElement | null;
+    if (campaignCodeInput) {
+      campaignCodeInput.value = campaignCodeParam;
+    }
+  }
+
+  // Clear field errors on input
+  form?.querySelectorAll('input').forEach((input) => {
+    input.addEventListener('input', () => {
+      clearFieldError((input as HTMLInputElement).name);
+    });
+  });
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    formError?.classList.add('hidden');
+    form.querySelectorAll('input').forEach((input) => {
+      clearFieldError((input as HTMLInputElement).name);
+    });
+
+    const formData = new FormData(form);
+    const phoneValue = (formData.get('phone') as string)?.trim();
+    const campaignCodeValue = (formData.get('campaignCode') as string)?.trim();
+
+    const rawData: Record<string, any> = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+    };
+
+    if (phoneValue) rawData.phone = phoneValue;
+    if (campaignCodeValue) rawData.campaignCode = campaignCodeValue;
+
+    // Get Turnstile token if configured
+    if ((window as any).turnstile) {
+      const turnstileResponse = (window as any).turnstile.getResponse();
+      if (turnstileResponse) {
+        rawData.captcha = turnstileResponse;
+      }
+    }
+
+    // Validate
+    const validated = interestSchema.safeParse(rawData);
+    if (!validated.success) {
+      validated.error.errors.forEach((error) => {
+        const fieldName = error.path.join('.');
+        showFieldError(fieldName, error.message);
+      });
+
+      if (formError && formErrorMessage) {
+        formErrorMessage.textContent = 'Vennligst rett feilene over og prøv igjen.';
+        formError.classList.remove('hidden');
+      }
+      return;
+    }
+
+    // Build payload – exclude empty phone after transform
+    const payload: Record<string, any> = {
+      name: validated.data.name,
+      email: validated.data.email,
+    };
+    if (validated.data.phone) payload.phone = validated.data.phone;
+    if (validated.data.campaignCode) payload.campaignCode = validated.data.campaignCode;
+    if (validated.data.captcha) payload.captcha = validated.data.captcha;
+
+    try {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sender...';
+
+      const apiUrl = form.getAttribute('data-api-url') || 'https://export.fish/v1/leads/register';
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        if (response.status === 503) {
+          throw new Error('Tjenesten er midlertidig utilgjengelig. Vennligst prøv igjen om noen minutter.');
+        }
+        throw new Error('Innsending feilet. Vennligst prøv igjen senere, eller kontakt oss på kontakt@eksportfiske.no.');
+      }
+
+      window.location.href = '/registrer/takk';
+    } catch (error) {
+      console.error('Interest form error:', error);
+      if (formError && formErrorMessage) {
+        formErrorMessage.textContent =
+          error instanceof Error
+            ? error.message
+            : 'En uventet feil oppstod. Vennligst prøv igjen.';
+        formError.classList.remove('hidden');
+      }
+
+      if ((window as any).turnstile) {
+        (window as any).turnstile.reset();
+      }
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Send inn';
+    }
+  });
+
+  function showFieldError(fieldName: string, message: string) {
+    const input = form?.querySelector(`[name="${fieldName}"]`) as HTMLInputElement | null;
+    const errorEl = document.getElementById(`field-${fieldName}-error`);
+
+    if (input) {
+      input.classList.add('error');
+      input.setAttribute('aria-invalid', 'true');
+    }
+    if (errorEl) {
+      errorEl.textContent = message;
+      errorEl.classList.remove('hidden');
+    }
+  }
+
+  function clearFieldError(fieldName: string) {
+    const input = form?.querySelector(`[name="${fieldName}"]`) as HTMLInputElement | null;
+    const errorEl = document.getElementById(`field-${fieldName}-error`);
+
+    if (input) {
+      input.classList.remove('error');
+      input.setAttribute('aria-invalid', 'false');
+    }
+    if (errorEl) {
+      errorEl.textContent = '';
+      errorEl.classList.add('hidden');
+    }
+  }
+</script>
