@@ -90,4 +90,13 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>
+  <script is:inline>
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (typeof fbq === 'function' && window._metaPixelInitialized) {
+          fbq('track', 'Contact');
+        }
+      });
+    });
+  </script>
 </Layout>
