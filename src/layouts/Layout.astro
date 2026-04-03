@@ -228,6 +228,33 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
       gtag('config', 'G-TH0VD36D5C');
     </script>
 
+    <!-- Meta Pixel - consent gated via ad_storage -->
+    <script is:inline>
+      // Meta Pixel stub - safe to define before consent
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+
+      // Only init and fire PageView if ad_storage consent is already granted
+      window.initMetaPixel = function() {
+        if (window._metaPixelInitialized) return;
+        window._metaPixelInitialized = true;
+        fbq('init', '2517567592013408');
+        fbq('track', 'PageView');
+      };
+
+      document.addEventListener('DOMContentLoaded', function() {
+        if (localStorage.getItem('cookie-consent') === 'granted') {
+          window.initMetaPixel();
+        }
+      });
+    </script>
+
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6674d462a18d4e0bb16ef63c13ace4a9"}'></script>
     <!-- End Cloudflare Web Analytics -->

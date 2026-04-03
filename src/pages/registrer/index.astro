@@ -306,6 +306,21 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
         throw new Error('Innsending feilet. Vennligst prøv igjen senere, eller kontakt oss på kontakt@eksportfiske.no.');
       }
 
+      // Fire Meta Pixel Lead event with advanced matching
+      if (typeof fbq === 'function') {
+        const [fn, ...ln] = (validated.data.name || '').trim().split(/\s+/);
+        fbq('track', 'Lead', {}, {
+          eventID: 'lead_' + Date.now(),
+          advanced_matching: {
+            em: validated.data.email?.toLowerCase().trim(),
+            ph: validated.data.phone ? '47' + validated.data.phone : undefined,
+            fn: fn?.toLowerCase(),
+            ln: ln.join(' ')?.toLowerCase() || undefined,
+            country: 'no',
+          }
+        });
+      }
+
       window.location.href = '/registrer/takk';
     } catch (error) {
       console.error('Interest form error:', error);

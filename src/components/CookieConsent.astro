@@ -7,7 +7,7 @@
   <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
     <div class="flex-1">
       <h3 class="font-semibold text-gray-900 mb-1">Vi bruker informasjonskapsler</h3>
-      <p class="text-sm text-gray-600">Vi bruker Google Analytics for å forbedre nettstedet. Informasjonskapslene hjelper oss å forstå hvordan besøkende bruker siden.</p>
+      <p class="text-sm text-gray-600">Vi bruker informasjonskapsler for analyse og markedsføring, for å forstå hvordan brukerne bruker siden.</p>
     </div>
     <div class="flex gap-3 shrink-0">
       <button id="cookie-accept" class="bg-primary hover:bg-primary-hover text-white px-6 py-2 rounded-lg transition-colors font-semibold">
@@ -56,6 +56,9 @@
           'analytics_storage': 'granted',
           'ad_storage': 'granted'
         });
+      }
+      if (typeof window.initMetaPixel === 'function') {
+        window.initMetaPixel();
       }
       banner?.classList.add('translate-y-full');
     });
