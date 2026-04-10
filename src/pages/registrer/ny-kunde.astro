@@ -431,12 +431,13 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
   const formError = document.getElementById('form-error');
   const formErrorMessage = document.getElementById('form-error-message');
 
-  // Handle pre-fill from URL query parameters (name, email, phone, kampanje)
+  // Handle pre-fill from URL query parameters (name, email, phone, orgnr, kampanje)
   const urlParams = new URLSearchParams(window.location.search);
   const campaignCodeParam = urlParams.get('kampanje');
   const nameParam = urlParams.get('name');
   const emailParam = urlParams.get('email');
   const phoneParam = urlParams.get('phone');
+  const orgnrParam = urlParams.get('orgnr');
 
   // Pre-populate contact fields from URL params
   if (nameParam) {
@@ -456,6 +457,15 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
     const businessPhone = document.querySelector('[name="businessContact.phone"]') as HTMLInputElement | null;
     if (reportingPhone) reportingPhone.value = phoneParam;
     if (businessPhone) businessPhone.value = phoneParam;
+  }
+
+  if (orgnrParam) {
+    const orgnrInput = document.querySelector('[name="organizationNumber"]') as HTMLInputElement | null;
+    if (orgnrInput) {
+      orgnrInput.value = orgnrParam;
+      // Trigger input event to activate Brreg auto-lookup
+      orgnrInput.dispatchEvent(new Event('input'));
+    }
   }
 
   if (campaignCodeParam) {
