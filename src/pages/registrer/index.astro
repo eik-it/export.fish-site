@@ -73,6 +73,17 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
             helpText="Valgfritt – 8-sifret norsk telefonnummer"
           />
 
+          <!-- Organization Number (optional) -->
+          <FormField
+            label="Organisasjonsnummer"
+            name="organizationNumber"
+            type="text"
+            placeholder="9 siffer (valgfritt)"
+            helpText="Hvis du allerede har det klart"
+            inputMode="numeric"
+            maxlength={9}
+          />
+
           <!-- Campaign Code (optional) -->
           <FormField
             label="Kampanjekode"
@@ -185,6 +196,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       .transform((val) => val.replace(/^(\+47|0047)/, ''))
       .optional()
       .or(z.literal('')),
+    organizationNumber: z.string().regex(/^\d{9}$/, 'Organisasjonsnummer må være 9 siffer').optional().or(z.literal('')),
     campaignCode: z.string().max(50).optional(),
     captcha: z.string().optional(),
   });
@@ -200,6 +212,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
   const nameParam = urlParams.get('name');
   const emailParam = urlParams.get('email');
   const phoneParam = urlParams.get('phone');
+  const orgnrParam = urlParams.get('orgnr');
 
   // Pre-populate fields from URL params
   if (nameParam) {
@@ -213,6 +226,11 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
   if (phoneParam) {
     const phoneInput = document.querySelector('[name="phone"]') as HTMLInputElement | null;
     if (phoneInput) phoneInput.value = phoneParam;
+  }
+
+  if (orgnrParam) {
+    const orgnrInput = document.querySelector('[name="organizationNumber"]') as HTMLInputElement | null;
+    if (orgnrInput) orgnrInput.value = orgnrParam;
   }
 
   if (campaignCodeParam) {
@@ -247,6 +265,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
     const formData = new FormData(form);
     const phoneValue = (formData.get('phone') as string)?.trim();
     const campaignCodeValue = (formData.get('campaignCode') as string)?.trim();
+    const orgNumberValue = (formData.get('organizationNumber') as string)?.trim();
 
     const rawData: Record<string, any> = {
       name: formData.get('name'),
@@ -254,6 +273,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
     };
 
     if (phoneValue) rawData.phone = phoneValue;
+    if (orgNumberValue) rawData.organizationNumber = orgNumberValue;
     if (campaignCodeValue) rawData.campaignCode = campaignCodeValue;
 
     // Get Turnstile token if configured
@@ -285,6 +305,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       email: validated.data.email,
     };
     if (validated.data.phone) payload.phone = validated.data.phone;
+    if (validated.data.organizationNumber) payload.organizationNumber = validated.data.organizationNumber;
     if (validated.data.campaignCode) payload.campaignCode = validated.data.campaignCode;
     if (validated.data.captcha) payload.captcha = validated.data.captcha;
 
