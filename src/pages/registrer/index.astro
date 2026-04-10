@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import FormField from '../../components/forms/FormField.astro';
+import OrgNumberField from '../../components/forms/OrgNumberField.astro';
 
 const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 ---
@@ -74,15 +75,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
           />
 
           <!-- Organization Number (optional) -->
-          <FormField
-            label="Organisasjonsnummer"
-            name="organizationNumber"
-            type="text"
-            placeholder="9 siffer (valgfritt)"
-            helpText="Hvis du allerede har det klart"
-            inputMode="numeric"
-            maxlength={9}
-          />
+          <OrgNumberField required={false} />
 
           <!-- Campaign Code (optional) -->
           <FormField
@@ -196,7 +189,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       .transform((val) => val.replace(/^(\+47|0047)/, ''))
       .optional()
       .or(z.literal('')),
-    organizationNumber: z.string().regex(/^\d{9}$/, 'Organisasjonsnummer må være 9 siffer').optional().or(z.literal('')),
+    organizationNumber: z.string().regex(/^\d{9}$/, 'Organisasjonsnummer må være nøyaktig 9 siffer').optional().or(z.literal('')),
     campaignCode: z.string().max(50).optional(),
     captcha: z.string().optional(),
   });
