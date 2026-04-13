@@ -57,8 +57,12 @@ const id = 'field-subdomain';
 
 <script>
   /**
-   * Convert company name to URL-friendly subdomain format
+   * Convert company name to URL-friendly subdomain format.
    * Example: "Nordland Fiske AS" → "nordland-fiske-as"
+   *
+   * Deliberately does not truncate — if the generated label exceeds the
+   * backend limit, we want the user to see why via the normal field-level
+   * validation error (driven by the zod schema in ny-kunde.astro).
    */
   function generateSubdomain(companyName: string): string {
     return companyName
@@ -91,17 +95,22 @@ const id = 'field-subdomain';
     '[name="subdomain"]'
   ) as HTMLInputElement;
 
-  // Update placeholder to match the suffix
+  // Update placeholder to match the suffix.
   if (subdomainInput) {
     const basePlaceholder = 'bedriftsnavn';
     subdomainInput.placeholder = basePlaceholder + subdomainSuffix;
   }
 
   if (companyNameInput && subdomainInput) {
-    // Track if user has manually edited the subdomain
+    // Track if user has manually edited the subdomain. We rely on
+    // event.isTrusted to distinguish real keystrokes from the synthetic
+    // input event we dispatch after auto-fill (which must not flip this
+    // flag — otherwise subsequent company-name edits would stop
+    // re-populating the subdomain).
     let userEdited = false;
 
-    subdomainInput.addEventListener('input', () => {
+    subdomainInput.addEventListener('input', (event) => {
+      if (!event.isTrusted) return;
       if (subdomainInput.value.trim()) {
         userEdited = true;
       }
@@ -112,6 +121,10 @@ const id = 'field-subdomain';
       if (!userEdited && companyNameInput.value.trim()) {
         const subdomain = generateSubdomain(companyNameInput.value);
         subdomainInput.value = subdomain + subdomainSuffix;
+        // Dispatch a synthetic input event so any live validators
+        // registered on the subdomain field run — same pattern
+        // OrgNumberField uses when it auto-fills companyName.
+        subdomainInput.dispatchEvent(new Event('input', { bubbles: true }));
       }
     });
 
@@ -120,6 +133,7 @@ const id = 'field-subdomain';
       if (!companyNameInput.value.trim()) {
         userEdited = false;
         subdomainInput.value = '';
+        subdomainInput.dispatchEvent(new Event('input', { bubbles: true }));
       }
     });
   }
