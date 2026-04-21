@@ -102,9 +102,6 @@ function buildFrontmatter(fields) {
   lines.push(`slug: ${JSON.stringify(fields.slug)}`);
   lines.push(`guid: ${JSON.stringify(fields.guid)}`);
   lines.push(`pubDate: ${fields.pubDate}`);
-  if (fields.source) {
-    lines.push(`source: ${JSON.stringify(fields.source)}`);
-  }
   if (fields.image) {
     lines.push('image:');
     lines.push(`  src: ${JSON.stringify(fields.image.src)}`);
@@ -231,7 +228,6 @@ async function main() {
       slug,
       guid,
       pubDate: pubDateIso,
-      source: 'Soro (trysoro.com)',
       image: imageUrl ? { src: imageUrl, alt: title } : null,
       tags,
     });
