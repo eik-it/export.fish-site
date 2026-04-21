@@ -1,0 +1,211 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const siteUrl = 'https://eksportfiske.no';
+const canonicalURL = `${siteUrl}/blogg/${entry.id}`;
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('nb-NO', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: entry.data.title,
+  description: entry.data.description,
+  datePublished: entry.data.pubDate.toISOString(),
+  url: canonicalURL,
+  publisher: {
+    '@type': 'Organization',
+    name: 'Eksportfiske.no',
+    url: siteUrl,
+  },
+  ...(entry.data.image
+    ? {
+        image: {
+          '@type': 'ImageObject',
+          url: entry.data.image.src,
+          description: entry.data.image.alt,
+        },
+      }
+    : {}),
+};
+---
+
+<Layout
+  title={`${entry.data.title} | Eksportfiske.no`}
+  description={entry.data.description}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </Fragment>
+
+  <article class="pt-44 pb-16 bg-white">
+    <div class="max-w-2xl mx-auto px-4">
+
+      <!-- Article header -->
+      <header class="mb-8">
+        <time
+          datetime={entry.data.pubDate.toISOString()}
+          class="text-sm text-gray-500 mb-3 block"
+        >
+          {formatDate(entry.data.pubDate)}
+        </time>
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-4">
+          {entry.data.title}
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">{entry.data.description}</p>
+      </header>
+
+      <!-- Hero image -->
+      {entry.data.image && (
+        <figure class="mb-10">
+          <img
+            src={entry.data.image.src}
+            alt={entry.data.image.alt}
+            width="800"
+            height="450"
+            class="w-full rounded-xl object-cover"
+            loading="eager"
+          />
+        </figure>
+      )}
+
+      <!-- Article body -->
+      <div class="article-body text-gray-800 leading-relaxed">
+        <Content />
+      </div>
+
+      <!-- Source attribution -->
+      {entry.data.source && (
+        <footer class="mt-10 pt-6 border-t border-gray-200">
+          <p class="text-sm text-gray-500">
+            Publisert via Soro, redigert for eksportfiske.no
+          </p>
+        </footer>
+      )}
+    </div>
+  </article>
+
+  <!-- CTA section -->
+  <section class="py-16 bg-gradient-to-br from-blue-50 to-slate-50">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        Klar til å komme i gang?
+      </h2>
+      <p class="text-lg text-gray-600 mb-8">
+        Sett opp fangstrapportering for din turistfiskebedrift på under ti minutter.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/registrer/ny-kunde/"
+          class="bg-primary hover:bg-primary-hover text-white font-semibold px-8 py-4 rounded-lg transition-colors text-center shadow-md hover:shadow-lg"
+        >
+          Kom i gang gratis
+        </a>
+        <a
+          href="/registrering"
+          class="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-4 rounded-lg transition-colors text-center"
+        >
+          Les om registrering
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .article-body :global(h2) {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .article-body :global(h3) {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .article-body :global(p) {
+    margin-bottom: 1.25rem;
+    line-height: 1.75;
+  }
+
+  .article-body :global(ul),
+  .article-body :global(ol) {
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .article-body :global(ul) {
+    list-style-type: disc;
+  }
+
+  .article-body :global(ol) {
+    list-style-type: decimal;
+  }
+
+  .article-body :global(li) {
+    margin-bottom: 0.5rem;
+    line-height: 1.75;
+  }
+
+  .article-body :global(a) {
+    color: #2196f3;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .article-body :global(a:hover) {
+    color: #1e88e5;
+  }
+
+  .article-body :global(strong) {
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .article-body :global(blockquote) {
+    border-left: 4px solid #2196f3;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: #4b5563;
+    font-style: italic;
+  }
+
+  .article-body :global(code) {
+    background-color: #f3f4f6;
+    padding: 0.2em 0.4em;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+  }
+
+  .article-body :global(hr) {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 2rem 0;
+  }
+</style>

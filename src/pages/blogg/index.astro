@@ -1,0 +1,81 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const allPosts = await getCollection('blog');
+const posts = allPosts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('nb-NO', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+}
+---
+
+<Layout
+  title="Blogg | Eksportfiske.no"
+  description="Artikler om turistfiske, registrering, fangstrapportering og regelverk for turistfiskebedrifter i Norge."
+>
+  <section class="pt-44 pb-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Blogg</h1>
+      <p class="text-lg text-gray-600 mb-12">
+        Artikler om turistfiske, registrering og regelverk for norske turistfiskebedrifter.
+      </p>
+
+      {posts.length === 0 && (
+        <p class="text-gray-500">Ingen artikler publisert ennå.</p>
+      )}
+
+      <div class="space-y-10">
+        {posts.map((post) => (
+          <article class="flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-10">
+            {post.data.image && (
+              <a href={`/blogg/${post.id}`} class="sm:flex-shrink-0">
+                <img
+                  src={post.data.image.src}
+                  alt={post.data.image.alt}
+                  width="240"
+                  height="160"
+                  class="w-full sm:w-60 h-40 object-cover rounded-lg"
+                  loading="lazy"
+                />
+              </a>
+            )}
+            <div class="flex flex-col justify-between">
+              <div>
+                <time
+                  datetime={post.data.pubDate.toISOString()}
+                  class="text-sm text-gray-500 mb-2 block"
+                >
+                  {formatDate(post.data.pubDate)}
+                </time>
+                <h2 class="text-xl font-semibold text-gray-900 mb-2">
+                  <a
+                    href={`/blogg/${post.id}`}
+                    class="hover:text-primary transition-colors"
+                  >
+                    {post.data.title}
+                  </a>
+                </h2>
+                <p class="text-gray-600 leading-relaxed">{post.data.description}</p>
+              </div>
+              <div class="mt-4">
+                <a
+                  href={`/blogg/${post.id}`}
+                  class="text-primary font-semibold hover:text-primary-hover transition-colors"
+                >
+                  Les mer &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
