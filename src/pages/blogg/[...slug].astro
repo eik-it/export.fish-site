@@ -52,6 +52,10 @@ const jsonLd = {
 <Layout
   title={`${entry.data.title} | Eksportfiske.no`}
   description={entry.data.description}
+  ogImage={entry.data.image?.src}
+  ogImageAlt={entry.data.image?.alt}
+  ogType="article"
+  articlePublishedTime={entry.data.pubDate.toISOString()}
 >
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
