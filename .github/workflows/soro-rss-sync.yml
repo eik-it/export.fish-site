@@ -48,7 +48,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: soro/${{ github.run_id }}
-          base: main
+          base: master
           title: "Soro: ${{ steps.check.outputs.first_title }}"
           body: |
             ## Nye artikler fra Soro
