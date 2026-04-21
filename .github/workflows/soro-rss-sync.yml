@@ -1,0 +1,69 @@
+name: Soro RSS sync
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Installer avhengigheter
+        run: npm ci
+
+      - name: Hent nye artikler fra Soro
+        run: node scripts/sync-soro-rss.mjs
+
+      - name: Sjekk om det er nye artikler
+        id: check
+        run: |
+          if git diff --quiet HEAD -- src/content/blog/; then
+            echo "new_articles=false" >> $GITHUB_OUTPUT
+            echo "No new articles found"
+          else
+            NEW_FILES=$(git diff --name-only HEAD -- src/content/blog/ | tr '\n' ', ' | sed 's/,$//')
+            echo "new_articles=true" >> $GITHUB_OUTPUT
+            echo "files=$NEW_FILES" >> $GITHUB_OUTPUT
+            echo "New files: $NEW_FILES"
+            FIRST_FILE=$(git diff --name-only HEAD -- src/content/blog/ | head -1)
+            TITLE=$(grep '^title:' "$FIRST_FILE" | head -1 | sed 's/^title: *//' | sed 's/^"//' | sed 's/"$//')
+            echo "first_title=$TITLE" >> $GITHUB_OUTPUT
+            echo "First title: $TITLE"
+          fi
+
+      - name: Opprett PR med nye artikler
+        if: steps.check.outputs.new_articles == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: soro/${{ github.run_id }}
+          base: main
+          title: "Soro: ${{ steps.check.outputs.first_title }}"
+          body: |
+            ## Nye artikler fra Soro
+
+            Følgende filer er lagt til:
+            `${{ steps.check.outputs.files }}`
+
+            ## Gjennomgangssjekkliste
+
+            - [ ] Faktapåstander er verifisert mot gjeldende regelverk
+            - [ ] Stemmen er konsistent med eksportfiske.no (første person, norsk)
+            - [ ] Tre-delt registreringstest (MVA + 50 000 kr + båt) er korrekt fremstilt
+            - [ ] Datoer og årstall er korrekte (ingen udokumenterte "fra 2025"-påstander)
+            - [ ] CTA peker til /registrer/ny-kunde/ og er tydelig
+            - [ ] Interne lenker er gyldige
+            - [ ] Artikkelen er klar for publisering
+          commit-message: "Legg til artikler fra Soro RSS"
+          delete-branch: true

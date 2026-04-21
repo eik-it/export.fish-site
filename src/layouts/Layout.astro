@@ -76,6 +76,9 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
     <link rel="icon" type="image/svg+xml" href={favicon} />
     <title>{title}</title>
 
+    <!-- Additional head content injected by child pages -->
+    <slot name="head" />
+
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
       {
@@ -280,6 +283,7 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
             <a href="/registrering" class="text-gray-600 hover:text-primary transition py-3 px-3 hover:bg-gray-50 rounded">Turistfiskebedrift?</a>
             <a href="/om-oss" class="text-gray-600 hover:text-primary transition py-3 px-3 hover:bg-gray-50 rounded">Om oss</a>
             <a href="/kontakt" class="text-gray-600 hover:text-primary transition py-3 px-3 hover:bg-gray-50 rounded">Kontakt</a>
+            <a href="/blogg" class="text-gray-600 hover:text-primary transition py-3 px-3 hover:bg-gray-50 rounded">Blogg</a>
           </nav>
         </details>
 
@@ -290,6 +294,7 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
           <a href="/registrering" class="text-gray-600 hover:text-primary transition">Turistfiskebedrift?</a>
           <a href="/om-oss" class="text-gray-600 hover:text-primary transition">Om oss</a>
           <a href="/kontakt" class="text-gray-600 hover:text-primary transition">Kontakt</a>
+          <a href="/blogg" class="text-gray-600 hover:text-primary transition">Blogg</a>
         </div>
         <a href="https://test.export.fish" target="_blank" rel="noopener noreferrer" class="hidden md:inline-block bg-primary hover:bg-primary-hover text-white px-6 py-2 rounded-lg transition-colors font-semibold">
           Prøv appen!
