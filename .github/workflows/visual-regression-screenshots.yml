@@ -4,6 +4,7 @@ on:
     types: [opened, synchronize, reopened]
     paths:
       - 'src/**'
+      - '!src/content/blog/**'
       - 'public/**'
       - 'e2e/**'
       - 'astro.config.mjs'
