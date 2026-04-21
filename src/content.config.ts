@@ -11,7 +11,6 @@ const legalCollection = defineCollection({
   }),
 });
 
-// Blog collection for Soro-sourced articles
 // Note: the frontmatter `slug` field is consumed by the glob loader as entry.id
 // and must not be declared in the schema.
 const blogCollection = defineCollection({
@@ -21,7 +20,6 @@ const blogCollection = defineCollection({
     description: z.string(),
     guid: z.string(),
     pubDate: z.coerce.date(),
-    source: z.string().optional(),
     image: z
       .object({
         src: z.string(),
