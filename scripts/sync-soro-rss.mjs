@@ -19,6 +19,7 @@ const FEED_URL = 'https://app.trysoro.com/api/rss/11cc0329-e7c8-46bf-aa54-faa04e
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const projectRoot = join(__dirname, '..');
 const blogDir = join(projectRoot, 'src', 'content', 'blog');
+const imagesDir = join(blogDir, 'images');
 
 if (!existsSync(blogDir)) {
   mkdirSync(blogDir, { recursive: true });
@@ -50,6 +51,30 @@ function createTurndown() {
     bulletListMarker: '-',
   });
   return td;
+}
+
+// Download a remote image and return its extension. Throws on network/HTTP error.
+async function downloadImage(url, slug) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+  // Infer extension from URL path, fall back to content-type, then to webp.
+  const urlPath = new URL(url).pathname;
+  const urlExt = urlPath.match(/\.(webp|jpe?g|png|gif|avif)$/i)?.[1]?.toLowerCase();
+  const ctypeExt = {
+    'image/webp': 'webp',
+    'image/jpeg': 'jpg',
+    'image/png': 'png',
+    'image/gif': 'gif',
+    'image/avif': 'avif',
+  }[res.headers.get('content-type')?.split(';')[0].trim()];
+  const ext = urlExt || ctypeExt || 'webp';
+
+  if (!existsSync(imagesDir)) mkdirSync(imagesDir, { recursive: true });
+  const target = join(imagesDir, `${slug}.${ext}`);
+  const buf = Buffer.from(await res.arrayBuffer());
+  writeFileSync(target, buf);
+  return `./images/${slug}.${ext}`;
 }
 
 // Extract a clean slug from the item link
@@ -219,6 +244,17 @@ async function main() {
     const imageUrl = extractImageUrl(item);
     const tags = extractTags(item);
 
+    // Download hero image to src/content/blog/images/<slug>.<ext>
+    // so Astro's image pipeline can optimize it (AVIF/WebP + srcset).
+    let localImagePath = null;
+    if (imageUrl) {
+      try {
+        localImagePath = await downloadImage(imageUrl, slug);
+      } catch (err) {
+        console.log(`  Could not download image for "${slug}": ${err.message}`);
+      }
+    }
+
     const htmlBody = item['content:encoded'] || '';
     const markdownBody = htmlBody ? turndown.turndown(htmlBody) : '';
 
@@ -228,7 +264,7 @@ async function main() {
       slug,
       guid,
       pubDate: pubDateIso,
-      image: imageUrl ? { src: imageUrl, alt: title } : null,
+      image: localImagePath ? { src: localImagePath, alt: title } : null,
       tags,
     });
 

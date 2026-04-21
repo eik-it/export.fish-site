@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
 
 export async function getStaticPaths() {
@@ -40,7 +41,7 @@ const jsonLd = {
     ? {
         image: {
           '@type': 'ImageObject',
-          url: entry.data.image.src,
+          url: new URL(entry.data.image.src.src, siteUrl).toString(),
           description: entry.data.image.alt,
         },
       }
@@ -76,11 +77,11 @@ const jsonLd = {
       <!-- Hero image -->
       {entry.data.image && (
         <figure class="mb-10">
-          <img
+          <Image
             src={entry.data.image.src}
             alt={entry.data.image.alt}
-            width="800"
-            height="450"
+            widths={[480, 800, 1200]}
+            sizes="(max-width: 768px) 100vw, 800px"
             class="w-full rounded-xl object-cover"
             loading="eager"
           />

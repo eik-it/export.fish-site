@@ -15,19 +15,20 @@ const legalCollection = defineCollection({
 // and must not be declared in the schema.
 const blogCollection = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    guid: z.string(),
-    pubDate: z.coerce.date(),
-    image: z
-      .object({
-        src: z.string(),
-        alt: z.string(),
-      })
-      .optional(),
-    tags: z.array(z.string()).default([]),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      guid: z.string(),
+      pubDate: z.coerce.date(),
+      image: z
+        .object({
+          src: image(),
+          alt: z.string(),
+        })
+        .optional(),
+      tags: z.array(z.string()).default([]),
+    }),
 });
 
 export const collections = {
