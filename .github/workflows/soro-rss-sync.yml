@@ -28,17 +28,19 @@ jobs:
       - name: Sjekk om det er nye artikler
         id: check
         run: |
+          # Mark untracked files as intent-to-add so git diff sees them.
+          git add -N src/content/blog/
           if git diff --quiet HEAD -- src/content/blog/; then
             echo "new_articles=false" >> $GITHUB_OUTPUT
             echo "No new articles found"
           else
             NEW_FILES=$(git diff --name-only HEAD -- src/content/blog/ | tr '\n' ', ' | sed 's/,$//')
-            echo "new_articles=true" >> $GITHUB_OUTPUT
-            echo "files=$NEW_FILES" >> $GITHUB_OUTPUT
-            echo "New files: $NEW_FILES"
             FIRST_FILE=$(git diff --name-only HEAD -- src/content/blog/ | head -1)
             TITLE=$(grep '^title:' "$FIRST_FILE" | head -1 | sed 's/^title: *//' | sed 's/^"//' | sed 's/"$//')
+            echo "new_articles=true" >> $GITHUB_OUTPUT
+            echo "files=$NEW_FILES" >> $GITHUB_OUTPUT
             echo "first_title=$TITLE" >> $GITHUB_OUTPUT
+            echo "New files: $NEW_FILES"
             echo "First title: $TITLE"
           fi
 
