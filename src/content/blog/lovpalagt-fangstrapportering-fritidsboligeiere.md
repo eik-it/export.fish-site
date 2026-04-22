@@ -70,7 +70,7 @@ God rapportering er heller ikke bare et myndighetskrav. Turister som opplever at
 
 Hvis du driver utleie til turistfiskere, er det lite å vinne på å bygge egne nødløsninger rundt et regelverk som allerede er krevende. Du trenger et oppsett laget for denne typen drift — der fangstrapportering, kontroll og eksportdokumentasjon henger sammen.
 
-Det er akkurat det [eksportfiske.no](https://eksportfiske.no/registrer/ny-kunde/) er bygget for. Du deler en lenke med turistene ved ankomst. De oppretter fiskeperioden og registrerer fangst dag for dag på sitt eget språk. Når de avslutter perioden, kontrollerer du og godkjenner — og rapporten går automatisk til Fiskeridirektoratet. Ingen dobbeltarbeid, ingen håndskrift å tolke etterpå.
+Det er akkurat det [eksportfiske.no](https://eksportfiske.no/registrer/) er bygget for. Du deler en lenke med turistene ved ankomst. De oppretter fiskeperioden og registrerer fangst dag for dag på sitt eget språk. Når de avslutter perioden, kontrollerer du og godkjenner — og rapporten går automatisk til Fiskeridirektoratet. Ingen dobbeltarbeid, ingen håndskrift å tolke etterpå.
 
 For fritidsboligeiere som leier ut til turistfiske, er dette ikke lenger "greit å ha". Det er en del av grunnmuren. Jo tidligere du får rutinen på plass, desto mindre sårbar blir sesongen når tempoet øker.
 
@@ -78,4 +78,4 @@ For fritidsboligeiere som leier ut til turistfiske, er dette ikke lenger "greit 
 
 Vi har bygget eksportfiske.no for fritidsboligeiere som vil ha rapporteringen på plass uten å investere i et stort system. Turistene registrerer fangsten på sitt eget språk via en unik e-postlenke, du godkjenner fiskeperioden før avreise, og utførselsdokumentasjonen ligger klar.
 
-[Registrer bedriften din i dag →](https://eksportfiske.no/registrer/ny-kunde/)
+[Registrer bedriften din i dag →](https://eksportfiske.no/registrer/)
