@@ -3,20 +3,20 @@ title: "Daglig fangstrapportering i turistfiske"
 description: "Regelverket krever daglig fangstrapportering i turistfiske. Slik gjør du rapporteringen enkel, riktig og trygg for gjestene."
 slug: "daglig-fangstrapportering-turistfiske"
 guid: "8dc94a43-733f-492c-84da-31661f4f9559"
-pubDate: 2026-04-21T19:50:39.000Z
+pubDate: 2026-04-22T19:50:39.000Z
 image:
   src: "./images/daglig-fangstrapportering-turistfiske.webp"
   alt: "Daglig fangstrapportering i turistfiske"
 tags: []
 ---
 
-Regelverket krever daglig fangstrapportering. For deg som leier ut hytte og båt til fisketurister, betyr dette at fangst må inn hver dag, per fartøy og art. Det høres kanskje ut som enda mer papirarbeid, men i praksis handler det om å lage en rutine som faktisk fungerer når du har gjester, nøkkelutlevering, båtvask og alt det andre som også skal gjøres.
+Regelverket krever daglig fangstrapportering. For deg som leier ut hytte og båt til fisketurister, betyr dette at fangst må inn hver dag, per opphold og art. Det høres kanskje ut som enda mer papirarbeid, men i praksis handler det om å lage en rutine som faktisk fungerer når du har gjester, nøkkelutlevering, båtvask og alt det andre som også skal gjøres.
 
 Det er nettopp her mange små utleiere kjenner at det glipper. Ikke fordi de ikke vil gjøre ting riktig, men fordi manuelle løsninger er sårbare. En lapp på kjøkkenbordet blir borte. En SMS blir ikke fulgt opp. Gjestene drar tidlig på morgenen, og plutselig mangler du registrering for én av dagene, og du kan ikke avslutte og godkjenne fiskeperioden — som er grunnlaget for [utførselsdokumentasjonen](https://eksportfiske.no/registrer/). Vi har selv stått i dette, og vi vet hvor fort en liten glipp blir til unødvendig stress.
 
 ## Hva betyr daglig fangstrapportering i turistfiske i praksis?
 
-Kjernen er enkel: fangsten skal rapporteres daglig, og rapporteringen skal knyttes til riktig fartøy og riktig art. Det er ikke nok å vite at "de fikk litt torsk og sei i løpet av uka". Du må ha strukturerte opplysninger som kan sendes inn i tråd med kravene.
+Kjernen er enkel: fangsten skal rapporteres daglig, og rapporteringen skal knyttes til riktig opphold og riktig art. Det er ikke nok å vite at "de fikk litt torsk og sei i løpet av uka". Du må ha strukturerte opplysninger som kan sendes inn i tråd med kravene.
 
 For en liten utleier med én hytte og én båt betyr dette at du må vite hva gjestene faktisk har tatt opp hver dag de fisker. Har du flere hytter eller overlappende opphold, må du i tillegg passe på at fangsten knyttes til riktig gjest og riktig periode. Det er her mange undervurderer arbeidsmengden. Selve rapporten trenger ikke ta lang tid, men oppfølgingen rundt kan spise tid hvis du må ringe, purre og etterregistrere.
 
