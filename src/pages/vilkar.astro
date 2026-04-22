@@ -1,10 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getEntry } from 'astro:content';
+import { getEntry, render } from 'astro:content';
 
 // Get the ToS content using Astro content collections
 const tosEntry = await getEntry('legal', 'vilkar');
-const { Content } = await tosEntry.render();
+const { Content } = await render(tosEntry);
 ---
 
 <Layout

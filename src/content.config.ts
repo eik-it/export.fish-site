@@ -3,7 +3,7 @@ import { glob } from 'astro/loaders';
 
 // Define the legal collection for ToS and other legal documents
 const legalCollection = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.md', base: './src/content/legal' }),
   schema: z.object({
     title: z.string().optional(),
     lastUpdated: z.date().optional(),
