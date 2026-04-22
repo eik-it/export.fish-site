@@ -28,7 +28,7 @@ For utleiere som har utenlandske gjester er frivillig registrering som regel det
 
 ## Det er ikke bare registreringen som avgjør
 
-Registrering er inngangen til flere plikter: daglig fangstrapportering til Fiskeridirektoratet, korrekt eksportdokumentasjon, og rutiner som faktisk fungerer i hverdagen. Det er her vi ser flest ryke uti — ikke på selve registreringen, men på oppfølgingen etterpå.
+Registrering er inngangen til flere plikter: [daglig fangstrapportering](/blogg/daglig-fangstrapportering-turistfiske/) til Fiskeridirektoratet, korrekt eksportdokumentasjon, og rutiner som faktisk fungerer i hverdagen. Det er her vi ser flest ryke uti — ikke på selve registreringen, men på oppfølgingen etterpå.
 
 Det holder med noen få gjester, flere språk og hektiske utsjekker før kontrollen glipper. Et papirskjema i resepsjonen, en SMS eller en muntlig bekreftelse fra gjesten er sjelden godt nok når rapporteringen skal være daglig og eksportdokumentasjonen må være korrekt.
 
@@ -42,7 +42,7 @@ Det avgjørende er ofte helheten i tilbudet. Hvis gjestene velger deg fordi de s
 
 ## Hvorfor kravene bare blir viktigere
 
-Dokumentasjonskravene i denne bransjen blir ikke mindre strenge. Fiskeridirektoratet forventer sporbarhet, daglig rapportering og at virksomheten har kontroll på hva som blir fanget og hva som blir tatt ut av landet.
+Dokumentasjonskravene i denne bransjen blir ikke mindre strenge. Fiskeridirektoratet forventer [sporbarhet og korrekt dokumentasjon](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/), daglig rapportering og at virksomheten har kontroll på hva som blir fanget og hva som blir tatt ut av landet.
 
 For utleiere betyr det at improviserte løsninger fungerer stadig dårligere. Det som gikk med få gjester og lav aktivitet, holder ikke når du først er innenfor ordningen. Da er spørsmålet om du må registrere turistfiskebedrift tett knyttet til om du har et system som faktisk tåler kontroll.
 
@@ -69,7 +69,7 @@ Start med å se ærlig på hva du tilbyr. Har du overnatting og båt? Kommer gje
 
 Se deretter på arbeidsflyten din. Hvordan samles fangstdata inn i dag? Hvem kontrollerer at opplysningene er riktige? Hvordan håndteres gjester som ikke snakker norsk? Og hva skjer når fem båter reiser samme dag? Hvis svarene er uklare, er det et driftssignal like mye som et regelverkssignal.
 
-Dette er nettopp behovet vi har bygget Eksportfiske.no for. Turistene registrerer fangst på eget språk via QR-kode, du godkjenner med ett klikk, og både den daglige rapporten til Fiskeridirektoratet og eksportdokumentet til gjesten går automatisk.
+Dette er nettopp behovet vi har bygget [eksportfiske.no](https://eksportfiske.no/registrer/ny-kunde/) for. Turistene registrerer fangst på eget språk via QR-kode, du godkjenner med ett klikk, og både den daglige rapporten til Fiskeridirektoratet og eksportdokumentet til gjesten går automatisk.
 
 ## Må du registrere turistfiskebedrift hvis du bare leier ut én hytte?
 
@@ -81,4 +81,4 @@ Det er innholdet i tjenesten som teller, ikke antall enheter.
 
 Hvis du sitter med spørsmålet _må jeg registrere turistfiskebedrift_, er du sannsynligvis nærmere grensen enn du tror. Det lønner seg å få avklaringen før sesongen starter, ikke når første gjest står i døren og spør om papirene for å ta med fangsten hjem.
 
-[Kom i gang gratis hos Eksportfiske.no](https://eksportfiske.no/registrer/ny-kunde/) — det tar under ti minutter å sette opp. Du får daglig fangstrapportering, eksportdokumenter på gjestenes språk, og en oppfølging som fungerer i praksis — ikke bare på papir.
+[Prøv eksportfiske.no gratis i én måned](https://eksportfiske.no/registrer/ny-kunde/) — det tar under ti minutter å sette opp. Du får daglig fangstrapportering, eksportdokumenter på gjestenes språk, og en oppfølging som fungerer i praksis — ikke bare på papir.

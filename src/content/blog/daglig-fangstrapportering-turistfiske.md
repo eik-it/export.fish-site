@@ -10,7 +10,7 @@ image:
 tags: []
 ---
 
-Regelverket krever daglig fangstrapportering. For deg som leier ut hytte og båt til fisketurister, betyr dette at fangst må inn hver dag, per opphold og art. Det høres kanskje ut som enda mer papirarbeid, men i praksis handler det om å lage en rutine som faktisk fungerer når du har gjester, nøkkelutlevering, båtvask og alt det andre som også skal gjøres.
+Regelverket krever daglig fangstrapportering [for turistfiskebedrifter](/blogg/ma-du-registrere-turistfiskebedrift/). For deg som leier ut hytte og båt til fisketurister, betyr dette at fangst må inn hver dag, per opphold og art. Det høres kanskje ut som enda mer papirarbeid, men i praksis handler det om å lage en rutine som faktisk fungerer når du har gjester, nøkkelutlevering, båtvask og alt det andre som også skal gjøres.
 
 Det er nettopp her mange små utleiere kjenner at det glipper. Ikke fordi de ikke vil gjøre ting riktig, men fordi manuelle løsninger er sårbare. En lapp på kjøkkenbordet blir borte. En SMS blir ikke fulgt opp. Gjestene drar tidlig på morgenen, og plutselig mangler du registrering for én av dagene, og du kan ikke avslutte og godkjenne fiskeperioden — som er grunnlaget for utførselsdokumentasjonen. Vi har selv stått i dette, og vi vet hvor fort en liten glipp blir til unødvendig stress.
 

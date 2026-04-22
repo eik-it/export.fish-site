@@ -16,9 +16,9 @@ For hytteeiere og mindre utleiere som tilbyr båt og fiskeopplevelser til turist
 
 ## Hva betyr lovpålagt fangstrapportering for fritidsboligeiere?
 
-I praksis betyr det at du som leier ut fritidsbolig og båt [til turistfiskere](https://eksportfiske.no/registrer/), må ha kontroll på fangstdata når virksomheten omfattes av rapporteringsplikt. Det holder ikke å be turisten si fra ved avreise eller skrive noe på et ark. Opplysningene må samles inn riktig, til rett tid og på en måte som kan brukes videre i rapporteringen.
+I praksis betyr det at du som leier ut fritidsbolig og båt til turistfiskere, må ha kontroll på fangstdata når virksomheten [omfattes av rapporteringsplikt](/blogg/ma-du-registrere-turistfiskebedrift/). Det holder ikke å be turisten si fra ved avreise eller skrive noe på et ark. Opplysningene må samles inn riktig, til rett tid og på en måte som kan brukes videre i rapporteringen.
 
-Det er særlig kombinasjonen av overnatting, båtutleie og turistfiske som gjør dette relevant. Mange mindre aktører tenker fortsatt på seg selv som "bare en hytteeier". Men når du tar betalt for fiskeopplevelser, blir du i praksis en del av en [regulert verdikjede](https://eksportfiske.no/registrering/). Da holder det ikke med uformelle rutiner.
+Det er særlig kombinasjonen av overnatting, båtutleie og turistfiske som gjør dette relevant. Mange mindre aktører tenker fortsatt på seg selv som "bare en hytteeier". Men når du tar betalt for fiskeopplevelser, blir du i praksis en del av en regulert verdikjede. Da holder det ikke med uformelle rutiner.
 
 Mange blir overrasket over hvor mye ansvar som faktisk ligger hos utleier. Turisten registrerer fangsten, men du må ha et system som sikrer at det faktisk skjer — og at dokumentasjonen kan følges opp.
 
@@ -36,7 +36,7 @@ Selve rapporteringsplikten oppleves ofte som komplisert fordi mange blander fang
 
 Du må vite hvem som fisker, når de fisker, og hvilken fangst som tas opp — knyttet til riktig fiskeperiode. Hvis turisten senere skal ha dokumentasjon for utførsel av fisk, må grunnlaget allerede være korrekt. Feil i første ledd følger hele veien videre.
 
-Gode rutiner starter ved ankomst. Du bør ha en enkel måte for turisten å registrere daglig fangst på, og en prosess for å kontrollere at fiskeperioden er komplett før den avsluttes. Hvis du venter til avreisedagen, har du ventet for lenge.
+Gode rutiner starter ved ankomst. Du bør ha en enkel måte for turisten å [registrere daglig fangst](/blogg/daglig-fangstrapportering-turistfiske/) på, og en prosess for å kontrollere at fiskeperioden er komplett før den avsluttes. Hvis du venter til avreisedagen, har du ventet for lenge.
 
 ## Løs det daglig, ikke ved avreise
 
@@ -70,6 +70,12 @@ God rapportering er heller ikke bare et myndighetskrav. Turister som opplever at
 
 Hvis du driver utleie til turistfiskere, er det lite å vinne på å bygge egne nødløsninger rundt et regelverk som allerede er krevende. Du trenger et oppsett laget for denne typen drift — der fangstrapportering, kontroll og eksportdokumentasjon henger sammen.
 
-Det er akkurat det eksportfiske.no er bygget for. Du deler en lenke med turistene ved ankomst. De oppretter fiskeperioden og registrerer fangst dag for dag på sitt eget språk. Når de avslutter perioden, kontrollerer du og godkjenner — og rapporten går automatisk til Fiskeridirektoratet. Ingen dobbeltarbeid, ingen håndskrift å tolke etterpå.
+Det er akkurat det [eksportfiske.no](https://eksportfiske.no/registrer/ny-kunde/) er bygget for. Du deler en lenke med turistene ved ankomst. De oppretter fiskeperioden og registrerer fangst dag for dag på sitt eget språk. Når de avslutter perioden, kontrollerer du og godkjenner — og rapporten går automatisk til Fiskeridirektoratet. Ingen dobbeltarbeid, ingen håndskrift å tolke etterpå.
 
-For fritidsboligeiere som [leier ut til turistfiske](https://eksportfiske.no/registrer/ny-kunde/), er dette ikke lenger "greit å ha". Det er en del av grunnmuren. Jo tidligere du får rutinen på plass, desto mindre sårbar blir sesongen når tempoet øker.
+For fritidsboligeiere som leier ut til turistfiske, er dette ikke lenger "greit å ha". Det er en del av grunnmuren. Jo tidligere du får rutinen på plass, desto mindre sårbar blir sesongen når tempoet øker.
+
+## Kom i gang før sesongen
+
+Vi har bygget eksportfiske.no for fritidsboligeiere som vil ha rapporteringen på plass uten å investere i et stort system. Turistene registrerer fangsten på sitt eget språk via en unik e-postlenke, du godkjenner fiskeperioden før avreise, og utførselsdokumentasjonen ligger klar.
+
+[Registrer bedriften din i dag →](https://eksportfiske.no/registrer/ny-kunde/)
