@@ -18,7 +18,7 @@ Det er nettopp her mange små utleiere kjenner at det glipper. Ikke fordi de ikk
 
 Kjernen er enkel: fangsten skal rapporteres daglig, og rapporteringen skal knyttes til riktig fartøy og riktig art. Det er ikke nok å vite at "de fikk litt torsk og sei i løpet av uka". Du må ha strukturerte opplysninger som kan sendes inn i tråd med kravene.
 
-For en liten utleier med én hytte og én båt betyr dette at du må vite hva gjestene faktisk har tatt opp hver dag de fisker. Har du to båter, må du i tillegg passe på at fangsten blir ført på riktig båt. Det er her mange undervurderer arbeidsmengden. Selve rapporten trenger ikke ta lang tid, men oppfølgingen rundt kan spise tid hvis du må ringe, purre og etterregistrere.
+For en liten utleier med én hytte og én båt betyr dette at du må vite hva gjestene faktisk har tatt opp hver dag de fisker. Har du flere hytter eller overlappende opphold, må du i tillegg passe på at fangsten knyttes til riktig gjest og riktig periode. Det er her mange undervurderer arbeidsmengden. Selve rapporten trenger ikke ta lang tid, men oppfølgingen rundt kan spise tid hvis du må ringe, purre og etterregistrere.
 
 Det nye kravet gjør også noe annet viktig: det flytter rapportering fra "noe vi ordner ved utsjekk" til "noe som må skje løpende". Da holder det ikke med gode intensjoner. Du trenger en rutine som er enkel nok til at både du og gjestene faktisk bruker den hver dag.
 
@@ -44,7 +44,7 @@ Til slutt trenger du en kontrollsløyfe. Selv om turistene registrerer selv, må
 
 Det er særlig tre ting som ofte skaper trøbbel. Det første er artsregistrering. Gjestene bruker gjerne ord de kjenner fra hjemlandet, eller de skiller ikke mellom arter som du vet må føres korrekt. Derfor bør systemet hjelpe dem til å velge riktig art, ikke overlate alt til fritekst.
 
-Det andre er fartøy. Hvis du leier ut mer enn én båt, må fangsten kobles til riktig båt fra start. Det er tungvint å rydde opp i etterkant, og det er fort gjort å blande hvis to grupper kommer inn omtrent samtidig.
+Det andre er opphold og gjester. Hvis du har flere hytter eller grupper som overlapper, må fangsten knyttes til riktig opphold fra start. Det er tungvint å rydde opp i etterkant, og det er fort gjort å blande hvis to grupper kommer inn omtrent samtidig.
 
 Det tredje er timing. Mange tenker at så lenge alt er ført før gjestene drar, er det godt nok. Men med daglige krav og avhengighet mellom rapportering og utførselsdokumentasjon blir det en dårlig vane. Den tryggeste løsningen er å få fangsten registrert fortløpende hver dag.
 
