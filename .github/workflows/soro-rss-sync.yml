@@ -64,7 +64,7 @@ jobs:
             - [ ] Stemmen er konsistent med eksportfiske.no (første person, norsk)
             - [ ] Tre-delt registreringstest (MVA + 50 000 kr + båt) er korrekt fremstilt
             - [ ] Datoer og årstall er korrekte (ingen udokumenterte "fra 2025"-påstander)
-            - [ ] CTA peker til /registrer/ny-kunde/ og er tydelig
+            - [ ] CTA peker til /registrer/ og er tydelig
             - [ ] Interne lenker er gyldige
             - [ ] Artikkelen er klar for publisering
           commit-message: "Legg til artikler fra Soro RSS"

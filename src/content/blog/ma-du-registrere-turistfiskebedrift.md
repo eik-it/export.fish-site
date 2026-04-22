@@ -77,8 +77,4 @@ Ofte er dette spørsmålet stilt med håp om et enkelt nei. Men én hytte er ikk
 
 Det er innholdet i tjenesten som teller, ikke antall enheter.
 
-## Kom i gang før sesongen
-
 Hvis du sitter med spørsmålet _må jeg registrere turistfiskebedrift_, er du sannsynligvis nærmere grensen enn du tror. Det lønner seg å få avklaringen før sesongen starter, ikke når første gjest står i døren og spør om papirene for å ta med fangsten hjem.
-
-[Prøv eksportfiske.no gratis i én måned](https://eksportfiske.no/registrer/) — det tar under ti minutter å sette opp. Du får daglig fangstrapportering, eksportdokumenter på gjestenes språk, og en oppfølging som fungerer i praksis — ikke bare på papir.

@@ -14,7 +14,7 @@ const legalCollection = defineCollection({
 // Note: the frontmatter `slug` field is consumed by the glob loader as entry.id
 // and must not be declared in the schema.
 const blogCollection = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
+  loader: glob({ pattern: ['**/*.md', '!REVIEW_GUIDELINES.md'], base: './src/content/blog' }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
