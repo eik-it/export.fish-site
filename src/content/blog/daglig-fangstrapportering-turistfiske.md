@@ -1,6 +1,6 @@
 ---
 title: "Daglig fangstrapportering i turistfiske"
-description: "Daglig fangstrapportering turistfiske fra 1. august 2025 krever nye rutiner. Slik gjør du rapporteringen enkel, riktig og trygg for gjestene."
+description: "Regelverket krever daglig fangstrapportering i turistfiske. Slik gjør du rapporteringen enkel, riktig og trygg for gjestene."
 slug: "daglig-fangstrapportering-turistfiske"
 guid: "8dc94a43-733f-492c-84da-31661f4f9559"
 pubDate: 2026-04-21T19:50:39.000Z
@@ -10,9 +10,9 @@ image:
 tags: []
 ---
 
-Fra 1. august 2025 holder det ikke lenger å samle opp fangst og ta det senere. For deg som leier ut hytte og båt til fisketurister, betyr daglig fangstrapportering turistfiske at fangst må inn hver dag, per fartøy og art. Det høres kanskje ut som enda mer papirarbeid, men i praksis handler det om å lage en rutine som faktisk fungerer når du har gjester, nøkkelutlevering, båtvask og alt det andre som også skal gjøres.
+Regelverket krever daglig fangstrapportering. For deg som leier ut hytte og båt til fisketurister, betyr dette at fangst må inn hver dag, per fartøy og art. Det høres kanskje ut som enda mer papirarbeid, men i praksis handler det om å lage en rutine som faktisk fungerer når du har gjester, nøkkelutlevering, båtvask og alt det andre som også skal gjøres.
 
-Det er nettopp her mange små utleiere kjenner at det glipper. Ikke fordi de ikke vil gjøre ting riktig, men fordi manuelle løsninger er sårbare. En lapp på kjøkkenbordet blir borte. En SMS blir ikke fulgt opp. Gjestene drar tidlig på morgenen, og plutselig mangler du rapporten som må være sendt før du kan utstede [utførselsdokumentasjon](https://eksportfiske.no/registrer/). Vi har selv stått i dette, og vi vet hvor fort en liten glipp blir til unødvendig stress.
+Det er nettopp her mange små utleiere kjenner at det glipper. Ikke fordi de ikke vil gjøre ting riktig, men fordi manuelle løsninger er sårbare. En lapp på kjøkkenbordet blir borte. En SMS blir ikke fulgt opp. Gjestene drar tidlig på morgenen, og plutselig mangler du registrering for én av dagene, og du kan ikke avslutte og godkjenne fiskeperioden — som er grunnlaget for [utførselsdokumentasjonen](https://eksportfiske.no/registrer/). Vi har selv stått i dette, og vi vet hvor fort en liten glipp blir til unødvendig stress.
 
 ## Hva betyr daglig fangstrapportering i turistfiske i praksis?
 
@@ -34,7 +34,7 @@ Det betyr ikke at alt må være komplisert. Tvert imot. Den beste rutinen er den
 
 Start med ett prinsipp: rapportering skal skje samme dag som fisket foregår. Ikke dagen etter, ikke ved avreise. Samme dag. Når den regelen er tydelig fra første kontakt med gjesten, blir resten mye enklere.
 
-Deretter må du gjøre rapporteringen lett tilgjengelig. Hvis gjestene må laste ned en app, opprette bruker og forstå norske faguttrykk, mister du mange på veien. Har du derimot en løsning der de åpner en lenke, velger språk og registrerer fangsten selv, senker du terskelen kraftig. Det er særlig viktig når over halvparten av gjestene er tyskspråklige og mange bare er i Norge noen få dager i året.
+Deretter må du gjøre rapporteringen lett tilgjengelig. Hvis gjestene må laste ned en app, opprette bruker og forstå norske faguttrykk, mister du mange på veien. Har du derimot en løsning der turisten oppgir e-post, åpner en unik lenke og registrerer fangsten på sitt eget språk, senker du terskelen kraftig. Det er særlig viktig for mange utleiere der en stor andel av gjestene er tyskspråklige og mange bare er i Norge noen få dager i året.
 
 Du bør også forklare hvorfor rapporteringen angår dem. Ikke med paragrafspråk, men konkret. Hvis fangsten ikke er rapportert, kan du heller ikke gjøre klart utførselsdokumentasjonen de trenger ved hjemreise. Da skjønner gjestene at dette ikke er en intern rutine for deg, men en nødvendig del av oppholdet.
 
@@ -62,7 +62,7 @@ Mange som driver med [én hytte og én båt](https://eksportfiske.no/blogg/lovpa
 
 Når du driver alene eller sammen med familien, må systemet fungere uten opplæring, installasjon og teknisk styr. Det må være lett å sette i gang med, lett å bruke for gjestene og lett å kontrollere for deg. Det er også derfor lav terskel betyr så mye mer enn "fine funksjoner". Hvis løsningen ikke blir brukt hver dag, hjelper det lite hva den kan på papiret.
 
-Vi mener derfor at god daglig fangstrapportering turistfiske ikke først og fremst handler om avansert teknologi. Det handler om å fjerne friksjon. En passordløs lenke på gjestens eget språk er ofte mer verdifull enn et komplisert system med mange valg. Når det er enkelt, blir det gjort.
+Vi mener derfor at god daglig fangstrapportering turistfiske ikke først og fremst handler om avansert teknologi. Det handler om å fjerne friksjon. En løsning der turisten enkelt får tilgang via e-post og kan registrere på sitt eget språk er ofte mer verdifull enn et komplisert system med mange valg. Når det er enkelt, blir det gjort.
 
 ## Hvordan gjøre oppstarten enkel for gjestene
 
