@@ -69,7 +69,7 @@ Start med å se ærlig på hva du tilbyr. Har du overnatting og båt? Kommer gje
 
 Se deretter på arbeidsflyten din. Hvordan samles fangstdata inn i dag? Hvem kontrollerer at opplysningene er riktige? Hvordan håndteres gjester som ikke snakker norsk? Og hva skjer når fem båter reiser samme dag? Hvis svarene er uklare, er det et driftssignal like mye som et regelverkssignal.
 
-Dette er nettopp behovet vi har bygget [eksportfiske.no](https://eksportfiske.no/registrer/ny-kunde/) for. Turistene registrerer fangst på eget språk via QR-kode, du godkjenner med ett klikk, og både den daglige rapporten til Fiskeridirektoratet og eksportdokumentet til gjesten går automatisk.
+Dette er nettopp behovet vi har bygget [eksportfiske.no](https://eksportfiske.no/registrer/) for. Turistene registrerer fangst på eget språk via QR-kode, du godkjenner med ett klikk, og både den daglige rapporten til Fiskeridirektoratet og eksportdokumentet til gjesten går automatisk.
 
 ## Må du registrere turistfiskebedrift hvis du bare leier ut én hytte?
 
@@ -81,4 +81,4 @@ Det er innholdet i tjenesten som teller, ikke antall enheter.
 
 Hvis du sitter med spørsmålet _må jeg registrere turistfiskebedrift_, er du sannsynligvis nærmere grensen enn du tror. Det lønner seg å få avklaringen før sesongen starter, ikke når første gjest står i døren og spør om papirene for å ta med fangsten hjem.
 
-[Prøv eksportfiske.no gratis i én måned](https://eksportfiske.no/registrer/ny-kunde/) — det tar under ti minutter å sette opp. Du får daglig fangstrapportering, eksportdokumenter på gjestenes språk, og en oppfølging som fungerer i praksis — ikke bare på papir.
+[Prøv eksportfiske.no gratis i én måned](https://eksportfiske.no/registrer/) — det tar under ti minutter å sette opp. Du får daglig fangstrapportering, eksportdokumenter på gjestenes språk, og en oppfølging som fungerer i praksis — ikke bare på papir.
