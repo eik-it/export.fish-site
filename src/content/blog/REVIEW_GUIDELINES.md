@@ -64,9 +64,11 @@ Påstander som "over halvparten av gjestene er tyskspråklige" er ikke verifiser
 - Ikke fest lenker på tangentiale ord ("regulert verdikjede" → registreringsside gir ingen mening).
 - Enten bruk et naturlig verb/uttrykk, eller la ordet stå som ren tekst og plasser CTA-en et annet sted.
 
-### Avsluttende CTA-seksjon
+### Ikke legg til egen CTA-seksjon i artikler
 
-Hver artikkel bør avsluttes med en dedikert `## Kom i gang...`-seksjon med tydelig handlingslenke. Brand-omtaler i brødteksten kan også lenkes, men den avsluttende CTA-en er konverteringsankeret.
+Bloggmalen (`src/pages/blogg/[...slug].astro`) rendrer automatisk en "Klar til å komme i gang?"-seksjon med knapper til `/registrer/` og `/registrering` på alle bloggsider. Egne `## Kom i gang...`-seksjoner i artikkelen blir derfor dobbel CTA — ikke legg dem til.
+
+Brand-omtaler i brødteksten kan fortsatt lenkes der det flyter naturlig (f.eks. "det er akkurat det [eksportfiske.no](https://eksportfiske.no/registrer/) er bygget for"). Det er den avsluttende malsseksjonen som er konverteringsankeret.
 
 ## Redaksjonell konsistens
 

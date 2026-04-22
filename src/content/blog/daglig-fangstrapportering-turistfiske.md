@@ -81,9 +81,3 @@ Et annet tydelig tegn er at du har begynt å få flere korte opphold. Jo oftere 
 Vi nevner ikke dette for å dramatisere. Tvert imot. Poenget er at du kan ta grep før det blir et problem. Når rapporteringen går digitalt og løpende, får du en enklere hverdag og bedre kontroll uten å bruke mer tid.
 
 For mange små utleiere er det nettopp det som teller mest. Ikke store ord, men en løsning som gjør at dagen flyter. Du vet at kravene følges. Gjestene forstår hva de skal gjøre. Og når de skal reise hjem, ligger grunnlaget klart i stedet for å være noe du må jage inn i siste liten.
-
-## Kom i gang med enkel daglig rapportering
-
-eksportfiske.no har vi laget for små utleiere som vil ha rutinen på plass uten å investere i et stort system. Turistene registrerer fangsten på sitt eget språk via en unik e-postlenke, du godkjenner fiskeperioden før avreise, og utførselsdokumentasjonen ligger klar.
-
-[Registrer bedriften din i dag →](https://eksportfiske.no/registrer/)
