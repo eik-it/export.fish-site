@@ -6,11 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "test:e2e": "playwright test",
-    "test:e2e:visual": "playwright test --grep '@visual'",
-    "test:e2e:ui": "playwright test --ui",
-    "test:e2e:headed": "playwright test --headed"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
@@ -23,7 +19,6 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@playwright/test": "^1.56.1",
     "fast-xml-parser": "^5.7.1",
     "sharp": "^0.34.5",
     "turndown": "^7.2.4"
