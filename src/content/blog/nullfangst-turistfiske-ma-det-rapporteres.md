@@ -12,7 +12,7 @@ tags: []
 
 Gjesten kom inn uten fisk. Kanskje var det mye vind, kanskje bet ikke seien, eller kanskje de bare tok en kort kveldstur. Det er nettopp her mange utleiere stopper opp og lurer: Hva gjør vi med nullfangst turistfiske - skal det rapporteres, og i så fall hvordan?
 
-Det korte svaret er at det ikke holder å bare registrere de dagene det faktisk blir tatt fisk. Når regelverket krever daglig fangstrapportering per fartøy og art, må du også ha kontroll på dagene der resultatet er null. For deg som leier ut én hytte og én båt, er dette ikke bare et spørsmål om papirarbeid. Det handler om å ha orden i driften, kunne utstede riktig utførselsdokumentasjon og slippe usikkerhet i etterkant.
+Det korte svaret er at det ikke holder å bare registrere de dagene det faktisk blir tatt fisk. Regelverket krever daglig fangstrapportering for hele fiskeperioden, og du må også ha kontroll på dagene der resultatet er null. For deg som leier ut én hytte og én båt, er dette ikke bare et spørsmål om papirarbeid. Det handler om å ha orden i driften, kunne utstede riktig utførselsdokumentasjon og slippe usikkerhet i etterkant.
 
 ## Hvorfor nullfangst i turistfiske skaper trøbbel
 
@@ -24,9 +24,9 @@ Derfor er nullfangst ikke en bagatell. Det er en del av dokumentasjonen på at r
 
 ## Hva betyr nullfangst turistfiske i praksis?
 
-I praktisk drift betyr nullfangst at et fartøy har vært brukt til fiske, men at det ikke er tatt fisk som skal føres som fangst den dagen. Det viktige er ikke bare sluttresultatet i fryseboksen. Det viktige er at turen har funnet sted, og at virksomheten din har en sammenhengende rapportering.
+I praktisk drift betyr nullfangst at gjestene har vært ute på fisketur innenfor et opphold, men at det ikke er tatt fisk som skal føres som fangst den dagen. Det viktige er ikke bare sluttresultatet i fryseboksen. Det viktige er at turen har funnet sted, og at virksomheten din har en sammenhengende rapportering for hele fiskeperioden.
 
-Dette blir ekstra relevant etter forskriftsendringene som trådte i kraft 1. august 2025. Da ble det skjerpet krav til [daglig rapportering](https://eksportfiske.no/blogg/daglig-fangstrapportering-turistfiske/) per fartøy og art, og utførselsdokumentasjon kan ikke utstedes før rapport er sendt inn. For deg betyr det én ting: Du trenger en rutine som også fanger opp nullfangst, ikke bare dagens storfangst.
+Regelverket krever daglig fangstrapportering, og det er periodelukkingen kombinert med utleiers godkjenning som utløser utførselsdokumentasjonen. Det betyr at du trenger en rutine som fanger opp alle dager i oppholdet - også de uten fangst. Les mer om [daglig rapportering](/blogg/daglig-fangstrapportering-turistfiske/) og hva det innebærer i praksis.
 
 Det betyr ikke at du må gjøre dette tungvint. Tvert imot. Poenget er å gjøre det enkelt nok til at det faktisk blir gjort hver dag.
 
@@ -61,7 +61,7 @@ Den vanligste feilen er å tro at nullfangst ikke trenger noen registrering. Den
 
 En annen klassiker er at utleier noterer "ingen fisk" på papir eller i en melding, men ikke får det inn i den faktiske fangstrapporteringen. Da har du i praksis informasjonen, men ikke dokumentasjonen der den må være. Hvis du senere skal utstede utførselsdokumentasjon, hjelper det lite at opplysningen ligger i en notatbok på kjøkkenet.
 
-Noen tenker også at nullfangst bare er relevant for større anlegg med mange båter. Det stemmer dårlig. Tvert imot merkes slike hull ofte ekstra godt hos [små utleiere](https://eksportfiske.no/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/). Har du én båt, er hver fiskedag synlig. Mangler det rapportering for to av fem dager, blir avviket vanskeligere å forklare enn i en stor drift med mange samtidige bevegelser.
+Noen tenker også at nullfangst bare er relevant for større anlegg med mange båter. Det stemmer dårlig. Tvert imot merkes slike hull ofte ekstra godt hos [små utleiere](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/). Har du ett opphold om gangen, er hver fiskedag synlig. Mangler det rapportering for to av fem dager, blir avviket vanskeligere å forklare enn i en stor drift med mange samtidige bevegelser.
 
 ## Hvordan lage en rutine som faktisk holder
 
@@ -69,7 +69,7 @@ Den beste rutinen er den som tåler en travel lørdag, en sen innsjekk og gjeste
 
 Det som fungerer best for små utleiere, er en enkel flyt der gjestene registrerer selv, dag for dag, og der du har oversikt over hva som er sendt inn og hva som mangler. Når rapporteringen skjer fortløpende, blir nullfangst bare en normal del av driften. Ikke et problem du oppdager for sent.
 
-Det er nettopp derfor vi har bygget [Eksportfiske.no](https://eksportfiske.no/registrer/) slik vi selv ville brukt det som utleiere. Gjestene får en passordløs lenke og kan registrere på norsk, engelsk eller tysk. Du beholder kontrollen, ser hva som mangler, og kan utstede dokumentasjon når rapportene er på plass. Turistene gjør jobben, og du får enklere drift uten å gi slipp på oversikten.
+Det er nettopp derfor vi har bygget [eksportfiske.no](https://eksportfiske.no/registrer/) slik vi selv ville brukt det som utleiere. Du deler en subdomene-lenke eller QR-kode med gjestene ved innsjekk. Gjesten oppretter fiskeperioden, oppgir e-postadressen sin og får en unik lenke til sitt eget dashbord - der kan de registrere fangst på norsk, engelsk eller tysk. Du beholder kontrollen, ser hva som mangler, og dokumentasjonen er klar når perioden er godkjent. Turistene gjør jobben, og du får enklere drift uten å gi slipp på oversikten.
 
 ## Hva bør du si til gjestene?
 
@@ -81,7 +81,7 @@ For tyskspråklige og andre utenlandske gjester betyr språk mye mer enn mange t
 
 ## Det handler ikke om merarbeid, men om sammenheng
 
-Nullfangst turistfiske virker lite viktig helt til du trenger en fullstendig rapportkjede. Da ser du fort hvor avgjørende de tomme dagene er. De binder sammen oppholdet, viser faktisk bruk av fartøy og gjør at dokumentasjonen henger på greip.
+Nullfangst turistfiske virker lite viktig helt til du trenger en fullstendig rapportkjede. Da ser du fort hvor avgjørende de tomme dagene er. De binder sammen fiskeperioden, viser faktisk aktivitet gjennom oppholdet og gjør at dokumentasjonen henger på greip.
 
 For noen utleiere vil dette fortsatt løses med en veldig enkel daglig rutine. For andre, særlig hvis du har to båter, hyppige bytter eller mange utenlandske gjester, blir et digitalt opplegg nesten nødvendig. Det er ikke fordi driften din er stor. Det er fordi hukommelse og lapper ikke skalerer særlig godt, selv i liten skala.
 
