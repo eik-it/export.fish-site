@@ -46,7 +46,7 @@ Det er særlig tre ting som ofte skaper trøbbel. Det første er artsregistrerin
 
 Det andre er opphold og gjester. Hvis du har flere hytter eller grupper som overlapper, må fangsten knyttes til riktig opphold fra start. Det er tungvint å rydde opp i etterkant, og det er fort gjort å blande hvis to grupper kommer inn omtrent samtidig.
 
-Det tredje er timing. Mange tenker at så lenge alt er ført før gjestene drar, er det godt nok. Men med daglige krav og avhengighet mellom rapportering og utførselsdokumentasjon blir det en dårlig vane. Den tryggeste løsningen er å få fangsten registrert fortløpende hver dag.
+Det tredje er timing. Mange tenker at så lenge alt er ført før gjestene drar, er det godt nok. Men med daglige krav og avhengighet mellom rapportering og utførselsdokumentasjon blir det en dårlig vane. Den tryggeste løsningen er å få fangsten registrert fortløpende hver dag — [også dagene gjestene ikke får fisk](/blogg/nullfangst-turistfiske-ma-det-rapporteres/).
 
 ## Hva betyr dette for utførselsdokumentasjon?
 
@@ -58,11 +58,11 @@ Har du derimot daglig registrering på plass, blir utførselsdokumentasjonen en 
 
 ## En liten utleier trenger ikke et stort system
 
-Mange som driver med [én hytte og én båt](https://eksportfiske.no/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/) tenker at digitale løsninger er laget for større anlegg. Det stemmer dårlig med virkeligheten. Det er ofte den lille utleieren som har mest å vinne på en enkel arbeidsflyt, fordi du ikke har resepsjon, administrasjon eller en ansatt som kan rydde opp etterpå.
+Mange som driver med [én hytte og én båt](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/) tenker at digitale løsninger er laget for større anlegg. Det stemmer dårlig med virkeligheten. Det er ofte den lille utleieren som har mest å vinne på en enkel arbeidsflyt, fordi du ikke har resepsjon, administrasjon eller en ansatt som kan rydde opp etterpå.
 
 Når du driver alene eller sammen med familien, må systemet fungere uten opplæring, installasjon og teknisk styr. Det må være lett å sette i gang med, lett å bruke for gjestene og lett å kontrollere for deg. Det er også derfor lav terskel betyr så mye mer enn "fine funksjoner". Hvis løsningen ikke blir brukt hver dag, hjelper det lite hva den kan på papiret.
 
-Vi mener derfor at god daglig fangstrapportering turistfiske ikke først og fremst handler om avansert teknologi. Det handler om å fjerne friksjon. En løsning der turisten enkelt får tilgang via e-post og kan registrere på sitt eget språk er ofte mer verdifull enn et komplisert system med mange valg. Når det er enkelt, blir det gjort. Det er akkurat derfor [eksportfiske.no gjør rapporteringen enkel](https://eksportfiske.no/registrer/) — turistene registrerer på eget språk via en e-postlenke, og du beholder kontrollen før utførselsdokumentasjonen utstedes.
+Vi mener derfor at god daglig fangstrapportering i turistfiske ikke først og fremst handler om avansert teknologi. Det handler om å fjerne friksjon. En løsning der turisten enkelt får tilgang via e-post og kan registrere på sitt eget språk er ofte mer verdifull enn et komplisert system med mange valg. Når det er enkelt, blir det gjort. Det er akkurat derfor [eksportfiske.no gjør rapporteringen enkel](https://eksportfiske.no/registrer/) — turistene registrerer på eget språk via en e-postlenke, og du beholder kontrollen før utførselsdokumentasjonen utstedes.
 
 ## Hvordan gjøre oppstarten enkel for gjestene
 
