@@ -12,7 +12,7 @@ tags: []
 
 Gjesten kom inn uten fisk. Kanskje var det mye vind, kanskje bet ikke seien, eller kanskje de bare tok en kort kveldstur. Det er nettopp her mange utleiere stopper opp og lurer: Hva gjør vi med nullfangst — dager uten fangst — skal de rapporteres, og i så fall hvordan?
 
-Det korte svaret er at det ikke holder å bare registrere de dagene det faktisk blir tatt fisk. Regelverket krever daglig fangstrapportering for hele fiskeperioden, og du må også ha kontroll på dagene der resultatet er null. For deg som leier ut én hytte og én båt, er dette ikke bare et spørsmål om papirarbeid. Det handler om å ha orden i driften, kunne utstede riktig utførselsdokumentasjon og slippe usikkerhet i etterkant.
+Det korte svaret er at det ikke holder å bare registrere de dagene det faktisk blir tatt fisk. Regelverket krever daglig fangstrapportering for hele fiskeperioden, og du må også ha kontroll på dagene der resultatet er null. For deg som [leier ut én hytte og én båt](/blogg/ma-du-registrere-turistfiskebedrift/), er dette ikke bare et spørsmål om papirarbeid. Det handler om å ha orden i driften, kunne utstede riktig utførselsdokumentasjon og slippe usikkerhet i etterkant.
 
 ## Hvorfor nullfangst skaper trøbbel
 
