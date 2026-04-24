@@ -46,7 +46,7 @@ I praksis er forskjellen på et system som brukes og et som ikke brukes: enkelhe
 
 ## Slik lager du en trygg arbeidsflyt
 
-En god arbeidsflyt trenger ikke være komplisert. Den må bare være konsekvent. Ved ankomst forklarer du kort at turisten selv oppretter fiskeperioden og registrerer fangst dag for dag. Underveis kan du følge med og ta tak i avvik. Når turisten avslutter fiskeperioden ved avreise, kontrollerer du og godkjenner — da er grunnlaget klart for rapportering og eksportdokumentasjon.
+En god arbeidsflyt trenger ikke være komplisert. Den må bare være konsekvent. Ved ankomst forklarer du kort at turisten selv oppretter fiskeperioden og [registrerer fangst dag for dag](/blogg/nullfangst-turistfiske-ma-det-rapporteres/). Underveis kan du følge med og ta tak i avvik. Når turisten avslutter fiskeperioden ved avreise, kontrollerer du og godkjenner — da er grunnlaget klart for rapportering og eksportdokumentasjon.
 
 Det er midtfasen mange undervurderer. Uten løpende registrering sitter du med hukommelse og manuell oppsamling i høysesong. Det er sjelden en trygg modell.
 

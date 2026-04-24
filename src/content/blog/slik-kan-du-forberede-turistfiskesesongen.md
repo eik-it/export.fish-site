@@ -12,29 +12,29 @@ tags: []
 
 Det merkes fort når du ikke har rukket å forberede turistfiskesesongen. Første gjest står på tunet, båtnøkkelen skal overleveres, redningsvestene må telles, og samtidig dukker spørsmålet opp om fangstrapportering og utførselsdokumentasjon. Da blir små glipper fort til unødvendig stress. Nettopp derfor lønner det seg å ta noen praktiske grep før sesongen starter - særlig nå som kravene til rapportering er skjerpet.
 
-For mange [små utleiere](https://eksportfiske.no/blogg/ma-du-registrere-turistfiskebedrift/) handler dette ikke om store systemprosjekter. Det handler om å få kontroll på noen få ting som må sitte fra dag én. Har du én hytte og én båt, er det ofte enda viktigere. Når du driver alene eller sammen med familie, finnes det ingen administrasjon i bakgrunnen som rydder opp senere.
+For mange [små utleiere](/blogg/ma-du-registrere-turistfiskebedrift/) handler dette ikke om store systemprosjekter. Det handler om å få kontroll på noen få ting som må sitte fra dag én. Har du én hytte og én båt, er det ofte enda viktigere. Når du driver alene eller sammen med familie, finnes det ingen administrasjon i bakgrunnen som rydder opp senere.
 
 ## Forberede turistfiskesesongen starter med flyten
 
 Det første du bør se på, er ikke båten eller brygga. Det er arbeidsflyten din. Hvordan skal en gjest gå fra ankomst til ferdig rapportert fangst og riktig dokumentasjon ved avreise?
 
-Mange tenker at de kan ta dette muntlig ved innsjekk. Det fungerer noen ganger, men ikke alltid. Gjestene kommer ofte slitne fram, noen er ivrige etter å komme seg på sjøen, og informasjon som virker opplagt for deg, blir fort glemt. Derfor bør du ha en fast rekkefølge. Først registrering av gjesten. Så informasjon om fangstrapportering. Deretter hvordan rapporten sendes inn under oppholdet. Til slutt hva som må være på plass før utførselsdokumentasjon kan utstedes.
+Mange tenker at de kan ta dette muntlig ved innsjekk. Det fungerer noen ganger, men ikke alltid. Gjestene kommer ofte slitne fram, noen er ivrige etter å komme seg på sjøen, og informasjon som virker opplagt for deg, blir fort glemt. Derfor bør du ha en fast rekkefølge. Først registrering av gjesten. Så informasjon om [rapporteringsplikten](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/). Deretter hvordan rapporten sendes inn under oppholdet. Til slutt hva som må være på plass før utførselsdokumentasjon kan utstedes.
 
 Her glipper det ofte hos små utleiere. Ikke fordi du ikke kan reglene, men fordi sesongen går fort og hver uke blir litt forskjellig. Vi har selv stått i dette, og vi vet hva som glipper når du prøver å huske alt i hodet mens du samtidig vasker hytte, sjekker motor og svarer på meldinger.
 
 ## Gå gjennom rapporteringskravene før første gjest kommer
 
-Etter forskriftsendringene som trådte i kraft 1. august 2025, skal fangst rapporteres [daglig per fartøy og art](https://eksportfiske.no/blogg/daglig-fangstrapportering-turistfiske/). Det betyr i praksis at du ikke bør vente til utsjekk med å samle inn informasjon. Hvis rapporten ikke er sendt inn, kan utførselsdokumentasjon heller ikke utstedes. Det er et konkret punkt du må bygge inn i driften din, ikke noe du kan løse med en lapp på kjøkkenbordet.
+Regelverket krever at fangst rapporteres [daglig per opphold og art](/blogg/daglig-fangstrapportering-turistfiske/). Det betyr i praksis at du ikke bør vente til utsjekk med å samle inn informasjon. Hvis rapporten ikke er sendt inn, kan utførselsdokumentasjon heller ikke utstedes. Det er et konkret punkt du må bygge inn i driften din, ikke noe du kan løse med en lapp på kjøkkenbordet.
 
 For en liten utleier er løsningen som regel å gjøre rapporteringen til en del av gjestens rutine, ikke din ekstrajobb. Når turistene gjør jobben fortløpende, blir det enklere å holde kontroll. Du trenger fortsatt oversikt og godkjenning, men du slipper å sitte siste kvelden og tolke håndskrift, bilder av fiskekasser eller halve artsnavn på tysk.
 
-Det er også lurt å sjekke hvordan du håndterer [dager uten fangst](https://eksportfiske.no/blogg/nullfangst-turistfiske-ma-det-rapporteres/). Hvis en båt er ute, må du vite hva som skal registreres og når. Her bør du bruke samme praksis for alle opphold. Ikke lag spesialløsninger for hver gjest. Standardrutiner er det som gir ro i hverdagen.
+Det er også lurt å sjekke hvordan du håndterer [dager uten fangst](/blogg/nullfangst-turistfiske-ma-det-rapporteres/). Hvis en båt er ute, må du vite hva som skal registreres og når. Her bør du bruke samme praksis for alle opphold. Ikke lag spesialløsninger for hver gjest. Standardrutiner er det som gir ro i hverdagen.
 
 ## Gjør informasjonen forståelig for gjestene
 
-Mange gjester er flinke og vil gjøre ting riktig. Problemet er sjelden viljen. Problemet er språk, timing og uklare beskjeder. Over halvparten av turistene i dette markedet er tyskspråklige, og mange leser ikke norsk informasjon i detalj. Hvis instruksjonen om fangstrapportering bare står på et ark i gangen, er det lett å miste kontrollen.
+Mange gjester er flinke og vil gjøre ting riktig. Problemet er sjelden viljen. Problemet er språk, timing og uklare beskjeder. En stor andel av turistene i dette markedet er tyskspråklige, og mange leser ikke norsk informasjon i detalj. Hvis instruksjonen om fangstrapportering bare står på et ark i gangen, er det lett å miste kontrollen.
 
-Derfor bør du gå gjennom all gjesteinformasjon før sesongen. Står det tydelig hvem som skal rapportere, hva som skal rapporteres, og når det skal gjøres? Er begrepene enkle nok? Bruk korte setninger. Unngå intern fagsjargong. Skriv heller at fangsten må rapporteres hver dag per båt og art enn å lage lange forklaringer om regelverket.
+Derfor bør du gå gjennom all gjesteinformasjon før sesongen. Står det tydelig hvem som skal rapportere, hva som skal rapporteres, og når det skal gjøres? Er begrepene enkle nok? Bruk korte setninger. Unngå intern fagsjargong. Skriv heller at fangsten må rapporteres hver dag per opphold og art enn å lage lange forklaringer om regelverket.
 
 Det samme gjelder utførselsdokumentasjon. Mange gjester er først opptatt av dette mot slutten av oppholdet. Du bør derfor si fra allerede ved ankomst at dokumentasjon for utførsel henger sammen med innsendt fangstrapport. Da unngår du diskusjoner ved avreise, når tiden er knapp og bilen allerede er pakket.
 
@@ -52,7 +52,7 @@ En god sesongstart er ikke den mest detaljerte. Den er den som faktisk blir bruk
 
 Be gjerne et familiemedlem eller en venn gå gjennom ankomstløpet slik en gjest ville gjort. Får de med seg hvordan rapporteringen fungerer? Skjønner de hva som må være registrert før utførselsdokumentasjon kan ordnes? Hvis noe er uklart for dem, blir det også uklart for gjestene.
 
-Dette er også tidspunktet for å luke bort papirbaserte nødprosedyrer som i realiteten har blitt hovedløsningen. Mange starter med tanken om å digitalisere "senere", men ender med lapper, meldinger og manuell opprydding. Det kan fungere i lavsesong med én booking, men det blir sårbart når flere opphold overlapper. Særlig etter 2025-kravene er det lurt å bruke en løsning der rapportering skjer i tråd med forskriftens krav til digitale systemer, og der dokumentflyten følger rapporteringen. Vi i Eksportfiske.no har bygget dette nettopp for små utleiere som vil ha det enkelt, med turistene gjør jobben på sitt eget språk og du beholder kontrollen.
+Dette er også tidspunktet for å luke bort papirbaserte nødprosedyrer som i realiteten har blitt hovedløsningen. Mange starter med tanken om å digitalisere "senere", men ender med lapper, meldinger og manuell opprydding. Det kan fungere i lavsesong med én booking, men det blir sårbart når flere opphold overlapper. Særlig etter de skjerpede rapporteringskravene er det lurt å bruke en løsning der rapportering skjer i tråd med forskriftens krav til digitale systemer, og der dokumentflyten følger rapporteringen. Vi i eksportfiske.no har bygget dette nettopp for små utleiere som vil ha det enkelt, med turistene gjør jobben på sitt eget språk og du beholder kontrollen.
 
 ## Hva du bør ha klart før første innsjekk
 
