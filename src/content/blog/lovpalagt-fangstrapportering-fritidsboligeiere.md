@@ -34,7 +34,7 @@ Manuell håndtering skaper også et ansvarsfall: sitter turisten på manglende r
 
 Selve rapporteringsplikten oppleves ofte som komplisert fordi mange blander fangstregistrering, intern dokumentasjon og eksportdokumentasjon. Dette er nært knyttet sammen, men det er ikke det samme.
 
-Du må vite hvem som fisker, når de fisker, og hvilken fangst som tas opp — knyttet til riktig fiskeperiode. Hvis turisten senere skal ha dokumentasjon for utførsel av fisk, må grunnlaget allerede være korrekt. Feil i første ledd følger hele veien videre.
+Du må vite hvem som fisker, når de fisker, og hvilken fangst som tas opp — knyttet til riktig fiskeperiode. Hvis turisten senere skal ha dokumentasjon for utførsel av fisk, må grunnlaget allerede være korrekt. Feil i første ledd følger hele veien videre. Familier med barn reiser spesielle spørsmål her — se [hva som gjelder for aldersgrense og utførsel](/blogg/aldersgrense-turistfiske-12-ar/).
 
 Gode rutiner starter ved ankomst. Du bør ha en enkel måte for turisten å [registrere daglig fangst](/blogg/daglig-fangstrapportering-turistfiske/) på, og en prosess for å kontrollere at fiskeperioden er komplett før den avsluttes. Hvis du venter til avreisedagen, har du ventet for lenge.
 
