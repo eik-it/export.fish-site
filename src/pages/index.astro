@@ -35,7 +35,10 @@ import logo from '../assets/logo.png';
 
     <div class="w-full mx-auto text-center max-w-5xl relative z-10 px-4">
       <h1 class="text-4xl md:text-7xl font-bold mb-6 leading-tight break-words" id="hero-heading">
-        Leier du ut hytta til turistfiskere?
+        Leier du ut <span
+          id="hero-word"
+          style="display:inline-block;transition:opacity 0.18s ease,transform 0.18s ease;will-change:opacity,transform;"
+        >hytta</span> til turistfiskere?
       </h1>
 
       <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-blue-50 font-light leading-relaxed">
@@ -1077,6 +1080,65 @@ import logo from '../assets/logo.png';
       }, 100);
     }
   });
+
+  // Hero headline word-swap animation with exponential backoff
+  // Swaps "hytta" <-> "båten" rapidly at first, then slows to a gentle rhythm.
+  // Respects prefers-reduced-motion.
+  (function () {
+    const words = ['hytta', 'båten'];
+    // Intervals (ms) between swaps: starts fast, slows down exponentially,
+    // then loops back to give a repeating "burst → settle" feel.
+    const intervals = [200, 350, 550, 850, 1300, 2000, 3000, 3500, 4000];
+
+    const motionOk = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function init() {
+      const el = document.getElementById('hero-word');
+      if (!el) return;
+
+      if (!motionOk) {
+        // Static – show first word, no animation
+        el.textContent = words[0];
+        return;
+      }
+
+      let wordIndex = 0;
+      let intervalIndex = 0;
+
+      function swap() {
+        // Fade + slight upward slide out
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(-6px)';
+
+        setTimeout(() => {
+          wordIndex = (wordIndex + 1) % words.length;
+          el.textContent = words[wordIndex];
+          // Slide in from below
+          el.style.transform = 'translateY(6px)';
+          // Force reflow so the slide-in transition fires
+          void el.offsetWidth;
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+
+          // Advance through the interval table, then repeat the last value
+          const delay = intervals[Math.min(intervalIndex, intervals.length - 1)];
+          intervalIndex = intervalIndex < intervals.length - 1 ? intervalIndex + 1 : 0;
+          setTimeout(swap, delay);
+        }, 180); // matches the CSS transition duration
+      }
+
+      // Kick off after a short initial pause
+      const firstDelay = intervals[0];
+      intervalIndex = 1;
+      setTimeout(swap, firstDelay);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
 </script>
 
 <!-- Trigger visual regression -->
