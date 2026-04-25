@@ -35,7 +35,10 @@ import logo from '../assets/logo.png';
 
     <div class="w-full mx-auto text-center max-w-5xl relative z-10 px-4">
       <h1 class="text-4xl md:text-7xl font-bold mb-6 leading-tight break-words" id="hero-heading">
-        Leier du ut hytta til turistfiskere?
+        Leier du ut <span
+          id="hero-word"
+          style="display:inline-block;transition:opacity 0.18s ease,transform 0.18s ease;will-change:opacity,transform;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;"
+        >hytta</span> til turistfiskere?
       </h1>
 
       <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-blue-50 font-light leading-relaxed">
@@ -1077,6 +1080,79 @@ import logo from '../assets/logo.png';
       }, 100);
     }
   });
+
+  // Hero headline word-swap animation with exponential backoff.
+  // Swaps "hytta" <-> "båten" rapidly at first, decelerates over ~15s,
+  // then settles permanently on a randomly chosen word.
+  // Respects prefers-reduced-motion.
+  (function () {
+    const words = ['hytta', 'båten'];
+
+    // 10 intervals, exponential-ish decay from 500ms → 2500ms.
+    // Total animation time ≈ sum of intervals + transition overhead ≈ 15s.
+    const intervals = [
+      500, 600, 720, 870, 1050, 1260, 1500, 1800, 2150, 2500
+    ];
+
+    const motionOk = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function init() {
+      const el = document.getElementById('hero-word');
+      if (!el) return;
+
+      // Choose the settle word randomly at page load so different visitors see
+      // different results. The animation always starts on "hytta" and alternates,
+      // so we need an even number of swaps to settle on "hytta" and an odd number
+      // to settle on "båten". Pick the target first, then decide swap count.
+      const settleOn = Math.random() < 0.5 ? 'hytta' : 'båten';
+      // intervals.length swaps = 18 (even → settles on "hytta").
+      // intervals.length - 1 swaps = 17 (odd → settles on "båten").
+      const totalSwaps = settleOn === 'hytta' ? intervals.length : intervals.length - 1;
+
+      if (!motionOk) {
+        // Static – show the pre-chosen settle word immediately, no animation
+        el.textContent = settleOn;
+        return;
+      }
+
+      let wordIndex = 0;  // starts on "hytta" (index 0)
+      let swapsDone = 0;
+
+      function swap() {
+        // Fade + slight upward slide out
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(-6px)';
+
+        setTimeout(() => {
+          wordIndex = (wordIndex + 1) % words.length;
+          el.textContent = words[wordIndex];
+          swapsDone++;
+
+          // Slide in from below
+          el.style.transform = 'translateY(6px)';
+          // Force reflow so the slide-in transition fires
+          void el.offsetWidth;
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+
+          // Stop after the planned number of swaps
+          if (swapsDone >= totalSwaps) return;
+
+          const delay = intervals[Math.min(swapsDone, intervals.length - 1)];
+          setTimeout(swap, delay);
+        }, 180); // matches the CSS transition duration
+      }
+
+      // Kick off after the first interval
+      setTimeout(swap, intervals[0]);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
 </script>
 
 <!-- Trigger visual regression -->
