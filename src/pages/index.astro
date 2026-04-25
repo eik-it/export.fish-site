@@ -37,7 +37,7 @@ import logo from '../assets/logo.png';
       <h1 class="text-4xl md:text-7xl font-bold mb-6 leading-tight break-words" id="hero-heading">
         Leier du ut <span
           id="hero-word"
-          style="display:inline-block;transition:opacity 0.18s ease,transform 0.18s ease;will-change:opacity,transform;"
+          style="display:inline-block;transition:opacity 0.18s ease,transform 0.18s ease;will-change:opacity,transform;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;"
         >hytta</span> til turistfiskere?
       </h1>
 
@@ -1081,14 +1081,19 @@ import logo from '../assets/logo.png';
     }
   });
 
-  // Hero headline word-swap animation with exponential backoff
-  // Swaps "hytta" <-> "båten" rapidly at first, then slows to a gentle rhythm.
+  // Hero headline word-swap animation with exponential backoff.
+  // Swaps "hytta" <-> "båten" rapidly at first, decelerates over ~25s,
+  // then settles permanently on a randomly chosen word.
   // Respects prefers-reduced-motion.
   (function () {
     const words = ['hytta', 'båten'];
-    // Intervals (ms) between swaps: starts fast, slows down exponentially,
-    // then loops back to give a repeating "burst → settle" feel.
-    const intervals = [200, 350, 550, 850, 1300, 2000, 3000, 3500, 4000];
+
+    // 18 intervals, exponential-ish decay from 150ms → ~3800ms.
+    // Total animation time ≈ sum of all intervals + transition overhead ≈ 25s.
+    const intervals = [
+      150, 220, 320, 450, 620, 850, 1100, 1400, 1750,
+      2100, 2500, 2850, 3100, 3300, 3450, 3600, 3700, 3800
+    ];
 
     const motionOk = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -1096,14 +1101,23 @@ import logo from '../assets/logo.png';
       const el = document.getElementById('hero-word');
       if (!el) return;
 
+      // Choose the settle word randomly at page load so different visitors see
+      // different results. The animation always starts on "hytta" and alternates,
+      // so we need an even number of swaps to settle on "hytta" and an odd number
+      // to settle on "båten". Pick the target first, then decide swap count.
+      const settleOn = Math.random() < 0.5 ? 'hytta' : 'båten';
+      // intervals.length swaps = 18 (even → settles on "hytta").
+      // intervals.length - 1 swaps = 17 (odd → settles on "båten").
+      const totalSwaps = settleOn === 'hytta' ? intervals.length : intervals.length - 1;
+
       if (!motionOk) {
-        // Static – show first word, no animation
-        el.textContent = words[0];
+        // Static – show the pre-chosen settle word immediately, no animation
+        el.textContent = settleOn;
         return;
       }
 
-      let wordIndex = 0;
-      let intervalIndex = 0;
+      let wordIndex = 0;  // starts on "hytta" (index 0)
+      let swapsDone = 0;
 
       function swap() {
         // Fade + slight upward slide out
@@ -1113,6 +1127,8 @@ import logo from '../assets/logo.png';
         setTimeout(() => {
           wordIndex = (wordIndex + 1) % words.length;
           el.textContent = words[wordIndex];
+          swapsDone++;
+
           // Slide in from below
           el.style.transform = 'translateY(6px)';
           // Force reflow so the slide-in transition fires
@@ -1120,17 +1136,16 @@ import logo from '../assets/logo.png';
           el.style.opacity = '1';
           el.style.transform = 'translateY(0)';
 
-          // Advance through the interval table, then repeat the last value
-          const delay = intervals[Math.min(intervalIndex, intervals.length - 1)];
-          intervalIndex = intervalIndex < intervals.length - 1 ? intervalIndex + 1 : 0;
+          // Stop after the planned number of swaps
+          if (swapsDone >= totalSwaps) return;
+
+          const delay = intervals[Math.min(swapsDone, intervals.length - 1)];
           setTimeout(swap, delay);
         }, 180); // matches the CSS transition duration
       }
 
-      // Kick off after a short initial pause
-      const firstDelay = intervals[0];
-      intervalIndex = 1;
-      setTimeout(swap, firstDelay);
+      // Kick off after the first interval
+      setTimeout(swap, intervals[0]);
     }
 
     if (document.readyState === 'loading') {
