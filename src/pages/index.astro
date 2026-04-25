@@ -1082,17 +1082,16 @@ import logo from '../assets/logo.png';
   });
 
   // Hero headline word-swap animation with exponential backoff.
-  // Swaps "hytta" <-> "båten" rapidly at first, decelerates over ~25s,
+  // Swaps "hytta" <-> "båten" rapidly at first, decelerates over ~15s,
   // then settles permanently on a randomly chosen word.
   // Respects prefers-reduced-motion.
   (function () {
     const words = ['hytta', 'båten'];
 
-    // 18 intervals, exponential-ish decay from 150ms → ~3800ms.
-    // Total animation time ≈ sum of all intervals + transition overhead ≈ 25s.
+    // 10 intervals, exponential-ish decay from 500ms → 2500ms.
+    // Total animation time ≈ sum of intervals + transition overhead ≈ 15s.
     const intervals = [
-      150, 220, 320, 450, 620, 850, 1100, 1400, 1750,
-      2100, 2500, 2850, 3100, 3300, 3450, 3600, 3700, 3800
+      500, 600, 720, 870, 1050, 1260, 1500, 1800, 2150, 2500
     ];
 
     const motionOk = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
