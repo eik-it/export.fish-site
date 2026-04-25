@@ -36,7 +36,7 @@ Mange gjester er flinke og vil gjøre ting riktig. Problemet er sjelden viljen. 
 
 Derfor bør du gå gjennom all gjesteinformasjon før sesongen. Står det tydelig hvem som skal rapportere, hva som skal rapporteres, og når det skal gjøres? Er begrepene enkle nok? Bruk korte setninger. Unngå intern fagsjargong. Skriv heller at fangsten må rapporteres hver dag per opphold og art enn å lage lange forklaringer om regelverket.
 
-Det samme gjelder utførselsdokumentasjon. Mange gjester er først opptatt av dette mot slutten av oppholdet. Du bør derfor si fra allerede ved ankomst at dokumentasjon for utførsel henger sammen med innsendt fangstrapport. Da unngår du diskusjoner ved avreise, når tiden er knapp og bilen allerede er pakket.
+Det samme gjelder utførselsdokumentasjon. Mange gjester er først opptatt av dette mot slutten av oppholdet. Du bør derfor si fra allerede ved ankomst at dokumentasjon for utførsel henger sammen med innsendt fangstrapport. Da unngår du diskusjoner ved avreise, når tiden er knapp og bilen allerede er pakket. Familier med barn stiller gjerne tilleggsspørsmål her — se [hva som gjelder for aldersgrense og utførselsdokumentasjon](/blogg/aldersgrense-turistfiske-12-ar/).
 
 ## Båt, utstyr og registrering må henge sammen
 

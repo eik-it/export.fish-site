@@ -67,7 +67,7 @@ For deg som utleier betyr manglende registrering at gjestene ikke kan eksportere
 
 Start med å se ærlig på hva du tilbyr. Har du overnatting og båt? Kommer gjestene primært for å fiske? Hjelper du med fangst, oppbevaring eller utførsel? Hvis du svarer ja på flere av disse, bør du undersøke registrering nærmere.
 
-Se deretter på arbeidsflyten din. Hvordan samles fangstdata inn i dag? Hvem kontrollerer at opplysningene er riktige? Hvordan håndteres gjester som ikke snakker norsk? Og hva skjer når fem båter reiser samme dag? Hvis svarene er uklare, er det et driftssignal like mye som et regelverkssignal.
+Se deretter på arbeidsflyten din. Hvordan samles fangstdata inn i dag? Hvem kontrollerer at opplysningene er riktige? Hvordan håndteres gjester som ikke snakker norsk? Og hva skjer når fem båter reiser samme dag? Hvis svarene er uklare, er det et driftssignal like mye som et regelverkssignal. Familier med barn reiser ofte tilleggsspørsmål om hvem som egentlig fisker og hva som gjelder for utførsel — les mer om [aldersgrense i turistfiske](/blogg/aldersgrense-turistfiske-12-ar/).
 
 Dette er nettopp behovet vi har bygget [eksportfiske.no](https://eksportfiske.no/registrer/) for. Turistene registrerer fangst på eget språk via QR-kode, du godkjenner med ett klikk, og både den daglige rapporten til Fiskeridirektoratet og eksportdokumentet til gjesten går automatisk.
 

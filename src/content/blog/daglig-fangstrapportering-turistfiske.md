@@ -44,7 +44,7 @@ Til slutt trenger du en kontrollsløyfe. Selv om turistene registrerer selv, må
 
 Det er særlig tre ting som ofte skaper trøbbel. Det første er artsregistrering. Gjestene bruker gjerne ord de kjenner fra hjemlandet, eller de skiller ikke mellom arter som du vet må føres korrekt. Derfor bør systemet hjelpe dem til å velge riktig art, ikke overlate alt til fritekst.
 
-Det andre er opphold og gjester. Hvis du har flere hytter eller grupper som overlapper, må fangsten knyttes til riktig opphold fra start. Det er tungvint å rydde opp i etterkant, og det er fort gjort å blande hvis to grupper kommer inn omtrent samtidig.
+Det andre er opphold og gjester. Hvis du har flere hytter eller grupper som overlapper, må fangsten knyttes til riktig opphold fra start. Det er tungvint å rydde opp i etterkant, og det er fort gjort å blande hvis to grupper kommer inn omtrent samtidig. Familier med barn er en typisk situasjon der det oppstår spørsmål om hvem som teller og hvem som skal registreres — se vår gjennomgang av [aldersgrense og rapporteringspraksis](/blogg/aldersgrense-turistfiske-12-ar/).
 
 Det tredje er timing. Mange tenker at så lenge alt er ført før gjestene drar, er det godt nok. Men med daglige krav og avhengighet mellom rapportering og utførselsdokumentasjon blir det en dårlig vane. Den tryggeste løsningen er å få fangsten registrert fortløpende hver dag — [også dagene gjestene ikke får fisk](/blogg/nullfangst-turistfiske-ma-det-rapporteres/).
 

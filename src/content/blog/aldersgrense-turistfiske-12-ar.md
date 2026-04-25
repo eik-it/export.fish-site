@@ -26,7 +26,7 @@ Vi har selv stått i dette. Det er ofte ikke regelverket i seg selv som skaper t
 
 Når noen søker etter "aldersgrense turistfiske 12 år", leter de gjerne etter en klar grense. Problemet er at regelverket ikke alltid fungerer sånn i praksis. For turistfiske må du ofte vurdere situasjonen ut fra hva gjesten faktisk skal gjøre, og hvilken dokumentasjon som skal utstedes etterpå.
 
-Hvis barnet er med på båten og deltar i fisket, er det én del av bildet. Hvis familien senere ønsker utførselsdokumentasjon, er det en annen del. Og hvis fangsten skal rapporteres daglig per fartøy og art, slik [kravene nå er skjerpet](https://eksportfiske.no/blogg/daglig-fangstrapportering-turistfiske/), må opplysningene inn på en måte som er korrekt og forståelig for både deg og gjestene.
+Hvis barnet er med på båten og deltar i fisket, er det én del av bildet. Hvis familien senere ønsker utførselsdokumentasjon, er det en annen del. Og hvis fangsten skal rapporteres daglig per opphold og art, slik [kravene nå er skjerpet](/blogg/daglig-fangstrapportering-turistfiske/), må opplysningene inn på en måte som er korrekt og forståelig for både deg og gjestene.
 
 Det tryggeste er derfor å unngå bastante husregler som "under 12 år teller ikke" eller "fra 12 år må alle registreres som voksne" hvis du ikke har kontroll på hva du mener med det. Slike forenklinger skaper fort merarbeid senere.
 
@@ -34,13 +34,13 @@ Det tryggeste er derfor å unngå bastante husregler som "under 12 år teller ik
 
 Når en familie bestiller én hytte og én båt for en uke, trenger de ikke et juridisk foredrag. De trenger en kort forklaring på hva som gjelder hos deg. Den bør tas før første båttur, ikke kvelden før avreise.
 
-Fortell at all fangst som tas i tilknytning til oppholdet må håndteres korrekt gjennom [fangstrapportering](https://eksportfiske.no/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/). Forklar også at utførselsdokumentasjon forutsetter at rapportene er på plass. Da blir spørsmålet om barnets alder satt inn i riktig sammenheng: ikke som en løs detalj, men som del av hele dokumentflyten.
+Fortell at all fangst som tas i tilknytning til oppholdet må håndteres korrekt gjennom [fangstrapportering](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/). Forklar også at utførselsdokumentasjon forutsetter at rapportene er på plass. Da blir spørsmålet om barnets alder satt inn i riktig sammenheng: ikke som en løs detalj, men som del av hele dokumentflyten.
 
 For mange små utleiere er dette den virkelige nøtten. Du vil være hjelpsom, men du vil ikke stå og tolke detaljer på flere språk mens gjestene skal rekke sjøen. Derfor er det smart å bruke et opplegg der turistene selv registrerer underveis, på eget språk, mens du beholder kontrollen. Det gir ro i hverdagen, særlig når familien består av to voksne, to barn og ulike navn på booking, båtfører og reisefølge.
 
 ## Barn, fangstrapportering og ansvar
 
-Selv om spørsmålet ofte stilles som et aldersspørsmål, er ansvaret ditt som utleier mer knyttet til rapporteringen enn til selve fiskestanga. Det sentrale er at fangsten fra turene blir registrert riktig per fartøy og art, og at grunnlaget for senere utførselsdokumentasjon er i orden.
+Selv om spørsmålet ofte stilles som et aldersspørsmål, er ansvaret ditt som utleier mer knyttet til rapporteringen enn til selve fiskestanga. Det sentrale er at fangsten fra turene blir registrert riktig per opphold og art, og at grunnlaget for senere utførselsdokumentasjon er i orden. Det forutsetter at virksomheten din er [registrert som turistfiskebedrift](/blogg/ma-du-registrere-turistfiskebedrift/) — uten registrering har gjestene ingen utførselskvote i det hele tatt.
 
 Det betyr i praksis at du bør vite hvem som har vært ute med båten, hvilken booking fangsten tilhører, og at registreringen skjer fortløpende. Når dette glipper, hjelper det lite å være sikker på om barnet var 11 eller 12 år. Feilen oppstår som regel i flyten rundt dataene, ikke i bursdagen.
 
@@ -66,7 +66,7 @@ Poenget er ikke teknologi for teknologiens skyld. Poenget er at du slipper å st
 
 Noen situasjoner fortjener litt mer oppmerksomhet enn andre. Det gjelder særlig når bestiller ikke er samme person som den som fører båten, når barn og voksne reiser inn og ut på ulike datoer, eller når familien forventer utførselsdokumentasjon uten at fangsten er rapportert løpende.
 
-I slike tilfeller lønner det seg å ta en kort avklaring tidlig. Spør hvem som faktisk deltar i fisket, hvem som disponerer båten, og om de forventer å ta med fisk ut av landet. Det trenger ikke være mer komplisert enn det. Men den lille samtalen kan spare deg for mye fram og tilbake senere.
+I slike tilfeller lønner det seg å ta en kort avklaring tidlig. Spør hvem som faktisk deltar i fisket, hvem som disponerer båten, og om de forventer å ta med fisk ut av landet. Det trenger ikke være mer komplisert enn det. Men den lille samtalen kan spare deg for mye fram og tilbake senere. Husk også at [dager uten fangst](/blogg/nullfangst-turistfiske-ma-det-rapporteres/) inngår i rapporteringen — hull i datagrunnlaget er like problematisk som feil registrering.
 
 Hvis du er usikker på hvordan en konkret alderssituasjon skal vurderes, er det bedre å si det rett ut og kontrollere opp mot oppdatert veiledning enn å gi et skråsikkert svar. Det gir mindre risiko og mer tillit.
 
