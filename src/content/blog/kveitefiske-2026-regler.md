@@ -3,7 +3,7 @@ title: "Kveitefiske 2026: Sesong, minstemål og maksmål — og hvorfor 200 cm-g
 description: "Kveitefiske er strengt regulert: minstemål 84 cm, maksmål 200 cm, og totalfredet 20.12–20.4 i hele landet. Slik håndterer du reglene som turistfiskevert."
 slug: "kveitefiske-2026-regler"
 guid: "33d6fe90-d483-489b-ac02-afc89ae32cc9"
-pubDate: 2026-04-26T21:00:00.000Z
+pubDate: 2026-05-19T08:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
