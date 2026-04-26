@@ -6,6 +6,9 @@ guid: "841cd71f-669f-4392-a642-c81b3d6b2322"
 pubDate: 2026-04-26T17:00:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/fangstrapportering-nybegynner-guide.webp"
+  alt: "Fangstrapportering for nybegynnere: Hva, hvordan og hvor ofte"
 ---
 
 Du har nettopp registrert deg som turistfiskebedrift — eller vurderer å gjøre det. Du vet at det finnes noe som heter fangstrapportering, men er usikker på hva det egentlig innebærer i praksis. Hvilke fiskearter gjelder det? Hvor ofte må du rapportere? Og hva skjer de dagene gjestene ikke får fisk?
