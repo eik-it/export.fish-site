@@ -1088,10 +1088,10 @@ import logo from '../assets/logo.png';
   (function () {
     const words = ['hytta', 'båten'];
 
-    // 10 intervals, exponential-ish decay from 500ms → 2500ms.
+    // 8 intervals, exponential-ish decay from 1000ms → ~2660ms (1.15× per step).
     // Total animation time ≈ sum of intervals + transition overhead ≈ 15s.
     const intervals = [
-      500, 600, 720, 870, 1050, 1260, 1500, 1800, 2150, 2500
+      1000, 1150, 1320, 1520, 1750, 2010, 2310, 2660
     ];
 
     const motionOk = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
