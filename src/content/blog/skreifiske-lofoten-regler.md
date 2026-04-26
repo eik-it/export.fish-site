@@ -6,6 +6,9 @@ guid: "71102403-2118-47ee-b530-063b3d7ab733"
 pubDate: 2026-04-26T22:30:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/skreifiske-lofoten-regler.webp"
+  alt: "Skreifiske i Lofoten: Sesong, regler og tips for vertskap"
 ---
 
 Utenfor Henningsvær er det mørkt langt utpå morgenen i januar. Vinden kommer sidelengs fra nordvest, og dekket er glatt av rim. Men ned i dypet, langs kanten der kontinentalsokkelen brått faller mot Norskehavet, samler skreien seg i tette stimer. Den har svømt fra Barentshavet i måneder for å gyte akkurat her. Det er dette øyeblikket som har trukket fiskere til Lofoten i tusen år. Det er det samme øyeblikket du som vertskap kan bygge et produkt rundt.
