@@ -6,6 +6,9 @@ guid: "c83d1d64-ef1f-4f53-94d9-858a8c8acea2"
 pubDate: 2026-04-26T15:00:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/slik-registrerer-du-turistfiskebedrift.webp"
+  alt: "Slik registrerer du turistfiskebedrift hos Fiskeridirektoratet"
 ---
 
 Mange utleiere som leier ut hytte og båt til fisketurister vet at de bør registrere seg, men vet ikke helt hvor de begynner. Fiskeridirektoratets register for turistfiskebedrifter er ikke særlig godt forklart på norsk nett, og mange starter sesongen uten å ha fått papirene på plass. Det er synd, fordi selve registreringen er enklere enn folk tror — og fordi den er inngangsporten til alt annet: utførselskvote for gjestene, rapporteringsplikt, og en legitim drift innenfor regelverket.
