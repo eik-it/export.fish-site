@@ -6,6 +6,9 @@ guid: "7f5e64bd-9177-4762-a235-0654e512aecf"
 pubDate: 2026-04-26T14:00:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/sesongkalender-turistfiske-norge.webp"
+  alt: "Sesongkalender for turistfiske i Norge: Måned for måned"
 ---
 
 Havet følger ikke samme kalender som turistsesongen. Skreien er der i januar men borte i april. Makrellen dukker opp i juli og forsvinner igjen når vannet avkjøles. Kveita er ettertraktet hele sommeren, men fredningsperioden stenger for det meste fra desember til slutten av mars. For deg som driver turistfiskebedrift, eller for gjestene dine som planlegger turen, er det uvurderlig å vite hva som venter på hvilken tid av året — og hvilke grenser regelverket setter.
