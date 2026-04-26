@@ -3,7 +3,7 @@ title: "Sikkerhetsutstyr på utleiebåten: Komplett sjekkliste for utleier"
 description: "Hva må og bør være om bord på utleiebåten? Sjekkliste over påbudt og anbefalt sikkerhetsutstyr for utleiere som tar imot fisketurister."
 slug: "sikkerhetsutstyr-utleiebat-sjekkliste"
 guid: "e3f8a1c2-7d94-4b05-9e62-0f1a3b5c8d7e"
-pubDate: 2026-04-26T20:00:00.000Z
+pubDate: 2026-05-21T08:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
