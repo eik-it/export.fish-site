@@ -16,7 +16,7 @@ Det er nettopp her mange små utleiere kjenner at det glipper. Ikke fordi de ikk
 
 ## Hva betyr daglig fangstrapportering i turistfiske i praksis?
 
-Kjernen er enkel: fangsten skal rapporteres daglig, og rapporteringen skal knyttes til riktig opphold og riktig art. Det er ikke nok å vite at "de fikk litt torsk og sei i løpet av uka". Du må ha strukturerte opplysninger som kan sendes inn i tråd med kravene.
+Kjernen er enkel: fangsten skal rapporteres daglig, og rapporteringen skal knyttes til riktig opphold og riktig art. Per forskriften er det seks arter du plikter å rapportere: torsk, sei, kveite, uer, steinbit og hyse. Det er ikke nok å vite at "de fikk litt torsk og sei i løpet av uka". Du må ha strukturerte opplysninger som kan sendes inn i tråd med kravene.
 
 For en liten utleier med én hytte og én båt betyr dette at du må vite hva gjestene faktisk har tatt opp hver dag de fisker. Har du flere hytter eller overlappende opphold, må du i tillegg passe på at fangsten knyttes til riktig gjest og riktig periode. Det er her mange undervurderer arbeidsmengden. Selve rapporten trenger ikke ta lang tid, men oppfølgingen rundt kan spise tid hvis du må ringe, purre og etterregistrere.
 
@@ -51,6 +51,8 @@ Det tredje er timing. Mange tenker at så lenge alt er ført før gjestene drar,
 ## Hva betyr dette for utførselsdokumentasjon?
 
 Dette er kanskje det punktet som merkes best i praksis. Utførselsdokumentasjon kan ikke utstedes før rapport er sendt inn. Derfor henger rapportering og gjesteopplevelse tett sammen.
+
+Husk også at gjestene dine kan ta med seg inntil 15 kg fisk per opphold ut av landet — en kvote som gjelder fra 1.1.2026 og reduseres til 10 kg fra 1.1.2027. Uten fullstendig og godkjent fangstrapportering kan du ikke utstede den dokumentasjonen de trenger ved grensen.
 
 Hvis du sitter med manuelle notater siste kveld før avreise, kan hele prosessen stoppe opp fordi én fangstdag mangler eller er uklar. Da blir du sittende og ringe gjester som allerede pakker bil eller står på kaia. Det er dårlig bruk av tid for deg, og det gir en unødvendig dårlig avslutning på oppholdet. Mangler i rapporteringen er heller ikke bare et praktisk problem — det er også den vanligste årsaken til at utleiere lurer på [konsekvensene av manglende fangstrapportering](/blogg/bot-for-turistfiske-rapportering/).
 
