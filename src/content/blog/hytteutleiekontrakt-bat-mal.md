@@ -3,7 +3,7 @@ title: "Hytteutleiekontrakt med båt: Hva må reguleres?"
 description: "Hva en god hytteutleiekontrakt med båt bør inneholde: ansvar, depositum, drivstoff, skader, fiskeregler og forsikring. Praktisk guide for utleier."
 slug: "hytteutleiekontrakt-bat-mal"
 guid: "b5ac62db-77c1-4143-8de6-b0e28eb96e72"
-pubDate: 2026-04-26T18:30:00.000Z
+pubDate: 2026-05-29T08:00:00.000Z
 tags: []
 image:
   src: "./images/hytteutleiekontrakt-bat-mal.webp"
