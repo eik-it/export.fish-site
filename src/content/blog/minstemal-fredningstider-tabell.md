@@ -3,7 +3,7 @@ title: "Minstemål og fredningstider for fiskearter — komplett oversikt"
 description: "Komplett oversikt over minstemål og fredningstider for fiskearter for fritidsfiskere i Norge, med soneskillet 62°N. Oppdateres årlig."
 slug: "minstemal-fredningstider-tabell"
 guid: "b3f7c2a1-8e4d-4f9b-a6d3-12e845c09f73"
-pubDate: 2026-04-26T13:30:00.000Z
+pubDate: 2026-05-11T08:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
