@@ -6,6 +6,9 @@ guid: "c7a2f4e8-3b91-4d5a-9e6f-1c8d2a0b7f43"
 pubDate: 2026-04-26T12:30:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/50000-kr-grensen-turistfiskebedrift.webp"
+  alt: "50 000-kronersgrensen: Når blir hytteutleien din en turistfiskebedrift?"
 ---
 
 Det er et spørsmål mange utleiere utsetter. Ikke fordi de ikke bryr seg, men fordi det virker usikkert hva som egentlig gjelder. Når fisketurister begynner å booke, og inntektene stiger, kommer det uunngåelig: Er dette nå en turistfiskebedrift?
