@@ -6,6 +6,9 @@ guid: "0bdc3371-42a2-4814-8edd-c8b65f041de0"
 pubDate: 2026-04-27T00:00:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/baerekraftig-turistfiske-fang-slipp.webp"
+  alt: "Bærekraftig turistfiske: Catch and release, gjenutsetting og kvotebevissthet"
 ---
 
 Regelverket strammes inn år for år. Utførselskvoten er redusert fra 15 til 10 kilo per person. Kveitefredninga er utvidet. Nullfiskeområder innføres langs stadig flere kyststrekninga. For mange utleiere føles dette som begrensninger på det de selger. Vi mener det er det motsatte: en mulighet til å posisjonere virksomheten som noe mer enn en plass å hente fisk.
