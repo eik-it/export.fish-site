@@ -6,6 +6,9 @@ guid: "33d6fe90-d483-489b-ac02-afc89ae32cc9"
 pubDate: 2026-04-26T21:00:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/kveitefiske-2026-regler.webp"
+  alt: "Kveitefiske 2026: Sesong, minstemål og maksmål — og hvorfor 200 cm-grensen finnes"
 ---
 
 Kveita er for mange gjester det ultimate målet for en norsk fiskeferie. Stor, sterk og sagnomsust — det er ikke rart at turistfiskebedrifter langs kysten jevnlig tar imot gjester som har planlagt kveitefisket i måneder. Men kveita er også en av de mest regulerte artene i norsk fritids- og turistfiske, og regelverket har de siste årene blitt skjerpet betraktelig. For deg som er utleier, er det din jobb å sørge for at gjestene fisker innenfor det som er lov.
