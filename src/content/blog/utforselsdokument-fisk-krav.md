@@ -82,7 +82,7 @@ Kvoten gjelder ikke kongekrabbe, laks, ørret, røye eller annen ferskvannsfisk.
 
 Tolletaten kontrollerer fisk ved grensepasseringer. Kontrollene kan skje i bil, bobil, tilhenger og ved flyplasser. De sjekker både at dokumentet finnes og at det er korrekt utfylt. Et dokument som mangler fødselsdato, organisasjonsnummer eller signatur er ikke et gyldig dokument — selv om du har fylt inn resten.
 
-Tolletaten kan beslaglegge all fisk hvis dokumentasjonen er mangelfull. Reisende som forsøker å ta med fisk uten gyldig dokument risikerer bot på 8 000 kroner grunnbot og 200 kroner per kilo — i tillegg til at fisken beslaglegges. Dette er ikke en risiko du skal la gjestene ta. [Se hva som skjer ved grensen og hvordan du unngår bot](/blogg/tolletaten-grense-fisk-bot-unngå/).
+Tolletaten kan beslaglegge all fisk hvis dokumentasjonen er mangelfull. Reisende som forsøker å ta med fisk uten gyldig dokument risikerer bot på 8 000 kroner grunnbot og 200 kroner per kilo — i tillegg til at fisken beslaglegges. Dette er ikke en risiko du skal la gjestene ta. [Se hva som skjer ved grensen og hvordan du unngår bot](/blogg/tolletaten-grense-fisk-bot-unnga/).
 
 ## Hvem kan utstede dokumentet?
 
