@@ -3,7 +3,7 @@ title: "Skreifiske i Lofoten: Sesong, regler og tips for vertskap"
 description: "Skreisesongen i Lofoten varer januar–april. Slik posisjonerer du deg som turistfiskevert: regler, sikkerhet i vinterforhold, og hva gjestene forventer."
 slug: "skreifiske-lofoten-regler"
 guid: "71102403-2118-47ee-b530-063b3d7ab733"
-pubDate: 2026-04-26T22:30:00.000Z
+pubDate: 2026-06-10T08:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
