@@ -6,6 +6,9 @@ guid: "30a6fb92-abb7-453d-999d-689a2157435a"
 pubDate: 2026-04-26T13:00:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/leie-hytte-med-bat-sjekkliste.webp"
+  alt: "Leier du ut hytte med båt? Sjekklisten du må gjennom før sesongen"
 ---
 
 Mange fritidsboligeiere oppdager for sent at det å leie ut hytte med båt er noe helt annet enn å leie ut hytte alene. Båten endrer regnestykket — juridisk, forsikringsmessig og skattemessig. Denne sjekklisten er laget for deg som leier ut via Airbnb, Finn.no eller direkte til turister, og som vil ha kontrollen på plass før første gjest setter foten på brygga.
