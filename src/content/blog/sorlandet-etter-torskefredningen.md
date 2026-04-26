@@ -3,7 +3,7 @@ title: "Sørlandet etter torskefredningen: Hva kan turistfiskeverter fortsatt ti
 description: "Med tre nullfiskeområder i Oslofjorden og totalfredet torsk i Skagerrak: hva er fortsatt mulig for turistfiskeverter på Sørlandet?"
 slug: "sorlandet-etter-torskefredningen"
 guid: "fc621984-664c-4e6d-bdd6-3d2eb4c77dd5"
-pubDate: 2026-04-26T23:00:00.000Z
+pubDate: 2026-06-08T08:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
