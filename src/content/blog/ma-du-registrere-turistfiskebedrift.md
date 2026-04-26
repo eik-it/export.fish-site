@@ -4,6 +4,7 @@ description: "Må du registrere turistfiskebedrift? Få klar oversikt over regle
 slug: "ma-du-registrere-turistfiskebedrift"
 guid: "a4381f64-11f4-475b-8170-2da75d0ded64"
 pubDate: 2026-04-21T08:37:06.000Z
+author: "Kim Eik"
 image:
   src: "./images/ma-du-registrere-turistfiskebedrift.webp"
   alt: "Må du registrere turistfiskebedrift?"

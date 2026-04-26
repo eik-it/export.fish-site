@@ -4,6 +4,7 @@ description: "Lurer du på hva aldersgrensen betyr i turistfiske? Her får du en
 slug: "aldersgrense-turistfiske-12-ar"
 guid: "ac241f34-2165-4e8d-abde-605a5b2f6866"
 pubDate: 2026-04-25T06:06:19.000Z
+author: "Kim Eik"
 image:
   src: "./images/aldersgrense-turistfiske-12-ar.webp"
   alt: "Aldersgrense turistfiske 12 år - hva gjelder?"

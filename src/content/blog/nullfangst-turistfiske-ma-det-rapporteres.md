@@ -4,6 +4,7 @@ description: "Nullfangst skaper ofte usikkerhet i turistfiskedriften. Her får d
 slug: "nullfangst-turistfiske-ma-det-rapporteres"
 guid: "a21b343d-7a06-47d8-800e-4846f9f0af88"
 pubDate: 2026-04-23T05:51:21.000Z
+author: "Kim Eik"
 image:
   src: "./images/nullfangst-turistfiske-ma-det-rapporteres.webp"
   alt: "Nullfangst turistfiske - må det rapporteres?"

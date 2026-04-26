@@ -4,6 +4,7 @@ description: "Slik kan du forberede turistfiskesesongen med riktige rutiner for 
 slug: "slik-kan-du-forberede-turistfiskesesongen"
 guid: "1bcc9f68-f054-4b2f-a758-31475c12317e"
 pubDate: 2026-04-24T05:54:33.000Z
+author: "Kim Eik"
 image:
   src: "./images/slik-kan-du-forberede-turistfiskesesongen.webp"
   alt: "Slik kan du forberede turistfiskesesongen"
