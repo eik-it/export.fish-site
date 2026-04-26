@@ -3,7 +3,7 @@ title: "Skatt på utleie av fiskehytte: 12 %, 25 % og 22 % — slik henger det s
 description: "MVA-satser, kapital- vs næringsinntekt og skatteregler for utleie av fiskehytte med båt. Slik vurderer du hva som gjelder for deg."
 slug: "skatt-utleie-fiskehytte"
 guid: "f80f6e21-61be-4f12-b6f0-ff6a5e92fe2a"
-pubDate: 2026-04-26T17:30:00.000Z
+pubDate: 2026-06-02T08:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
