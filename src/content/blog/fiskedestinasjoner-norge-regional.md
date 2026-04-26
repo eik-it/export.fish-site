@@ -6,6 +6,9 @@ guid: "be11059f-cecc-4eee-9b88-4bdf2ec3804c"
 pubDate: 2026-04-26T22:00:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/fiskedestinasjoner-norge-regional.webp"
+  alt: "Hvor i Norge fisker man hva? Regional guide for fisketurister"
 ---
 
 Norge har over 100 000 kilometer kystlinje, hundrevis av innsjøer og vassdrag verdt å nevne, og fiskebestander som varierer dramatisk fra region til region. For en fisketurist betyr det at valg av destinasjon er like viktig som valg av utstyr. Kveite finner du ikke i Glomma, og ørret er sjelden tema i Lofoten om vinteren. Denne guiden gir deg en oversikt over hva de ulike regionene faktisk byr på - hvilke arter, hvilke sesonger og hva slags vertskap som finnes der.
