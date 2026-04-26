@@ -3,7 +3,7 @@ title: "Sesongkalender for turistfiske i Norge: Måned for måned"
 description: "Hvilke arter er aktive når? Sesongkalender med fredninger og beste regioner per måned for turistfiske i Norge."
 slug: "sesongkalender-turistfiske-norge"
 guid: "7f5e64bd-9177-4762-a235-0654e512aecf"
-pubDate: 2026-04-26T14:00:00.000Z
+pubDate: 2026-05-13T08:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
