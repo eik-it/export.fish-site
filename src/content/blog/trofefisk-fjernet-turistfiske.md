@@ -6,6 +6,9 @@ guid: "904fba5b-f1a6-42b3-a2a7-bd567d11bacf"
 pubDate: 2026-04-26T14:30:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/trofefisk-fjernet-turistfiske.webp"
+  alt: "Trofefisken er borte: Hva betyr det for fisketuristen?"
 ---
 
 En stor kveite er for mange fisketurister drømmefangsten. En meter og åtti, kanskje over to. Bildet på kaia, historien som fortelles i årevis. Det er nettopp denne fangsten som har skapt mest forvirring etter at regelverket for turistfiske ble strammet inn fra 1. august 2025.
