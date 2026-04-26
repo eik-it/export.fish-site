@@ -3,7 +3,7 @@ title: "Bærekraftig turistfiske: Catch and release, gjenutsetting og kvotebevis
 description: "Hvordan vertskap kan posisjonere bærekraft som verdi: etisk håndtering av storkveite, fang og slipp, og kvotebevissthet i en tid med strammere regler."
 slug: "baerekraftig-turistfiske-fang-slipp"
 guid: "0bdc3371-42a2-4814-8edd-c8b65f041de0"
-pubDate: 2026-04-27T00:00:00.000Z
+pubDate: 2026-06-14T08:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
