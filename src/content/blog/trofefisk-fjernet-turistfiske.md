@@ -3,7 +3,7 @@ title: "Trofefisken er borte: Hva betyr det for fisketuristen?"
 description: "Trofefisk-tillegget er fjernet fra utførselskvoten. Dette betyr endringen for fisketurister og turistfiskebedrifter — og hvorfor reglene ble endret."
 slug: "trofefisk-fjernet-turistfiske"
 guid: "904fba5b-f1a6-42b3-a2a7-bd567d11bacf"
-pubDate: 2026-04-26T14:30:00.000Z
+pubDate: 2026-05-15T08:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
