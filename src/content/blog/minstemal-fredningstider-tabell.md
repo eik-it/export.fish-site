@@ -6,6 +6,9 @@ guid: "b3f7c2a1-8e4d-4f9b-a6d3-12e845c09f73"
 pubDate: 2026-04-26T13:30:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/minstemal-fredningstider-tabell.webp"
+  alt: "Minstemål og fredningstider for fiskearter — komplett oversikt"
 ---
 
 Vet du hva som gjelder for torsken der du fisker? Reglene varierer med sone, art og årstid — og det er ikke alltid intuitivt hvor grensen går. Denne artikkelen samler minstemål og fredningstider for de viktigste artene for fritidsfiskere i Norge, basert på gjeldende Høstingsforskrift (FOR-2021-12-23-3910). Bruk den som et praktisk oppslagsverk i planleggingen av sesongen.
