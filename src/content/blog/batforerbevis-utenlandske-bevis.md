@@ -3,7 +3,7 @@ title: "Båtførerbevis: Når må gjestene dine ha det — og hva med utenlandsk
 description: "Når kreves båtførerbevis i Norge, og hvilke utenlandske bevis godtas? Praktisk gjennomgang for utleiere som tar imot tyske, nederlandske og andre fisketurister."
 slug: "batforerbevis-utenlandske-bevis"
 guid: "2ecc34ff-0bb6-4d6a-a7bd-f1358d5dbda2"
-pubDate: 2026-04-26T19:30:00.000Z
+pubDate: 2026-05-23T08:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
