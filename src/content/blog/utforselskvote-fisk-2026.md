@@ -6,6 +6,9 @@ guid: "8b725c20-ef2f-4d28-8731-5a523c4523d7"
 pubDate: 2026-04-26T12:00:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/utforselskvote-fisk-2026.webp"
+  alt: "Utførselskvote for fisk i 2026: Slik er de nye reglene"
 ---
 
 Når gjestene dine pakker bilen for hjemreise, er utførselskvoten gjerne det siste spørsmålet de stiller. Og det er ofte da det haster mest å ha riktig svar. Fra 1. januar 2026 er kvoten 15 kg fisk per person per opphold — og den faller til 10 kg fra 1. januar 2027. For deg som driver [registrert turistfiskebedrift](/blogg/ma-du-registrere-turistfiskebedrift/) er det nødvendig å kjenne disse grensene, fordi det er du som utsteder dokumentasjonen gjestene trenger ved grensepassering.
