@@ -6,6 +6,9 @@ guid: "2ecc34ff-0bb6-4d6a-a7bd-f1358d5dbda2"
 pubDate: 2026-04-26T19:30:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/batforerbevis-utenlandske-bevis.webp"
+  alt: "Båtførerbevis: Når må gjestene dine ha det — og hva med utenlandske bevis?"
 ---
 
 Spørsmålet dukker opp hvert år: har gjesten lov til å ta båten ut alene? Den tyske familien har med seg et bevis hjemmefra, men du er usikker på om det faktisk gjelder i Norge. Nederlandske gjester sier de har et CWO-sertifikat og lurer på om det holder. Og noen norske gjester tar for gitt at de kan kjøre bare fordi de alltid har gjort det.
