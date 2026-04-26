@@ -28,7 +28,7 @@ For en profesjonell turistfiskebedrift med fast ansatte og daglig drift er det m
 
 Tenk på situasjonen: du leier ut hytta via Airbnb, gjestene ankommer en fredag kveld når du ikke er til stede, og de fisker fra lørdag med robåten som ligger ved brygga. De er en blanding av tyske og nederlandske turister, ingen snakker norsk, og ingen av dem visste at det fantes noe som het fangstrapportering. Et papirskjema på kjøkkenbenken — på norsk — løser ingenting her.
 
-Situasjonen er enda mer krevende med motorbåt inkludert i leien, fordi gjestene da kan fiske langt fra hytta og lande fangsten et annet sted. Du mister sporbarhet uten å ha gjort noe galt. Og selv om du følger opp med SMS etterpå, husker gjestene sjelden nøyaktig art eller vekt to dager etter at fisken ble tatt opp.
+Selv om du følger opp med SMS etterpå, husker gjestene sjelden nøyaktig art eller vekt to dager etter at fisken ble tatt opp. Du mister sporbarhet uten å ha gjort noe galt — fangst forfaller raskt i hukommelsen, og det blir bare verre jo lenger tid det går før noen registrerer den.
 
 Det manuelle systemet forutsetter at noen er til stede, at gjestene forstår hva de skal gjøre, og at de gjør det. For de fleste fritidsboligeiere stemmer ingen av disse forutsetningene.
 
@@ -54,8 +54,7 @@ Det som faktisk fungerer er at gjestene selv håndterer sin del — men med tyde
 
 Her er forskjellen mellom ulike oppsett:
 - **Hytte uten båt**: Gjestene fisker fra land eller tar med egen båt. Rapporteringsplikten gjelder fortsatt hvis du er registrert, men din rolle er enklere.
-- **Hytte med robåt**: Gjestene fisker nær hytta. Oversikten er håndterbar, og daglig registrering er realistisk.
-- **Hytte med motorbåt**: Gjestene kan fiske lenger unna og lander fangst ulike steder. Løpende digital registrering er eneste praktiske måte å holde oversikt.
+- **Hytte med båt (robåt eller motorbåt)**: Daglig digital registrering er den eneste rutinen som faktisk holder gjennom en sesong. Båttype betyr lite for kravet — det er antall gjester, hyppigheten av bytter og dine egne arbeidstider som avgjør hvor avhengig du er av at gjestene rapporterer selv.
 - **Airbnb med fiske som ekstra tilbud**: Mange gjester forventer ikke fiskebyråkrati når de booker. Tydelig forhåndsinformasjon og et enkelt verktøy er det som avgjør om det faktisk skjer.
 
 Felles for alle: du trenger en rutine som ikke forutsetter at du er til stede. Det er den eneste modellen som tåler fri-uke, full booking og gjester som reiser tidlig mandag morgen.
