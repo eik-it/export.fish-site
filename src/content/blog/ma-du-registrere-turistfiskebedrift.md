@@ -60,9 +60,11 @@ Hvis flere av disse stemmer, er du som regel innenfor — enten pliktig (hvis du
 
 ## Hva det koster å la være
 
-Den største risikoen er ikke bare en formell feil. Uten registrering har gjestene dine null utførselskvote. Tas de i kontroll med fisk uten dokumentasjon, risikerer de **8 000 kr i grunnbot, 200 kr per overskuddskilo, og beslag av hele fangsten**. Det er ikke en bot du sender en turist hjem med etter å ha betalt dyrt for opphold, båt og reise. Men selv registrerte virksomheter kan havne i trøbbel — [manglende eller feil rapportering](/blogg/bot-for-turistfiske-rapportering/) er en like vanlig kilde til problem som manglende registrering.
+Den største risikoen er ikke bare en formell feil. Uten registrering har gjestene dine null utførselskvote. Er de uregistrerte og forsøker å ta med fisk ut av Norge, regnes det som fiskesmugling — og Tolletaten kan beslaglegge hele fangsten og anmelde forholdet til politiet. Riksadvokatens bøtesatser for ulovlig utførsel er **8 000 kr i grunnbøte og 200 kr per kilo over tillatt mengde**. Det er ikke en bot du sender en turist hjem med etter å ha betalt dyrt for opphold, båt og reise.
 
-For deg som utleier betyr manglende registrering at gjestene ikke kan eksportere fisk i det hele tatt — et tydelig konkurransehemmer mot naboer som er registrert. Legg til risikoen for dårlige anmeldelser, tapte bookinger og eventuelle overtredelsesgebyrer fra Fiskeridirektoratet, og regnestykket blir ganske entydig.
+For deg som registrert virksomhet er sanksjonsbildet et annet: brudd på rapporteringsplikten etter turistfiskeforskriften §§ 2–5 kan medføre **overtredelsesgebyr opp til 100 000 kr** (jf. forskrift 2011-12-20-1437 § 5). Gjentatte eller grove brudd kan i tillegg føre til **sletting fra Fiskeridirektoratets register** (turistfiskeforskriften § 6) — noe som i praksis stenger virksomheten ute fra ordningen. [Manglende eller feil rapportering](/blogg/bot-for-turistfiske-rapportering/) er like vanlig kilde til problem som manglende registrering.
+
+For deg som utleier betyr manglende registrering at gjestene ikke kan eksportere fisk i det hele tatt — et tydelig konkurransehemmer mot naboer som er registrert. Legg til risikoen for dårlige anmeldelser, tapte bookinger og eventuelle gebyrer, og regnestykket blir ganske entydig.
 
 ## Slik vurderer du din egen drift
 
@@ -79,3 +81,12 @@ Ofte er dette spørsmålet stilt med håp om et enkelt nei. Men én hytte er ikk
 Det er innholdet i tjenesten som teller, ikke antall enheter.
 
 Hvis du sitter med spørsmålet _må jeg registrere turistfiskebedrift_, er du sannsynligvis nærmere grensen enn du tror. Det lønner seg å få avklaringen før sesongen starter, ikke når første gjest står i døren og spør om papirene for å ta med fangsten hjem.
+
+---
+
+## Kilder
+
+- [Forskrift om turistfiskevirksomheter (FOR-2017-07-05-1141)](https://lovdata.no/dokument/SF/forskrift/2017-07-05-1141) — registreringsplikt (§ 1), rapporteringsplikt (§§ 2–4), sletting fra register (§ 6), overtredelsesgebyr (§ 8)
+- [Forskrift om overtredelsesgebyr mv. etter havressursloven (FOR-2011-12-20-1437)](https://lovdata.no/dokument/SF/forskrift/2011-12-20-1437) — satser for overtredelsesgebyr, opp til 100 000 kr
+- [Fiskeridirektoratet: Fiskesmugling og utførsel](https://www.fiskeridir.no/turistfiske/fiskesmugling-og-utfoersel) — bøtesatser ved ulovlig utførsel (8 000 kr grunnbøte + 200 kr/kg), fastsatt av Riksadvokaten
+- [Forskrift om utførselsregulering av fisk og fiskevarer fra sportsfiske (FOR-2006-06-01-570)](https://lovdata.no/dokument/SF/forskrift/2006-06-01-570) — utførselskvote og vilkår for registrerte turistfiskebedrifter
