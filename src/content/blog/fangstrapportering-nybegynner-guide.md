@@ -3,7 +3,7 @@ title: "Fangstrapportering for nybegynnere: Hva, hvordan og hvor ofte"
 description: "Innføring i fangstrapportering for turistfiskebedrifter. Hvilke arter, hvilke frister, hvordan rapportere null, og forskjellen på manuell og digital løsning."
 slug: "fangstrapportering-nybegynner-guide"
 guid: "841cd71f-669f-4392-a642-c81b3d6b2322"
-pubDate: 2026-04-26T17:00:00.000Z
+pubDate: 2026-05-17T08:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
