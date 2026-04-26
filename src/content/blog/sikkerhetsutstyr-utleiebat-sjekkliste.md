@@ -6,6 +6,9 @@ guid: "e3f8a1c2-7d94-4b05-9e62-0f1a3b5c8d7e"
 pubDate: 2026-04-26T20:00:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/sikkerhetsutstyr-utleiebat-sjekkliste.webp"
+  alt: "Sikkerhetsutstyr på utleiebåten: Komplett sjekkliste for utleier"
 ---
 
 Mange utleiere går gjennom båten før sesongen uten å tenke nøye gjennom hva som faktisk er påbudt. Motorolje, bensin, batteriet — ja. Men flytevest til alle? Godkjent brannslukker? Leselig instruksjon på motor og dødmannsknapp? Det er lett å undervurdere hva regelverket krever, og lett å overse det som ikke er lovpålagt, men som kan avgjøre utfallet i en nødsituasjon.
