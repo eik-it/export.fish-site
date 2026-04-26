@@ -3,7 +3,7 @@ title: "Slik registrerer du turistfiskebedrift hos Fiskeridirektoratet"
 description: "Steg-for-steg-guide til registrering av turistfiskebedrift hos Fiskeridirektoratet. Krav, skjema, ID-porten og D-nummer for utenlandske eiere."
 slug: "slik-registrerer-du-turistfiskebedrift"
 guid: "c83d1d64-ef1f-4f53-94d9-858a8c8acea2"
-pubDate: 2026-04-26T15:00:00.000Z
+pubDate: 2026-05-01T08:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
