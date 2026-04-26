@@ -21,6 +21,7 @@ const blogCollection = defineCollection({
       description: z.string(),
       guid: z.string(),
       pubDate: z.coerce.date(),
+      author: z.string().default('Kim Eik'),
       image: z
         .object({
           src: image(),

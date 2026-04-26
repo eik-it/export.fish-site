@@ -32,6 +32,10 @@ const jsonLd = {
   description: entry.data.description,
   datePublished: entry.data.pubDate.toISOString(),
   url: canonicalURL,
+  author: {
+    '@type': 'Person',
+    name: entry.data.author,
+  },
   publisher: {
     '@type': 'Organization',
     name: 'Eksportfiske.no',
