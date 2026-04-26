@@ -3,7 +3,7 @@ title: "Plattformrapportering 2026: Hva betyr de nye DPI-reglene for hytteverter
 description: "Fra 1.1.2026 rapporterer Airbnb og Booking.com transaksjoner direkte til Skatteetaten. Slik fungerer DPI, hva som omfattes, og hvordan du kommer i forkant."
 slug: "plattformrapportering-2026-dpi-airbnb"
 guid: "96fee18b-e9c5-4a36-b2f2-11599d4061bb"
-pubDate: 2026-04-26T18:00:00.000Z
+pubDate: 2026-06-04T08:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
