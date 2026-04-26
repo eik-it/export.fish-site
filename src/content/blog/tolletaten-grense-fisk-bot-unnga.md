@@ -6,6 +6,9 @@ guid: "aab498bb-1062-4fa1-a2c9-6acc6bd1bf58"
 pubDate: 2026-04-26T16:30:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/tolletaten-grense-fisk-bot-unnga.webp"
+  alt: "Slik unngår gjestene dine bot på grensa: Tolletatens kontrollrutiner"
 ---
 
 I 2024 beslagla Tolletaten over 13 tonn fisk på vei ut av Norge. Det er nesten det dobbelte av 2023-tallene, og Tolletaten selv sier de sannsynligvis bare ser toppen av isfjellet. For deg som driver turistfiskebedrift betyr dette ikke bare at presset på kontrollapparatet øker — det betyr at gjestene dine møter en grense som ser nøyere etter enn de kanskje forventer.
