@@ -6,6 +6,9 @@ guid: "eeb4495c-0b81-460a-9db2-f08c146c0146"
 pubDate: 2026-04-26T20:30:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/sjovettregler-tysk-engelsk-gjester.webp"
+  alt: "Sjøvettreglene oversatt: Slik briefer du tyske og nederlandske gjester"
 ---
 
 Tyske og nederlandske gjester er flinke på sjøen. Mange er vant til å ro og padle, noen har båterfaring fra Nordsjøen eller de store innsjøene i Mellom-Europa — men norsk kyst er noe annet. Strøm, skjær, rask vindøkning og plutselig tåke overrasker gjester som ikke kjenner farvannene. Som utleier er det din oppgave å gi dem det de trenger for å ferdes trygt, og sjøvettreglene er et naturlig utgangspunkt.
