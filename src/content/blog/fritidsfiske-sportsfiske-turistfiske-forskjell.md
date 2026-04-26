@@ -6,6 +6,9 @@ guid: "5b4b5584-73bd-48c1-8bc2-473aee426dcc"
 pubDate: 2026-04-26T16:00:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/fritidsfiske-sportsfiske-turistfiske-forskjell.webp"
+  alt: "Forskjellen på fritidsfiske, sportsfiske og turistfiske"
 ---
 
 Mange bruker ordene fritidsfiske, sportsfiske og turistfiske om hverandre. Det er forståelig — men juridisk er de ikke likestilte, og hvilken kategori som gjelder for deg eller gjestene dine, avgjør hvem som har rett til å eksportere fisk, og hvem som er ansvarlig for rapporteringen.
