@@ -6,6 +6,9 @@ guid: "b0af22f7-593f-4431-a4dd-b43a9c91b33c"
 pubDate: 2026-04-26T23:30:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/handtering-fangst-frysing-transport.webp"
+  alt: "Slik håndterer gjestene fangsten: Sløying, frysing og transport hjem"
 ---
 
 Gjestene har hatt en god uke, og fryseren i boden er full. Nå skal fangsten hjem — til Tyskland, Nederland eller et annet land — og spørsmålene begynner å komme. Kan de ta med fileter? Hva veier 15 kilo egentlig? Trenger de å pakke det i is? Og hva sier tollvesenet?
