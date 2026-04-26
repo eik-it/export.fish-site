@@ -42,7 +42,7 @@ Dette er et punkt mange turistfiskebedrifter opplever at gjestene misforstår: d
 
 En gjest kan fullt lovlig fange en stor kveite. Fangsten skal registreres og rapporteres daglig som del av [fangstrapporteringen](/blogg/daglig-fangstrapportering-turistfiske/). Men "fanget" betyr ikke "utørt". For å ta fisk med over grensen må fisken ligge innenfor utførselskvoten, som nå er 15 kg. En kveite på 35 kg kan dermed tas til land og spises på stedet — men ikke fraktes ut av landet.
 
-Det er dette skillet som er viktig å kommunisere til gjestene på forhånd, ikke etter at de har fisket. En gjest som har planlagt å ta hjem en stor kveite, og som ikke vet om utførselskvoten, vil bli skuffet på kaia — og det er ikke en god avslutning på et opphold. Les mer om hva som faktisk kreves ved grensen hos [Tolletaten](/blogg/tolletaten-grense-fisk-bot-unngå/).
+Det er dette skillet som er viktig å kommunisere til gjestene på forhånd, ikke etter at de har fisket. En gjest som har planlagt å ta hjem en stor kveite, og som ikke vet om utførselskvoten, vil bli skuffet på kaia — og det er ikke en god avslutning på et opphold. Les mer om hva som faktisk kreves ved grensen hos [Tolletaten](/blogg/tolletaten-grense-fisk-bot-unnga/).
 
 ## Hva slags fisk utgjør risikoen?
 
