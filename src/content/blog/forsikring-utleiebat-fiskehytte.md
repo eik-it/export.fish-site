@@ -3,7 +3,7 @@ title: "Forsikring av båt og hytte ved utleie til fisketurister"
 description: "Hva dekker en vanlig hytteforsikring og båtforsikring når du leier ut til fisketurister? Forskjellen på ansvars-, kasko- og næringsforsikring."
 slug: "forsikring-utleiebat-fiskehytte"
 guid: "f7a8ca51-bd94-4fd2-8882-5a6437c26682"
-pubDate: 2026-04-26T19:00:00.000Z
+pubDate: 2026-05-27T08:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
