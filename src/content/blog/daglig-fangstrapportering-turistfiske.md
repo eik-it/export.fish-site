@@ -52,7 +52,7 @@ Det tredje er timing. Mange tenker at så lenge alt er ført før gjestene drar,
 
 Dette er kanskje det punktet som merkes best i praksis. Utførselsdokumentasjon kan ikke utstedes før rapport er sendt inn. Derfor henger rapportering og gjesteopplevelse tett sammen.
 
-Hvis du sitter med manuelle notater siste kveld før avreise, kan hele prosessen stoppe opp fordi én fangstdag mangler eller er uklar. Da blir du sittende og ringe gjester som allerede pakker bil eller står på kaia. Det er dårlig bruk av tid for deg, og det gir en unødvendig dårlig avslutning på oppholdet.
+Hvis du sitter med manuelle notater siste kveld før avreise, kan hele prosessen stoppe opp fordi én fangstdag mangler eller er uklar. Da blir du sittende og ringe gjester som allerede pakker bil eller står på kaia. Det er dårlig bruk av tid for deg, og det gir en unødvendig dårlig avslutning på oppholdet. Mangler i rapporteringen er heller ikke bare et praktisk problem — det er også den vanligste årsaken til at utleiere lurer på [konsekvensene av manglende fangstrapportering](/blogg/bot-for-turistfiske-rapportering/).
 
 Har du derimot daglig registrering på plass, blir utførselsdokumentasjonen en ryddig sistekontroll i stedet for en redningsaksjon. Det er akkurat derfor disse rutinene betyr mer enn bare forskriftsetterlevelse. De sparer deg for tid, og de gjør at gjestene opplever utleien som profesjonell og enkel.
 

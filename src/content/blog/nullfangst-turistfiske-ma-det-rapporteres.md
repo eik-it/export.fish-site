@@ -57,7 +57,7 @@ Det høres enkelt ut fordi det bør være enkelt. Hele poenget er ro i hverdagen
 
 ## Vanlige feil rundt nullfangst
 
-Den vanligste feilen er å tro at nullfangst ikke trenger noen registrering. Den nest vanligste er å la gjesten opplyse om alt samlet siste dag. Begge deler skaper unødvendig usikkerhet.
+Den vanligste feilen er å tro at nullfangst ikke trenger noen registrering. Den nest vanligste er å la gjesten opplyse om alt samlet siste dag. Begge deler skaper unødvendig usikkerhet — og hull i rapporteringen er nettopp det som kan utløse spørsmål om [konsekvenser og bot](/blogg/bot-for-turistfiske-rapportering/).
 
 En annen klassiker er at utleier noterer "ingen fisk" på papir eller i en melding, men ikke får det inn i den faktiske fangstrapporteringen. Da har du i praksis informasjonen, men ikke dokumentasjonen der den må være. Hvis du senere skal utstede utførselsdokumentasjon, hjelper det lite at opplysningen ligger i en notatbok på kjøkkenet.
 
