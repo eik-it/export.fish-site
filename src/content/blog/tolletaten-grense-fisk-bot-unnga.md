@@ -3,7 +3,7 @@ title: "Slik unngår gjestene dine bot på grensa: Tolletatens kontrollrutiner"
 description: "Tolletaten beslagla over 13 tonn fisk i 2024. Slik fungerer kontrollen ved grensa, hva bøtene koster, og hvordan du forbereder gjestene dine."
 slug: "tolletaten-grense-fisk-bot-unnga"
 guid: "aab498bb-1062-4fa1-a2c9-6acc6bd1bf58"
-pubDate: 2026-04-26T16:30:00.000Z
+pubDate: 2026-05-09T08:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
