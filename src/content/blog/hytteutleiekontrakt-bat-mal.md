@@ -5,6 +5,9 @@ slug: "hytteutleiekontrakt-bat-mal"
 guid: "b5ac62db-77c1-4143-8de6-b0e28eb96e72"
 pubDate: 2026-04-26T18:30:00.000Z
 tags: []
+image:
+  src: "./images/hytteutleiekontrakt-bat-mal.webp"
+  alt: "Hytteutleiekontrakt med båt: Hva må reguleres?"
 ---
 
 Mange hytteutleiere oppdager hull i kontrakten sin i det øyeblikket noe går galt. Motorbåten returneres med bulket skrog, gjestene er usikre på hvem som skal betale for drivstoffet de brukte, og ingen husker hva som ble avtalt ved innsjekk. En god kontrakt løser ikke alle konflikter, men den avklarer forventninger på forhånd og gir begge parter et felles utgangspunkt.
