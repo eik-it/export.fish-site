@@ -126,7 +126,7 @@ Det de typisk sjekker:
 
 En gjest som kan vise frem dokumentasjon, pakket fisk med tydelig merking og en kvittering for oppholdet, kommer som regel raskt gjennom. En gjest som ikke har papirene i orden, risikerer beslag og bot — og det er din virksomhet som utsteder dokumentasjonen, så god praksis beskytter deg begge.
 
-Les mer om [hva som skjer ved grensekontroll og hva du kan gjøre for å unngå trøbbel](/blogg/tolletaten-grense-fisk-bot-unngå/).
+Les mer om [hva som skjer ved grensekontroll og hva du kan gjøre for å unngå trøbbel](/blogg/tolletaten-grense-fisk-bot-unnga/).
 
 ## Typiske feil — og hva du kan gjøre for å forebygge dem
 
