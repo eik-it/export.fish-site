@@ -89,117 +89,60 @@ These elements reinforce the Norwegian coastal identity and can appear across im
 
 ---
 
-## Per-Article Scene Descriptions
-
-Append one of these after the Common Theme Prefix for each article.
-
----
-
-### 1. `aldersgrense-turistfiske-12-ar.webp`
-**Article**: "Aldersgrense i turistfiske: hva gjelder for 12-åringer?"
-
-```
-Scene: A small aluminium fishing boat moored at a weathered wooden dock on a calm
-Norwegian fjord, seen from the dock level. A child's small rubber boot and an adult's
-boot are visible at the dock edge — feet only, no faces. A simple fishing rod leans
-against the dock railing. Early morning light, still water reflecting the grey sky.
-Mood: quiet, family, responsibility.
-```
-
----
-
-### 2. `bot-for-turistfiske-rapportering.webp`
-**Article**: "Bot for turistfiske-rapportering?"
-
-```
-Scene: A traditional red Norwegian boathouse (naust) at dusk, its reflection broken
-in gently rippling water. The heavy wooden door is slightly ajar, warm light spilling
-from inside suggesting activity. A mooring rope is wrapped around a dock bollard in
-the foreground. Mood: seriousness, accountability, the weight of responsibility at
-end of day. No people visible.
-```
-
----
-
-### 3. `daglig-fangstrapportering-turistfiske.webp`
-**Article**: "Daglig fangstrapportering i turistfiske"
-
-```
-Scene: Early morning on a Norwegian coastal quay. A fresh catch of cod (torsk) lies
-in a grey plastic fish crate on a wet dock, water droplets visible. In the soft
-background, a small aluminium boat is tied up and a boathouse silhouette is visible.
-The light is cool, diffuse, overcast — the start of a working day. No people.
-Mood: routine, precision, daily rhythm.
-```
-
----
-
-### 4. `lovpalagt-fangstrapportering-fritidsboligeiere.webp`
-**Article**: "Lovpålagt fangstrapportering for fritidsboligeiere"
-
-```
-Scene: A traditional Norwegian cabin (hytte) by the water's edge, with a small dock
-and aluminium boat moored below. Shot from slightly above and behind, looking out
-over a calm fjord inlet. The cabin shows signs of active use — life vests hung on a
-railing, a pair of oars propped against the wall. Overcast Nordic light, grey-green
-water. Mood: ownership, stewardship, quiet obligation.
-```
-
----
-
-### 5. `ma-du-registrere-turistfiskebedrift.webp`
-**Article**: "Må du registrere turistfiskebedrift?"
-
-```
-Scene: A small Norwegian harbour with two or three aluminium boats tied to a long
-weathered wooden dock. The boats are simple and functional — no luxury yachts.
-Granite rocks frame the foreground. In the far background, a cluster of red and
-white coastal buildings on a low hillside. Wide, open, Norwegian. Mood: threshold,
-decision, belonging to a regulated world. No people.
-```
-
----
-
-### 6. `nullfangst-turistfiske-ma-det-rapporteres.webp`
-**Article**: "Nullfangst — må det rapporteres?"
-
-```
-Scene: An empty fishing boat on still, glassy fjord water at the end of the day.
-The boat is moored; the water surface is calm and mirror-like, reflecting an overcast
-pale grey sky. A single fishing line hangs slack over the side — nothing on it.
-The mood is quiet, slightly melancholic, honest. Shot from the dock, looking along
-the waterline. No people, no fish.
-```
-
----
-
-### 7. `slik-kan-du-forberede-turistfiskesesongen.webp`
-**Article**: "Slik kan du forberede turistfiskesesongen"
-
-```
-Scene: A Norwegian boathouse and dock being readied for the season — life vests
-stacked and aired on a railing, a coil of rope neatly arranged on the dock,
-an aluminium boat freshly tied up. Early spring light: the snow has just left the
-mountains visible in the background, pale blue-grey water, cool clear air.
-A sense of purposeful preparation before guests arrive. No people, no faces.
-```
-
----
-
 ## Prompt Template Structure
 
 Final prompt = **Common Theme Prefix** + **Per-Article Scene Description**
 
-Example for article 3:
+The Common Theme Prefix is reusable and never changes. The scene description is
+written fresh for each new article from the article's content, following the
+methodology below.
+
+---
+
+## How to Derive a Scene from a New Article
+
+When generating a hero for a new blog post, work through these steps:
+
+1. **Read the article** and identify its core theme in one sentence (e.g.
+   "the legal duty to report catches", "preparing for the season").
+2. **Pick a single concrete object or moment** that anchors the theme — not a
+   metaphor, not a person performing an action. A boot at a dock edge, a fish
+   crate on a wet quay, a rope coiled on a bollard. One readable focal point.
+3. **Choose a setting** from the Recurring Brand Elements list (dock, naust,
+   aluminium boat, fjord, hytte, harbour). Mix two if it adds depth, no more.
+4. **Set the time of day and weather** to match the article's emotional tone:
+   - Bright, purposeful topic → soft early-morning light, calm water
+   - Serious, regulatory topic → overcast grey, dusk, muted palette
+   - Reflective, melancholic topic → glassy still water, flat pale sky
+   - Forward-looking, seasonal → spring light, snow leaving the mountains
+5. **Name the mood explicitly** in one phrase ("quiet responsibility",
+   "purposeful preparation", "honest accountability"). The model uses this
+   to colour-grade and compose.
+6. **Write the scene as 3–5 sentences** in plain English. Lead with the
+   focal object, then the setting, then the light, then the mood.
+   No people's faces. No text. No screens.
+7. **Append it after the Common Theme Prefix verbatim** and feed the combined
+   prompt to nano-banana. Save output to
+   `src/content/blog/images/<article-slug>.webp`.
+
+### Worked Example
+
+Article: "Daglig fangstrapportering i turistfiske" (daily catch reporting)
+
+- Core theme: *the daily routine of logging a catch*
+- Focal object: *a fish crate with fresh cod on a wet dock*
+- Setting: *coastal quay with boat in the soft background*
+- Time/weather: *early morning, overcast, cool diffuse light*
+- Mood: *routine, precision, daily rhythm*
+
+Resulting scene description:
 
 ```
-Photorealistic wide-format hero image for a Norwegian coastal fishing tourism website.
-Norwegian coastal palette: deep fjord navy (#1a3a5c), weathered granite grey,
-fjord teal (#4a9b8e), pale morning sky, and soft natural daylight — no saturated
-or tropical colours. [... full prefix ...] No flags or political symbols.
-
-Scene: Early morning on a Norwegian coastal quay. A fresh catch of cod (torsk) lies
-in a grey plastic fish crate on a wet dock, water droplets visible. [... etc ...]
+Scene: Early morning on a Norwegian coastal quay. A fresh catch of cod (torsk)
+lies in a grey plastic fish crate on a wet dock, water droplets visible. In the
+soft background, a small aluminium boat is tied up and a boathouse silhouette is
+visible. The light is cool, diffuse, overcast — the start of a working day.
+No people. Mood: routine, precision, daily rhythm.
 ```
 
 ---
