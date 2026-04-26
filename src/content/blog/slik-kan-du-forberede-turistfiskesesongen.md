@@ -24,7 +24,7 @@ Her glipper det ofte hos små utleiere. Ikke fordi du ikke kan reglene, men ford
 
 ## Gå gjennom rapporteringskravene før første gjest kommer
 
-Regelverket krever at fangst rapporteres [daglig per opphold og art](/blogg/daglig-fangstrapportering-turistfiske/). Det betyr i praksis at du ikke bør vente til utsjekk med å samle inn informasjon. Hvis rapporten ikke er sendt inn, kan utførselsdokumentasjon heller ikke utstedes. Det er et konkret punkt du må bygge inn i driften din, ikke noe du kan løse med en lapp på kjøkkenbordet.
+Regelverket krever at fangst rapporteres [daglig per opphold og art](/blogg/daglig-fangstrapportering-turistfiske/). Det betyr i praksis at du ikke bør vente til utsjekk med å samle inn informasjon. Hvis rapporten ikke er sendt inn, kan utførselsdokumentasjon heller ikke utstedes. Det er et konkret punkt du må bygge inn i driften din, ikke noe du kan løse med en lapp på kjøkkenbordet. Svake rutiner på dette punktet er også den vanligste veien inn i [situasjoner der spørsmål om bot og rapporteringsbrudd dukker opp](/blogg/bot-for-turistfiske-rapportering/).
 
 For en liten utleier er løsningen som regel å gjøre rapporteringen til en del av gjestens rutine, ikke din ekstrajobb. Når turistene gjør jobben fortløpende, blir det enklere å holde kontroll. Du trenger fortsatt oversikt og godkjenning, men du slipper å sitte siste kvelden og tolke håndskrift, bilder av fiskekasser eller halve artsnavn på tysk.
 

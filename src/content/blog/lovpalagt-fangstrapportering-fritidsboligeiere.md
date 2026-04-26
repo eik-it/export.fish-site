@@ -62,7 +62,7 @@ Når turisten selv registrerer fortløpende, slipper du å tolke håndskrift, et
 
 ## Hvor risikoen faktisk ligger
 
-De fleste tenker først på bøter, men den daglige risikoen er mer praktisk. Dårlig dokumentasjon skaper ekstraarbeid og frustrasjon i møte med turister som skal reise videre med fisk. Én slik situasjon kan ta uforholdsmessig mye tid for en liten utleier.
+De fleste tenker først på bøter, men den daglige risikoen er mer praktisk. Dårlig dokumentasjon skaper ekstraarbeid og frustrasjon i møte med turister som skal reise videre med fisk. Én slik situasjon kan ta uforholdsmessig mye tid for en liten utleier. Les mer om [hva manglende rapportering faktisk kan føre til](/blogg/bot-for-turistfiske-rapportering/) — og hva du gjør for å unngå det.
 
 God rapportering er heller ikke bare et myndighetskrav. Turister som opplever at avreisen blir vanskelig eller reglene uklare, tar det med seg i totalinntrykket. Det er en del av selve leveransen.
 

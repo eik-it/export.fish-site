@@ -59,7 +59,7 @@ Hvis flere av disse stemmer, er du som regel innenfor — enten pliktig (hvis du
 
 ## Hva det koster å la være
 
-Den største risikoen er ikke bare en formell feil. Uten registrering har gjestene dine null utførselskvote. Tas de i kontroll med fisk uten dokumentasjon, risikerer de **8 000 kr i grunnbot, 200 kr per overskuddskilo, og beslag av hele fangsten**. Det er ikke en bot du sender en turist hjem med etter å ha betalt dyrt for opphold, båt og reise.
+Den største risikoen er ikke bare en formell feil. Uten registrering har gjestene dine null utførselskvote. Tas de i kontroll med fisk uten dokumentasjon, risikerer de **8 000 kr i grunnbot, 200 kr per overskuddskilo, og beslag av hele fangsten**. Det er ikke en bot du sender en turist hjem med etter å ha betalt dyrt for opphold, båt og reise. Men selv registrerte virksomheter kan havne i trøbbel — [manglende eller feil rapportering](/blogg/bot-for-turistfiske-rapportering/) er en like vanlig kilde til problem som manglende registrering.
 
 For deg som utleier betyr manglende registrering at gjestene ikke kan eksportere fisk i det hele tatt — et tydelig konkurransehemmer mot naboer som er registrert. Legg til risikoen for dårlige anmeldelser, tapte bookinger og eventuelle overtredelsesgebyrer fra Fiskeridirektoratet, og regnestykket blir ganske entydig.
 
