@@ -3,7 +3,7 @@ title: "Torskefredning i Oslofjorden: Tre nullfiskeområder fra 2026"
 description: "Fra 1.1.2026 trådte tre nullfiskeområder i kraft i Oslofjorden — indre Oslofjord, Færder og Ytre Hvaler. Hva som er forbudt og hvilke arter som fortsatt kan fiskes."
 slug: "torskefredning-oslofjorden-2026"
 guid: "e3f7a2b1-9c4d-4e8f-b6a3-d1e2f3a4b5c6"
-pubDate: 2026-04-26T21:30:00.000Z
+pubDate: 2026-06-06T08:00:00.000Z
 tags: []
 image:
   src: "./images/torskefredning-oslofjorden-2026.webp"
