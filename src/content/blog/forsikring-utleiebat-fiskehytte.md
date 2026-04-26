@@ -6,6 +6,9 @@ guid: "f7a8ca51-bd94-4fd2-8882-5a6437c26682"
 pubDate: 2026-04-26T19:00:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/forsikring-utleiebat-fiskehytte.webp"
+  alt: "Forsikring av båt og hytte ved utleie til fisketurister"
 ---
 
 > **Merk:** Denne artikkelen er generell informasjon og skal ikke tolkes som forsikringsrådgivning. Forsikringsvilkår varierer mellom selskaper og produkter. Ta alltid kontakt med ditt forsikringsselskap for å avklare hva som gjelder i din konkrete situasjon.
