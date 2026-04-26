@@ -3,7 +3,7 @@ title: "Sjøvettreglene oversatt: Slik briefer du tyske og nederlandske gjester"
 description: "Sjøvettreglene på norsk, engelsk og tysk — klar til å printes og henges på hytta. Praktisk verktøy for utleiere med utenlandske fisketurister."
 slug: "sjovettregler-tysk-engelsk-gjester"
 guid: "eeb4495c-0b81-460a-9db2-f08c146c0146"
-pubDate: 2026-04-26T20:30:00.000Z
+pubDate: 2026-05-25T08:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
