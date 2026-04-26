@@ -5,6 +5,9 @@ slug: "torskefredning-oslofjorden-2026"
 guid: "e3f7a2b1-9c4d-4e8f-b6a3-d1e2f3a4b5c6"
 pubDate: 2026-04-26T21:30:00.000Z
 tags: []
+image:
+  src: "./images/torskefredning-oslofjorden-2026.webp"
+  alt: "Torskefredning i Oslofjorden: Tre nullfiskeområder fra 2026"
 ---
 
 Fra 1. januar 2026 gjelder et av de strengeste fiskeriforbudene i norsk kysthistorie for Oslofjorden. Tre nullfiskeområder er innført, og i disse sonene er alt fiske og all sanking forbudt gjennom hele året — for alle, uten unntak for arten. For deg som leier ut hytte og båt på Østlandet eller langs Skagerrakkysten, er det avgjørende å kjenne til hva som gjelder, hva som er tillatt utenfor sonene, og hvordan du kan informere gjestene korrekt.
