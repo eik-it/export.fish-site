@@ -3,7 +3,7 @@ title: "Hvor i Norge fisker man hva? Regional guide for fisketurister"
 description: "Regional oversikt over fiskedestinasjoner i Norge: Lofoten, Sørøya, Hitra/Frøya, Helgeland, fjordene og innlandsfiske. Hva som er typisk hvor."
 slug: "fiskedestinasjoner-norge-regional"
 guid: "be11059f-cecc-4eee-9b88-4bdf2ec3804c"
-pubDate: 2026-04-26T22:00:00.000Z
+pubDate: 2026-06-12T08:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
