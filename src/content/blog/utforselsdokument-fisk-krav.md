@@ -6,6 +6,9 @@ guid: "ce38f5ec-f9e8-400b-a8ef-e978fc1551a6"
 pubDate: 2026-04-26T15:30:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/utforselsdokument-fisk-krav.webp"
+  alt: "Hva må stå på utførselsdokumentet? Krav og sjekkliste"
 ---
 
 Gjesten er klar til å kjøre hjem. Bilen er pakket, fryseesken med fisk er lastet, og spørsmålet kommer: "Kan vi få papiret?" Det øyeblikket avslører raskt om du har orden på utførselsdokumentasjonen — eller om du sitter med hull i rutinene dine.
