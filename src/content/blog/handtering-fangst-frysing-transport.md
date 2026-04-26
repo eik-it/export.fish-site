@@ -3,7 +3,7 @@ title: "Slik håndterer gjestene fangsten: Sløying, frysing og transport hjem"
 description: "Praktisk guide til sløying, filetering, frysing og pakking av fisk for transport hjem — med kvotedokumentasjon, omregningsfaktorer og hva man unngår på sommerstid."
 slug: "handtering-fangst-frysing-transport"
 guid: "b0af22f7-593f-4431-a4dd-b43a9c91b33c"
-pubDate: 2026-04-26T23:30:00.000Z
+pubDate: 2026-05-31T08:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
