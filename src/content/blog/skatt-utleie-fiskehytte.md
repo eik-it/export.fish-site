@@ -6,6 +6,9 @@ guid: "f80f6e21-61be-4f12-b6f0-ff6a5e92fe2a"
 pubDate: 2026-04-26T17:30:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/skatt-utleie-fiskehytte.webp"
+  alt: "Skatt på utleie av fiskehytte: 12 %, 25 % og 22 % — slik henger det sammen"
 ---
 
 Når du leier ut en fiskehytte med båt til turistfiskere, møter du raskt tre forskjellige prosenttall: 12 %, 25 % og 22 %. De handler om ulike ting — MVA-sats på overnatting, MVA-sats på båtutleie og selskapsskatt på overskudd. Det er lett å blande dem, og det kan koste deg penger i begge retninger.
