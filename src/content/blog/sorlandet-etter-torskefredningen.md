@@ -6,6 +6,9 @@ guid: "fc621984-664c-4e6d-bdd6-3d2eb4c77dd5"
 pubDate: 2026-04-26T23:00:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/sorlandet-etter-torskefredningen.webp"
+  alt: "Sørlandet etter torskefredningen: Hva kan turistfiskeverter fortsatt tilby?"
 ---
 
 Det er ikke unaturlig at mange turistfiskeverter på Sørlandet kjenner på en tyngde akkurat nå. Torsk har i årevis vært ryggraden i tilbudet — den arten gjestene spør etter, den som fyller kasserollene og gir familien noe å ta med hjem. Når torsken nå er totalfredet i Skagerrak fra Telemark til svenskegrensen, og tre nullfiskeområder i Oslofjorden stenger ytterligere deler av fjorden fra 1. januar 2026, er det lett å se det som en krise.
