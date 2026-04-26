@@ -6,6 +6,9 @@ guid: "96fee18b-e9c5-4a36-b2f2-11599d4061bb"
 pubDate: 2026-04-26T18:00:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/plattformrapportering-2026-dpi-airbnb.webp"
+  alt: "Plattformrapportering 2026: Hva betyr de nye DPI-reglene for hytteverter?"
 ---
 
 Mange hytteutleiere har de siste årene levd med en viss usikkerhet: hva vet egentlig Skatteetaten om inntektene fra Airbnb-bookinger, og hvor nøye er de? Fra 1. januar 2026 er svaret enkelt — de vet det samme som plattformen. Airbnb, Booking.com og Vrbo er nå pålagt å rapportere transaksjoner direkte til norske skattemyndigheter. Det er denne ordningen som kalles DPI, eller Digital Platform Information.
