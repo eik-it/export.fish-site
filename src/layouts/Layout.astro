@@ -72,6 +72,11 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} />
 
+    <!-- Agent discovery -->
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+    <link rel="agent-skills" href="/.well-known/agent-skills/index.json" />
+    <link rel="alternate" type="text/markdown" href={canonicalURL} />
+
     <!-- Open Graph -->
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalURL} />
