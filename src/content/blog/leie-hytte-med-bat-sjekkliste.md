@@ -63,7 +63,7 @@ Sjøfartsdirektoratets [sjekkliste for fritidsfartøy](https://www.sjofartsdir.n
 
 Dersom gjestene dine skal ta med fisk ut av Norge, må dokumentasjonen være i orden. Det gjelder selv om du ikke er registrert som turistfiskebedrift — men da er kvoten null, og de kan ikke ta med seg noe.
 
-- [ ] Er virksomheten registrert? Da kan gjestene ta med seg inntil 15 kg filét (eller tilsvarende hel fisk) per person ut av landet.
+- [ ] Er virksomheten registrert? Da kan gjestene ta med seg inntil 15 kg filét (eller tilsvarende hel fisk) per person ut av landet, en kvote som har vært gjeldende siden 2021.
 - [ ] Har du rutiner for [utførselsdokument](/blogg/utforselsdokument-fisk-krav/) som utstedes ved avreise?
 - [ ] Vet gjestene at dokumentet forutsetter fullstendig fangstrapportering gjennom hele oppholdet?
 
