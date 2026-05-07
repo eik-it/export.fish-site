@@ -9,7 +9,7 @@ const agentSkills = (site: URL) =>
           name: 'register-turistfiskebedrift',
           type: 'form',
           description:
-            'Registrer din turistfiskebedrift hos Fiskeridirektoratet via vårt skjema',
+            'Registrer turistfiskebedriften din i export.fish-appen for å rapportere fangst',
           url: new URL('registrer', site).href,
         },
       ],
