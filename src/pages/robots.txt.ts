@@ -5,6 +5,11 @@ Content-Signal: search=yes, ai-train=yes, ai-input=yes
 Allow: /
 
 Sitemap: ${new URL('sitemap-index.xml', site).href}
+
+# AI-agentressurser:
+# - llms.txt: ${new URL('llms.txt', site).href}
+# - Agent Skills: ${new URL('.well-known/agent-skills/index.json', site).href}
+# - Alle sider tilgjengelig som markdown ved å legge til .md på URL-en
 `;
 
 export const GET: APIRoute = ({ site }) => {
