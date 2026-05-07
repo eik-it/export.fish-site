@@ -141,13 +141,12 @@ function extractContent(html: string): {
   // Also remove the cookie consent banner and any fixed overlays.
   $('[class*="cookie"], [id*="cookie"], [class*="consent"], [id*="consent"]').remove();
 
-  // Try main > article > body in order.
+  // Prefer <main>. Use <article> only when there's exactly one — multiple
+  // articles indicate cards/lists, not the page's primary content.
   let content = $('main').first();
   if (!content.length) {
-    content = $('article').first();
-  }
-  if (!content.length) {
-    content = $('body');
+    const articles = $('article');
+    content = articles.length === 1 ? articles.first() : $('body');
   }
 
   const bodyHtml = content.html() ?? '';

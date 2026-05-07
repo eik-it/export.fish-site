@@ -360,7 +360,9 @@ const markdownURL = new URL(_mdPathname + '.md', siteUrl).href;
         </a>
       </nav>
     </header>
-    <slot />
+    <main>
+      <slot />
+    </main>
     <CookieConsent />
     <script>
       document.addEventListener('DOMContentLoaded', () => {
