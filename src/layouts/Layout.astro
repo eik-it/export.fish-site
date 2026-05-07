@@ -50,6 +50,11 @@ const favicon = '/favicon.svg';
 const siteUrl = 'https://eksportfiske.no';
 const canonicalURL = new URL(Astro.url.pathname, siteUrl).href;
 const ogImageURL = new URL(ogImage.src, siteUrl).href;
+
+// Markdown alternate URL: /blog/sjekkliste/ → /blog/sjekkliste.md
+// Homepage (/) → /index.md
+const _mdPathname = Astro.url.pathname.replace(/\/$/, '') || '/index';
+const markdownURL = new URL(_mdPathname + '.md', siteUrl).href;
 ---
 
 <!doctype html>
@@ -75,7 +80,7 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
     <!-- Agent discovery -->
     <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
     <link rel="agent-skills" href="/.well-known/agent-skills/index.json" />
-    <link rel="alternate" type="text/markdown" href={canonicalURL} />
+    <link rel="alternate" type="text/markdown" href={markdownURL} />
 
     <!-- Open Graph -->
     <meta property="og:type" content={ogType} />

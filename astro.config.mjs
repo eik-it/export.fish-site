@@ -4,6 +4,7 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 import sitemap from '@astrojs/sitemap';
+import markdownOutput from './src/integrations/markdown-output.ts';
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,7 +19,10 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [sitemap({
-    filter: (page) => !page.includes('/registrer/takk') && !page.includes('/qr')
-  })]
+  integrations: [
+    sitemap({
+      filter: (page) => !page.includes('/registrer/takk') && !page.includes('/qr')
+    }),
+    markdownOutput(),
+  ]
 });
