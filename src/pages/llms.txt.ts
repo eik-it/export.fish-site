@@ -22,20 +22,20 @@ export const GET: APIRoute = async ({ site }) => {
 
   const content = `# Eksportfiske.no
 
-> Markedsside for export.fish — en rapporteringsplattform for norske turistfiskebedrifter. Hjelper dem med å oppfylle Fiskeridirektoratets krav til fangstrapportering.
+> Marketing site for export.fish — a reporting platform for Norwegian turistfiskebedrifter (fishing tourism businesses). Helps them comply with the Norwegian Directorate of Fisheries' (Fiskeridirektoratet) catch-reporting requirements. Site content is in Norwegian.
 
-## Bloggartikler
+## Articles
 ${blogLines}
 
-## Sider
-- [Om oss](${siteBase}/om-oss/): Om export.fish og teamet bak
-- [Kontakt](${siteBase}/kontakt/): Kontaktinformasjon
-- [Registrer](${siteBase}/registrer/): Registreringsskjema for export.fish-plattformen (krever eksisterende registrering hos Fiskeridirektoratet)
+## Pages
+- [Om oss](${siteBase}/om-oss/): About the export.fish team and platform
+- [Kontakt](${siteBase}/kontakt/): Contact information
+- [Registrer](${siteBase}/registrer/): Registration form for the export.fish platform (requires the business to already be registered with Fiskeridirektoratet)
 
-## Markdown-tilgang
-Alle sider er tilgjengelige som ren markdown ved å legge til .md på URL-en (f.eks. ${siteBase}/blogg/daglig-fangstrapportering-turistfiske.md).
+## Markdown access
+Every page is available as clean markdown by appending .md to the URL (e.g. ${siteBase}/blogg/daglig-fangstrapportering-turistfiske.md).
 
-## Oppdagelse
+## Discovery
 - Sitemap: ${siteBase}/sitemap-index.xml
 - Agent Skills (Cloudflare RFC v0.2.0): ${siteBase}/.well-known/agent-skills/index.json
 - robots.txt: ${siteBase}/robots.txt
