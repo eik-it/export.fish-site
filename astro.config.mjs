@@ -10,6 +10,10 @@ export default defineConfig({
   site: 'https://eksportfiske.no',
   base: '',
 
+  build: {
+    inlineStylesheets: 'auto',
+  },
+
   vite: {
     plugins: [tailwindcss()]
   },
