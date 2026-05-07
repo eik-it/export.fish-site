@@ -53,7 +53,7 @@ Mange utleiere henger vestene på plass og tenker seg ferdig. Men hvis gjestene 
 - [ ] Lyktemateriell og lanterner etter gjeldende krav (hvitt lys akter, rød og grønn sidelykter ved kjøring i mørket)
 - [ ] Lensepumpe eller øsekar
 - [ ] Kasteline
-- [ ] Tuten/fløyte for lydsignal i tåke
+- [ ] Tåkelur (lydsignal i tåke)
 
 Sjøfartsdirektoratets [sjekkliste for fritidsfartøy](https://www.sjofartsdir.no) er et godt utgangspunkt for å verifisere dette. Kravene varierer noe etter båtens lengde.
 
