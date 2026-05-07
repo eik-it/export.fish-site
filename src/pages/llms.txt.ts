@@ -33,7 +33,13 @@ ${blogLines}
 - [Registrer](${siteBase}/registrer/): Registration form for the export.fish platform (requires the business to already be registered with Fiskeridirektoratet)
 
 ## Markdown access
-Every page is available as clean markdown by appending .md to the URL (e.g. ${siteBase}/blogg/daglig-fangstrapportering-turistfiske.md).
+Every page is available as clean markdown. The URL is constructed as follows:
+- Homepage: ${siteBase}/index.md
+- Any other page: drop any trailing slash from the path and append .md
+  - ${siteBase}/blogg/daglig-fangstrapportering-turistfiske/ → ${siteBase}/blogg/daglig-fangstrapportering-turistfiske.md
+  - ${siteBase}/kontakt/ → ${siteBase}/kontakt.md
+
+Each HTML page also exposes its markdown URL via <link rel="alternate" type="text/markdown" href="..."> in the document head — this is the most reliable discovery method.
 
 ## Discovery
 - Sitemap: ${siteBase}/sitemap-index.xml

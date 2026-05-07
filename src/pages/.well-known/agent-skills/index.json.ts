@@ -8,7 +8,7 @@ const agentSkills = JSON.stringify(
         name: 'read-content-as-markdown',
         type: 'instruction',
         description:
-          'Read any page as clean markdown by appending .md to the URL, or follow <link rel="alternate" type="text/markdown"> in the page HTML head. Preferred for AI ingestion. (Hent enhver side som markdown ved å legge til .md i URL-en.)',
+          'Read any page as clean markdown. Most reliable: follow <link rel="alternate" type="text/markdown"> in the page HTML head. Manual rule: homepage is at /index.md; for any other page drop trailing slash and append .md (e.g. /blogg/foo/ → /blogg/foo.md). Preferred for AI ingestion.',
         url: 'https://eksportfiske.no/index.md',
       },
       {
