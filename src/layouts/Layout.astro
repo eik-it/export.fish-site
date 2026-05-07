@@ -252,11 +252,25 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
       });
     </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH0VD36D5C"></script>
+    <!-- Google tag (gtag.js) - deferred until after load/idle to avoid forced reflow during LCP -->
     <script is:inline>
-      gtag('js', new Date());
-      gtag('config', 'G-TH0VD36D5C');
+      window.addEventListener('load', function() {
+        function loadGtag() {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-TH0VD36D5C';
+          s.onload = function() {
+            gtag('js', new Date());
+            gtag('config', 'G-TH0VD36D5C');
+          };
+          document.head.appendChild(s);
+        }
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadGtag, { timeout: 2000 });
+        } else {
+          setTimeout(loadGtag, 1000);
+        }
+      });
     </script>
 
     <!-- Meta Pixel - deferred until consent is granted.
