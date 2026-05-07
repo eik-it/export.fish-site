@@ -36,11 +36,12 @@ const ogImageAltText = ogImageAlt ?? 'export.fish - Fangstrapportering for turis
 // Hero preload — generate multiple widths so browsers pick the right variant.
 // The imagesrcset/imagesizes on the <link> mirror what the <Image> component
 // renders, so mobile browsers fetch the small variant instead of the 1920w one.
+// quality: 75 — background image, text overlay, safe to go below default 80.
 const [heroSm, heroMd, heroLg, heroXl] = await Promise.all([
-  getImage({ src: defaultOgImage, format: 'webp', width: 640 }),
-  getImage({ src: defaultOgImage, format: 'webp', width: 1024 }),
-  getImage({ src: defaultOgImage, format: 'webp', width: 1280 }),
-  getImage({ src: defaultOgImage, format: 'webp', width: 1920 }),
+  getImage({ src: defaultOgImage, format: 'webp', width: 640, quality: 75 }),
+  getImage({ src: defaultOgImage, format: 'webp', width: 1024, quality: 75 }),
+  getImage({ src: defaultOgImage, format: 'webp', width: 1280, quality: 75 }),
+  getImage({ src: defaultOgImage, format: 'webp', width: 1920, quality: 75 }),
 ]);
 const heroPreloadSrcset = `${heroSm.src} 640w, ${heroMd.src} 1024w, ${heroLg.src} 1280w, ${heroXl.src} 1920w`;
 const heroPreload = heroXl; // fallback href points at the largest
@@ -252,11 +253,25 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
       });
     </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH0VD36D5C"></script>
+    <!-- Google tag (gtag.js) - deferred until after load/idle to avoid forced reflow during LCP -->
     <script is:inline>
-      gtag('js', new Date());
-      gtag('config', 'G-TH0VD36D5C');
+      window.addEventListener('load', function() {
+        function loadGtag() {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-TH0VD36D5C';
+          s.onload = function() {
+            gtag('js', new Date());
+            gtag('config', 'G-TH0VD36D5C');
+          };
+          document.head.appendChild(s);
+        }
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadGtag, { timeout: 2000 });
+        } else {
+          setTimeout(loadGtag, 1000);
+        }
+      });
     </script>
 
     <!-- Meta Pixel - deferred until consent is granted.
@@ -301,7 +316,7 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
     <header class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50">
       <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="/" class="flex items-center gap-3 group">
-          <Image src={logo} alt="export.fish logo" width={80} height={80} class="h-16 w-16 md:h-20 md:w-20 transition-transform group-hover:scale-110" />
+          <Image src={logo} alt="export.fish logo" width={80} height={80} densities={[1, 2]} class="h-16 w-16 md:h-20 md:w-20 transition-transform group-hover:scale-110" />
           <span class="text-2xl md:text-3xl font-bold text-primary">Eksportfiske</span>
         </a>
         <!-- Mobile menu (hamburger) -->
