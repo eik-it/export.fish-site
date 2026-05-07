@@ -28,7 +28,7 @@ import logo from '../assets/logo.png';
   <!-- Hero Section -->
   <section class="relative pt-52 pb-32 md:pb-40 text-white overflow-hidden" aria-labelledby="hero-heading">
     <!-- Background Image -->
-    <div class="absolute inset-0 opacity-0 transition-opacity duration-1000 ease-out hero-bg-loaded" aria-hidden="true">
+    <div class="absolute inset-0 hero-bg-fade" aria-hidden="true">
       <Image src={heroBg} alt="" class="w-full h-full object-cover" widths={[640, 1024, 1280, 1920]} sizes="100vw" loading="eager" fetchpriority="high" />
       <div class="absolute inset-0 bg-gradient-to-br from-blue-400/75 via-blue-500/80 to-blue-600/85"></div>
     </div>
@@ -130,7 +130,7 @@ import logo from '../assets/logo.png';
         <!-- Feature 1 -->
         <article class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
           <div class="h-48 relative overflow-hidden">
-            <Image src={feature3} alt="Turistfiskebåt ved norsk fjord - fangstrapportering eksportfiske.no" class="w-full h-full object-cover" width={800} height={600} />
+            <Image src={feature3} alt="Turistfiskebåt ved norsk fjord - fangstrapportering eksportfiske.no" class="w-full h-full object-cover" widths={[400, 800]} sizes="(max-width: 768px) 100vw, 400px" width={800} height={600} />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20"></div>
           </div>
           <div class="p-6">
@@ -144,7 +144,7 @@ import logo from '../assets/logo.png';
         <!-- Feature 2 -->
         <article class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
           <div class="h-48 relative overflow-hidden">
-            <Image src={feature1} alt="Turistfiske opplevelse med digital fangstrapportering" class="w-full h-full object-cover" width={800} height={600} />
+            <Image src={feature1} alt="Turistfiske opplevelse med digital fangstrapportering" class="w-full h-full object-cover" widths={[400, 800]} sizes="(max-width: 768px) 100vw, 400px" width={800} height={600} />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20"></div>
           </div>
           <div class="p-6">
@@ -158,7 +158,7 @@ import logo from '../assets/logo.png';
         <!-- Feature 3 -->
         <article class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
           <div class="h-48 relative overflow-hidden">
-            <Image src={feature2} alt="Fornøyde fisketurister bruker export.fish rapporteringsapp" class="w-full h-full object-cover" width={800} height={600} />
+            <Image src={feature2} alt="Fornøyde fisketurister bruker export.fish rapporteringsapp" class="w-full h-full object-cover" widths={[400, 800]} sizes="(max-width: 768px) 100vw, 400px" width={800} height={600} />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20"></div>
           </div>
           <div class="p-6">
@@ -1069,17 +1069,8 @@ import logo from '../assets/logo.png';
 </Layout>
 
 <script>
-  // Fade in hero background on page load
-  document.addEventListener('DOMContentLoaded', () => {
-    const heroBg = document.querySelector('.hero-bg-loaded');
-    if (heroBg) {
-      // Small delay to ensure smooth transition
-      setTimeout(() => {
-        heroBg.classList.remove('opacity-0');
-        heroBg.classList.add('opacity-100');
-      }, 100);
-    }
-  });
+  // Hero background is now visible immediately via CSS animation (no JS gate).
+  // hero-bg-fade class uses a keyframe defined in the <style> block below.
 
   // Hero headline word-swap animation with exponential backoff.
   // Swaps "hytta" <-> "båten" rapidly at first, decelerates over ~15s,
@@ -1156,3 +1147,20 @@ import logo from '../assets/logo.png';
 </script>
 
 <!-- Trigger visual regression -->
+
+<style>
+  /* Hero background fades in via CSS — LCP element is visible from first paint,
+     no JS gate. Pure CSS animation starts at opacity 1 so it never blocks paint. */
+  @keyframes hero-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  .hero-bg-fade {
+    animation: hero-fade-in 1s ease-out both;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-bg-fade {
+      animation: none;
+    }
+  }
+</style>

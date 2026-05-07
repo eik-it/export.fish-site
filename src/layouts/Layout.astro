@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { getImage } from 'astro:assets';
+import { getImage, Image } from 'astro:assets';
 import defaultOgImage from '../assets/hero-bg.jpg';
 import CookieConsent from '../components/CookieConsent.astro';
 import logo from '../assets/logo.png';
@@ -33,9 +33,17 @@ const ogSource = customOgImage ?? defaultOgImage;
 const ogImage = await getImage({ src: ogSource, format: 'webp', width: 1200, height: 630 });
 const ogImageAltText = ogImageAlt ?? 'export.fish - Fangstrapportering for turistfiske';
 
-// Hero preload still points at the site-wide hero — that's the LCP element
-// above the fold on the homepage.
-const heroPreload = await getImage({ src: defaultOgImage, format: 'webp', width: 1920 });
+// Hero preload — generate multiple widths so browsers pick the right variant.
+// The imagesrcset/imagesizes on the <link> mirror what the <Image> component
+// renders, so mobile browsers fetch the small variant instead of the 1920w one.
+const [heroSm, heroMd, heroLg, heroXl] = await Promise.all([
+  getImage({ src: defaultOgImage, format: 'webp', width: 640 }),
+  getImage({ src: defaultOgImage, format: 'webp', width: 1024 }),
+  getImage({ src: defaultOgImage, format: 'webp', width: 1280 }),
+  getImage({ src: defaultOgImage, format: 'webp', width: 1920 }),
+]);
+const heroPreloadSrcset = `${heroSm.src} 640w, ${heroMd.src} 1024w, ${heroLg.src} 1280w, ${heroXl.src} 1920w`;
+const heroPreload = heroXl; // fallback href points at the largest
 
 const favicon = '/favicon.svg';
 const siteUrl = 'https://eksportfiske.no';
@@ -53,7 +61,12 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
     {noindex && <meta name="robots" content="noindex, nofollow" />}
 
     <!-- Preload hero image for LCP optimization -->
-    <link rel="preload" as="image" href={heroPreload.src} type="image/webp" />
+    <!-- imagesrcset/imagesizes mirror the <Image> widths/sizes so mobile browsers
+         fetch the 640w variant (~52 KB) instead of the 1920w one (~328 KB). -->
+    <link rel="preload" as="image" href={heroPreload.src} type="image/webp"
+      imagesrcset={heroPreloadSrcset}
+      imagesizes="100vw"
+    />
 
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} />
@@ -246,22 +259,28 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
       gtag('config', 'G-TH0VD36D5C');
     </script>
 
-    <!-- Meta Pixel - consent gated via ad_storage -->
+    <!-- Meta Pixel - deferred until consent is granted.
+         The fbq stub is defined here so calls before load are queued.
+         The actual fbevents.js script is only injected on consent to avoid
+         a parse-blocking third-party request on every page load. -->
     <script is:inline>
-      // Meta Pixel stub - safe to define before consent
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
+      // Lightweight fbq stub — no script injection yet.
+      if (!window.fbq) {
+        var n = window.fbq = function() {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!window._fbq) window._fbq = n;
+        n.push = n; n.loaded = true; n.version = '2.0'; n.queue = [];
+      }
 
-      // Only init and fire PageView if ad_storage consent is already granted
       window.initMetaPixel = function() {
         if (window._metaPixelInitialized) return;
         window._metaPixelInitialized = true;
+        // Inject fbevents.js only now (after consent)
+        var t = document.createElement('script');
+        t.async = true;
+        t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+        document.head.appendChild(t);
         fbq('init', '2517567592013408');
         fbq('track', 'PageView');
       };
@@ -282,7 +301,7 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
     <header class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50">
       <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="/" class="flex items-center gap-3 group">
-          <img src={logo.src} alt="export.fish logo" class="h-16 w-16 md:h-20 md:w-20 transition-transform group-hover:scale-110" />
+          <Image src={logo} alt="export.fish logo" width={80} height={80} class="h-16 w-16 md:h-20 md:w-20 transition-transform group-hover:scale-110" />
           <span class="text-2xl md:text-3xl font-bold text-primary">Eksportfiske</span>
         </a>
         <!-- Mobile menu (hamburger) -->
