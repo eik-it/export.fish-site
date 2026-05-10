@@ -29,6 +29,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Full history needed so the sitemap build can compute <lastmod>
+          # via `git log -1 --format=%cI -- <file>` for each page.
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
