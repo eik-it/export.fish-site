@@ -66,6 +66,9 @@ const markdownURL = new URL(_mdPathname + '.md', siteUrl).href;
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
 
+    <!-- Site verification -->
+    <meta name="msvalidate.01" content="89A5E32210CB1F235C34A3037A868B1C" />
+
     <!-- Preload hero image for LCP optimization -->
     <!-- imagesrcset/imagesizes mirror the <Image> widths/sizes so mobile browsers
          fetch the 640w variant (~52 KB) instead of the 1920w one (~328 KB). -->
