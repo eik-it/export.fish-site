@@ -73,7 +73,7 @@ Et ryddig rapporteringsopplegg gir deg dessuten et dokumentert grunnlag å vise 
 
 Fredningen av torsk er ikke vilkårlig. Den kommer fordi bestanden er i dårlig forfatning etter tiår med overbeskatning. Det er en realitet som faktisk kan brukes i markedsføringen — ikke som et beklagelig faktum, men som en del av en større fortelling om bærekraftig fisketurisme.
 
-Gjester — særlig fra Sentral-Europa — setter i stadig større grad pris på at utleierne de velger tar ansvar. Et tilbud der du eksplisitt sier at dere ikke fisker torsk fordi dere respekterer fredningen, og at dere i stedet tilbyr rike alternativer, sender et signal om seriøsitet. Se gjerne på [fang-og-slipp-prinsippene](/blogg/baerekraftig-turistfiske-fang-slipp/) for noen av disse artene.
+Gjester — særlig fra Sentral-Europa — setter i stadig større grad pris på at utleierne de velger tar ansvar. Et tilbud der du eksplisitt sier at dere ikke fisker torsk fordi dere respekterer fredningen, og at dere i stedet tilbyr rike alternativer, sender et signal om seriøsitet.
 
 ## Konkret: hva gjør du denne sesongen?
 
