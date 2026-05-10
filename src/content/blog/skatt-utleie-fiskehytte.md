@@ -91,7 +91,7 @@ Mange utleiere opererer lenge uten å ha tenkt gjennom disse spørsmålene. Det 
 
 Hvis du leier ut [uten å ha vurdert om du er MVA-pliktig](/blogg/ma-du-registrere-turistfiskebedrift/), er det første steget å beregne bruttoinntekten for de siste 12 månedene og sammenligne med 50 000-kroners-grensen. Er du i nærheten av eller over grensen, bør du snakke med en regnskapsfører.
 
-Det er også verdt å tenke på at [plattformer som Airbnb rapporterer inntektsdata til Skatteetaten fra og med 2026](/blogg/plattformrapportering-2026-dpi-airbnb/). Det betyr at inntekter du tidligere kanskje ikke tenkte på som "offisielle", nå vil ligge synlig i skattemyndighetenes systemer.
+Det er også verdt å tenke på at plattformer som Airbnb rapporterer inntektsdata til Skatteetaten fra og med 2026. Det betyr at inntekter du tidligere kanskje ikke tenkte på som "offisielle", nå vil ligge synlig i skattemyndighetenes systemer.
 
 Har du en [sjekkliste for alt som bør være på plass](/blogg/leie-hytte-med-bat-sjekkliste/) når du leier ut hytte og båt? Det inkluderer ikke bare skatteforhold, men også [lovpålagt fangstrapportering for gjestene dine](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/).
 
