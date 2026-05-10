@@ -1,5 +1,5 @@
 ---
-title: "Leier du ut hytte med båt? Sjekklisten du må gjennom før sesongen"
+title: "Sjekkliste for hytteutleie med båt"
 description: "Praktisk sjekkliste for fritidsboligeiere som leier ut hytte med båt: registreringsvurdering, sikkerhetsutstyr, dokumentasjon, gjesteinformasjon, forsikring og skatt."
 slug: "leie-hytte-med-bat-sjekkliste"
 guid: "30a6fb92-abb7-453d-999d-689a2157435a"

@@ -1,5 +1,5 @@
 ---
-title: "50 000-kronersgrensen: Når blir hytteutleien din en turistfiskebedrift?"
+title: "50 000-kronersgrensen for turistfiskebedrifter"
 description: "Hvor går grensen mellom hytteutleie og turistfiskebedrift? Slik vurderer du om du må registrere virksomheten din i Fiskeridirektoratet."
 slug: "50000-kr-grensen-turistfiskebedrift"
 guid: "c7a2f4e8-3b91-4d5a-9e6f-1c8d2a0b7f43"
