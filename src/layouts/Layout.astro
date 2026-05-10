@@ -11,6 +11,7 @@ interface Props {
   title: string;
   description?: string;
   noindex?: boolean;
+  suppressCanonical?: boolean;
   ogImage?: ImageMetadata;
   ogImageAlt?: string;
   ogType?: 'website' | 'article';
@@ -21,6 +22,7 @@ const {
   title,
   description = 'Enkel fangstrapportering for turistfiskebedrifter',
   noindex = false,
+  suppressCanonical = false,
   ogImage: customOgImage,
   ogImageAlt,
   ogType = 'website',
@@ -78,7 +80,7 @@ const markdownURL = new URL(_mdPathname + '.md', siteUrl).href;
     />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href={canonicalURL} />
+    {!suppressCanonical && <link rel="canonical" href={canonicalURL} />}
 
     <!-- Agent discovery -->
     <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
