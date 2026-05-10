@@ -1,5 +1,5 @@
 ---
-title: "Slik registrerer du turistfiskebedrift hos Fiskeridirektoratet"
+title: "Slik registrerer du turistfiskebedrift"
 description: "Steg-for-steg-guide til registrering av turistfiskebedrift hos Fiskeridirektoratet. Krav, skjema, ID-porten og søknadsprosessen."
 slug: "slik-registrerer-du-turistfiskebedrift"
 guid: "c83d1d64-ef1f-4f53-94d9-858a8c8acea2"

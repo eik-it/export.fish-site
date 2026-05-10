@@ -1,5 +1,5 @@
 ---
-title: "Forskjellen på fritidsfiske, sportsfiske og turistfiske"
+title: "Forskjellen på fritidsfiske og turistfiske"
 description: "Hva skiller fritidsfiske, sportsfiske og turistfiske juridisk og praktisk? Slik finner du ut hvilket regelverk som gjelder for deg eller gjestene dine."
 slug: "fritidsfiske-sportsfiske-turistfiske-forskjell"
 guid: "5b4b5584-73bd-48c1-8bc2-473aee426dcc"

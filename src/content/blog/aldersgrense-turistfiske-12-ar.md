@@ -1,5 +1,5 @@
 ---
-title: "Aldersgrense i turistfiske: hva gjelder for 12-åringer?"
+title: "Aldersgrense i turistfiske: 12-åringer"
 description: "Lurer du på hva aldersgrensen betyr i turistfiske? Her får du en praktisk forklaring på hva som gjelder for barn på 12 år, rapportering og utførsel."
 slug: "aldersgrense-turistfiske-12-ar"
 guid: "ac241f34-2165-4e8d-abde-605a5b2f6866"

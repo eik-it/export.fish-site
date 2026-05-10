@@ -1,5 +1,5 @@
 ---
-title: "Hva må stå på utførselsdokumentet? Krav og sjekkliste"
+title: "Krav til utførselsdokument for fisk"
 description: "Komplett oversikt over hva utførselsdokumentet for fisk må inneholde, hvorfor dokumentet må utstedes etter fangstrapportering, og hvordan du unngår avvisning ved grensa."
 slug: "utforselsdokument-fisk-krav"
 guid: "ce38f5ec-f9e8-400b-a8ef-e978fc1551a6"
