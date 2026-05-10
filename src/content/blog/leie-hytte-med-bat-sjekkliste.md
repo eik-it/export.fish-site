@@ -75,7 +75,7 @@ Utførselsdokumentet er ikke noe du bare skriver ut på slutten. Grunnlaget er a
 
 Dette er punktet flest undervurderer. Informasjon som virker åpenbar for deg, er ikke åpenbar for en turist som ankommer sliten etter mange timers reise og er ivrig etter å komme seg på sjøen.
 
-- [ ] Er sjøvettsreglene tilgjengelig på et språk gjestene faktisk leser? Tysk er viktig for mange norske fiskehytter — se hva vi har laget for [sjøvettsregler på tysk og engelsk](/blogg/sjovettregler-tysk-engelsk-gjester/).
+- [ ] Er sjøvettsreglene tilgjengelig på et språk gjestene faktisk leser? Tysk er viktig for mange norske fiskehytter.
 - [ ] Har du informert om [fiskeregler og kvoter](/blogg/fritidsfiske-sportsfiske-turistfiske-forskjell/) — hva som er lov å fiske, minstemål og fredningstider?
 - [ ] Vet gjestene at de skal [rapportere fangst daglig](/blogg/daglig-fangstrapportering-turistfiske/) — også dager uten fangst?
 - [ ] Er det tydelig hvem de kontakter ved problemer med båten?
@@ -96,8 +96,6 @@ En vanlig innboforsikring eller hytteforsikring dekker normalt ikke utleievirkso
 
 Forskjellen mellom kasko og ansvar er vesentlig: ansvarsforsikring dekker skade på andre, kaskoforsikring dekker skade på din egen båt. Hvis en gjest kjører på en stein, vil du gjerne ha kasko. Mange tror de har det — men utleieklausuler kan sette forsikringen ut av spill. Sjekk dette skriftlig, ikke muntlig.
 
-Se mer om [forsikring for utleiebåt og fiskehytte](/blogg/forsikring-utleiebat-fiskehytte/) for en grundigere gjennomgang av hva du bør be om fra forsikringsselskapet.
-
 ---
 
 ## 6. Skatt og MVA
@@ -115,8 +113,6 @@ MVA-reglene er mer kompliserte. Etter MVA-loven § 2-1 er omsetning av utleietje
 - [ ] Er fakturering og bokføring i tråd med kravene dersom du er MVA-registrert?
 
 Skatteetaten har god veiledning om utleie av fritidseiendom. Vi anbefaler å lese den og eventuelt konsultere en regnskapsfører før du begynner å ta inn gjester — ikke etter.
-
-Se mer om [skatt ved utleie av fiskehytte](/blogg/skatt-utleie-fiskehytte/).
 
 ---
 

@@ -89,7 +89,7 @@ En vanlig misforståelse er at det er turistens ansvar å holde seg innenfor reg
 
 Hvis gjesten forsøker å ta med fisk uten gyldig dokumentasjon, er det gjesten som møter Tolletaten ved grensen. Men det er du som utleier som har satt gjesten i den situasjonen — enten fordi du ikke var registrert, eller fordi dokumentasjonen ikke var på plass. Det er derfor koblingen mellom begrepsforståelse og faktisk drift er viktigere enn det virker ved første øyekast.
 
-Et bærekraftig og gjestevennlig fisketilbud forutsetter at regelverket er avklart fra din side før turistsesongen starter. Les mer om [bærekraftig turistfiske og fang-og-slipp-praksis](/blogg/baerekraftig-turistfiske-fang-slipp/) og hvordan norske [fiskedestinasjoner skiller seg fra hverandre](/blogg/fiskedestinasjoner-norge-regional/).
+Et bærekraftig og gjestevennlig fisketilbud forutsetter at regelverket er avklart fra din side før turistsesongen starter.
 
 ---
 
