@@ -78,15 +78,15 @@ Her er en oversikt over de vanligste kategoriene:
 
 Det er gjestens ansvar å kjenne til og overholde reglene. Men som utleier er det god praksis å avklare noen punkter — særlig av hensyn til forsikringen.
 
-**Sjekk om båten utløser krav.** For å vite om gjesten overhodet trenger bevis, må du vite nøyaktig hva du leier ut: lengde i meter og motoreffekt i hk. Notér dette et sted tilgjengelig, for eksempel i [leieavtalen for hytte og båt](/blogg/hytteutleiekontrakt-bat-mal/).
+**Sjekk om båten utløser krav.** For å vite om gjesten overhodet trenger bevis, må du vite nøyaktig hva du leier ut: lengde i meter og motoreffekt i hk. Notér dette et sted tilgjengelig, for eksempel i leieavtalen for hytte og båt.
 
 **Spør etter bevis.** Har du en båt over 8 meter eller over 25 hk, er det naturlig å be gjester som er født 1980 eller later om å vise gyldig bevis. Gjør det til en fast del av innsjekkingsrutinen.
 
 **Vurder om beviset dekker båten.** Et seilbåtsertifikat gir ikke rett til å kjøre motorbåt, og et kanalsertifikat gjelder ikke på havet. Sjekk at sertifikatet faktisk gir rett til å kjøre den typen og størrelsen båt du leier ut.
 
-**Forsikringen kan kreve mer enn loven.** Selv om loven ikke alltid krever bevis, kan forsikringspolisen ha strengere krav. Les vilkårene nøye — noen forsikringer krever at fører har dokumentert kompetanse uavhengig av om bevis er lovpålagt. Dette er et punkt mange utleiere overser, og konsekvensene kan bli store ved en skade. Se mer om [forsikring ved utleie av båt og hytte](/blogg/forsikring-utleiebat-fiskehytte/).
+**Forsikringen kan kreve mer enn loven.** Selv om loven ikke alltid krever bevis, kan forsikringspolisen ha strengere krav. Les vilkårene nøye — noen forsikringer krever at fører har dokumentert kompetanse uavhengig av om bevis er lovpålagt. Dette er et punkt mange utleiere overser, og konsekvensene kan bli store ved en skade.
 
-**Gi klare instrukser.** Sikkerheten begynner allerede i velkomstsamtalen. Gå gjennom regler og grenser tidlig, helst skriftlig og på gjestenes eget språk. Et enkelt informasjonsark på tysk for tyske gjester er langt mer effektivt enn lengre forklaringer på norsk. Vi har samlet gode råd om dette i [sjøvettsregler for tyske og engelskspråklige gjester](/blogg/sjovettregler-tysk-engelsk-gjester/).
+**Gi klare instrukser.** Sikkerheten begynner allerede i velkomstsamtalen. Gå gjennom regler og grenser tidlig, helst skriftlig og på gjestenes eget språk. Et enkelt informasjonsark på tysk for tyske gjester er langt mer effektivt enn lengre forklaringer på norsk.
 
 ## Bevissjekk er bare ett punkt i innsjekkingen
 
