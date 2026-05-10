@@ -98,6 +98,9 @@ jobs:
             while IFS= read -r FILE; do
               [ -z "${FILE}" ] && continue
               case "${FILE}" in
+                # Noindex / utility pages — never submit to IndexNow.
+                src/pages/404.astro|src/pages/qr.astro|src/pages/registrer/ny-kunde.astro|src/pages/registrer/takk.astro)
+                  ;;
                 src/content/blog/*.md)
                   SLUG=$(basename "${FILE}" .md)
                   URL_LIST+=("https://${HOST}/blogg/${SLUG}/")
@@ -116,7 +119,8 @@ jobs:
                   PAGE=$(echo "${FILE}" | sed -E 's|src/pages/(.+)/index\.astro|\1|')
                   URL_LIST+=("https://${HOST}/${PAGE}/")
                   ;;
-                src/pages/*.astro)
+                src/pages/*/*.astro|src/pages/*.astro)
+                  # Top-level or nested page (e.g. /kontakt/, /docs/foo/).
                   PAGE=$(echo "${FILE}" | sed -E 's|src/pages/(.+)\.astro|\1|')
                   URL_LIST+=("https://${HOST}/${PAGE}/")
                   ;;
