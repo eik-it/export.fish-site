@@ -21,7 +21,10 @@ export default defineConfig({
 
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/registrer/takk') && !page.includes('/qr'),
+      filter: (page) =>
+        !page.includes('/registrer/takk') &&
+        !page.includes('/registrer/ny-kunde') &&
+        !page.includes('/qr'),
       customPages: [
         'https://eksportfiske.no/llms.txt',
         'https://eksportfiske.no/.well-known/agent-skills/index.json',
