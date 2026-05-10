@@ -43,7 +43,7 @@ De fleste overskridelsene skyldes ikke bevisst smugling, men misforståelser og 
 
 **De fordeler fisken mellom biler eller reisefølge uten at dokumentasjonen stemmer.** Å flytte fisk fra en bil til en annen for å skjule mengden er en klassisk feil — og det er ulovlig uavhengig av om den samlede mengden per person er innenfor kvoten.
 
-**De tar med troféfisk.** Troféfisken ble fjernet som unntak fra regelverket allerede i 2018, da Nærings- og fiskeridepartementet fastsatte ny forskrift om turistfiskevirksomheter. [Trofékveite og andre store eksemplarer regnes inn i kvoten](/blogg/trofefisk-fjernet-turistfiske/) på lik linje med annen fisk, men mange gjester tror fortsatt at de kan ta med én stor fisk i tillegg.
+**De tar med troféfisk.** Troféfisken ble fjernet som unntak fra regelverket allerede i 2018, da Nærings- og fiskeridepartementet fastsatte ny forskrift om turistfiskevirksomheter. Trofékveite og andre store eksemplarer regnes inn i kvoten på lik linje med annen fisk, men mange gjester tror fortsatt at de kan ta med én stor fisk i tillegg.
 
 ## Ditt ansvar som utleier — medvirkning er ikke en hypotetisk risiko
 
@@ -67,7 +67,7 @@ For å unngå den situasjonen trenger du en rapporteringsrutine som fungerer lø
 
 ## For tyske og engelskspråklige gjester
 
-En stor andel av gjestene ved norske turistfiskebedrifter kommer fra tyskspråklige land og er ikke kjent med norsk tollpraksis. Mange tror at det er nok å "bare" ha fisket lovlig, uten å forstå dokumentasjonskravene. Orienter gjestene på deres eget språk om de tre nøkkelpunktene: kvoten, dokumentet, og veiingen. [Sjøvettsregler og avreiseinformasjon på tysk og engelsk](/blogg/sjovettregler-tysk-engelsk-gjester/) hjelper deg å nå dem uten at du må lage alt fra bunnen.
+En stor andel av gjestene ved norske turistfiskebedrifter kommer fra tyskspråklige land og er ikke kjent med norsk tollpraksis. Mange tror at det er nok å "bare" ha fisket lovlig, uten å forstå dokumentasjonskravene. Orienter gjestene på deres eget språk om de tre nøkkelpunktene: kvoten, dokumentet, og veiingen.
 
 ## Det store bildet
 

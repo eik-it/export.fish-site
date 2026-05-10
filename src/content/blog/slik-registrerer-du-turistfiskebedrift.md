@@ -91,7 +91,7 @@ Mange bruker unødvendig lang tid fordi de ikke har all informasjon tilgjengelig
 
 Har du alt dette klart, er selve søknaden grei å fylle ut. Det tar som regel ikke mer enn 15–20 minutter.
 
-Sjekkliste for utleiere som vil gjøre alt riktig fra start finner du i [leie-hytte-med-båt-sjekklisten](/blogg/leie-hytte-med-bat-sjekkliste/). Har du spørsmål om skatt og inntektsføring av utleieinntektene, er [skatt på utleie av fiskehytte](/blogg/skatt-utleie-fiskehytte/) et godt utgangspunkt. Utførsel av fisk for gjestene forutsetter at du også kjenner kravene til [utførselsdokumentasjon](/blogg/utforselsdokument-fisk-krav/). Familier med barn reiser egne spørsmål, se gjennomgangen av [aldersgrense i turistfiske](/blogg/aldersgrense-turistfiske-12-ar/).
+Sjekkliste for utleiere som vil gjøre alt riktig fra start finner du i [leie-hytte-med-båt-sjekklisten](/blogg/leie-hytte-med-bat-sjekkliste/). Utførsel av fisk for gjestene forutsetter at du også kjenner kravene til [utførselsdokumentasjon](/blogg/utforselsdokument-fisk-krav/). Familier med barn reiser egne spørsmål, se gjennomgangen av [aldersgrense i turistfiske](/blogg/aldersgrense-turistfiske-12-ar/).
 
 Vi mener at registreringen er det enkle trinnet. Det er det som kommer etterpå, rutinene, rapporteringen og dokumentasjonen, som avgjør om driften faktisk holder mål i sesongen. Men du må ha registreringen på plass for å komme i gang. Og du kan ikke vente til første gjest banker på døra.
 
