@@ -21,11 +21,11 @@ Et viktig grunnprinsipp: som [registrert turistfiskebedrift](/blogg/ma-du-regist
 
 Januar er måneden for de mest dedikerte turistfiskerne. Langs kysten av Lofoten og Vesterålen er dette starten på skreisesongen — den arktiske torsken som vandrer inn fra Barentshavet for å gyte på de grunne bankene. Skreifiske i Lofoten er et av Norges mest kjente fiskeopplevelser og trekker gjester fra hele Europa, særlig Tyskland og Østerrike.
 
-Skreien er tilgjengelig fra rundt Røst i sør til Andøya i nord, med høysesongen gjerne i februar og mars. Fisket foregår fra småbåt med juksa eller pilk, og størrelsen på fisken er jevnt over imponerende. Sjekk de spesifikke reglene for [skreifiske i Lofoten](/blogg/skreifiske-lofoten-regler/) før sesongen, da det kan gjelde særregler for området.
+Skreien er tilgjengelig fra rundt Røst i sør til Andøya i nord, med høysesongen gjerne i februar og mars. Fisket foregår fra småbåt med juksa eller pilk, og størrelsen på fisken er jevnt over imponerende. Sjekk de spesifikke reglene for skreifiske i Lofoten før sesongen, da det kan gjelde særregler for området.
 
-Sør for 62°N er torsken fredet i Oslofjorden gjennom hele perioden — se detaljer under [torskefredning i Oslofjorden](/blogg/torskefredning-oslofjorden-2026/).
+Sør for 62°N er torsken fredet i Oslofjorden gjennom hele perioden.
 
-Kveita er fredet fra 20. desember til 31. mars i hele landet (Høstingsforskriften § 38). Det betyr at januar og februar er lukkede måneder for kveitefiske, og dette gjelder uten unntak fra Skagerrak til Finnmark. [Les mer om kveitefiske og 2026-regler](/blogg/kveitefiske-2026-regler/).
+Kveita er fredet fra 20. desember til 31. mars i hele landet (Høstingsforskriften § 38). Det betyr at januar og februar er lukkede måneder for kveitefiske, og dette gjelder uten unntak fra Skagerrak til Finnmark.
 
 Sei er tilgjengelig langs hele kysten uten fredningsperiode og er et godt alternativ for gjester som ønsker tidlig sesong. Hyse og brosme fanges også godt fra januar langs Nordlandskysten.
 
@@ -43,7 +43,7 @@ Kveitefredninga varer til og med 31. mars. Fra 1. april er det igjen åpent for 
 
 ## Mai–juni: Torskefredningen slutter i Skagerrak, kysttorsk tilgjengelig
 
-Mai markerer slutten på torskefredningsperioden i Skagerrak og Nordsjøen. I Skagerrak-regionen — langs Sørlandet og Vestfold — har torsken vært fredet gjennom gyteperioden, men nå er det igjen åpent. For turistfiskebedrifter i sørlige regioner er mai en av de bedre månedene for kysttorsk. Les mer om mulighetene [etter torskefredningen på Sørlandet](/blogg/sorlandet-etter-torskefredningen/).
+Mai markerer slutten på torskefredningsperioden i Skagerrak og Nordsjøen. I Skagerrak-regionen — langs Sørlandet og Vestfold — har torsken vært fredet gjennom gyteperioden, men nå er det igjen åpent. For turistfiskebedrifter i sørlige regioner er mai en av de bedre månedene for kysttorsk.
 
 Sjøtemperaturen stiger, og fiskeaktiviteten øker langs kysten. Sei og lyr er aktive fra Rogaland og nordover. Langs Vestlandet og nordover er dette starten på den populære "vår-sesongen" for alt-mulig-fiske fra småbåt.
 
@@ -71,7 +71,7 @@ Torsk: Langs Nord-Norge er kysttorsk tilgjengelig gjennom sommeren. Sør for 62�
 
 September er en av de beste månedene for kveite. Fisken er godt matet og aktiv, og havtemperaturen gir gode forhold. Særlig langs Troms og Finnmark er septemberfisket etter stor kveite svært populært. For turistfiskebedrifter i nord er dette en attraktiv sesong som trekker dedikerte fiskere.
 
-Husk imidlertid reglene rundt [trofékveite](/blogg/kveitefiske-2026-regler/): Norge har innført restriksjoner på de største individene for å beskytte gytebestanden. Det er viktig at gjestene dine kjenner til disse reglene før de drar ut.
+Husk imidlertid reglene rundt trofékveite: Norge har innført restriksjoner på de største individene for å beskytte gytebestanden. Det er viktig at gjestene dine kjenner til disse reglene før de drar ut.
 
 Torsk er aktiv langs hele kysten i september og oktober. Dette er en god periode for kysttorskfiske fra Trøndelag og nordover, og seien begynner å samle seg i stimer på de dypere områdene.
 
@@ -85,7 +85,7 @@ Høsten er også en god periode for ørret og røye i fjellet. Mange innsjøer o
 
 November er et stille skille. Turistsesongen er i all hovedsak over for de fleste utleiere, men dedikerte fiskere er fortsatt aktive. Kysttorsk langs Nordland, Troms og Finnmark gir godt fiske. Sei samler seg i dypere vann og kan fanges med pilk og juksa.
 
-En kritisk dato nærmer seg: 20. desember innføres totalfredningen av kveite i hele landet. Fra og med denne datoen og ut mars måned er det forbudt å fiske kveite. Gjester som planlegger turer sent i desember, må orienteres om dette. [Kveitefredningens regler](/blogg/kveitefiske-2026-regler/) er absolutte — det finnes ingen dispensasjoner for turistfiske.
+En kritisk dato nærmer seg: 20. desember innføres totalfredningen av kveite i hele landet. Fra og med denne datoen og ut mars måned er det forbudt å fiske kveite. Gjester som planlegger turer sent i desember, må orienteres om dette. Kveitefredningens regler er absolutte, det finnes ingen dispensasjoner for turistfiske.
 
 For turistfiskebedrifter er november og desember gjerne månedene for planlegging av neste sesong. Det er et godt tidspunkt å gå gjennom [rapporteringsrutinene](/blogg/slik-kan-du-forberede-turistfiskesesongen/) og sørge for at alt er på plass før sesongen skyter fart igjen i januar.
 
@@ -97,7 +97,7 @@ Husk at [daglig fangstrapportering](/blogg/daglig-fangstrapportering-turistfiske
 
 En av de vanligste kildene til misforståelser i norsk fisketurisme er soneskillet ved 62°N (nord for Stad-halvøya på Vestlandet). Mange regler, særlig for torsk, er ulike nord og sør for denne linjen.
 
-Sør for 62°N gjelder strengere torskeregler i Skagerrak og Nordsjøen, inkludert fredningsperioder på gytende torsk om vinteren. Oslofjorden har egne særregler som gjør torsken praktisk talt fredet store deler av året. [Les om torskefredningen i Oslofjorden](/blogg/torskefredning-oslofjorden-2026/) for detaljer.
+Sør for 62°N gjelder strengere torskeregler i Skagerrak og Nordsjøen, inkludert fredningsperioder på gytende torsk om vinteren. Oslofjorden har egne særregler som gjør torsken praktisk talt fredet store deler av året.
 
 Nord for 62°N er torsk generelt mer tilgjengelig gjennom hele året, men bestemmelsene om kvoter og minsteMål gjelder like fullt. Det er også her skreifisket foregår.
 
@@ -111,7 +111,7 @@ En sesongkalender er et nyttig verktøy, men den er ikke mer enn et utgangspunkt
 
 Det som virkelig skiller en profesjonell turistfiskebedrift, er evnen til å sette forventningene riktig. En gjest som vet at skreien er der i februar men sjeldnere i mai, har et bedre utgangspunkt for turen. En familie som forstår at kveitefredninga gjelder til 31. mars, slipper å bli skuffet.
 
-Husk at sesongplanlegging ikke bare handler om hvilken fisk som er aktiv. Det handler like mye om å ha driften klar. Har du oversikt over hvilke [regionale fiskedestinasjoner](/blogg/fiskedestinasjoner-norge-regional/) som passer for de ulike sesongene? Tilbyr du ulike pakker etter årstid? Har du informasjon på tysk eller engelsk klar for sommersesongene, og nordnorsk særpreg fremhevet for vinterfiskerne som kommer for skreien?
+Husk at sesongplanlegging ikke bare handler om hvilken fisk som er aktiv. Det handler like mye om å ha driften klar. Tilbyr du ulike pakker etter årstid? Har du informasjon på tysk eller engelsk klar for sommersesongene, og nordnorsk særpreg fremhevet for vinterfiskerne som kommer for skreien?
 
 Bruk gjerne denne oversikten som grunnlag for kommunikasjonen din — i bookingbekreftelser, gjesteinformasjon og på nettsiden. Kombiner den med din lokale kunnskap om beste plasser og beste tidspunkt. Jo bedre informert gjestene er på forhånd, jo mer fornøyde kommer de til å være — uavhengig av om det er skreitid, makrelsommer eller høstens kveitetokt.
 
