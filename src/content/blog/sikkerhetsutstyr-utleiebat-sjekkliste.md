@@ -76,7 +76,7 @@ Utover det generelle utstyret er det noen punkter som gjelder spesielt når du l
 
 **Barn om bord**
 
-Barn under 15 år har krav på flytevest tilpasset sin vekt. Sjekk at du har vester i relevante størrelser. Mange utleiere har bare voksenvester. Når en familie med barn ankommer uten egne vester, er det utleierens ansvar at det som henger om bord faktisk passer. Se også [hva som gjelder for barn og turistfiske](/blogg/batforerbevis-utenlandske-bevis/) når det gjelder hvem som kan ha ansvar for båten.
+Barn under 15 år har krav på flytevest tilpasset sin vekt. Sjekk at du har vester i relevante størrelser. Mange utleiere har bare voksenvester. Når en familie med barn ankommer uten egne vester, er det utleierens ansvar at det som henger om bord faktisk passer.
 
 ## Sjekkliste for sesongen
 
@@ -122,13 +122,13 @@ En hytte med [båtutleie som en del av pakken](/blogg/leie-hytte-med-bat-sjekkli
 
 ## Hva du bør si til gjestene
 
-Sikkerhetsutstyret er bare nyttig hvis gjestene vet om det. Bruk to minutter ved nøkkeloverlevering til å vise hvor vestene henger, hvor dødmannsknappen sitter, hvordan motoren stoppes manuelt, og hvor nødnumre er festet i båten. Du trenger ikke holde et sikkerhetskurs — men gjennomgangen bør skje, helst før de kjører ut første gang. En [kontrakt for båtutleie](/blogg/hytteutleiekontrakt-bat-mal/) bør også dekke hvem som er ansvarlig for sikkerhetsutstyret under oppholdet.
+Sikkerhetsutstyret er bare nyttig hvis gjestene vet om det. Bruk to minutter ved nøkkeloverlevering til å vise hvor vestene henger, hvor dødmannsknappen sitter, hvordan motoren stoppes manuelt, og hvor nødnumre er festet i båten. Du trenger ikke holde et sikkerhetskurs — men gjennomgangen bør skje, helst før de kjører ut første gang. Leieavtalen bør også dekke hvem som er ansvarlig for sikkerhetsutstyret under oppholdet.
 
-Har du utenlandske gjester, finnes [sjøvettreglene på tysk og engelsk](/blogg/sjovettregler-tysk-engelsk-gjester/) — heng dem opp i hytta eller legg dem i båten.
+Har du utenlandske gjester, bør sjøvettreglene være tilgjengelig på gjestenes eget språk — heng dem opp i hytta eller legg dem i båten.
 
 ## Forsikring og ansvar
 
-Et godt rigget sikkerhetsutstyr er god utleiedrift. Men husk at utstyret også henger sammen med forsikringsvilkårene. Mange forsikringer for [utleiebåt og fiskehytte](/blogg/forsikring-utleiebat-fiskehytte/) har krav om at lovpålagt utstyr er om bord og i orden. Mangler det, kan forsikringen bortfalle i en skadesituasjon.
+Et godt rigget sikkerhetsutstyr er god utleiedrift. Men husk at utstyret også henger sammen med forsikringsvilkårene. Sjekk om forsikringsavtalen din har krav om at lovpålagt utstyr er om bord og i orden — mangler det, kan forsikringen bortfalle i en skadesituasjon.
 
 Sjekk polisen din konkret: hva krever forsikringsselskapet, og er du innenfor kravene? Det er bedre å vite det nå enn å finne ut av det etter et uhell.
 
