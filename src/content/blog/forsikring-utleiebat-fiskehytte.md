@@ -77,11 +77,11 @@ Når du kontakter forsikringsselskapet for å melde inn utleie av hytte og/eller
 - **Gjestenes kompetanse:** Stiller du krav til båtførerbevis? Sjekker du dette? Les om hva som gjelder for [utenlandske båtførerbevis](/blogg/batforerbevis-utenlandske-bevis/) — selskaper kan stille krav til at leietaker er kvalifisert.
 - **Sikkerhetsrutiner:** Har du skriftlig sjekkliste for gjestene? Gir du sikkerhetsgjennomgang? Dette kan påvirke ansvarsvurderingen ved en eventuell skade.
 
-Det er også verdt å lese [hytteutleieavtale og båtmal](/blogg/hytteutleiekontrakt-bat-mal/) med tanke på hva kontrakten bør regulere for at forsikringsforholdet skal være ryddig.
+Det er også verdt å tenke gjennom hva leieavtalen bør regulere for at forsikringsforholdet skal være ryddig.
 
 ## Krysskobling: forsikring og skatteregler
 
-Forsikringsbehovet henger sammen med det skattemessige og næringsrettslige bildet. [Skatt ved utleie av fiskehytte](/blogg/skatt-utleie-fiskehytte/) påvirker om du regnes som næringsdrivende eller privatperson — og det igjen påvirker hvilken forsikring du trenger. Tilsvarende gjelder [50 000-kronergrensen for turistfiskebedrifter](/blogg/50000-kr-grensen-turistfiskebedrift/): krysser du den terskelen og er registrert, endres kravene til deg som utleier på flere plan — inkludert [lovpålagt fangstrapportering](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/) og forsikring.
+Forsikringsbehovet henger sammen med det skattemessige og næringsrettslige bildet. Skattestatusen din påvirker om du regnes som næringsdrivende eller privatperson, og det igjen påvirker hvilken forsikring du trenger. Tilsvarende gjelder [50 000-kronergrensen for turistfiskebedrifter](/blogg/50000-kr-grensen-turistfiskebedrift/): krysser du den terskelen og er registrert, endres kravene til deg som utleier på flere plan — inkludert [lovpålagt fangstrapportering](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/) og forsikring.
 
 Sjekklisten for [leie av hytte med båt](/blogg/leie-hytte-med-bat-sjekkliste/) gir et praktisk startpunkt for hva du bør ha på plass som utleier — forsikring er ett av de sentrale punktene der.
 
