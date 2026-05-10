@@ -21,29 +21,29 @@ Hjemmelen er Riksadvokatens bøtedirektiv for overtredelse av forskrift om utfø
 
 Satsen er 8 000 kroner i grunnbot, pluss 200 kroner per kilo fisk eller fiskevare som overstiger kvoten. All fisk inndras. Det er ingen advarsel, ingen mulighet til å snu og levere tilbake. Overstiger gjesten grensa, mister de hele lasten og betaler boten.
 
-Et konkret eksempel: en gjest pakker 12 kilo torskefilet. Med omregningsfaktoren på 2,97 tilsvarer det knapt 36 kilo hel fisk. Kvoten er 15 kilo per person. Med én person på dokumentet er overskridelsen stor, og boten tilsvarende. Omregningsfaktoren er sentral her — filet veier mye mindre enn hel fisk, men regelverket omregner tilbake til hel fisk (rund vekt) for å avgjøre om kvoten er overholdt.
+Et konkret eksempel: en gjest pakker 20 kilo torskefilet. I turistfiskekvoten teller filet på sin faktiske vekt, så 20 kilo filet er 20 kilo av kvoten. Fra 1. januar 2026 er kvoten 15 kilo per person, og det er gjeldende kvote når denne artikkelen publiseres i mai 2026. Overskridelsen er fem kilo, og boten blir 8 000 kroner pluss 200 kroner per kilo over kvoten, til sammen 9 000 kroner, i tillegg til at all fisken inndras. Det er en utbredt misforståelse at filetvekten skal omregnes til hel fisk (rund vekt) før den telles mot kvoten. Det gjelder for kommersielt fiske, ikke for turistfiske.
 
 ## Slik fungerer selve grensekontrollen
 
 Tolletaten er ikke avhengig av at gjesten selv melder fra. De stopper kjøretøy, sjekker kjølebager og fryseboxer, og ber om dokumentasjon på stedet. For deg som utleier er det viktig å forstå hva gjestene faktisk trenger å ha klar:
 
-**Utførselsdokumentet** skal inneholde navn og fødselsdato på alle som fisket, virksomhetens navn, adresse og organisasjonsnummer, datoer for oppholdet, antall deltakere, dato for utstedelse og underskrift fra deg som utleier. Dokumentet er ikke overførbart — personen som er navngitt, må selv bære fisken over grensen. To venner kan ikke dele ett dokument.
+**Utførselsdokumentet** er fra 1. august 2025 individuelt, ikke gruppebasert. Hvert dokument gjelder én person, og skal inneholde navn, fødselsdato og bostedsadresse til personen som fører fisken ut av landet, samt navn, besøksadresse og organisasjonsnummer for den registrerte turistfiskevirksomheten. Det er ikke lenger mulig å utstede ett felles dokument for et reisefølge, hver gjest får sitt eget. Personen som er navngitt, må selv bære fisken over grensen.
 
 **Fisken må la seg veie.** Dette er et punkt mange undervurderer. Hvis fisken er emballert på en måte som gjør veiing vanskelig — for eksempel pakket inn i klær, fordelt i mange små poser, eller gjemt i sekker — skaper det umiddelbar mistanke og gjør kontrollørenes jobb vanskeligere. Det bremser prosessen og øker sannsynligheten for nøye gjennomgang.
 
-**Kvoten gjelder per person, to ganger i året.** Fra 1. januar 2026 er kvoten 15 kilo per person, ned fra 18 kilo. Fra 1. januar 2027 reduseres den videre til 10 kilo. En familie på fire har altså samlet 60 kilo å jobbe med — men hvert familiemedlem trenger eget dokument, og alle over 12 år må stå oppført.
+**Kvoten gjelder per person, to ganger i året.** Fra 1. januar 2026 er kvoten 15 kilo per person, ned fra 18 kilo. Fra 1. januar 2027 reduseres den videre til 10 kilo. En familie på fire har altså samlet 60 kilo å jobbe med, men kvoten gjelder bare for den som har fylt 12 år, og hvert familiemedlem trenger sitt eget individuelle utførselsdokument.
 
 ## Vanlige feil gjestene gjør
 
 De fleste overskridelsene skyldes ikke bevisst smugling, men misforståelser og dårlige rutiner. Her er det vi ser oftest:
 
-**De forstår ikke filet-omregningen.** En gjest som fisket 20 kilo hel fisk og filéterer det selv, sitter igjen med omtrent 6–7 kilo filet. Det hører greit ut. Men en gjest som kjøper filet, regner feil, eller tar med seg filet fra en uke med intensivt fiske, kan fort overskride uten å skjønne det før kontrollørene viser seg. Regelen er at filet multipliseres med faktoren 2,97 for å finne tilsvarende hel fisk. 15 kilo filet tilsvarer da drøyt 44 kilo hel fisk — godt over kvoten for én person.
+**De misforstår hva kvoten faktisk omfatter.** Mange tror at kvoten på 15 kilo bare gjelder hel fisk, og at filet er noe annet eller får et fradrag. Det er feil. Kvoten omfatter både hel fisk og bearbeidet fisk som filet, og alt teller på sin faktiske vekt. 16 kilo filet er én kilo over kvoten, helt uavhengig av hvor mye hel fisk det opprinnelig var. En uke med intensivt fiske gir fort mer filet enn gjesten tror, særlig hvis flere reisedager mellomlagres. Regn alltid med faktisk vekt på det som puttes i kjølebagen.
 
 **De har ikke dokumentet klart.** Gjestene finner ikke papiret, det er ikke signert riktig, eller de er ikke klar over at de trenger det. Noen tror det holder å vise fram en bookingbekreftelse. Det holder ikke.
 
 **De fordeler fisken mellom biler eller reisefølge uten at dokumentasjonen stemmer.** Å flytte fisk fra en bil til en annen for å skjule mengden er en klassisk feil — og det er ulovlig uavhengig av om den samlede mengden per person er innenfor kvoten.
 
-**De tar med troféfisk.** Fra 2025 er troféfisken fjernet som unntak fra regelverket. [Trofékveite og andre store eksemplarer regnes nå inn i kvoten](/blogg/trofefisk-fjernet-turistfiske/) på lik linje med annen fisk.
+**De tar med troféfisk.** Troféfisken ble fjernet som unntak fra regelverket allerede i 2018, da Nærings- og fiskeridepartementet fastsatte ny forskrift om turistfiskevirksomheter. [Trofékveite og andre store eksemplarer regnes inn i kvoten](/blogg/trofefisk-fjernet-turistfiske/) på lik linje med annen fisk, men mange gjester tror fortsatt at de kan ta med én stor fisk i tillegg.
 
 ## Ditt ansvar som utleier — medvirkning er ikke en hypotetisk risiko
 
@@ -59,7 +59,7 @@ Det beste du kan gjøre er å ta snakken tidlig. Ikke kvelda før avreise, men v
 
 **Hold dokumentet klart og tilgjengelig.** Ikke pakk det ned i bunnen av bagasjen. Det skal fram raskt om de blir stoppet.
 
-**Kjenn kvoten.** 15 kilo per person. Filet ganges med 2,97. Familie på fire: hvert familiemedlem trenger eget dokument. Ingen troféfisk i tillegg.
+**Kjenn kvoten.** 15 kilo per person, gjeldende fra 1. januar 2026. Filet og hel fisk teller på sin faktiske vekt, det er ingen omregning til rund vekt for turistfiske. Familie på fire: hvert familiemedlem trenger sitt eget individuelle dokument. Troféfisk regnes inn i kvoten på lik linje med annen fisk.
 
 **Tenk på [utforselsdokumentet som en del av oppholdet](/blogg/utforselsdokument-fisk-krav/), ikke som papirarbeid ved avreise.** Det utstedes etter at fiskeperioden er avsluttet og godkjent. Har ikke fangstrapporteringen gått som den skal gjennom hele oppholdet, mangler grunnlaget for å utstede dokumentet. Det er der mange utleiere opplever stresset — ikke i selve utstedelsen, men i oppdagelsen av hull i rapporteringen kvelden før avreise.
 
