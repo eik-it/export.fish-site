@@ -55,7 +55,7 @@ Her er det vi anbefaler, basert på det sportsfiskemiljøet har etablert som god
 
 **Skånsom utsetting.** Hold fisken stødig ved boatside, la den hvile noen sekunder til den begynner å bevege seg, og la den dykke ned på egenhånd. Ikke slipp den brått eller kast den ned.
 
-Mer om prinsippene for forsiktig fang-og-slipp finner du i vår artikkel om [bærekraftig turistfiske og fang-slipp-metoder](/blogg/baerekraftig-turistfiske-fang-slipp/).
+Prinsippene for forsiktig fang-og-slipp-håndtering er vel etablerte i norsk sportsfiskemiljø og bør følges nøye ved utsetting av storkveite.
 
 ## Hva du bør formidle til gjestene
 
@@ -77,7 +77,7 @@ Utførselskvoten forutsetter at fangsten er registrert korrekt gjennom [daglig f
 
 ## Frysing og transport av kveite
 
-Kveite er en stor og fet fisk som krever riktig håndtering fra det øyeblikket den er om bord. Feil temperaturkjede kan ødelegge fisken raskt, særlig i sommermånedene. Dersom gjestene dine ønsker å ta med kveita hjem, bør de planlegge for kapasitet i nedkjøling allerede fra dag én. Les mer om [håndtering, frysing og transport av fangst](/blogg/handtering-fangst-frysing-transport/) for å gi gjestene konkrete råd.
+Kveite er en stor og fet fisk som krever riktig håndtering fra det øyeblikket den er om bord. Feil temperaturkjede kan ødelegge fisken raskt, særlig i sommermånedene. Dersom gjestene dine ønsker å ta med kveita hjem, bør de planlegge for kapasitet i nedkjøling allerede fra dag én og sørge for riktig emballering for transport.
 
 ## Regelverket i korte trekk
 
