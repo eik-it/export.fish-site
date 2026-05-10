@@ -55,7 +55,7 @@ Mange utleiere henger vestene på plass og tenker seg ferdig. Men hvis gjestene 
 - [ ] Kasteline
 - [ ] Nødfløyte
 
-Sjøfartsdirektoratets [sjekkliste for fritidsfartøy](https://www.sjofartsdir.no) er et godt utgangspunkt for å verifisere dette. Kravene varierer noe etter båtens lengde.
+Sjøfartsdirektoratets [side om sikkerhet ved utleie av båt](https://www.sdir.no/fritidsbat/sikkerhet-ved-utleie-av-bat/) er et godt utgangspunkt for å verifisere dette. Kravene varierer noe etter båtens lengde.
 
 ---
 
@@ -147,7 +147,7 @@ For å gjøre det enkelt: her er de viktigste sjekkliste-punktene samlet.
 ## Kilder
 
 - **Lov om fritids- og småbåter (småbåtloven)** — særlig § 23a om flyteutstyr, Lovdata
-- **Sjøfartsdirektoratet** — krav til sikkerhetsutstyr på fritidsfartøy, sjofartsdir.no
+- **Sjøfartsdirektoratet** — krav til sikkerhetsutstyr på fritidsfartøy, sdir.no
 - **Forskrift om turistfiskevirksomheter** (FOR-2017-07-05-1141) — registreringsplikt og rapporteringskrav, Lovdata
 - **Merverdiavgiftsloven** — §§ 2-1 og 3-11 (fritak for fast eiendom), § 5-5 (redusert sats), Lovdata
 - **Skatteetaten** — veiledning om skattlegging av utleie av fritidseiendom, skatteetaten.no
