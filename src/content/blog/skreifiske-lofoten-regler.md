@@ -73,7 +73,7 @@ Se [forberedelsesguiden for turistfiskesesongen](/blogg/slik-kan-du-forberede-tu
 
 Skreifisket er kongen, men Lofoten byr på mer i vintersesongen. Lyr, sei og hyse er vanlige bifangster. Kveite finnes også i disse farvannene, men det gjelder egne regler for [kveitefiske i 2026](/blogg/kveitefiske-2026-regler/) som du bør gjøre deg kjent med — og informere gjestene om. Det er stor forskjell på skrei og kysttorsk, og gjestene bør også vite at minstemål og fredningsbestemmelser gjelder uavhengig av sesong og art. En oppdatert oversikt finner du i [tabellen over minstemål og fredningstider](/blogg/minstemal-fredningstider-tabell/).
 
-Bærekraft er et tema som stadig oftere dukker opp blant europeiske gjester. Prinsippene om [bærekraftig fangst og fang-og-slipp-praksis](/blogg/baerekraftig-turistfiske-fang-slipp/) er ikke bare etiske standpunkter — de er salgspunkter overfor gjester som er opptatt av miljø og ressursforvaltning.
+Bærekraft er et tema som stadig oftere dukker opp blant europeiske gjester. Prinsippene om bærekraftig fangst og fang-og-slipp er ikke bare etiske standpunkter — de er salgspunkter overfor gjester som er opptatt av miljø og ressursforvaltning.
 
 ## Samarbeid med lokale aktører
 
@@ -81,7 +81,7 @@ Lofoten-sesongen er sterk nok til å bære en hel klynge av lokale aktører som 
 
 - **Lokale fiskebruk og restauranter** som kan tilberede fangsten — dette er et løft for gjesteopplevelsen og gir fangsten en slutt utover fryseboksen i hytta.
 - **Guidetjenester og aktivitetsarrangører** som tilbyr nordlys-turer, fjordkryss eller kulturhistoriske guider.
-- **Andre turistfiskevertskaper** i området — det finnes nettverk og samarbeidsstrukturer, og det finnes nasjonale og regionale oversikter over [fiskedestinasjoner i Norge](/blogg/fiskedestinasjoner-norge-regional/) som kan plassere deg på kartet.
+- **Andre turistfiskevertskaper** i området — det finnes nettverk og samarbeidsstrukturer som kan plassere deg på kartet.
 
 Samarbeid gjør du som liten aktør sterkere, ikke svakere. Gjestene som reiser langt for én opplevelse, vil ha mer enn én ting å gjøre i løpet av en uke.
 
