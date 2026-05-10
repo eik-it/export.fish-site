@@ -1,3 +1,12 @@
+# Deploy to GitHub Pages and notify search engines via IndexNow.
+#
+# IndexNow key file: public/24fe6003d5a54402911dd3abb4d27cb0.txt
+# Served at: https://eksportfiske.no/24fe6003d5a54402911dd3abb4d27cb0.txt
+#
+# After a successful Pages deploy the "indexnow" job fetches the live sitemap,
+# extracts all URLs, and POSTs them to api.indexnow.org so Bing (and other
+# participating engines) index the site immediately.
+
 name: Deploy to GitHub Pages
 
 on:
@@ -49,3 +58,51 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+    steps:
+      - name: Ping IndexNow
+        continue-on-error: true
+        run: |
+          INDEXNOW_KEY="24fe6003d5a54402911dd3abb4d27cb0"
+          HOST="eksportfiske.no"
+          KEY_LOCATION="https://${HOST}/${INDEXNOW_KEY}.txt"
+
+          # Fetch sitemap and extract all <loc> URLs
+          SITEMAP_URL="https://${HOST}/sitemap-0.xml"
+          URLS=$(curl -sf "${SITEMAP_URL}" \
+            | grep -oP '(?<=<loc>)[^<]+' \
+            | jq -Rs '[split("\n")[] | select(length > 0)]')
+
+          if [ -z "${URLS}" ] || [ "${URLS}" = "[]" ]; then
+            echo "No URLs found in sitemap, skipping IndexNow ping."
+            exit 0
+          fi
+
+          PAYLOAD=$(jq -n \
+            --arg host "${HOST}" \
+            --arg key "${INDEXNOW_KEY}" \
+            --arg keyLocation "${KEY_LOCATION}" \
+            --argjson urlList "${URLS}" \
+            '{host: $host, key: $key, keyLocation: $keyLocation, urlList: $urlList}')
+
+          echo "Submitting $(echo "${URLS}" | jq 'length') URLs to IndexNow..."
+
+          HTTP_STATUS=$(curl -s -o /tmp/indexnow_response.txt -w "%{http_code}" \
+            -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "${PAYLOAD}")
+
+          echo "Response status: ${HTTP_STATUS}"
+          cat /tmp/indexnow_response.txt
+
+          # 200 = OK, 202 = Accepted (queued) — both are success
+          if [ "${HTTP_STATUS}" != "200" ] && [ "${HTTP_STATUS}" != "202" ]; then
+            echo "IndexNow ping returned unexpected status ${HTTP_STATUS}"
+            exit 1
+          fi
+
+          echo "IndexNow ping successful."
