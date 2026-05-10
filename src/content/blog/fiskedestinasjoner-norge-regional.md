@@ -121,7 +121,7 @@ Uansett region er det avgjørende å sjekke at utleier er registrert som turistf
 
 For deg som driver utleie er det også viktig å ha rutinene på plass: [slik forbereder du turistfiskesesongen](/blogg/slik-kan-du-forberede-turistfiskesesongen/) gir en praktisk gjennomgang av hva som bør være klart før første gjest ankommer.
 
-En god sesong starter med god informasjon til gjestene - inkludert [håndtering av fangst, frysing og transport](/blogg/handtering-fangst-frysing-transport/) og [hva som gjelder for bærekraftig turistfiske og fang-og-slipp](/blogg/baerekraftig-turistfiske-fang-slipp/). Det handler ikke bare om å overholde reglene - det handler om at bestandene er der neste sesong også.
+En god sesong starter med god informasjon til gjestene - inkludert [håndtering av fangst, frysing og transport](/blogg/handtering-fangst-frysing-transport/). Det handler ikke bare om å overholde reglene - det handler om at bestandene er der neste sesong også.
 
 ## Minstemål og fredningstider
 
