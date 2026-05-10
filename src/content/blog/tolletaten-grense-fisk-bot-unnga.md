@@ -1,6 +1,6 @@
 ---
 title: "Slik unngår gjestene dine bot på grensa: Tolletatens kontrollrutiner"
-description: "Tolletaten beslagla over 13 tonn fisk i 2024. Slik fungerer kontrollen ved grensa, hva bøtene koster, og hvordan du forbereder gjestene dine."
+description: "Tolletaten beslagla 23 tonn fisk i 2025, nesten dobbelt så mye som året før. Slik fungerer kontrollen ved grensa, hva bøtene koster, og hvordan du forbereder gjestene dine."
 slug: "tolletaten-grense-fisk-bot-unnga"
 guid: "aab498bb-1062-4fa1-a2c9-6acc6bd1bf58"
 pubDate: 2026-05-09T08:00:00.000Z
@@ -11,7 +11,7 @@ image:
   alt: "Slik unngår gjestene dine bot på grensa: Tolletatens kontrollrutiner"
 ---
 
-I 2024 beslagla Tolletaten over 13 tonn fisk på vei ut av Norge. Det er nesten det dobbelte av 2023-tallene, og Tolletaten selv sier de sannsynligvis bare ser toppen av isfjellet. For deg som driver turistfiskebedrift betyr dette ikke bare at presset på kontrollapparatet øker — det betyr at gjestene dine møter en grense som ser nøyere etter enn de kanskje forventer.
+I 2025 beslagla Tolletaten 23 541 kilo fisk på vei ut av Norge, nesten det dobbelte av 13 193 kilo i 2024. Antallet beslag gikk samtidig ned fra 230 til 189, så hver enkeltsak ble i snitt vesentlig større. Tolletaten selv sier de sannsynligvis bare ser toppen av isfjellet. For deg som driver turistfiskebedrift betyr dette ikke bare at presset på kontrollapparatet øker, det betyr at gjestene dine møter en grense som ser nøyere etter enn de kanskje forventer.
 
 Sei og torsk dominerer beslagene. Uer, kveite og steinbit dukker også opp. Det er ikke familien med en uke i Lofoten og 14 kilo pakket i kjølebag som er problemet — det er de som kommer med mobile fryselagre fulle av filet. Men konsekvensen er at kontrollen treffer alle, og at vanlige feil ved grensa koster hardt selv om intensjonen var god.
 
@@ -71,14 +71,14 @@ En stor andel av gjestene ved norske turistfiskebedrifter kommer fra tyskspråkl
 
 ## Det store bildet
 
-Tolletatens rekordbeslag i 2024 handler om organisert miljøkriminalitet og ikke om gjennomsnittsfamilien som fisker sei i Nordland. Men den økte kontrollen treffer alle som passerer grensa med fisk — og gjester som ikke er forberedt, betaler prisen. Som utleier kan du ikke forhindre alle feil. Det du kan gjøre er å fjerne de vanligste feilkildene gjennom tydelig informasjon, god dokumentasjonsflyt og en [fangstrapportering](/blogg/daglig-fangstrapportering-turistfiske/) som holder orden gjennom hele sesongen.
+Tolletatens rekordbeslag i 2025, med færre saker men nesten dobbelt så mye fisk i kilo som året før, handler om organisert miljøkriminalitet og ikke om gjennomsnittsfamilien som fisker sei i Nordland. Men den økte kontrollen treffer alle som passerer grensa med fisk, og gjester som ikke er forberedt, betaler prisen. Som utleier kan du ikke forhindre alle feil. Det du kan gjøre er å fjerne de vanligste feilkildene gjennom tydelig informasjon, god dokumentasjonsflyt og en [fangstrapportering](/blogg/daglig-fangstrapportering-turistfiske/) som holder orden gjennom hele sesongen.
 
 Det er ikke mer enn gjestene trenger for å komme trygt hjem — med fisken.
 
 ## Kilder
 
 - [Tolletaten – Rekordstore mengder beslaglagt i 2024](https://www.toll.no/no/om-oss/aktuelt-fra-tolletaten/rekordstore-mengder-beslaglagt-i-2024)
-- [Tolletaten – Beslagsstatistikk for 2024](https://www.toll.no/no/om-tolletaten/om-oss/statistikk/beslagsstatistikk-for-2024)
+- [Tolletaten – Beslagsstatistikk for 2025](https://www.toll.no/no/om-oss/statistikk/beslagsstatistikk-for-2025)
 - [Tolletaten – Fiskekvote når du reiser fra Norge](https://www.toll.no/no/varer/fisk/kvote)
 - [Fiskeridirektoratet – Utførselskvote og fiskesmugling](https://www.fiskeridir.no/Turistfiske/fiskesmugling-og-utfoersel)
 - [NHO Reiseliv – Kvoter og bøtesatser for utførsel av fisk](https://www.nhoreiseliv.no/jushjelp-tariff-hms/lover-og-regler-for-drift/turistfiske/kvoter-og-botesatser-fisk/)
