@@ -37,7 +37,7 @@ Parallelt med reglene om utførselskvoten finnes det en annen regulering som gje
 
 Bakgrunnen er dokumentert av Havforskningsinstituttet: svært store kveiter inneholder høye nivåer av miljøgifter, særlig dioksiner og PCB. I kveiter over 100 kilo hadde 60 prosent av de analyserte fiskene konsentrasjoner av organiske miljøgifter over grenseverdien. Slike fisk er rett og slett ikke egnet som mat, og myndighetene ba Fiskeridirektoratet innføre utkastpåbud på dette grunnlaget.
 
-Havforskningsinstituttet fraråder dessuten å dra stor kveite opp i fartøyet. Sjansen for at fisken overlever et godt forsvar og et langt løft er liten. Det betyr at fang-og-slipp-tanken gjelder, men at den bør praktiseres forsiktig — la fisken bli i vannet så langt det lar seg gjøre. Les mer om [bærekraftig turistfiske og fang-og-slipp-praksis](/blogg/baerekraftig-turistfiske-fang-slipp/).
+Havforskningsinstituttet fraråder dessuten å dra stor kveite opp i fartøyet. Sjansen for at fisken overlever et godt forsvar og et langt løft er liten. Det betyr at fang-og-slipp-tanken gjelder, men at den bør praktiseres forsiktig — la fisken bli i vannet så langt det lar seg gjøre.
 
 ## Forskjellen på "fanget" og "utført"
 
@@ -51,7 +51,7 @@ Det er dette skillet som er viktig å kommunisere til gjestene på forhånd, ikk
 
 Utførselskvoten på 15 kg gjelder uavhengig av art. Torsk, sei, hyse, uer — alt teller. Har gjesten allerede fylt kvoten med torsk og sei, er det ingenting igjen til kveite, heller ikke dersom kveiten er innenfor lovlig mål.
 
-Kveite har minstemål på 84 cm og maksmål på 200 cm. Fisk mellom 130 og 200 cm befinner seg i et område der [kveitefiskets regler for 2026](/blogg/kveitefiske-2026-regler/) begrenser hva som er levedyktig å fange og beholde. Kveite under 84 cm og levedyktig kveite over 200 cm skal settes tilbake.
+Kveite har minstemål på 84 cm og maksmål på 200 cm. Fisk mellom 130 og 200 cm befinner seg i et område der gjeldende regler begrenser hva som er levedyktig å fange og beholde. Kveite under 84 cm og levedyktig kveite over 200 cm skal settes tilbake.
 
 For gjester som vil ha kveite med hjem, er virkeligheten altså at det er den mellomstore kveiten — innenfor mål og innenfor kvoten — som er den praktisk mulige fangsten å utføre. Det er et poeng som ikke alltid er tydelig i forventningene folk har med seg til en fiskeuke i Norge.
 
