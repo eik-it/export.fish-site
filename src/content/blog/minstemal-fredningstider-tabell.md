@@ -95,11 +95,11 @@ For turistfiskebedrifter som har gjester som planlegger å fiske i Oslofjord-omr
 
 Torsken i Skagerrak og Oslofjorden har vært totalfredet siden 2019 for fritidsfiskere. Fredningen ble innført da bestanden kollapset, og gjelder fra og med Telemark og inn i Oslofjorden. Nullfiskeområdene som trådte i kraft 1. januar 2026 er en ytterligere innskjerping av dette regimet.
 
-Fritidsfiskere som planlegger turer til [kysten sør for 62°N](/blogg/sesongkalender-turistfiske-norge/) bør merke seg at torskefredningen er streng og håndheves aktivt. For turistfiskebedrifter langs Skagerrakkysten og i Oslofjorden endrer nullfiskeområdene forutsetningene for hva gjester kan fiske. Se vår gjennomgang av [torskefredningen i Oslofjorden](/blogg/torskefredning-oslofjorden-2026/) for detaljer.
+Fritidsfiskere som planlegger turer til kysten sør for 62°N bør merke seg at torskefredningen er streng og håndheves aktivt. For turistfiskebedrifter langs Skagerrakkysten og i Oslofjorden endrer nullfiskeområdene forutsetningene for hva gjester kan fiske.
 
 ## Kveite: regler du bør kjenne til før sesong
 
-Kveite er en av de mest ettertraktede artene for turistfiskere langs norskekysten. Med et minstemål på 84 cm og strenge fredningstider er [kveitefiske et område der regelkunnskap er avgjørende](/blogg/kveitefiske-2026-regler/). Husk at fredningen gjelder alle redskaper, og at kveite over 200 cm alltid skal settes tilbake.
+Kveite er en av de mest ettertraktede artene for turistfiskere langs norskekysten. Med et minstemål på 84 cm og strenge fredningstider er kveitefiske et område der regelkunnskap er avgjørende. Husk at fredningen gjelder alle redskaper, og at kveite over 200 cm alltid skal settes tilbake.
 
 ## Hva med artene uten minstemål?
 
