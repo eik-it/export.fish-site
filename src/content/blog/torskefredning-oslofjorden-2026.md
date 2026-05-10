@@ -84,15 +84,15 @@ For turistfiskebedrifter som holder til langs Skagerrakkysten eller i ytre deler
 
 **Krabbe** kan fiskes med teiner av fritidsfiskere og i turistfiskesammenheng — opptil 10 teiner per person utenfor nullfiskeområdene. Sjekk gjeldende regelverk for din posisjon, da det er egne regler for hummerfredning og sesonger som varierer langs kysten.
 
-For utleiere på Sørlandet og i ytre Skagerrak er situasjonen annerledes enn i Oslofjorden. Vi ser nærmere på mulighetene i artikkelen [Sørlandet etter torskefredningen](/blogg/sorlandet-etter-torskefredningen/).
+For utleiere på Sørlandet og i ytre Skagerrak er situasjonen annerledes enn i Oslofjorden, med bedre tilgang på alternative arter utenfor de stengte sonene.
 
 ## Konsekvenser for sørlandske utleiere
 
 Nullfiskeområdene rammer primært utleiere med virksomhet inne i de tre sonene: indre Oslofjord, rundt Færder og ved Ytre Hvaler. For disse er situasjonen krevende. Gjestene kan ikke fiske i de vanligste farvannene, og mange har nettopp valgt destinasjonen nettopp for fiskeopplevelsen.
 
-For utleiere i disse områdene er det viktig å kommunisere tydelig til gjestene allerede ved booking hva som er tillatt og hva som ikke er det. Misforståelser kan lett oppstå, særlig blant utenlandske gjester som ikke kjenner det norske regelverket. Se gjerne vår oversikt over [fiskedestinasjoner i Norge](/blogg/fiskedestinasjoner-norge-regional/) for å forstå hvilke regioner som er minst berørt.
+For utleiere i disse områdene er det viktig å kommunisere tydelig til gjestene allerede ved booking hva som er tillatt og hva som ikke er det. Misforståelser kan lett oppstå, særlig blant utenlandske gjester som ikke kjenner det norske regelverket.
 
-For turistfiskebedrifter lenger sør langs Skagerrakkysten er det bedre spillerom, men også her gjelder det å holde seg oppdatert på gytefeltforbud, minstemål og bærekraftige fiskepraksiser. En god praksis for gjestene er [fang og slipp](/blogg/baerekraftig-turistfiske-fang-slipp/), særlig for arter der bestanden er under press.
+For turistfiskebedrifter lenger sør langs Skagerrakkysten er det bedre spillerom, men også her gjelder det å holde seg oppdatert på gytefeltforbud, minstemål og bærekraftige fiskepraksiser.
 
 Uansett lokasjon gjelder den lovpålagte plikten til [daglig fangstrapportering](/blogg/daglig-fangstrapportering-turistfiske/) for alle registrerte turistfiskebedrifter. Fangst av lovlige arter skal rapporteres daglig per opphold og art, og perioden skal lukkes og godkjennes av utleier før utførselsdokumentasjon kan utstedes.
 
