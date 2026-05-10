@@ -73,7 +73,7 @@ Det enkle rådet: print tabellen over, laminer den, og heng den godt synlig i hy
 
 En [sjekkliste for sikkerhetsutstyr i utleiebåten](/blogg/sikkerhetsutstyr-utleiebat-sjekkliste/) bør henge ved siden av i båthuset. Da har gjestene alt de trenger samlet på ett sted.
 
-Vurder også å inkludere dette i [leieavtalen for hytte og båt](/blogg/hytteutleiekontrakt-bat-mal/). En kvittering på at gjestene har lest og forstått reglene, gir deg et dokumentert ansvarsskille.
+Vurder også å inkludere dette i leieavtalen for hytte og båt. En kvittering på at gjestene har lest og forstått reglene, gir deg et dokumentert ansvarsskille.
 
 ## Utenlandske båtførerbevis
 
@@ -86,9 +86,7 @@ Sjøvettreglene er én del av et større ansvarsbilde. Disse artiklene henger na
 - [Sjekkliste for leie av hytte med båt](/blogg/leie-hytte-med-bat-sjekkliste/) — alt gjestene trenger å vite fra ankomst til avreise
 - [Sikkerhetsutstyr i utleiebåt](/blogg/sikkerhetsutstyr-utleiebat-sjekkliste/) — hva loven krever og hva du bør ha i tillegg
 - [Båtførerbevis for utenlandske gjester](/blogg/batforerbevis-utenlandske-bevis/) — hvilke bevis som gjelder i norsk farvann
-- [Leieavtale for hytte med båt](/blogg/hytteutleiekontrakt-bat-mal/) — slik dokumenterer du ansvarsforhold
 - [Lovpålagt fangstrapportering for fritidsboligeiere](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/) — hva som kreves av deg som utleier
-- [Forsikring for utleiebåt og fiskehytte](/blogg/forsikring-utleiebat-fiskehytte/) — hva som dekkes og hva som ikke dekkes
 
 ## Kilder
 
