@@ -15,12 +15,27 @@ function formatDate(date: Date): string {
     year: 'numeric',
   });
 }
+
+const siteUrl = 'https://eksportfiske.no';
+
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: posts.map((post, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    url: `${siteUrl}/blogg/${post.id}/`,
+  })),
+};
 ---
 
 <Layout
   title="Blogg | Eksportfiske.no"
   description="Artikler om turistfiske, registrering, fangstrapportering og regelverk for turistfiskebedrifter i Norge."
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(itemListLd)} />
+  </Fragment>
   <section class="pt-44 pb-16 bg-white">
     <div class="max-w-4xl mx-auto px-4">
       <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Blogg</h1>
