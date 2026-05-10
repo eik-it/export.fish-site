@@ -149,7 +149,7 @@ De vanligste problemene vi ser:
 
 God fangstbehandling handler ikke bare om dokumentasjon og kvote. Det handler også om å ta vare på fisken som ressurs. Fisk som kastes fordi den ble ødelagt under transport, er bortkastet — for gjesten, for deg og for bestanden.
 
-Gjester som tar med godt behandlet fisk hjem, deler opplevelsen med familie og venner. Gjester som tar med dårlig fisk, gjør det ikke. God håndtering er markedsføring. Les mer om [fang og slipp](/blogg/baerekraftig-turistfiske-fang-slipp/) som alternativ for fisk utover det man faktisk tar med.
+Gjester som tar med godt behandlet fisk hjem, deler opplevelsen med familie og venner. Gjester som tar med dårlig fisk, gjør det ikke. God håndtering er markedsføring.
 
 For gjester fra utlandet som trenger informasjon på sitt eget språk, er det også nyttig å ha enkle instrukser tilgjengelig — se [sjøvettsregler på tysk og engelsk](/blogg/sjovettregler-tysk-engelsk-gjester/).
 
