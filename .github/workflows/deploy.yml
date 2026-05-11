@@ -6,22 +6,14 @@
 # After a successful Pages deploy:
 #   - "detect-blog-changes" computes which blog slugs changed (shared logic)
 #   - "indexnow" uses those slugs to ping IndexNow / Bing
-#   - "social-post" uses those slugs to post to Facebook and Google Business Profile
+#   - "social-post" uses those slugs to post to the Facebook Page
 #
-# Social posting (social-post job) requires the following GitHub secrets.
-# The job is completely inert until they are configured — each platform step
-# skips with an informational echo if its secrets are missing.
+# Social posting (social-post job) requires these GitHub secrets. The job is
+# completely inert until they are configured — the Facebook step skips with an
+# informational echo if its secrets are missing.
 #
-# Facebook:
-#   FB_PAGE_ID      — numeric Page ID (not profile URL, must be a Facebook Page)
+#   FB_PAGE_ID      — numeric Page ID (not a profile URL, must be a Facebook Page)
 #   FB_PAGE_TOKEN   — long-lived Page Access Token with pages_manage_posts permission
-#
-# Google Business Profile:
-#   GBP_ACCOUNT_ID    — accounts/<id> from the My Business API
-#   GBP_LOCATION_ID   — locations/<id> from the My Business API
-#   GBP_CLIENT_ID     — OAuth2 client ID (web application)
-#   GBP_CLIENT_SECRET — OAuth2 client secret
-#   GBP_REFRESH_TOKEN — offline refresh token for the account managing the GBP listing
 #
 # See the tracking issue for the full credential-setup checklist.
 
@@ -281,16 +273,10 @@ jobs:
           fi
           echo "IndexNow pings successful."
 
-  # Auto-post new blog articles to Facebook Page and Google Business Profile.
+  # Auto-post new blog articles to the Facebook Page.
   #
-  # This job is completely inert until the required secrets are configured.
-  # Each platform step checks for its own secrets and skips with an echo if
-  # any are missing — so a partial setup (e.g. only Facebook) works fine.
-  #
-  # Required secrets:
-  #   Facebook:  FB_PAGE_ID, FB_PAGE_TOKEN
-  #   Google:    GBP_ACCOUNT_ID, GBP_LOCATION_ID, GBP_CLIENT_ID,
-  #              GBP_CLIENT_SECRET, GBP_REFRESH_TOKEN
+  # This job is completely inert until FB_PAGE_ID and FB_PAGE_TOKEN are set as
+  # GitHub secrets — the Facebook step skips with an echo if either is missing.
   #
   # See the tracking issue for the full credential-setup checklist.
   social-post:
@@ -387,80 +373,5 @@ ${URL}"
             echo "Facebook post created successfully. Post ID: ${POST_ID}"
           else
             echo "Facebook post may have failed — no 'id' in response. Check the response above."
-            exit 1
-          fi
-
-      - name: Post to Google Business Profile
-        if: steps.check.outputs.has_posts == 'true'
-        continue-on-error: true
-        env:
-          GBP_ACCOUNT_ID: ${{ secrets.GBP_ACCOUNT_ID }}
-          GBP_LOCATION_ID: ${{ secrets.GBP_LOCATION_ID }}
-          GBP_CLIENT_ID: ${{ secrets.GBP_CLIENT_ID }}
-          GBP_CLIENT_SECRET: ${{ secrets.GBP_CLIENT_SECRET }}
-          GBP_REFRESH_TOKEN: ${{ secrets.GBP_REFRESH_TOKEN }}
-          TITLE: ${{ steps.frontmatter.outputs.title }}
-          DESCRIPTION: ${{ steps.frontmatter.outputs.description }}
-          URL: ${{ steps.frontmatter.outputs.url }}
-        run: |
-          if [ -z "${GBP_ACCOUNT_ID}" ] || [ -z "${GBP_LOCATION_ID}" ] || \
-             [ -z "${GBP_CLIENT_ID}" ] || [ -z "${GBP_CLIENT_SECRET}" ] || \
-             [ -z "${GBP_REFRESH_TOKEN}" ]; then
-            echo "One or more GBP secrets not configured — skipping Google Business Profile post."
-            echo "To enable: add GBP_ACCOUNT_ID, GBP_LOCATION_ID, GBP_CLIENT_ID,"
-            echo "           GBP_CLIENT_SECRET, and GBP_REFRESH_TOKEN as GitHub secrets."
-            exit 0
-          fi
-
-          # Exchange refresh token for an access token.
-          echo "Obtaining Google OAuth2 access token..."
-          TOKEN_RESPONSE=$(curl -s -X POST "https://oauth2.googleapis.com/token" \
-            -d "client_id=${GBP_CLIENT_ID}" \
-            -d "client_secret=${GBP_CLIENT_SECRET}" \
-            -d "refresh_token=${GBP_REFRESH_TOKEN}" \
-            -d "grant_type=refresh_token")
-
-          ACCESS_TOKEN=$(echo "${TOKEN_RESPONSE}" | jq -r '.access_token // ""' 2>/dev/null || echo "")
-          if [ -z "${ACCESS_TOKEN}" ]; then
-            echo "Failed to obtain access token. Token response:"
-            echo "${TOKEN_RESPONSE}"
-            exit 1
-          fi
-          echo "Access token obtained."
-
-          # Build summary: title + description, capped at ~1500 chars for GBP.
-          SUMMARY="${TITLE}
-
-${DESCRIPTION}"
-          SUMMARY="${SUMMARY:0:1500}"
-
-          # Create the local post.
-          echo "Creating Google Business Profile local post..."
-          PAYLOAD=$(jq -n \
-            --arg summary "${SUMMARY}" \
-            --arg url "${URL}" \
-            '{
-              languageCode: "no",
-              summary: $summary,
-              callToAction: { actionType: "LEARN_MORE", url: $url },
-              topicType: "STANDARD"
-            }')
-
-          HTTP_STATUS=$(curl -s -o /tmp/gbp_response.json -w "%{http_code}" \
-            -X POST \
-            "https://mybusiness.googleapis.com/v4/accounts/${GBP_ACCOUNT_ID}/locations/${GBP_LOCATION_ID}/localPosts" \
-            -H "Authorization: Bearer ${ACCESS_TOKEN}" \
-            -H "Content-Type: application/json" \
-            -d "${PAYLOAD}")
-
-          echo "HTTP status: ${HTTP_STATUS}"
-          echo "Response:"
-          cat /tmp/gbp_response.json; echo
-
-          POST_NAME=$(jq -r '.name // ""' /tmp/gbp_response.json 2>/dev/null || echo "")
-          if [ -n "${POST_NAME}" ]; then
-            echo "Google Business Profile post created successfully. Name: ${POST_NAME}"
-          else
-            echo "GBP post may have failed — no 'name' in response. Check the response above."
             exit 1
           fi
