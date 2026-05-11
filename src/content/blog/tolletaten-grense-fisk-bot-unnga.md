@@ -4,6 +4,7 @@ description: "Tolletaten beslagla 23 tonn fisk i 2025, nesten dobbelt så mye so
 slug: "tolletaten-grense-fisk-bot-unnga"
 guid: "aab498bb-1062-4fa1-a2c9-6acc6bd1bf58"
 pubDate: 2026-05-09T08:00:00.000Z
+updatedDate: 2026-05-10T00:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
