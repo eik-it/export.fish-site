@@ -3,9 +3,27 @@
 # IndexNow key file: public/24fe6003d5a54402911dd3abb4d27cb0.txt
 # Served at: https://eksportfiske.no/24fe6003d5a54402911dd3abb4d27cb0.txt
 #
-# After a successful Pages deploy the "indexnow" job fetches the live sitemap,
-# extracts all URLs, and POSTs them to api.indexnow.org so Bing (and other
-# participating engines) index the site immediately.
+# After a successful Pages deploy:
+#   - "detect-blog-changes" computes which blog slugs changed (shared logic)
+#   - "indexnow" uses those slugs to ping IndexNow / Bing
+#   - "social-post" uses those slugs to post to Facebook and Google Business Profile
+#
+# Social posting (social-post job) requires the following GitHub secrets.
+# The job is completely inert until they are configured — each platform step
+# skips with an informational echo if its secrets are missing.
+#
+# Facebook:
+#   FB_PAGE_ID      — numeric Page ID (not profile URL, must be a Facebook Page)
+#   FB_PAGE_TOKEN   — long-lived Page Access Token with pages_manage_posts permission
+#
+# Google Business Profile:
+#   GBP_ACCOUNT_ID    — accounts/<id> from the My Business API
+#   GBP_LOCATION_ID   — locations/<id> from the My Business API
+#   GBP_CLIENT_ID     — OAuth2 client ID (web application)
+#   GBP_CLIENT_SECRET — OAuth2 client secret
+#   GBP_REFRESH_TOKEN — offline refresh token for the account managing the GBP listing
+#
+# See the tracking issue for the full credential-setup checklist.
 
 name: Deploy to GitHub Pages
 
@@ -63,8 +81,68 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  indexnow:
+  # Shared change-detection job.
+  # Computes which blog slugs changed since the previous successful deploy.
+  # Both "indexnow" and "social-post" consume these outputs so the diff logic
+  # lives in exactly one place.
+  detect-blog-changes:
     needs: deploy
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+    outputs:
+      prev_sha: ${{ steps.detect.outputs.prev_sha }}
+      blog_slugs: ${{ steps.detect.outputs.blog_slugs }}
+    steps:
+      - name: Detect changed blog slugs
+        id: detect
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REPO="${GITHUB_REPOSITORY}"
+          HEAD_SHA="${GITHUB_SHA}"
+
+          # Find the previous successful deploy.yml run on master.
+          PREV_SHA=$(gh api \
+            "/repos/${REPO}/actions/workflows/deploy.yml/runs?branch=master&status=success&per_page=10" \
+            --jq "[.workflow_runs[] | select(.head_sha != \"${HEAD_SHA}\")][0].head_sha" 2>/dev/null || echo "")
+
+          echo "prev_sha=${PREV_SHA}" >> "$GITHUB_OUTPUT"
+
+          BLOG_SLUGS=""
+
+          if [ -n "${PREV_SHA}" ] && [ "${PREV_SHA}" != "null" ]; then
+            echo "Diffing ${PREV_SHA}..${HEAD_SHA}"
+            CHANGED=$(gh api "/repos/${REPO}/compare/${PREV_SHA}...${HEAD_SHA}" \
+              --jq '.files[].filename' 2>/dev/null || echo "")
+
+            while IFS= read -r FILE; do
+              [ -z "${FILE}" ] && continue
+              case "${FILE}" in
+                src/content/blog/*.md)
+                  SLUG=$(basename "${FILE}" .md)
+                  BLOG_SLUGS="${BLOG_SLUGS}${SLUG}"$'\n'
+                  ;;
+              esac
+            done <<< "${CHANGED}"
+          else
+            echo "No previous successful run found — no blog slugs to detect."
+          fi
+
+          # Remove trailing newline and export (multiline-safe via delimiter).
+          BLOG_SLUGS="${BLOG_SLUGS%$'\n'}"
+          echo "blog_slugs<<EOF" >> "$GITHUB_OUTPUT"
+          echo "${BLOG_SLUGS}" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
+          if [ -n "${BLOG_SLUGS}" ]; then
+            echo "Changed blog slugs:"
+            echo "${BLOG_SLUGS}" | sed 's/^/  - /'
+          else
+            echo "No blog content changes detected."
+          fi
+
+  indexnow:
+    needs: detect-blog-changes
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
     steps:
@@ -72,6 +150,8 @@ jobs:
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PREV_SHA: ${{ needs.detect-blog-changes.outputs.prev_sha }}
+          BLOG_SLUGS: ${{ needs.detect-blog-changes.outputs.blog_slugs }}
         run: |
           INDEXNOW_KEY="24fe6003d5a54402911dd3abb4d27cb0"
           HOST="eksportfiske.no"
@@ -79,19 +159,20 @@ jobs:
           REPO="${GITHUB_REPOSITORY}"
           HEAD_SHA="${GITHUB_SHA}"
 
-          # Find the previous successful deploy.yml run on master, so we can
-          # diff against it and submit only URLs that actually changed.
-          # Per IndexNow docs: every submitted URL counts against crawl quota,
-          # and only changed URLs should be published.
-          PREV_SHA=$(gh api \
-            "/repos/${REPO}/actions/workflows/deploy.yml/runs?branch=master&status=success&per_page=10" \
-            --jq "[.workflow_runs[] | select(.head_sha != \"${HEAD_SHA}\")][0].head_sha" 2>/dev/null || echo "")
-
           declare -a URL_LIST=()
           SUBMIT_HOMEPAGE=false
 
+          # Add blog URLs from shared detection output.
+          if [ -n "${BLOG_SLUGS}" ]; then
+            while IFS= read -r SLUG; do
+              [ -z "${SLUG}" ] && continue
+              URL_LIST+=("https://${HOST}/blogg/${SLUG}/")
+            done <<< "${BLOG_SLUGS}"
+          fi
+
+          # For non-blog file changes, run the full diff again so we can handle
+          # page/layout/component changes (IndexNow-specific logic).
           if [ -n "${PREV_SHA}" ] && [ "${PREV_SHA}" != "null" ]; then
-            echo "Diffing ${PREV_SHA}..${HEAD_SHA}"
             CHANGED=$(gh api "/repos/${REPO}/compare/${PREV_SHA}...${HEAD_SHA}" \
               --jq '.files[].filename' 2>/dev/null || echo "")
 
@@ -102,8 +183,7 @@ jobs:
                 src/pages/404.astro|src/pages/qr.astro|src/pages/registrer/ny-kunde.astro|src/pages/registrer/takk.astro)
                   ;;
                 src/content/blog/*.md)
-                  SLUG=$(basename "${FILE}" .md)
-                  URL_LIST+=("https://${HOST}/blogg/${SLUG}/")
+                  # Already handled above via BLOG_SLUGS.
                   ;;
                 src/pages/index.astro)
                   URL_LIST+=("https://${HOST}/")
@@ -200,3 +280,187 @@ jobs:
             exit 1
           fi
           echo "IndexNow pings successful."
+
+  # Auto-post new blog articles to Facebook Page and Google Business Profile.
+  #
+  # This job is completely inert until the required secrets are configured.
+  # Each platform step checks for its own secrets and skips with an echo if
+  # any are missing — so a partial setup (e.g. only Facebook) works fine.
+  #
+  # Required secrets:
+  #   Facebook:  FB_PAGE_ID, FB_PAGE_TOKEN
+  #   Google:    GBP_ACCOUNT_ID, GBP_LOCATION_ID, GBP_CLIENT_ID,
+  #              GBP_CLIENT_SECRET, GBP_REFRESH_TOKEN
+  #
+  # See the tracking issue for the full credential-setup checklist.
+  social-post:
+    needs: detect-blog-changes
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      BLOG_SLUGS: ${{ needs.detect-blog-changes.outputs.blog_slugs }}
+    steps:
+      - name: Check for changed blog posts
+        id: check
+        run: |
+          if [ -z "${BLOG_SLUGS}" ]; then
+            echo "No new or changed blog posts — skipping social posting."
+            echo "has_posts=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_posts=true" >> "$GITHUB_OUTPUT"
+            echo "Blog posts to announce:"
+            echo "${BLOG_SLUGS}" | sed 's/^/  - /'
+          fi
+
+      - name: Fetch blog frontmatter
+        id: frontmatter
+        if: steps.check.outputs.has_posts == 'true'
+        env:
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          HOST="eksportfiske.no"
+
+          # Read title and description from frontmatter via the GitHub API.
+          # We process only the first changed slug for social posting.
+          # (If multiple posts change in one push, only the first is posted.
+          #  This is intentional — bulk deploys are rare and one post is enough.)
+          SLUG=$(echo "${BLOG_SLUGS}" | head -n1)
+          FILE="src/content/blog/${SLUG}.md"
+
+          echo "Fetching frontmatter for: ${FILE}"
+
+          CONTENT=$(gh api "/repos/${REPO}/contents/${FILE}?ref=${HEAD_SHA}" \
+            --jq '.content' | base64 -d 2>/dev/null || echo "")
+
+          TITLE=$(echo "${CONTENT}" | grep -m1 '^title:' | sed "s/^title:[[:space:]]*//" | tr -d '"' | head -c 200)
+          DESCRIPTION=$(echo "${CONTENT}" | grep -m1 '^description:' | sed "s/^description:[[:space:]]*//" | tr -d '"' | head -c 300)
+          URL="https://${HOST}/blogg/${SLUG}/"
+
+          echo "title=${TITLE}" >> "$GITHUB_OUTPUT"
+          echo "description=${DESCRIPTION}" >> "$GITHUB_OUTPUT"
+          echo "url=${URL}" >> "$GITHUB_OUTPUT"
+          echo "slug=${SLUG}" >> "$GITHUB_OUTPUT"
+
+          echo "Title:       ${TITLE}"
+          echo "Description: ${DESCRIPTION}"
+          echo "URL:         ${URL}"
+
+      - name: Post to Facebook Page
+        if: steps.check.outputs.has_posts == 'true'
+        continue-on-error: true
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          TITLE: ${{ steps.frontmatter.outputs.title }}
+          DESCRIPTION: ${{ steps.frontmatter.outputs.description }}
+          URL: ${{ steps.frontmatter.outputs.url }}
+        run: |
+          if [ -z "${FB_PAGE_ID}" ] || [ -z "${FB_PAGE_TOKEN}" ]; then
+            echo "FB_PAGE_ID or FB_PAGE_TOKEN not configured — skipping Facebook post."
+            echo "To enable: add FB_PAGE_ID and FB_PAGE_TOKEN as GitHub secrets."
+            exit 0
+          fi
+
+          # Build the post message: title + description + URL, no em dashes.
+          MESSAGE="${TITLE}
+
+${DESCRIPTION}
+
+${URL}"
+
+          echo "Posting to Facebook Page ${FB_PAGE_ID}..."
+
+          HTTP_STATUS=$(curl -s -o /tmp/fb_response.json -w "%{http_code}" \
+            -X POST "https://graph.facebook.com/v21.0/${FB_PAGE_ID}/feed" \
+            --data-urlencode "message=${MESSAGE}" \
+            --data-urlencode "link=${URL}" \
+            -d "access_token=${FB_PAGE_TOKEN}")
+
+          echo "HTTP status: ${HTTP_STATUS}"
+          echo "Response:"
+          cat /tmp/fb_response.json; echo
+
+          POST_ID=$(jq -r '.id // ""' /tmp/fb_response.json 2>/dev/null || echo "")
+          if [ -n "${POST_ID}" ]; then
+            echo "Facebook post created successfully. Post ID: ${POST_ID}"
+          else
+            echo "Facebook post may have failed — no 'id' in response. Check the response above."
+            exit 1
+          fi
+
+      - name: Post to Google Business Profile
+        if: steps.check.outputs.has_posts == 'true'
+        continue-on-error: true
+        env:
+          GBP_ACCOUNT_ID: ${{ secrets.GBP_ACCOUNT_ID }}
+          GBP_LOCATION_ID: ${{ secrets.GBP_LOCATION_ID }}
+          GBP_CLIENT_ID: ${{ secrets.GBP_CLIENT_ID }}
+          GBP_CLIENT_SECRET: ${{ secrets.GBP_CLIENT_SECRET }}
+          GBP_REFRESH_TOKEN: ${{ secrets.GBP_REFRESH_TOKEN }}
+          TITLE: ${{ steps.frontmatter.outputs.title }}
+          DESCRIPTION: ${{ steps.frontmatter.outputs.description }}
+          URL: ${{ steps.frontmatter.outputs.url }}
+        run: |
+          if [ -z "${GBP_ACCOUNT_ID}" ] || [ -z "${GBP_LOCATION_ID}" ] || \
+             [ -z "${GBP_CLIENT_ID}" ] || [ -z "${GBP_CLIENT_SECRET}" ] || \
+             [ -z "${GBP_REFRESH_TOKEN}" ]; then
+            echo "One or more GBP secrets not configured — skipping Google Business Profile post."
+            echo "To enable: add GBP_ACCOUNT_ID, GBP_LOCATION_ID, GBP_CLIENT_ID,"
+            echo "           GBP_CLIENT_SECRET, and GBP_REFRESH_TOKEN as GitHub secrets."
+            exit 0
+          fi
+
+          # Exchange refresh token for an access token.
+          echo "Obtaining Google OAuth2 access token..."
+          TOKEN_RESPONSE=$(curl -s -X POST "https://oauth2.googleapis.com/token" \
+            -d "client_id=${GBP_CLIENT_ID}" \
+            -d "client_secret=${GBP_CLIENT_SECRET}" \
+            -d "refresh_token=${GBP_REFRESH_TOKEN}" \
+            -d "grant_type=refresh_token")
+
+          ACCESS_TOKEN=$(echo "${TOKEN_RESPONSE}" | jq -r '.access_token // ""' 2>/dev/null || echo "")
+          if [ -z "${ACCESS_TOKEN}" ]; then
+            echo "Failed to obtain access token. Token response:"
+            echo "${TOKEN_RESPONSE}"
+            exit 1
+          fi
+          echo "Access token obtained."
+
+          # Build summary: title + description, capped at ~1500 chars for GBP.
+          SUMMARY="${TITLE}
+
+${DESCRIPTION}"
+          SUMMARY="${SUMMARY:0:1500}"
+
+          # Create the local post.
+          echo "Creating Google Business Profile local post..."
+          PAYLOAD=$(jq -n \
+            --arg summary "${SUMMARY}" \
+            --arg url "${URL}" \
+            '{
+              languageCode: "no",
+              summary: $summary,
+              callToAction: { actionType: "LEARN_MORE", url: $url },
+              topicType: "STANDARD"
+            }')
+
+          HTTP_STATUS=$(curl -s -o /tmp/gbp_response.json -w "%{http_code}" \
+            -X POST \
+            "https://mybusiness.googleapis.com/v4/accounts/${GBP_ACCOUNT_ID}/locations/${GBP_LOCATION_ID}/localPosts" \
+            -H "Authorization: Bearer ${ACCESS_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -d "${PAYLOAD}")
+
+          echo "HTTP status: ${HTTP_STATUS}"
+          echo "Response:"
+          cat /tmp/gbp_response.json; echo
+
+          POST_NAME=$(jq -r '.name // ""' /tmp/gbp_response.json 2>/dev/null || echo "")
+          if [ -n "${POST_NAME}" ]; then
+            echo "Google Business Profile post created successfully. Name: ${POST_NAME}"
+          else
+            echo "GBP post may have failed — no 'name' in response. Check the response above."
+            exit 1
+          fi
