@@ -6,6 +6,9 @@ guid: "bd574ba1-df9b-410f-afcf-3ade22a890a7"
 pubDate: 2026-05-12T08:00:00.000Z
 author: "Kim Eik"
 tags: []
+image:
+  src: "./images/sikkerhetsansvar-utleie-fiskebat.webp"
+  alt: "Sikkerhetsutstyr klart på brygga: ansvaret du har som utleier av fiskebåt"
 ---
 
 Natt til 11. mai 2026 mistet tre turister livet da en leiebåt kantret utenfor Smøla i Møre og Romsdal. Årsaken til ulykken er under etterforskning, og politiet har foreløpig ikke konkludert. Vi vet ikke hva som gikk galt.
