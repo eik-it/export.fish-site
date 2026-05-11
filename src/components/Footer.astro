@@ -1,0 +1,81 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+---
+
+<footer id="kontakt" class="bg-gray-900 text-gray-300 py-12 sm:py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <!-- Company Info -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <Image src={logo} alt="export.fish logo" class="h-10 w-10" width={40} height={40} />
+          <span class="text-xl font-bold text-white">Eksportfiske</span>
+        </div>
+        <p class="text-sm text-gray-400">
+          Enkel fangstrapportering for turistfiskebedrifter i hele Norge. Godkjent av Fiskeridirektoratet.
+        </p>
+      </div>
+
+      <!-- Product -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Produkt</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/#fordeler" class="hover:text-primary transition">Fordeler</a></li>
+          <li><a href="/#hvordan-virker-det" class="hover:text-primary transition">Hvordan virker det?</a></li>
+          <li><a href="/#lovkrav" class="hover:text-primary transition">Lovkrav</a></li>
+          <li><a href="https://test.export.fish" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition">Test appen</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Ressurser</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="https://www.fiskeridir.no/turistfiske/rapportering-for-turistfiskebedrifter" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition">Fiskeridirektoratet</a></li>
+          <li><a href="https://lovdata.no/dokument/SF/forskrift/2017-07-05-1141" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition">Forskrift om rapportering</a></li>
+          <li><a href="https://www.nhoreiseliv.no/bransjer/opplevelser/fisketurisme/" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition">NHO Reiseliv - Fisketurisme</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Kontakt</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="mailto:kontakt@eksportfiske.no" class="hover:text-primary transition">
+              <!--email_off-->kontakt@eksportfiske.no<!--/email_off-->
+            </a>
+          </li>
+          <li>
+            <a href="/om-oss" class="hover:text-primary transition text-gray-400">
+              Om oss
+            </a>
+          </li>
+          <li>
+            <a href="/kontakt" class="hover:text-primary transition text-gray-400">
+              Kontaktinformasjon
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+      <p>&copy; {new Date().getFullYear()} Eksportfiske.no. Alle rettigheter reservert.</p>
+      <a
+        href="https://www.facebook.com/profile.php?id=61576429696153"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Følg Eksportfiske på Facebook"
+        class="inline-flex items-center gap-2 hover:text-primary transition"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4" aria-hidden="true">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+        Følg oss på Facebook
+      </a>
+    </div>
+  </div>
+</footer>
