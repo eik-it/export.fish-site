@@ -4,7 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 
 <Layout
   title="Takk - export.fish"
-  description="Vi har mottatt din henvendelse. Sjekk e-posten din for å fullføre registreringen."
+  description="Vi har mottatt din henvendelse. Du vil snart motta en e-post med neste steg."
   noindex
 >
   <!-- Hero Section -->
@@ -42,8 +42,8 @@ import Layout from '../../layouts/Layout.astro';
               </svg>
             </div>
             <div>
-              <p class="font-medium text-gray-900">Din henvendelse er mottatt</p>
-              <p class="text-sm text-gray-600">Du vil snart motta en e-post med lenke for å fullføre registreringen basert på opplysningene du har oppgitt.</p>
+              <p class="font-medium text-gray-900">Bedriften din er registrert</p>
+              <p class="text-sm text-gray-600">Du vil straks motta en e-post med lenke til dashbordet og QR-koden for turistene. Ingen ekstra steg.</p>
             </div>
           </li>
         </ul>
@@ -67,8 +67,8 @@ import Layout from '../../layouts/Layout.astro';
               </svg>
             </div>
             <div>
-              <p class="font-medium text-gray-900">Registreringen er mottatt</p>
-              <p class="text-sm text-gray-600">Vi har mottatt all informasjon og oppretter din konto.</p>
+              <p class="font-medium text-gray-900">Kontoen din er klar</p>
+              <p class="text-sm text-gray-600">Vi har opprettet kontoen din, og dashbord-lenken og QR-koden er sendt til e-posten din.</p>
             </div>
           </li>
           <li class="flex items-start gap-4">
@@ -76,17 +76,8 @@ import Layout from '../../layouts/Layout.astro';
               <span class="text-primary font-semibold text-sm">1</span>
             </div>
             <div>
-              <p class="font-medium text-gray-900">Kontoen din aktiveres</p>
-              <p class="text-sm text-gray-600">Vi verifiserer informasjonen og setter opp ditt export.fish-subdomene. Du mottar en e-post når alt er klart.</p>
-            </div>
-          </li>
-          <li class="flex items-start gap-4">
-            <div class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-              <span class="text-primary font-semibold text-sm">2</span>
-            </div>
-            <div>
-              <p class="font-medium text-gray-900">Del lenken med turistene</p>
-              <p class="text-sm text-gray-600">Når kontoen er aktiv, kan du dele din unike export.fish-lenke med turistene slik at de kan registrere fangst selv.</p>
+              <p class="font-medium text-gray-900">Del din unike lenke med turistene</p>
+              <p class="text-sm text-gray-600">Del ditt export.fish-subdomene og QR-koden med turistene, slik at de kan registrere fangst selv.</p>
             </div>
           </li>
         </ul>
@@ -153,8 +144,8 @@ import Layout from '../../layouts/Layout.astro';
     const interestContent = document.getElementById('interest-content');
     const registrertContent = document.getElementById('registrert-content');
 
-    if (title) title.textContent = 'Registreringen er fullført!';
-    if (subtitle) subtitle.textContent = 'Takk for at du valgte export.fish. Vi setter opp kontoen din nå.';
+    if (title) title.textContent = 'Bedriften din er registrert!';
+    if (subtitle) subtitle.textContent = 'Takk for at du valgte export.fish. Kontoen din er klar til bruk.';
     if (interestContent) interestContent.classList.add('hidden');
     if (registrertContent) registrertContent.classList.remove('hidden');
   }
