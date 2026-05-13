@@ -1,6 +1,6 @@
 # Retningslinjer for bloggartikkel-gjennomgang
 
-Dette dokumentet er en sjekkliste for å gjennomgå bloggartikler i `src/content/blog/`, spesielt artikler importert automatisk fra Soro via `.github/workflows/soro-rss-sync.yml`. Bruk listen før artikler merges til master.
+Dette dokumentet er en sjekkliste for å gjennomgå bloggartikler i `src/content/blog/`. Bruk listen før artikler merges til master.
 
 > **Merk:** Dette er et arbeidsdokument, ikke en publisert artikkel. Filen er ekskludert fra bloggens content collection via glob-mønster i `src/content.config.ts`.
 
@@ -39,7 +39,6 @@ Faktisk flyt:
 
 - Daglig rapporteringsplikt stammer fra forskrift 2017-07-05-1141 (2017).
 - Påstander som "Fra 1. august 2025..." krever dokumentert kilde, ellers reformuler til "Regelverket krever..." uten datoanker.
-- Soro-sjekklisten i `.github/workflows/soro-rss-sync.yml:67` flagger dette eksplisitt.
 
 ### Generelle statistikker må dempes eller tilskrives
 
@@ -51,7 +50,7 @@ Påstander som "over halvparten av gjestene er tyskspråklige" er ikke verifiser
 
 **`https://eksportfiske.no/registrer/`** er kanonisk URL for CTA-er i bloggartikler og på bloggsider.
 
-- Både Soro-sjekklisten (`.github/workflows/soro-rss-sync.yml`) og blog-templaten (`src/pages/blogg/[...slug].astro`) skal peke til `/registrer/`.
+- Blog-templaten (`src/pages/blogg/[...slug].astro`) peker til `/registrer/`.
 - `/registrer/ny-kunde/` brukes ikke — bruk alltid `/registrer/`.
 
 ### "Gratis" er misvisende alene
@@ -78,5 +77,4 @@ Brand-omtaler i brødteksten kan fortsatt lenkes der det flyter naturlig (f.eks.
 
 ## Gjennomgangsprosess
 
-- Soro RSS-importer kommer som PR-er med en sjekkliste i PR-body (se `.github/workflows/soro-rss-sync.yml:61-69`). Verifiser hver avkrysningsboks før merge.
 - Delegér innholdsgjennomgang til Skribent, build-validering til DeployBot, SEO til Søk. Skipper koordinerer.

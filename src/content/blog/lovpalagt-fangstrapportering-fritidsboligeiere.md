@@ -4,6 +4,7 @@ description: "Lovpålagt fangstrapportering for fritidsboligeiere krever gode ru
 slug: "lovpalagt-fangstrapportering-fritidsboligeiere"
 guid: "3429a3e7-2335-4d5d-9d2b-ee2cb4832f27"
 pubDate: 2026-04-21T11:17:55.000Z
+author: "Kim Eik"
 image:
   src: "./images/lovpalagt-fangstrapportering-fritidsboligeiere.webp"
   alt: "Lovpålagt fangstrapportering for fritidsboligeiere"

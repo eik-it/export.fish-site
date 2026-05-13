@@ -1,8 +1,9 @@
 ---
 import '../styles/global.css';
-import { getImage } from 'astro:assets';
+import { getImage, Image } from 'astro:assets';
 import defaultOgImage from '../assets/hero-bg.jpg';
 import CookieConsent from '../components/CookieConsent.astro';
+import Footer from '../components/Footer.astro';
 import logo from '../assets/logo.png';
 
 import type { ImageMetadata } from 'astro';
@@ -11,6 +12,7 @@ interface Props {
   title: string;
   description?: string;
   noindex?: boolean;
+  suppressCanonical?: boolean;
   ogImage?: ImageMetadata;
   ogImageAlt?: string;
   ogType?: 'website' | 'article';
@@ -21,6 +23,7 @@ const {
   title,
   description = 'Enkel fangstrapportering for turistfiskebedrifter',
   noindex = false,
+  suppressCanonical = false,
   ogImage: customOgImage,
   ogImageAlt,
   ogType = 'website',
@@ -33,18 +36,32 @@ const ogSource = customOgImage ?? defaultOgImage;
 const ogImage = await getImage({ src: ogSource, format: 'webp', width: 1200, height: 630 });
 const ogImageAltText = ogImageAlt ?? 'export.fish - Fangstrapportering for turistfiske';
 
-// Hero preload still points at the site-wide hero — that's the LCP element
-// above the fold on the homepage.
-const heroPreload = await getImage({ src: defaultOgImage, format: 'webp', width: 1920 });
+// Hero preload — generate multiple widths so browsers pick the right variant.
+// The imagesrcset/imagesizes on the <link> mirror what the <Image> component
+// renders, so mobile browsers fetch the small variant instead of the 1920w one.
+// quality: 75 — background image, text overlay, safe to go below default 80.
+const [heroSm, heroMd, heroLg, heroXl] = await Promise.all([
+  getImage({ src: defaultOgImage, format: 'webp', width: 640, quality: 75 }),
+  getImage({ src: defaultOgImage, format: 'webp', width: 1024, quality: 75 }),
+  getImage({ src: defaultOgImage, format: 'webp', width: 1280, quality: 75 }),
+  getImage({ src: defaultOgImage, format: 'webp', width: 1920, quality: 75 }),
+]);
+const heroPreloadSrcset = `${heroSm.src} 640w, ${heroMd.src} 1024w, ${heroLg.src} 1280w, ${heroXl.src} 1920w`;
+const heroPreload = heroXl; // fallback href points at the largest
 
 const favicon = '/favicon.svg';
 const siteUrl = 'https://eksportfiske.no';
 const canonicalURL = new URL(Astro.url.pathname, siteUrl).href;
 const ogImageURL = new URL(ogImage.src, siteUrl).href;
+
+// Markdown alternate URL: /blog/sjekkliste/ → /blog/sjekkliste.md
+// Homepage (/) → /index.md
+const _mdPathname = Astro.url.pathname.replace(/\/$/, '') || '/index';
+const markdownURL = new URL(_mdPathname + '.md', siteUrl).href;
 ---
 
 <!doctype html>
-<html lang="no">
+<html lang="nb">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -52,11 +69,26 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
 
+    <!-- Site verification -->
+    <meta name="msvalidate.01" content="89A5E32210CB1F235C34A3037A868B1C" />
+
     <!-- Preload hero image for LCP optimization -->
-    <link rel="preload" as="image" href={heroPreload.src} type="image/webp" />
+    <!-- imagesrcset/imagesizes mirror the <Image> widths/sizes so mobile browsers
+         fetch the 640w variant (~52 KB) instead of the 1920w one (~328 KB). -->
+    <link rel="preload" as="image" href={heroPreload.src} type="image/webp"
+      imagesrcset={heroPreloadSrcset}
+      imagesizes="100vw"
+    />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href={canonicalURL} />
+    {!suppressCanonical && <link rel="canonical" href={canonicalURL} />}
+
+    <!-- Agent discovery -->
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+    <link rel="agent-skills" href="/.well-known/agent-skills/index.json" />
+    <link rel="alternate" type="text/markdown" href={markdownURL} />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt — content index for AI agents" />
+    <meta name="ai-content-declaration" content="markdown-available, llms-txt-available, agent-skills-available" />
 
     <!-- Open Graph -->
     <meta property="og:type" content={ogType} />
@@ -195,7 +227,7 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
             "name": "Hvor lang tid tar det å sette opp?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Så snart du er registrert i vårt faktureringssystem er appen klar til bruk. Du får en unik lenke til ditt eget subdomene (f.eks. ditt-firma.export.fish) som du deler med turistene. De kan starte med fangstrapportering umiddelbart - ingen opplæring eller konfigurasjon nødvendig."
+              "text": "Appen er klar til bruk med en gang du har registrert bedriften. Du får en e-post med lenke til dashbordet og QR-koden du deler med turistene. Faktureringen ordnes i bakgrunnen og er ikke en betingelse for tilgang. Turistene kan starte med fangstrapportering umiddelbart, ingen opplæring eller konfigurasjon nødvendig."
             }
           },
           {
@@ -239,29 +271,49 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
       });
     </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH0VD36D5C"></script>
+    <!-- Google tag (gtag.js) - deferred until after load/idle to avoid forced reflow during LCP -->
     <script is:inline>
-      gtag('js', new Date());
-      gtag('config', 'G-TH0VD36D5C');
+      window.addEventListener('load', function() {
+        function loadGtag() {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-TH0VD36D5C';
+          s.onload = function() {
+            gtag('js', new Date());
+            gtag('config', 'G-TH0VD36D5C');
+          };
+          document.head.appendChild(s);
+        }
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadGtag, { timeout: 2000 });
+        } else {
+          setTimeout(loadGtag, 1000);
+        }
+      });
     </script>
 
-    <!-- Meta Pixel - consent gated via ad_storage -->
+    <!-- Meta Pixel - deferred until consent is granted.
+         The fbq stub is defined here so calls before load are queued.
+         The actual fbevents.js script is only injected on consent to avoid
+         a parse-blocking third-party request on every page load. -->
     <script is:inline>
-      // Meta Pixel stub - safe to define before consent
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
+      // Lightweight fbq stub — no script injection yet.
+      if (!window.fbq) {
+        var n = window.fbq = function() {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!window._fbq) window._fbq = n;
+        n.push = n; n.loaded = true; n.version = '2.0'; n.queue = [];
+      }
 
-      // Only init and fire PageView if ad_storage consent is already granted
       window.initMetaPixel = function() {
         if (window._metaPixelInitialized) return;
         window._metaPixelInitialized = true;
+        // Inject fbevents.js only now (after consent)
+        var t = document.createElement('script');
+        t.async = true;
+        t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+        document.head.appendChild(t);
         fbq('init', '2517567592013408');
         fbq('track', 'PageView');
       };
@@ -277,22 +329,22 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6674d462a18d4e0bb16ef63c13ace4a9"}'></script>
     <!-- End Cloudflare Web Analytics -->
   </head>
-  <body class="bg-gray-50 text-gray-900">
+  <body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col">
     <!-- Fixed Navigation -->
     <header class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50">
-      <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <nav class="container mx-auto px-4 py-4 flex justify-between items-center" aria-label="Hovedmeny">
         <a href="/" class="flex items-center gap-3 group">
-          <img src={logo.src} alt="export.fish logo" class="h-16 w-16 md:h-20 md:w-20 transition-transform group-hover:scale-110" />
+          <Image src={logo} alt="export.fish logo" width={80} height={80} densities={[1, 2]} class="h-16 w-16 md:h-20 md:w-20 transition-transform group-hover:scale-110" />
           <span class="text-2xl md:text-3xl font-bold text-primary">Eksportfiske</span>
         </a>
         <!-- Mobile menu (hamburger) -->
         <details id="mobile-menu" class="md:hidden relative">
-          <summary class="cursor-pointer p-2 list-none flex items-center justify-center">
-            <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <summary class="cursor-pointer p-2 list-none flex items-center justify-center" aria-label="Åpne meny">
+            <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </summary>
-          <nav class="absolute right-0 top-full mt-2 flex flex-col p-4 bg-white shadow-lg rounded-lg border border-gray-200 min-w-[200px] divide-y divide-gray-200">
+          <nav class="absolute right-0 top-full mt-2 flex flex-col p-4 bg-white shadow-lg rounded-lg border border-gray-200 min-w-[200px] divide-y divide-gray-200" aria-label="Mobilmeny">
             <a href="/#hvordan-virker-det" class="text-gray-600 hover:text-primary transition py-3 px-3 hover:bg-gray-50 rounded">Hvordan virker det?</a>
             <a href="/registrering" class="text-gray-600 hover:text-primary transition py-3 px-3 hover:bg-gray-50 rounded">Turistfiskebedrift?</a>
             <a href="/om-oss" class="text-gray-600 hover:text-primary transition py-3 px-3 hover:bg-gray-50 rounded">Om oss</a>
@@ -314,7 +366,10 @@ const ogImageURL = new URL(ogImage.src, siteUrl).href;
         </a>
       </nav>
     </header>
-    <slot />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
     <CookieConsent />
     <script>
       document.addEventListener('DOMContentLoaded', () => {

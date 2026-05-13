@@ -1,3 +1,21 @@
+# Deploy to GitHub Pages and notify search engines via IndexNow.
+#
+# IndexNow key file: public/24fe6003d5a54402911dd3abb4d27cb0.txt
+# Served at: https://eksportfiske.no/24fe6003d5a54402911dd3abb4d27cb0.txt
+#
+# After a successful Pages deploy:
+#   - "detect-blog-changes" computes which blog slugs changed (shared logic)
+#   - "indexnow" uses those slugs to ping IndexNow / Bing
+#   - "social-post" uses those slugs to post to the Facebook Page
+#
+# Social posting (social-post job) requires these GitHub secrets. The job is
+# completely inert until FB_PAGE_TOKEN is configured — the Facebook step skips
+# with an informational echo if the secret is missing.
+#
+#   FB_PAGE_TOKEN   — long-lived Page Access Token with pages_manage_posts permission
+#
+# See the tracking issue for the full credential-setup checklist.
+
 name: Deploy to GitHub Pages
 
 on:
@@ -20,6 +38,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Full history needed so the sitemap build can compute <lastmod>
+          # via `git log -1 --format=%cI -- <file>` for each page.
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -49,3 +71,306 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  # Shared change-detection job.
+  # Computes which blog slugs changed since the previous successful deploy.
+  # Both "indexnow" and "social-post" consume these outputs so the diff logic
+  # lives in exactly one place.
+  detect-blog-changes:
+    needs: deploy
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+    outputs:
+      prev_sha: ${{ steps.detect.outputs.prev_sha }}
+      blog_slugs: ${{ steps.detect.outputs.blog_slugs }}
+    steps:
+      - name: Detect changed blog slugs
+        id: detect
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REPO="${GITHUB_REPOSITORY}"
+          HEAD_SHA="${GITHUB_SHA}"
+
+          # Find the previous successful deploy.yml run on master.
+          PREV_SHA=$(gh api \
+            "/repos/${REPO}/actions/workflows/deploy.yml/runs?branch=master&status=success&per_page=10" \
+            --jq "[.workflow_runs[] | select(.head_sha != \"${HEAD_SHA}\")][0].head_sha" 2>/dev/null || echo "")
+
+          echo "prev_sha=${PREV_SHA}" >> "$GITHUB_OUTPUT"
+
+          BLOG_SLUGS=""
+
+          if [ -n "${PREV_SHA}" ] && [ "${PREV_SHA}" != "null" ]; then
+            echo "Diffing ${PREV_SHA}..${HEAD_SHA}"
+            CHANGED=$(gh api "/repos/${REPO}/compare/${PREV_SHA}...${HEAD_SHA}" \
+              --jq '.files[].filename' 2>/dev/null || echo "")
+
+            while IFS= read -r FILE; do
+              [ -z "${FILE}" ] && continue
+              case "${FILE}" in
+                src/content/blog/*.md)
+                  SLUG=$(basename "${FILE}" .md)
+                  BLOG_SLUGS="${BLOG_SLUGS}${SLUG}"$'\n'
+                  ;;
+              esac
+            done <<< "${CHANGED}"
+          else
+            echo "No previous successful run found — no blog slugs to detect."
+          fi
+
+          # Remove trailing newline and export (multiline-safe via delimiter).
+          BLOG_SLUGS="${BLOG_SLUGS%$'\n'}"
+          echo "blog_slugs<<EOF" >> "$GITHUB_OUTPUT"
+          echo "${BLOG_SLUGS}" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
+          if [ -n "${BLOG_SLUGS}" ]; then
+            echo "Changed blog slugs:"
+            echo "${BLOG_SLUGS}" | sed 's/^/  - /'
+          else
+            echo "No blog content changes detected."
+          fi
+
+  indexnow:
+    needs: detect-blog-changes
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+    steps:
+      - name: Ping IndexNow
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PREV_SHA: ${{ needs.detect-blog-changes.outputs.prev_sha }}
+          BLOG_SLUGS: ${{ needs.detect-blog-changes.outputs.blog_slugs }}
+        run: |
+          INDEXNOW_KEY="24fe6003d5a54402911dd3abb4d27cb0"
+          HOST="eksportfiske.no"
+          KEY_LOCATION="https://${HOST}/${INDEXNOW_KEY}.txt"
+          REPO="${GITHUB_REPOSITORY}"
+          HEAD_SHA="${GITHUB_SHA}"
+
+          declare -a URL_LIST=()
+          SUBMIT_HOMEPAGE=false
+
+          # Add blog URLs from shared detection output.
+          if [ -n "${BLOG_SLUGS}" ]; then
+            while IFS= read -r SLUG; do
+              [ -z "${SLUG}" ] && continue
+              URL_LIST+=("https://${HOST}/blogg/${SLUG}/")
+            done <<< "${BLOG_SLUGS}"
+          fi
+
+          # For non-blog file changes, run the full diff again so we can handle
+          # page/layout/component changes (IndexNow-specific logic).
+          if [ -n "${PREV_SHA}" ] && [ "${PREV_SHA}" != "null" ]; then
+            CHANGED=$(gh api "/repos/${REPO}/compare/${PREV_SHA}...${HEAD_SHA}" \
+              --jq '.files[].filename' 2>/dev/null || echo "")
+
+            while IFS= read -r FILE; do
+              [ -z "${FILE}" ] && continue
+              case "${FILE}" in
+                # Noindex / utility pages — never submit to IndexNow.
+                src/pages/404.astro|src/pages/qr.astro|src/pages/registrer/ny-kunde.astro|src/pages/registrer/takk.astro)
+                  ;;
+                src/content/blog/*.md)
+                  # Already handled above via BLOG_SLUGS.
+                  ;;
+                src/pages/index.astro)
+                  URL_LIST+=("https://${HOST}/")
+                  ;;
+                src/pages/blogg/index.astro)
+                  URL_LIST+=("https://${HOST}/blogg/")
+                  ;;
+                src/pages/blogg/\[*\].astro)
+                  # Blog template change affects every post — submit homepage as a canary.
+                  SUBMIT_HOMEPAGE=true
+                  ;;
+                src/pages/*/index.astro)
+                  PAGE=$(echo "${FILE}" | sed -E 's|src/pages/(.+)/index\.astro|\1|')
+                  URL_LIST+=("https://${HOST}/${PAGE}/")
+                  ;;
+                src/pages/*/*.astro|src/pages/*.astro)
+                  # Top-level or nested page (e.g. /kontakt/, /docs/foo/).
+                  PAGE=$(echo "${FILE}" | sed -E 's|src/pages/(.+)\.astro|\1|')
+                  URL_LIST+=("https://${HOST}/${PAGE}/")
+                  ;;
+                src/layouts/*|src/components/*|src/styles/*|astro.config.*|tailwind.config.*|public/*)
+                  # Site-wide impact — submit homepage as a canary; let Bing
+                  # re-crawl the rest based on sitemap lastmod.
+                  SUBMIT_HOMEPAGE=true
+                  ;;
+                *)
+                  ;;
+              esac
+            done <<< "${CHANGED}"
+
+            if [ "${SUBMIT_HOMEPAGE}" = "true" ]; then
+              URL_LIST+=("https://${HOST}/")
+            fi
+          else
+            echo "No previous successful run found — falling back to full sitemap submission."
+          fi
+
+          # Deduplicate and JSON-encode.
+          if [ ${#URL_LIST[@]} -gt 0 ]; then
+            URLS_JSON=$(printf '%s\n' "${URL_LIST[@]}" | sort -u | jq -Rs '[split("\n")[] | select(length > 0)]')
+          else
+            URLS_JSON="[]"
+          fi
+
+          # No-op deploy (e.g. only CI/docs/workflow files changed): skip the ping.
+          if [ -n "${PREV_SHA}" ] && [ "${URLS_JSON}" = "[]" ]; then
+            echo "No content URLs changed since previous deploy — skipping IndexNow ping."
+            exit 0
+          fi
+
+          # Cold-start fallback: first deploy or unknown previous SHA — submit the full sitemap once.
+          if [ "${URLS_JSON}" = "[]" ]; then
+            SITEMAP_URL="https://${HOST}/sitemap-0.xml"
+            URLS_JSON=$(curl -sf "${SITEMAP_URL}" \
+              | grep -oP '(?<=<loc>)[^<]+' \
+              | jq -Rs '[split("\n")[] | select(length > 0)]')
+          fi
+
+          if [ "${URLS_JSON}" = "[]" ]; then
+            echo "No URLs to submit."
+            exit 0
+          fi
+
+          PAYLOAD=$(jq -n \
+            --arg host "${HOST}" \
+            --arg key "${INDEXNOW_KEY}" \
+            --arg keyLocation "${KEY_LOCATION}" \
+            --argjson urlList "${URLS_JSON}" \
+            '{host: $host, key: $key, keyLocation: $keyLocation, urlList: $urlList}')
+
+          echo "Submitting $(echo "${URLS_JSON}" | jq 'length') URLs to IndexNow:"
+          echo "${URLS_JSON}" | jq -r '.[]' | sed 's/^/  - /'
+
+          # Generic relay (Bing, Yandex, Naver, Seznam, Yep) plus Bing's
+          # dedicated endpoint to guarantee surfacing in Bing Webmaster Tools.
+          OVERALL_FAIL=0
+          for ENDPOINT in "https://api.indexnow.org/IndexNow" "https://www.bing.com/indexnow"; do
+            HTTP_STATUS=$(curl -s -o /tmp/indexnow_response.txt -w "%{http_code}" \
+              -X POST "${ENDPOINT}" \
+              -H "Content-Type: application/json; charset=utf-8" \
+              -d "${PAYLOAD}")
+
+            echo "[${ENDPOINT}] status=${HTTP_STATUS}"
+            cat /tmp/indexnow_response.txt; echo
+
+            # 200 = OK, 202 = Accepted (queued) — both are success
+            if [ "${HTTP_STATUS}" != "200" ] && [ "${HTTP_STATUS}" != "202" ]; then
+              echo "[${ENDPOINT}] returned unexpected status ${HTTP_STATUS}"
+              OVERALL_FAIL=1
+            fi
+          done
+
+          if [ "${OVERALL_FAIL}" = "1" ]; then
+            exit 1
+          fi
+          echo "IndexNow pings successful."
+
+  # Auto-post new blog articles to the Facebook Page.
+  #
+  # This job is completely inert until FB_PAGE_TOKEN is set as a GitHub secret —
+  # the Facebook step skips with an echo if it is missing.
+  #
+  # See the tracking issue for the full credential-setup checklist.
+  social-post:
+    needs: detect-blog-changes
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      BLOG_SLUGS: ${{ needs.detect-blog-changes.outputs.blog_slugs }}
+    steps:
+      - name: Check for changed blog posts
+        id: check
+        run: |
+          if [ -z "${BLOG_SLUGS}" ]; then
+            echo "No new or changed blog posts — skipping social posting."
+            echo "has_posts=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_posts=true" >> "$GITHUB_OUTPUT"
+            echo "Blog posts to announce:"
+            echo "${BLOG_SLUGS}" | sed 's/^/  - /'
+          fi
+
+      - name: Fetch blog frontmatter
+        id: frontmatter
+        if: steps.check.outputs.has_posts == 'true'
+        env:
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          HOST="eksportfiske.no"
+
+          # Read title and description from frontmatter via the GitHub API.
+          # We process only the first changed slug for social posting.
+          # (If multiple posts change in one push, only the first is posted.
+          #  This is intentional — bulk deploys are rare and one post is enough.)
+          SLUG=$(echo "${BLOG_SLUGS}" | head -n1)
+          FILE="src/content/blog/${SLUG}.md"
+
+          echo "Fetching frontmatter for: ${FILE}"
+
+          CONTENT=$(gh api "/repos/${REPO}/contents/${FILE}?ref=${HEAD_SHA}" \
+            --jq '.content' | base64 -d 2>/dev/null || echo "")
+
+          TITLE=$(echo "${CONTENT}" | grep -m1 '^title:' | sed "s/^title:[[:space:]]*//" | tr -d '"' | head -c 200)
+          DESCRIPTION=$(echo "${CONTENT}" | grep -m1 '^description:' | sed "s/^description:[[:space:]]*//" | tr -d '"' | head -c 300)
+          URL="https://${HOST}/blogg/${SLUG}/"
+
+          echo "title=${TITLE}" >> "$GITHUB_OUTPUT"
+          echo "description=${DESCRIPTION}" >> "$GITHUB_OUTPUT"
+          echo "url=${URL}" >> "$GITHUB_OUTPUT"
+          echo "slug=${SLUG}" >> "$GITHUB_OUTPUT"
+
+          echo "Title:       ${TITLE}"
+          echo "Description: ${DESCRIPTION}"
+          echo "URL:         ${URL}"
+
+      - name: Post to Facebook Page
+        if: steps.check.outputs.has_posts == 'true'
+        continue-on-error: true
+        env:
+          FB_PAGE_ID: "1006728832532796"
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          TITLE: ${{ steps.frontmatter.outputs.title }}
+          DESCRIPTION: ${{ steps.frontmatter.outputs.description }}
+          URL: ${{ steps.frontmatter.outputs.url }}
+        run: |
+          if [ -z "${FB_PAGE_TOKEN}" ]; then
+            echo "FB_PAGE_TOKEN not configured — skipping Facebook post."
+            echo "To enable: add FB_PAGE_TOKEN as a GitHub secret."
+            exit 0
+          fi
+
+          # Build the post message: title + description + URL, no em dashes.
+          MESSAGE="${TITLE}
+
+${DESCRIPTION}
+
+${URL}"
+
+          echo "Posting to Facebook Page ${FB_PAGE_ID}..."
+
+          HTTP_STATUS=$(curl -s -o /tmp/fb_response.json -w "%{http_code}" \
+            -X POST "https://graph.facebook.com/v21.0/${FB_PAGE_ID}/feed" \
+            --data-urlencode "message=${MESSAGE}" \
+            --data-urlencode "link=${URL}" \
+            -d "access_token=${FB_PAGE_TOKEN}")
+
+          echo "HTTP status: ${HTTP_STATUS}"
+          echo "Response:"
+          cat /tmp/fb_response.json; echo
+
+          POST_ID=$(jq -r '.id // ""' /tmp/fb_response.json 2>/dev/null || echo "")
+          if [ -n "${POST_ID}" ]; then
+            echo "Facebook post created successfully. Post ID: ${POST_ID}"
+          else
+            echo "Facebook post may have failed — no 'id' in response. Check the response above."
+            exit 1
+          fi

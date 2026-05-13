@@ -4,6 +4,7 @@ description: "Hva kan bot for turistfiske-rapportering bety i praksis? Se hva re
 slug: "bot-for-turistfiske-rapportering"
 guid: "22c9610b-7455-4ee5-ba96-9ac874c112cd"
 pubDate: 2026-04-26T06:12:19.000Z
+author: "Kim Eik"
 image:
   src: "./images/bot-for-turistfiske-rapportering.webp"
   alt: "Bot for turistfiske-rapportering?"

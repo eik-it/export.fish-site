@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Siden finnes ikke – Eksportfiske.no"
+  description="Siden du leter etter finnes ikke. Gå tilbake til forsiden eller bruk en av lenkene nedenfor."
+  suppressCanonical={true}
+>
+  <Fragment slot="head">
+    <meta name="robots" content="noindex, follow" />
+  </Fragment>
+
+  <!-- Hero Section -->
+  <section class="pt-52 pb-16 bg-gradient-to-br from-blue-50 to-blue-100">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <p class="text-6xl font-bold text-primary mb-4">404</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Siden finnes ikke
+      </h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Det ser ut til at siden du leter etter ikke finnes, eller at adressen er feil skrevet. Prøv en av lenkene nedenfor.
+      </p>
+    </div>
+  </section>
+
+  <!-- Quick Links Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="grid sm:grid-cols-2 gap-6">
+
+        <a href="/" class="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-primary hover:shadow-md transition-all group">
+          <div class="flex items-center gap-3 mb-2">
+            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            <h2 class="font-semibold text-gray-900 group-hover:text-primary transition-colors">Forsiden</h2>
+          </div>
+          <p class="text-sm text-gray-600">Tilbake til eksportfiske.no</p>
+        </a>
+
+        <a href="/blogg" class="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-primary hover:shadow-md transition-all group">
+          <div class="flex items-center gap-3 mb-2">
+            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 12h6m-6 4h.01" />
+            </svg>
+            <h2 class="font-semibold text-gray-900 group-hover:text-primary transition-colors">Blogg</h2>
+          </div>
+          <p class="text-sm text-gray-600">Artikler om turistfiske og rapportering</p>
+        </a>
+
+        <a href="/kontakt" class="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-primary hover:shadow-md transition-all group">
+          <div class="flex items-center gap-3 mb-2">
+            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <h2 class="font-semibold text-gray-900 group-hover:text-primary transition-colors">Kontakt</h2>
+          </div>
+          <p class="text-sm text-gray-600">Ta kontakt med oss</p>
+        </a>
+
+        <a href="/registrer" class="bg-primary/5 rounded-xl p-6 border border-primary/20 hover:border-primary hover:shadow-md transition-all group">
+          <div class="flex items-center gap-3 mb-2">
+            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+            <h2 class="font-semibold text-gray-900 group-hover:text-primary transition-colors">Registrer bedrift</h2>
+          </div>
+          <p class="text-sm text-gray-600">Kom i gang med fangstrapportering</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -24,3 +24,32 @@ section[id] {
   margin-right: auto;
   max-width: 100%;
 }
+
+/* Blog post tables (markdown-rendered, no typography plugin).
+   display:block + overflow-x:auto makes wide tables scroll horizontally
+   on narrow viewports instead of overflowing the layout; cells still wrap. */
+article table {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+article th,
+article td {
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+article th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+
+article tbody tr:nth-child(even) td {
+  background-color: #f9fafb;
+}

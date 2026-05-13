@@ -4,6 +4,7 @@ description: "Regelverket krever daglig fangstrapportering i turistfiske. Slik g
 slug: "daglig-fangstrapportering-turistfiske"
 guid: "8dc94a43-733f-492c-84da-31661f4f9559"
 pubDate: 2026-04-22T19:50:39.000Z
+author: "Kim Eik"
 image:
   src: "./images/daglig-fangstrapportering-turistfiske.webp"
   alt: "Daglig fangstrapportering i turistfiske"
