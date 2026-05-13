@@ -349,11 +349,7 @@ jobs:
           fi
 
           # Build the post message: title + description + URL, no em dashes.
-          MESSAGE="${TITLE}
-
-${DESCRIPTION}
-
-${URL}"
+          MESSAGE=$(printf '%s\n\n%s\n\n%s' "${TITLE}" "${DESCRIPTION}" "${URL}")
 
           echo "Posting to Facebook Page ${FB_PAGE_ID}..."
 
