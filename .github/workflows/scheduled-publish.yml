@@ -1,0 +1,61 @@
+# Automatisk publisering av blogginnlegg iht. release-calendar.yml.
+#
+# Kjører daglig kl. 06:00 UTC (08:00 CEST) og merger PR-en som er planlagt
+# for dagens dato. Selve deploy skjer automatisk via deploy.yml etterpå.
+#
+# Manuell kjøring via workflow_dispatch støtter date_override for testing.
+
+name: Scheduled Publish
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      date_override:
+        description: 'Dato å publisere for (YYYY-MM-DD). Tom = i dag (UTC).'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Merge scheduled PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DATE_OVERRIDE: ${{ inputs.date_override }}
+        run: |
+          if [ -n "${DATE_OVERRIDE}" ]; then
+            TODAY="${DATE_OVERRIDE}"
+          else
+            TODAY=$(date -u +%Y-%m-%d)
+          fi
+          echo "Dato: ${TODAY}"
+
+          PR_NUMBER=$(grep -A2 "date: \"${TODAY}\"" .github/release-calendar.yml \
+            | grep 'pr:' | awk '{print $2}')
+
+          if [ -z "${PR_NUMBER}" ]; then
+            echo "Ingen PR planlagt for ${TODAY} — ingenting å gjøre."
+            exit 0
+          fi
+
+          echo "Fant PR #${PR_NUMBER} planlagt for ${TODAY}"
+
+          PR_STATE=$(gh pr view "${PR_NUMBER}" --json state --jq '.state')
+          if [ "${PR_STATE}" != "OPEN" ]; then
+            echo "PR #${PR_NUMBER} er ${PR_STATE} — hopper over."
+            exit 0
+          fi
+
+          echo "Merger PR #${PR_NUMBER}..."
+          gh pr merge "${PR_NUMBER}" --squash --delete-branch
+          echo "PR #${PR_NUMBER} merget."

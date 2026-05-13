@@ -1,0 +1,71 @@
+# Publiseringskalender for blogginnlegg.
+# Workflowen scheduled-publish.yml leser denne filen daglig og merger
+# den oppgitte PR-en på planlagt dato.
+#
+# Legg til nye innlegg her for å planlegge automatisk publisering.
+# Format: date: "YYYY-MM-DD", pr: <PR-nummer>
+
+schedule:
+  - date: "2026-05-15"
+    pr: 222
+    title: "Trofefisken er borte"
+
+  - date: "2026-05-17"
+    pr: 227
+    title: "Fangstrapportering for nybegynnere"
+
+  - date: "2026-05-19"
+    pr: 233
+    title: "Kveitefiske 2026"
+
+  - date: "2026-05-21"
+    pr: 230
+    title: "Sikkerhetsutstyr på utleiebåten"
+
+  - date: "2026-05-23"
+    pr: 234
+    title: "Båtførerbevis og utenlandske bevis"
+
+  - date: "2026-05-25"
+    pr: 231
+    title: "Sjøvettreglene oversatt for utenlandske gjester"
+
+  - date: "2026-05-27"
+    pr: 229
+    title: "Forsikring av båt og hytte ved utleie"
+
+  - date: "2026-05-29"
+    pr: 228
+    title: "Hytteutleiekontrakt med båt"
+
+  - date: "2026-05-31"
+    pr: 239
+    title: "Håndtering, frysing og transport av fangst"
+
+  - date: "2026-06-02"
+    pr: 225
+    title: "Skatt på utleie av fiskehytte"
+
+  - date: "2026-06-04"
+    pr: 226
+    title: "Plattformrapportering 2026 (DPI / Airbnb m.fl.)"
+
+  - date: "2026-06-06"
+    pr: 232
+    title: "Torskefredning i Oslofjorden"
+
+  - date: "2026-06-08"
+    pr: 240
+    title: "Sørlandet etter torskefredningen"
+
+  - date: "2026-06-10"
+    pr: 238
+    title: "Skreifiske i Lofoten"
+
+  - date: "2026-06-12"
+    pr: 241
+    title: "Regional fiskedestinasjon-guide"
+
+  - date: "2026-06-14"
+    pr: 237
+    title: "Bærekraftig turistfiske"
