@@ -83,6 +83,7 @@ jobs:
     outputs:
       prev_sha: ${{ steps.detect.outputs.prev_sha }}
       blog_slugs: ${{ steps.detect.outputs.blog_slugs }}
+      new_blog_slugs: ${{ steps.detect.outputs.new_blog_slugs }}
     steps:
       - name: Detect changed blog slugs
         id: detect
@@ -100,29 +101,37 @@ jobs:
           echo "prev_sha=${PREV_SHA}" >> "$GITHUB_OUTPUT"
 
           BLOG_SLUGS=""
+          NEW_BLOG_SLUGS=""
 
           if [ -n "${PREV_SHA}" ] && [ "${PREV_SHA}" != "null" ]; then
             echo "Diffing ${PREV_SHA}..${HEAD_SHA}"
+            # Fetch status + filename for blog files in one API call.
             CHANGED=$(gh api "/repos/${REPO}/compare/${PREV_SHA}...${HEAD_SHA}" \
-              --jq '.files[].filename' 2>/dev/null || echo "")
+              --jq '.files[] | select(.filename | test("^src/content/blog/[^/]+\\.md$")) | [.status, .filename] | @tsv' \
+              2>/dev/null || echo "")
 
-            while IFS= read -r FILE; do
+            while IFS=$'\t' read -r STATUS FILE; do
               [ -z "${FILE}" ] && continue
-              case "${FILE}" in
-                src/content/blog/*.md)
-                  SLUG=$(basename "${FILE}" .md)
-                  BLOG_SLUGS="${BLOG_SLUGS}${SLUG}"$'\n'
-                  ;;
-              esac
+              SLUG=$(basename "${FILE}" .md)
+              BLOG_SLUGS="${BLOG_SLUGS}${SLUG}"$'\n'
+              if [ "${STATUS}" = "added" ]; then
+                NEW_BLOG_SLUGS="${NEW_BLOG_SLUGS}${SLUG}"$'\n'
+              fi
             done <<< "${CHANGED}"
           else
             echo "No previous successful run found — no blog slugs to detect."
           fi
 
-          # Remove trailing newline and export (multiline-safe via delimiter).
+          # Remove trailing newlines and export (multiline-safe via delimiter).
           BLOG_SLUGS="${BLOG_SLUGS%$'\n'}"
+          NEW_BLOG_SLUGS="${NEW_BLOG_SLUGS%$'\n'}"
+
           echo "blog_slugs<<EOF" >> "$GITHUB_OUTPUT"
           echo "${BLOG_SLUGS}" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
+          echo "new_blog_slugs<<EOF" >> "$GITHUB_OUTPUT"
+          echo "${NEW_BLOG_SLUGS}" >> "$GITHUB_OUTPUT"
           echo "EOF" >> "$GITHUB_OUTPUT"
 
           if [ -n "${BLOG_SLUGS}" ]; then
@@ -130,6 +139,10 @@ jobs:
             echo "${BLOG_SLUGS}" | sed 's/^/  - /'
           else
             echo "No blog content changes detected."
+          fi
+          if [ -n "${NEW_BLOG_SLUGS}" ]; then
+            echo "New blog slugs (social post candidates):"
+            echo "${NEW_BLOG_SLUGS}" | sed 's/^/  - /'
           fi
 
   indexnow:
@@ -284,17 +297,17 @@ jobs:
     if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      BLOG_SLUGS: ${{ needs.detect-blog-changes.outputs.blog_slugs }}
+      BLOG_SLUGS: ${{ needs.detect-blog-changes.outputs.new_blog_slugs }}
     steps:
-      - name: Check for changed blog posts
+      - name: Check for new blog posts
         id: check
         run: |
           if [ -z "${BLOG_SLUGS}" ]; then
-            echo "No new or changed blog posts — skipping social posting."
+            echo "No new blog posts — skipping social posting."
             echo "has_posts=false" >> "$GITHUB_OUTPUT"
           else
             echo "has_posts=true" >> "$GITHUB_OUTPUT"
-            echo "Blog posts to announce:"
+            echo "New blog posts to announce:"
             echo "${BLOG_SLUGS}" | sed 's/^/  - /'
           fi
 
@@ -348,16 +361,33 @@ jobs:
             exit 0
           fi
 
-          # Build the post message: title + description + URL, no em dashes.
-          MESSAGE=$(printf '%s\n\n%s\n\n%s' "${TITLE}" "${DESCRIPTION}" "${URL}")
+          # Fetch og:image URL from the live page (available since deploy already ran).
+          echo "Fetching og:image from ${URL}..."
+          PAGE_HTML=$(curl -sf --max-time 15 "${URL}" || echo "")
+          OG_IMAGE=$(echo "${PAGE_HTML}" | grep -oP '(?<=<meta property="og:image" content=")[^"]+' | head -1)
+          echo "og:image: ${OG_IMAGE}"
 
-          echo "Posting to Facebook Page ${FB_PAGE_ID}..."
+          # Caption: title + description + link.
+          CAPTION=$(printf '%s\n\n%s\n\n%s' "${TITLE}" "${DESCRIPTION}" "${URL}")
 
-          HTTP_STATUS=$(curl -s -o /tmp/fb_response.json -w "%{http_code}" \
-            -X POST "https://graph.facebook.com/v21.0/${FB_PAGE_ID}/feed" \
-            --data-urlencode "message=${MESSAGE}" \
-            --data-urlencode "link=${URL}" \
-            -d "access_token=${FB_PAGE_TOKEN}")
+          if [ -n "${OG_IMAGE}" ]; then
+            # Photo post — better organic reach than a link post.
+            echo "Posting photo to Facebook Page ${FB_PAGE_ID}..."
+            HTTP_STATUS=$(curl -s -o /tmp/fb_response.json -w "%{http_code}" \
+              -X POST "https://graph.facebook.com/v21.0/${FB_PAGE_ID}/photos" \
+              --data-urlencode "url=${OG_IMAGE}" \
+              --data-urlencode "caption=${CAPTION}" \
+              -d "access_token=${FB_PAGE_TOKEN}")
+          else
+            # Fallback to link post if og:image could not be fetched.
+            echo "og:image not found — falling back to link post."
+            echo "Posting to Facebook Page ${FB_PAGE_ID}..."
+            HTTP_STATUS=$(curl -s -o /tmp/fb_response.json -w "%{http_code}" \
+              -X POST "https://graph.facebook.com/v21.0/${FB_PAGE_ID}/feed" \
+              --data-urlencode "message=${CAPTION}" \
+              --data-urlencode "link=${URL}" \
+              -d "access_token=${FB_PAGE_TOKEN}")
+          fi
 
           echo "HTTP status: ${HTTP_STATUS}"
           echo "Response:"
