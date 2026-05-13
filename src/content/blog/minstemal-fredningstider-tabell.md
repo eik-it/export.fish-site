@@ -95,7 +95,7 @@ For turistfiskebedrifter som har gjester som planlegger å fiske i Oslofjord-omr
 
 Torsken i Skagerrak og Oslofjorden har vært totalfredet siden 2019 for fritidsfiskere. Fredningen ble innført da bestanden kollapset, og gjelder fra og med Telemark og inn i Oslofjorden. Nullfiskeområdene som trådte i kraft 1. januar 2026 er en ytterligere innskjerping av dette regimet.
 
-Fritidsfiskere som planlegger turer til kysten sør for 62°N bør merke seg at torskefredningen er streng og håndheves aktivt. For turistfiskebedrifter langs Skagerrakkysten og i Oslofjorden endrer nullfiskeområdene forutsetningene for hva gjester kan fiske.
+Fritidsfiskere som planlegger turer til [kysten sør for 62°N](/blogg/sesongkalender-turistfiske-norge/) bør merke seg at torskefredningen er streng og håndheves aktivt. For turistfiskebedrifter langs Skagerrakkysten og i Oslofjorden endrer nullfiskeområdene forutsetningene for hva gjester kan fiske. Se vår gjennomgang av [torskefredningen i Oslofjorden](/blogg/torskefredning-oslofjorden-2026/) for detaljer.
 
 ## Kveite: regler du bør kjenne til før sesong
 
