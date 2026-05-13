@@ -1,6 +1,6 @@
 ---
 title: "Driver du Airbnb-utleie til turistfiskere? Dette gjelder deg"
-description: "Mange som leier ut hytte og båt via Airbnb og Vrbo tar imot fisketurister uten å vite at de driver turistfiskebedrift. Her er hva du faktisk må ha på plass."
+description: "Mange som leier ut hytte og båt via Airbnb, Finn.no og Vrbo tar imot fisketurister uten å vite at de driver turistfiskebedrift. Her er hva du faktisk må ha på plass."
 slug: "airbnb-utleie-turistfiske-hva-gjelder"
 guid: "c4fd555d-2457-4e91-8f6a-0819ea911b65"
 pubDate: 2026-06-16T08:00:00.000Z
@@ -11,7 +11,7 @@ image:
   alt: "Hytte med båt ved norsk brygge — utleie til fisketurister via Airbnb"
 ---
 
-Du har en hytte ved sjøen. Den leier du ut noen uker i sommersesongen via Airbnb eller Vrbo, og gjestene er som regel der for å fiske. Du stiller båten til disposisjon, de kjøper dagligvarer selv og er stort sett selvgående. Det virker som en enkel og grei greie.
+Du har en hytte ved sjøen. Den leier du ut noen uker i sommersesongen via Airbnb, Finn.no eller Vrbo, og gjestene er som regel der for å fiske. Du stiller båten til disposisjon, de kjøper dagligvarer selv og er stort sett selvgående. Det virker som en enkel og grei greie.
 
 Men det er mulig du driver en turistfiskebedrift uten å vite det, og at det medfører plikter du ikke har oppfylt.
 
@@ -61,7 +61,7 @@ Gjeldende kvoter er beskrevet i [Utførselskvote for fisk 2026](/blogg/utforsels
 
 ## Plattformrapportering (DPI)
 
-Fra og med 2023 er digitale plattformer som Airbnb og Vrbo pålagt å rapportere utleierens inntekter til Skatteetaten. Det skjer automatisk, uten at du trenger å gjøre noe, men det betyr at Skatteetaten får informasjon om hva du har tjent gjennom plattformen.
+Fra og med 2023 er digitale plattformer som Airbnb, Finn.no og Vrbo pålagt å rapportere utleierens inntekter til Skatteetaten. Det skjer automatisk, uten at du trenger å gjøre noe, men det betyr at Skatteetaten får informasjon om hva du har tjent gjennom plattformen.
 
 <!-- TODO: link til plattformrapportering-2026-dpi-airbnb når PR [#226] er merget -->
 
