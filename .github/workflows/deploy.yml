@@ -9,10 +9,9 @@
 #   - "social-post" uses those slugs to post to the Facebook Page
 #
 # Social posting (social-post job) requires these GitHub secrets. The job is
-# completely inert until they are configured — the Facebook step skips with an
-# informational echo if its secrets are missing.
+# completely inert until FB_PAGE_TOKEN is configured — the Facebook step skips
+# with an informational echo if the secret is missing.
 #
-#   FB_PAGE_ID      — numeric Page ID (not a profile URL, must be a Facebook Page)
 #   FB_PAGE_TOKEN   — long-lived Page Access Token with pages_manage_posts permission
 #
 # See the tracking issue for the full credential-setup checklist.
@@ -275,8 +274,8 @@ jobs:
 
   # Auto-post new blog articles to the Facebook Page.
   #
-  # This job is completely inert until FB_PAGE_ID and FB_PAGE_TOKEN are set as
-  # GitHub secrets — the Facebook step skips with an echo if either is missing.
+  # This job is completely inert until FB_PAGE_TOKEN is set as a GitHub secret —
+  # the Facebook step skips with an echo if it is missing.
   #
   # See the tracking issue for the full credential-setup checklist.
   social-post:
@@ -337,15 +336,15 @@ jobs:
         if: steps.check.outputs.has_posts == 'true'
         continue-on-error: true
         env:
-          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ID: "1006728832532796"
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
           TITLE: ${{ steps.frontmatter.outputs.title }}
           DESCRIPTION: ${{ steps.frontmatter.outputs.description }}
           URL: ${{ steps.frontmatter.outputs.url }}
         run: |
-          if [ -z "${FB_PAGE_ID}" ] || [ -z "${FB_PAGE_TOKEN}" ]; then
-            echo "FB_PAGE_ID or FB_PAGE_TOKEN not configured — skipping Facebook post."
-            echo "To enable: add FB_PAGE_ID and FB_PAGE_TOKEN as GitHub secrets."
+          if [ -z "${FB_PAGE_TOKEN}" ]; then
+            echo "FB_PAGE_TOKEN not configured — skipping Facebook post."
+            echo "To enable: add FB_PAGE_TOKEN as a GitHub secret."
             exit 0
           fi
 
