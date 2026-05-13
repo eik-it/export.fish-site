@@ -61,7 +61,7 @@ Gjeldende kvoter er beskrevet i [Utførselskvote for fisk 2026](/blogg/utforsels
 
 ## Plattformrapportering (DPI)
 
-Fra og med 2023 er digitale plattformer som Airbnb, Finn.no og Vrbo pålagt å rapportere utleierens inntekter til Skatteetaten. Det skjer automatisk, uten at du trenger å gjøre noe, men det betyr at Skatteetaten får informasjon om hva du har tjent gjennom plattformen.
+Fra og med 2023 er digitale plattformer som Airbnb og Vrbo pålagt å rapportere utleierens inntekter til Skatteetaten. Det skjer automatisk, uten at du trenger å gjøre noe, men det betyr at Skatteetaten får informasjon om hva du har tjent gjennom plattformen.
 
 <!-- TODO: link til plattformrapportering-2026-dpi-airbnb når PR [#226] er merget -->
 
