@@ -15,6 +15,11 @@ Gjestene har hatt en god uke, og fryseren i boden er full. Nå skal fangsten hje
 
 For deg som leier ut hytte og båt er dette praktiske spørsmål du bør ha svar på, ikke fordi du er tollen, men fordi godt forberedte gjester gjør avreisedagen enklere for alle. En gjest som ankommer grensen med feil pakking, manglende dokumentasjon eller for mye fisk i bagasjen, husker det oppholdet, dessverre ikke på den måten du ønsker.
 
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Håndtering av fangst starter med sløying samme dag fisken tas opp. For hjemtransport er utførselskvoten 15 kg per person, og én kilo filet tilsvarer 2,97 kg hel fisk ved kvoteberegningen. Gjestene trenger utførselsdokumentasjon fra deg, og den kan ikke utstedes før <a href="/fangstrapportering-turistfiske/">fangstrapporteringen</a> er komplett. Les mer om kravene til <a href="/utforselsdokumentasjon-fisk/">utførselsdokumentasjon</a> for å ha alt klart ved avreise.</p>
+</div>
+
 Her er en praktisk gjennomgang av hele kjeden, fra sløying på kaia til fisken er i fryseren hjemme.
 
 ## Sløying: gjør det med en gang
@@ -112,7 +117,7 @@ Dokumentet skal inneholde:
 2. Virksomhetens navn, adresse og organisasjonsnummer
 3. Oppholdsperiode og fangstperiode
 
-I tillegg må [fangsten være rapportert](/blogg/daglig-fangstrapportering-turistfiske/) for hele oppholdet, inkludert [dager uten fangst](/blogg/nullfangst-turistfiske-ma-det-rapporteres/), før du kan utstede dokumentet. Dokumentasjonen bygger altså på at [bedriften er registrert](/blogg/ma-du-registrere-turistfiskebedrift/) og at rapporteringen er i orden. Les mer om [kravene til utførselsdokumentet](/blogg/utforselsdokument-fisk-krav/).
+I tillegg må [fangsten være rapportert](/fangstrapportering-turistfiske/) for hele oppholdet, inkludert [dager uten fangst](/blogg/nullfangst-turistfiske-ma-det-rapporteres/), før du kan utstede dokumentet. Dokumentasjonen bygger altså på at [bedriften er registrert](/blogg/ma-du-registrere-turistfiskebedrift/) og at rapporteringen er i orden. Les mer om [kravene til utførselsdokumentasjon](/utforselsdokumentasjon-fisk/).
 
 Gjestene bør ha dokumentet tilgjengelig både fysisk og digitalt ved passering av grensen.
 
@@ -160,3 +165,42 @@ For gjester fra utlandet som trenger informasjon på sitt eget språk, er det og
 - **Fiskeridirektoratet**: [Utførselskvote og fiskesmugling](https://www.fiskeridir.no/Turistfiske/fiskesmugling-og-utfoersel): kvoteregler, omregningsfaktorer, dokumentasjonskrav
 - **Mattilsynet**: [Råd for oppbevaring av mat og drikke](https://www.mattilsynet.no/mat-og-drikke/forbrukere/rad-for-oppbevaring-av-mat): frysing og transport av fisk
 - **Tolletaten**: [Fiskekvote når du reiser fra Norge](https://www.toll.no/no/varer/fisk/kvote): grensekontroll, deklarering, bøtesatser
+
+## Relaterte guider
+
+- [Utførselsdokumentasjon for fisk](/utforselsdokumentasjon-fisk/) — krav og prosedyre for å utstede eksportdokumenter til gjestene
+- [Fangstrapportering for turistfiske](/fangstrapportering-turistfiske/) — daglig rapporteringsplikt som er grunnlaget for utførselsdokumentasjonen
+- [Nullfangst i turistfiske](/blogg/nullfangst-turistfiske-ma-det-rapporteres/) — også dager uten fangst må rapporteres
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hvor mye fisk kan turistfiskere ta med hjem fra Norge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Utførselskvoten i 2026 er 15 kg fisk eller fiskeprodukter per person, inntil to ganger per kalenderår. Fra 1. januar 2027 reduseres kvoten til 10 kg. Én kilo filet tilsvarer 2,97 kg hel fisk ved kvoteberegningen, så 5 kg filet bruker nesten hele kvoten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan gjestene pakke fisken som filet for transport hjem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, men filetvekten regnes om til hel fisk ved kvoteberegning. Fiskeridirektoratet bruker en omregningsfaktor på 2,97: én kilo filet tilsvarer 2,97 kilo hel fisk. Dette betyr at 5 kilo torskfilet bruker opp nesten hele kvoten på 15 kg."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva trenger gjestene for å ta med fisk hjem over grensen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gjestene trenger utførselsdokumentasjon utstedt av utleier. Dette dokumentet er personlig og kan ikke overdras. Det kan ikke utstedes før fangstrapporteringen for hele oppholdet er komplett og godkjent, inkludert nullfangstdager."
+      }
+    }
+  ]
+}
+</script>
