@@ -56,7 +56,7 @@ Følgende underleverandører behandler personopplysninger i forbindelse med drif
 | Google Cloud Platform (GCP) | Skyhosting og infrastruktur for backend | EU-region |
 | Database- og autentiseringsleverandør | Lagring av kontodata og pålogging | EU-region |
 | E-postleverandør | Transaksjonell e-post (varsler) | EU-region |
-| Fiken | Fakturering og regnskap (kundedata, fakturadata) | Norge |
+| CRM | Fakturering og kundeoppfølging (kundedata, fakturadata) | Norge |
 | Google LLC | Google Analytics (kun etter samtykke) | USA, EU-US Data Privacy Framework |
 | Meta Platforms Inc. | Meta Pixel (kun etter samtykke) | USA, EU-US Data Privacy Framework |
 
