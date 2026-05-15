@@ -1,0 +1,169 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Hytteutleie med båt: regler, rapporteringsplikt og dokumentasjon"
+  description="Leier du ut hytte med båt til turister? Her er reglene for registreringsplikt, fangstrapportering, eksportdokumentasjon, sikkerhet og forsikring for fritidsboligeiere."
+>
+  <Fragment slot="head">
+    <script type="application/ld+json">{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Har jeg rapporteringsplikt når jeg leier ut hytte med båt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Det kommer an på om du oppfyller alle tre vilkår: du tar betalt for utleien, er MVA-registrert, og forventer bruttoinntekt over 50 000 kr/år. Svarer du ja på alle tre, har du lovpålagt registrerings- og rapporteringsplikt som turistfiskebedrift. Svarer du ja på færre, kan du registrere deg frivillig."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva skjer hvis gjestene vil ta med fisk hjem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Uten at du er registrert som turistfiskebedrift og har rapportert fangst, kan du ikke utstede eksportdokument, og gjestene har i praksis null utførselskvote. De kan ikke ta med fisk hjem lovlig. Registrering og rapportering er forutsetningen for at turistene kan ta med seg fangsten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva er 50 000-kronersgrensen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Registreringsplikten som turistfiskebedrift inntreffer blant annet når bruttoinntekten fra utleie av hytte med båt overstiger 50 000 kr per år. Grensen gjelder brutto (før kostnader), ikke netto. Les mer om 50 000-kronersgrensen for turistfiskebedrifter."
+          }
+        }
+      ]
+    })}</script>
+    <script type="application/ld+json">{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Hjem", "item": "https://eksportfiske.no/" },
+        { "@type": "ListItem", "position": 2, "name": "Turistfiske regler", "item": "https://eksportfiske.no/turistfiske-regler/" },
+        { "@type": "ListItem", "position": 3, "name": "Hytteutleie med båt", "item": "https://eksportfiske.no/hytteutleie-med-bat-regler/" }
+      ]
+    })}</script>
+  </Fragment>
+
+  <article class="pt-44 pb-16 bg-white">
+    <div class="max-w-2xl mx-auto px-4">
+
+      <nav class="text-sm text-gray-500 mb-6" aria-label="Brødsmulesti">
+        <ol class="flex items-center gap-2 flex-wrap">
+          <li><a href="/" class="hover:text-primary transition">Hjem</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/turistfiske-regler/" class="hover:text-primary transition">Turistfiske regler</a></li>
+          <li aria-hidden="true">/</li>
+          <li class="text-gray-900 font-medium">Hytteutleie med båt</li>
+        </ol>
+      </nav>
+
+      <header class="mb-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-4">
+          Hytteutleie med båt: regler og rapporteringsplikt
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          Leier du ut hytte med båt til turister? Båten endrer regnestykket. Her er reglene for registrering, fangstrapportering og eksportdokumentasjon.
+        </p>
+      </header>
+
+      <div class="flex items-start gap-3 bg-green-50 border border-green-200 rounded-xl px-5 py-4 mb-8">
+        <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+          <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-green-800">Godkjent rapporteringssystem fra Fiskeridirektoratet</p>
+          <p class="text-xs text-green-700 mt-0.5">Export.fish er laget av en utleier, for andre utleiere. <a href="https://www.fiskeridir.no/turistfiske/rapportering-for-turistfiskebedrifter" target="_blank" rel="noopener noreferrer" class="underline hover:text-green-900 transition-colors">Se godkjente systemer</a>.</p>
+        </div>
+      </div>
+
+      <div class="article-body text-gray-800 leading-relaxed">
+
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-8">
+          <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+          <p class="text-gray-800">
+            Fritidsboligeiere som leier ut hytte med båt til turister og oppfyller visse kriterier har lovpålagt plikt til å registrere seg som turistfiskebedrift og rapportere fangst daglig til Fiskeridirektoratet. Uten slik registrering og rapportering kan ikke gjestene lovlig ta med fisk hjem til sitt land. Boten for manglende rapportering kan være opptil 50 000 kroner.
+          </p>
+        </div>
+
+        <h2>Når inntreffer registreringsplikten?</h2>
+        <p>
+          Plikten til å registrere seg som turistfiskebedrift hos Fiskeridirektoratet inntreffer når alle tre kriterier er oppfylt:
+        </p>
+        <ul>
+          <li>Du tar betalt for utleien (inkludert pakkepriser der båt inngår)</li>
+          <li>Du er MVA-registrert</li>
+          <li>Bruttoinntekt fra slik utleie overstiger 50 000 kr/år</li>
+        </ul>
+        <p>
+          Oppfyller du bare ett eller to av kriteriene, kan du registrere deg frivillig. Dette kan likevel være smart for å gi gjestene mulighet til å ta med fisk hjem. Les mer: <a href="/blogg/ma-du-registrere-turistfiskebedrift/">Må du registrere turistfiskebedrift?</a> og <a href="/blogg/50000-kr-grensen-turistfiskebedrift/">50 000-kronersgrensen for turistfiskebedrifter</a>
+        </p>
+
+        <h2>Hva betyr det for gjestene?</h2>
+        <p>
+          Utenlandske gjester som fisker fra båten din og vil ta med fangst hjem trenger et eksportdokument fra deg. Dette dokumentet kan bare utstedes av en registrert turistfiskebedrift, etter at fangsten er rapportert til Fiskeridirektoratet.
+        </p>
+        <p>
+          Uten din registrering og rapportering har gjestene i praksis null utførselskvote. For gjester som nettopp eksportmulighetene er poenget med turen, er dette et problem du helst vil unngå å fortelle dem om ved avreise. Les mer: <a href="/utforselsdokumentasjon-fisk/">Utførselsdokumentasjon for fisk</a>
+        </p>
+
+        <h2>Daglig fangstrapportering fra 2025</h2>
+        <p>
+          Registrerte turistfiskebedrifter har fra august 2025 plikt til å rapportere fangst daglig til Fiskeridirektoratet. Export.fish gjør dette enkelt: turistene registrerer fangst i appen, systemet rapporterer automatisk, og du godkjenner ved avreise. Les mer: <a href="/fangstrapportering-turistfiske/">Daglig fangstrapportering for turistfiske</a>
+        </p>
+
+        <h2>Sikkerhet og forsikring</h2>
+        <p>
+          Som utleier av båt til turister har du sikkerhetsansvar. Du bør sikre at:
+        </p>
+        <ul>
+          <li>Båten er forsikret for kommersiell utleie</li>
+          <li>Gjestene har fått opplæring i bruk av sikkerhetsutstyr</li>
+          <li>Påbudt sikkerhetsutstyr er om bord og i orden</li>
+        </ul>
+        <p>
+          Les mer: <a href="/blogg/sikkerhetsansvar-utleie-fiskebat/">Sikkerhetsansvar ved utleie av fiskebåt</a>
+        </p>
+
+        <h2>Sesongtips og forberedelse</h2>
+        <p>
+          Mange utleiere gjør det meste av forarbeidet én gang, og høster fruktene gjennom hele sesongen. Se sjekkliste: <a href="/blogg/leie-hytte-med-bat-sjekkliste/">Sjekkliste for hytteutleie med båt</a> og <a href="/blogg/slik-kan-du-forberede-turistfiskesesongen/">Slik kan du forberede turistfiskesesongen</a>
+        </p>
+
+      </div>
+    </div>
+  </article>
+
+  <section class="py-16 bg-gradient-to-br from-blue-50 to-slate-50">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        Laget av en utleier, for andre utleiere
+      </h2>
+      <p class="text-lg text-gray-600 mb-8">
+        Export.fish ble bygget fordi det ikke fantes en enkel, godkjent løsning. Prøv gratis i 30 dager.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/registrer/" class="bg-primary hover:bg-primary-hover text-white font-semibold px-8 py-4 rounded-lg transition-colors text-center shadow-md hover:shadow-lg">
+          Kom i gang gratis
+        </a>
+        <a href="/om-oss" class="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-4 rounded-lg transition-colors text-center">
+          Les historien bak
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .article-body :global(h2) { font-size: 1.5rem; font-weight: 700; color: #111827; margin-top: 2.5rem; margin-bottom: 1rem; line-height: 1.3; }
+  .article-body :global(p) { margin-bottom: 1.25rem; line-height: 1.75; }
+  .article-body :global(ul) { padding-left: 1.5rem; margin-bottom: 1.25rem; list-style-type: disc; }
+  .article-body :global(li) { margin-bottom: 0.5rem; line-height: 1.75; }
+  .article-body :global(a) { color: #2196f3; text-decoration: underline; text-underline-offset: 2px; }
+  .article-body :global(a:hover) { color: #1e88e5; }
+</style>
