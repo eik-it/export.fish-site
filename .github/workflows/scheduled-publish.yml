@@ -59,3 +59,11 @@ jobs:
           echo "Merger PR #${PR_NUMBER}..."
           gh pr merge "${PR_NUMBER}" --squash --delete-branch
           echo "PR #${PR_NUMBER} merget."
+
+          # GitHub stopper workflows som trigges av GITHUB_TOKEN fra å starte
+          # nye workflows (recursive run protection). Merge-commit'en over vil
+          # derfor IKKE trigge deploy.yml automatisk. Vi må sparke den i gang
+          # manuelt via workflow_dispatch.
+          echo "Sparker i gang deploy.yml mot master..."
+          gh workflow run deploy.yml --ref master
+          echo "deploy.yml trigget."
