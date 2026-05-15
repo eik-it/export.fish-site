@@ -13,6 +13,11 @@ image:
 
 Mange utleiere går gjennom båten før sesongen uten å tenke nøye gjennom hva som faktisk er påbudt. Motorolje, bensin, batteriet? Ja. Men flytevest til alle? Godkjent brannslukker? Leselig instruksjon på motor og dødmannsknapp? Det er lett å undervurdere hva regelverket krever, og lett å overse det som ikke er lovpålagt, men som kan avgjøre utfallet i en nødsituasjon.
 
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Utleiebåter krever godkjent flytevest til alle om bord (riktig størrelse for barn), brannslukker, lanterner, åre og redningsline etter småbåtloven. I tillegg anbefales VHF-radio, badetrapp og synlige nødnumre i båten. Se komplett oversikt for <a href="/hytteutleie-med-bat-regler/">hytteutleie med båt</a>.</p>
+</div>
+
 For deg som leier ut båt til fisketurister, er sikkerhetsutstyret ikke bare et ansvarsspørsmål. Det er en praktisk del av tilbudet ditt. Gjestene skal ut på sjøen og komme trygt hjem. De kjenner ikke farvannene, mange er ikke vant til å lese vær og bølger langs norskekysten, og de har sjelden tenkt gjennom hva de gjør hvis noe uventet skjer. Du er utleier, ikke kaptein, men du er den som har sørget for at båten er rigget riktig.
 
 ## Påbudt utstyr: dette er lovkravet
@@ -118,7 +123,7 @@ Et sikkerhetsutstyr ingen vet om, er så godt som ingen utstyr. Sett av fast tid
 - Sjekk at instruksjoner henger på plass og er leselige
 - Sjekk at øsekar og redningsline er i båten
 
-En hytte med [båtutleie som en del av pakken](/blogg/leie-hytte-med-bat-sjekkliste/) krever gjennomtenkte rutiner for selve båten, ikke bare huset. Sikkerhetsgjennomgangen er en del av den samme forberedelsen.
+En hytte med [båtutleie som en del av pakken](/hytteutleie-med-bat-regler/) krever gjennomtenkte rutiner for selve båten, ikke bare huset. Sikkerhetsgjennomgangen er en del av den samme forberedelsen.
 
 ## Hva du bør si til gjestene
 
@@ -139,3 +144,43 @@ Sikkerhetsarbeid i utleiebåten er ikke én ting du gjør i april og så glemmer
 - [Småbåtloven (Lov om fritids- og småbåter)](https://lovdata.no/dokument/NL/lov/1998-06-26-47): særlig § 23a om sikkerhetsutstyr
 - [Sjøfartsdirektoratet: krav til fritidsbåter](https://www.sjofartsdir.no/fritidsbat/)
 - [Redningsselskapet: sjekkliste og råd for fritidsbåter](https://www.redningsselskapet.no/)
+
+## Relaterte guider
+
+- [Hytteutleie med båt: regler og plikter](/hytteutleie-med-bat-regler/) — komplett oversikt for utleiere
+- [Sjøvettreglene på norsk, engelsk og tysk](/blogg/sjovettregler-tysk-engelsk-gjester/) — klar til å printe og henge på hytta
+- [Daglig fangstrapportering](/fangstrapportering-turistfiske/) — slik oppfyller du rapporteringsplikten
+- [Forsikring for utleiebåt og fiskehytte](/blogg/forsikring-utleiebat-fiskehytte/) — hva forsikringen dekker og hva du bør sjekke
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hva er påbudt sikkerhetsutstyr på utleiebåter i Norge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Etter småbåtloven er følgende påbudt: godkjent flytevest til alle om bord (riktig størrelse for barn), brannslukker, lanterner, åre eller alternativ fremdrift, øsekar eller pumpe, og redningsline."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Trenger utleiebåter VHF-radio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "VHF-radio er ikke lovpålagt, men sterkt anbefalt. Kanal 16 er nødkanalen i norske farvann. Gjestene trenger ikke sertifikat for å bruke en fast VHF i nødsituasjon."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva bør jeg si til gjestene om sikkerhetsutstyret?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vis gjestene hvor vestene henger, hvor dødmannsknappen sitter, hvordan motoren stoppes manuelt, og hvor nødnumre er festet i båten. Gjennomgangen bør skje før første tur, gjerne som del av nøkkeloverlevering."
+      }
+    }
+  ]
+}
+</script>
