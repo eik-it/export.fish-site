@@ -12,6 +12,11 @@ image:
 
 Mange hytteutleiere oppdager hull i kontrakten sin i det øyeblikket noe går galt. Motorbåten returneres med bulket skrog, gjestene er usikre på hvem som skal betale for drivstoffet de brukte, og ingen husker hva som ble avtalt ved innsjekk. En god kontrakt løser ikke alle konflikter, men den avklarer forventninger på forhånd og gir begge parter et felles utgangspunkt.
 
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">En hytteutleiekontrakt med båt bør regulere partene, leieperiode, pris, depositum, hva som er inkludert, ansvarsfordeling for hytte og båt, promilleregler, skader, forsikring og fiskeregler. Husleieloven gjelder ikke for korttidsleie av fritidsbolig, så det som ikke er skriftlig avtalt er ikke regulert. Se <a href="/hytteutleie-med-bat-regler/">hytteutleie med båt</a> for komplett oversikt.</p>
+</div>
+
 Særlig for utleiere som kombinerer hytte og båt, er det mye å regulere. Hytta og båten er to separate objekter med ulike ansvarsforhold, forsikringsregler og offentligrettslige krav. Denne guiden gir deg en sjekkliste over hva en slik kontrakt bør dekke, men erstatter ikke juridisk rådgivning. Er du usikker på formuleringer eller ansvarsforhold, bør du bruke en kvalifisert mal eller konsultere en advokat.
 
 ## Husleieloven gjelder ikke for fritidsbolig
@@ -167,3 +172,43 @@ For den daglige driften av turistfiskeoppholdet (rapportering, fangstregistrerin
 - [Huseierne: Leiekontrakt for hytte og fritidsbolig](https://www.huseierne.no/kontrakter/leiekontrakt-hytte-og-fritidsbolig/)
 - [Sjøfartsdirektoratet: Utredning om sikkerhet ved utleie av fritidsfartøy i Norge (2021)](https://www.sdir.no/siteassets/publikasjoner-som-pdf/utredning-til-nettside---sikkerhet-ved-utleie-av-fritidsfartoy-i-norge.pdf)
 - [Forskrift om krav til minstealder og båtførerbevis mv. for fører av fritidsbåt](https://lovdata.no/dokument/SF/forskrift/2009-03-03-259)
+
+## Relaterte guider
+
+- [Hytteutleie med båt: regler og plikter](/hytteutleie-med-bat-regler/) — komplett oversikt for utleiere
+- [Forsikring for utleiebåt og fiskehytte](/blogg/forsikring-utleiebat-fiskehytte/) — hva dekkes og hva du bør avklare
+- [Sikkerhetsutstyr i utleiebåt](/blogg/sikkerhetsutstyr-utleiebat-sjekkliste/) — sjekkliste over påbudt og anbefalt utstyr
+- [Daglig fangstrapportering](/fangstrapportering-turistfiske/) — slik oppfyller du rapporteringsplikten
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Gjelder husleieloven for hytteutleie med båt i Norge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nei, husleieloven gjelder i utgangspunktet ikke for korttidsutleie av fritidsbolig. Partene kan i stor grad avtale egne vilkår, men det som ikke er skriftlig avtalt er heller ikke regulert."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva bør en hytteutleiekontrakt med båt inneholde?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kontrakten bør regulere partenes identifikasjon, leieperiode, pris og depositum, hva som er inkludert (drivstoff, utstyr), ansvarsfordeling for hytte og båt, krav til båtfører, promilleregler, skaderutiner, forsikringsforhold og gjestens ansvar for fangstrapportering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvem er ansvarlig for skader på utleid båt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ansvarsfordelingen avhenger av hva som er avtalt i kontrakten og forsikringsvilkårene. Som eier plikter du å forsikre deg om at den som fører båten er kvalifisert. Skader leietaker påfører dekkes ikke av standard båtforsikring med mindre utleie er eksplisitt avtalt med forsikringsselskapet."
+      }
+    }
+  ]
+}
+</script>
