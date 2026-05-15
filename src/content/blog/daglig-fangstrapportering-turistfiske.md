@@ -53,7 +53,7 @@ Det tredje er timing. Mange tenker at så lenge alt er ført før gjestene drar,
 
 Dette er kanskje det punktet som merkes best i praksis. Utførselsdokumentasjon kan ikke utstedes før rapport er sendt inn. Derfor henger rapportering og gjesteopplevelse tett sammen.
 
-Husk også at gjestene dine kan ta med seg inntil 15 kg fisk per opphold ut av landet — en kvote som gjelder fra 1.1.2026 og reduseres til 10 kg fra 1.1.2027. Uten fullstendig og godkjent fangstrapportering kan du ikke utstede den dokumentasjonen de trenger ved grensen.
+Husk også at gjestene dine kan ta med seg inntil 15 kg fisk per person ut av landet, inntil to ganger per kalenderår (2026-kvoten, reduseres til 10 kg fra 1.1.2027). Uten fullstendig og godkjent fangstrapportering kan du ikke utstede den dokumentasjonen de trenger ved grensen.
 
 Hvis du sitter med manuelle notater siste kveld før avreise, kan hele prosessen stoppe opp fordi én fangstdag mangler eller er uklar. Da blir du sittende og ringe gjester som allerede pakker bil eller står på kaia. Det er dårlig bruk av tid for deg, og det gir en unødvendig dårlig avslutning på oppholdet. Mangler i rapporteringen er heller ikke bare et praktisk problem — det er også den vanligste årsaken til at utleiere lurer på [konsekvensene av manglende fangstrapportering](/blogg/bot-for-turistfiske-rapportering/).
 

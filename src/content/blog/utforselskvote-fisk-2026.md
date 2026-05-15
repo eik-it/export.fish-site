@@ -1,6 +1,6 @@
 ---
 title: "Utførselskvote for fisk i 2026"
-description: "Fra 1.1.2026 er utførselskvoten 15 kg per opphold, og kuttes til 10 kg fra 2027. Slik fungerer reglene for turistfiskebedrifter — og hva det betyr for gjestene dine."
+description: "Fra 1.1.2026 er utførselskvoten 15 kg per person, inntil to ganger per kalenderår, og kuttes til 10 kg fra 2027. Slik fungerer reglene for turistfiskebedrifter og hva det betyr for gjestene dine."
 slug: "utforselskvote-fisk-2026"
 guid: "8b725c20-ef2f-4d28-8731-5a523c4523d7"
 pubDate: 2026-04-27T08:00:00.000Z
@@ -11,13 +11,13 @@ image:
   alt: "Utførselskvote for fisk i 2026: Slik er de nye reglene"
 ---
 
-Når gjestene dine pakker bilen for hjemreise, er utførselskvoten gjerne det siste spørsmålet de stiller. Og det er ofte da det haster mest å ha riktig svar. Fra 1. januar 2026 er kvoten 15 kg fisk per person per opphold — og den faller til 10 kg fra 1. januar 2027. For deg som driver [registrert turistfiskebedrift](/blogg/ma-du-registrere-turistfiskebedrift/) er det nødvendig å kjenne disse grensene, fordi det er du som utsteder dokumentasjonen gjestene trenger ved grensepassering.
+Når gjestene dine pakker bilen for hjemreise, er utførselskvoten gjerne det siste spørsmålet de stiller. Og det er ofte da det haster mest å ha riktig svar. Fra 1. januar 2026 er kvoten 15 kg fisk per person, inntil to ganger per kalenderår, og den faller til 10 kg fra 1. januar 2027. For deg som driver [registrert turistfiskebedrift](/blogg/ma-du-registrere-turistfiskebedrift/) er det nødvendig å kjenne disse grensene, fordi det er du som utsteder dokumentasjonen gjestene trenger ved grensepassering.
 
 Reglene er hjemlet i FOR-2006-06-01-570 (forskrift om utførselsregulering av fisk og fiskevarer fra sportsfiske), senest endret ved FOR-2025-07-02-1401, som trådte i kraft 1. januar 2026.
 
 ## Hva er utførselskvoten i 2026?
 
-Fra 1. januar 2026 kan en person ta med seg inntil **15 kg fisk eller fiskevarer** ut av Norge. Kvoten gjelder per opphold, og den samme personen kan benytte seg av kvoten inntil to ganger i løpet av 2026.
+I 2026 kan turister som har fisket og oppholdt seg ved en registrert turistfiskebedrift, ta med inntil **15 kg fisk eller fiskeprodukter** ut av Norge per person, inntil to ganger per kalenderår. Fra 1. januar 2027 reduseres kvoten til 10 kg.
 
 Fra 1. januar 2027 kuttes kvoten til **10 kg**, to ganger per kalenderår. Det er denne trinnvise nedtrappingen myndighetene varslet da de første endringene ble vedtatt i 2025, og det er verdt å informere gjestene om allerede nå.
 

@@ -25,7 +25,7 @@ Fra 1. august 2025 er denne retten borte. Det er ikke lenger et eget tillegg for
 
 ## Hva er utførselskvoten nå?
 
-Utførselskvoten som gjelder fra 1. januar 2026 er 15 kg fisk eller fiskeprodukter per person per tur, og du kan benytte kvoten to ganger per kalenderår. Fra 1. januar 2027 reduseres den ytterligere til 10 kg to ganger i året.
+Utførselskvoten som gjelder fra 1. januar 2026 er 15 kg fisk eller fiskeprodukter per person, inntil to ganger per kalenderår. Fra 1. januar 2027 reduseres den ytterligere til 10 kg to ganger i året.
 
 Det er bare mulig å utføre fisk dersom fisket har foregått hos en [registrert turistfiskebedrift](/blogg/ma-du-registrere-turistfiskebedrift/). Gjestene må kunne dokumentere dette ved grensepasseringen. Tolletaten kontrollerer, og bøtene er høye: 8 000 kroner pluss 200 kroner per kilo ulovlig utført fisk.
 
