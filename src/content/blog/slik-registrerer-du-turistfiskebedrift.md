@@ -93,7 +93,7 @@ Har du alt dette klart, er selve søknaden grei å fylle ut. Det tar som regel i
 
 Sjekkliste for utleiere som vil gjøre alt riktig fra start finner du i [leie-hytte-med-båt-sjekklisten](/blogg/leie-hytte-med-bat-sjekkliste/). Utførsel av fisk for gjestene forutsetter at du også kjenner kravene til [utførselsdokumentasjon](/blogg/utforselsdokument-fisk-krav/). Familier med barn reiser egne spørsmål, se gjennomgangen av [aldersgrense i turistfiske](/blogg/aldersgrense-turistfiske-12-ar/).
 
-Vi mener at registreringen er det enkle trinnet. Det er det som kommer etterpå, rutinene, rapporteringen og dokumentasjonen, som avgjør om driften faktisk holder mål i sesongen. Men du må ha registreringen på plass for å komme i gang. Og du kan ikke vente til første gjest banker på døra.
+Vi mener at registreringen er det enkle trinnet. Det er det som kommer etterpå, rutinene, rapporteringen og dokumentasjonen, som avgjør om driften faktisk holder mål i sesongen. Men du må ha registreringen på plass for å komme i gang. Og du kan ikke vente til første gjest banker på døra. Når sesongen er i gang, bruk vår [sjekkliste for avreisedagen](/blogg/for-gjesten-reiser-hjem-sjekkliste/) for å sikre at fangstrapportering og eksportdokumentasjon er i orden før gjestene kjører.
 
 ## Kilder
 
