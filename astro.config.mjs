@@ -79,6 +79,12 @@ export default defineConfig({
   site: SITE_URL,
   base: '',
 
+  // Redirect old blog post to new landing page (meta refresh for GitHub Pages)
+  redirects: {
+    '/blogg/leie-hytte-med-bat-sjekkliste': '/hytteutleie-med-bat-regler/',
+    '/blogg/leie-hytte-med-bat-sjekkliste/': '/hytteutleie-med-bat-regler/',
+  },
+
   build: {
     inlineStylesheets: 'auto',
   },
