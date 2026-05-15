@@ -1,8 +1,8 @@
 # Personvernerklæring for eksportfiske.no
 
-Denne personvernerklæringen beskriver hvordan vi behandler personopplysninger samlet inn via markedsføringssiden eksportfiske.no, inkludert skjemainnsendinger og analyseinformasjon. Behandlingsansvarlig er Eksportfiske.no (EIK IT, org.nr. 993981532).
+Denne personvernerklæringen beskriver hvordan vi behandler personopplysninger om **turistfiskebedrifter** (kunder) i forbindelse med eksportfiske.no og det tilhørende abonnementet på export.fish-tjenesten. Behandlingsansvarlig er Eksportfiske.no (EIK IT, org.nr. 993981532).
 
-**Relatert:** Rapporteringstjenesten export.fish har sin egen [personvernerklæring](https://export.fish/privacy) og [vilkår](https://export.fish/terms) som dekker turistens og fiskerens bruk av PWA-en (fangstdata, eksportdokumenter osv.). Denne erklæringen omhandler kun det som skjer på eksportfiske.no og det som videreformidles til våre systemer som følge av registrering.
+**Avgrensning:** Selve rapporteringsverktøyet export.fish har egen [personvernerklæring](https://export.fish/privacy) og [vilkår](https://export.fish/terms) som dekker personopplysninger om **turister og fiskere** (sluttbrukere som registrerer fangst). Bedriftsdata og turistdata lagres i samme backend-database, men har ulike behandlingsansvarlige og dekkes derfor av hver sin erklæring.
 
 ## 1. Behandlingsansvarlig
 
@@ -12,16 +12,16 @@ Kontakt: [kontakt@eksportfiske.no](mailto:kontakt@eksportfiske.no)
 
 ## 2. Hvilke opplysninger samles inn
 
-Eksportfiske.no behandler følgende kategorier opplysninger:
+Vi behandler følgende kategorier personopplysninger om turistfiskebedrifter:
 
-### 2.1 Skjemainnsendinger
-Når du fyller ut registreringsskjema eller kontaktforespørsel på siden, samler vi inn opplysningene du selv oppgir, typisk:
+### 2.1 Bedriftsdata (kontoinformasjon)
+Ved registrering og bruk av export.fish-tjenesten samler vi inn:
 - Bedriftsnavn og organisasjonsnummer
-- Kontaktperson og e-postadresse
+- Navn på kontaktperson
+- E-postadresse (driftskontakt)
 - Telefonnummer
-- Andre opplysninger du frivillig deler i meldingsfelt
-
-Disse opplysningene brukes til å besvare henvendelsen din og starte registreringsprosessen for et export.fish-abonnement. Lagring og videre behandling skjer i våre egne backend-systemer (export.fish API) under samme behandlingsansvar.
+- Håndskreven signatur (brukes ved utstedelse av utførselsdokumentasjon på vegne av bedriften)
+- Annen informasjon du frivillig deler ved henvendelse eller registrering
 
 ### 2.2 Tekniske data og bruk av siden
 - Standard nettleserdata (IP-adresse, nettlesertype, besøkte sider) når du har gitt samtykke til analyseverktøy
@@ -53,6 +53,9 @@ Følgende underleverandører behandler personopplysninger i forbindelse med drif
 
 | Underleverandør | Tjeneste | Dataoverføring |
 |---|---|---|
+| Google Cloud Platform (GCP) | Skyhosting og infrastruktur for backend | EU-region |
+| Supabase | Database og autentisering | EU-region |
+| Mailgun | Transaksjonell e-post (fakturering, varsler) | EU-region |
 | Google LLC | Google Analytics (kun etter samtykke) | USA, EU-US Data Privacy Framework |
 | Meta Platforms Inc. | Meta Pixel (kun etter samtykke) | USA, EU-US Data Privacy Framework |
 
@@ -62,8 +65,10 @@ Hver av leverandørene har egne databehandleravtaler og personvernerklæringer s
 
 | Type data | Lagringstid |
 |---|---|
+| Bedriftsdata (aktiv konto) | Lagres så lenge kontoen er aktiv |
+| Bedriftsdata (avsluttet konto) | Lagres permanent |
+| Håndskreven signatur | Lagres så lenge bedriften har behov for utstedelse av utførselsdokumentasjon; slettes ved skriftlig forespørsel |
 | Samtykkevalg (`cookie-consent`) | Lagres i nettleseren din til du sletter den manuelt |
-| Skjemainnsendinger | Lagres permanent i våre systemer som del av kundeforholdet |
 | Analyseinformasjon (Google Analytics) | I henhold til Google Analytics standard (14 måneder med mindre vi justerer ned) |
 
 ## 7. Sikkerhetstiltak
