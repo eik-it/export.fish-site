@@ -16,7 +16,7 @@ import Layout from '../../layouts/Layout.astro';
           "name": "Hva er utførselskvoten for fisk fra Norge?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Utenlandske turister kan ta med inntil 18 kg fisk pluss én hel fisk per person per dag ut av Norge. Kvoten gjelder per person, ikke per gruppe. Alle eksporterte mengder krever eksportdokument fra turistfiskevirksomheten."
+            "text": "Fra 1. januar 2026 kan utenlandske turister ta med inntil 15 kg fisk per person per opphold ut av Norge, maksimalt to ganger per år. Fra 2027 kuttes kvoten til 10 kg. Kvoten gjelder per person, ikke per gruppe. Alle eksporterte mengder krever eksportdokument fra turistfiskevirksomheten."
           }
         },
         {
@@ -40,7 +40,7 @@ import Layout from '../../layouts/Layout.astro';
           "name": "Hva må stå på eksportdokumentet?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Dokumentet må inneholde: turistens navn og passnummer, turistfiskevirksomhetens navn og registreringsnummer, fangstperiode, fangststed, art og vekt for all fisk som skal eksporteres. Et godkjent rapporteringssystem som export.fish genererer dette automatisk."
+            "text": "Forskriften setter minimumskrav: om personen som fører ut fisken (fullt navn, fødselsdato, bostedsadresse), om virksomheten (navn, besøksadresse, organisasjonsnummer), om oppholdet (tidsrom og fiskeperiode, utstedelsesdato), og om ansvarlig person (navn, kontaktinfo, signatur). Personen må være minst 12 år. Et godkjent rapporteringssystem som export.fish genererer dette automatisk."
           }
         }
       ]
@@ -95,31 +95,52 @@ import Layout from '../../layouts/Layout.astro';
         <div class="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-8">
           <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
           <p class="text-gray-800">
-            Utenlandske turister som vil ta fisk ut av Norge trenger et eksportdokument utstedt av turistfiskevirksomheten. Dokumentet kan kun utstedes etter at fangsten er rapportert til Fiskeridirektoratet. Kvoten er 18 kg pluss én hel fisk per person per dag. Boten for ulovlig utførsel er 8 000 kroner pluss 200 kroner per kilo i overskudd.
+            Utenlandske turister som vil ta fisk ut av Norge trenger et eksportdokument utstedt av turistfiskevirksomheten. Dokumentet kan kun utstedes etter at fangsten er rapportert til Fiskeridirektoratet. Fra 2026 er kvoten 15 kg per person per opphold (to ganger per år), og kuttes til 10 kg fra 2027. Boten for ulovlig utførsel er 8 000 kroner pluss 200 kroner per kilo i overskudd.
           </p>
         </div>
 
         <h2>Utførselskvoten</h2>
         <p>
-          Utenlandske turister kan ta med seg inntil 18 kg fisk (sløyd og hodekappet vekt) pluss én hel fisk per person per dag ut av Norge. Kvoten er per person, ikke per gruppe. Overskrides kvoten, kan Tolletaten beslaglegge alt og ilegge gebyr.
+          Fra 1. januar 2026 kan utenlandske turister ta med seg inntil 15 kg fisk per person per opphold ut av Norge, maksimalt to ganger per kalenderår. Fra 2027 kuttes kvoten til 10 kg. Kvoten er per person, ikke per gruppe. Overskrides kvoten, kan Tolletaten beslaglegge alt og ilegge gebyr.
         </p>
         <p>
-          For 2026 er det også innført forbud mot å ta med trofisk fisk (uvanlig store individer av en art som anses som trekkplaster for turistfiskebedriften) ut av landet. Les mer: <a href="/blogg/trofefisk-fjernet-turistfiske/">Trofisk fisk fjernet fra turistfiske</a>
+          Kvoten gjelder ikke kongekrabbe, laks, ørret, røye eller annen ferskvannsfisk. Trofefisk gir heller ikke lenger noe særunntak — de teller inn i den vanlige 15 kg-grensen. Les mer: <a href="/blogg/utforselskvote-fisk-2026/">Utførselskvote for fisk i 2026</a>
         </p>
 
-        <h2>Kravene til eksportdokumentet</h2>
+        <h2>Feltkravene til eksportdokumentet</h2>
         <p>
-          Eksportdokumentet er turistens bevis overfor Tolletaten. Det er individuelt: én gjest, ett dokument. Dokumentet må inneholde:
+          Eksportdokumentet er turistens bevis overfor Tolletaten. Det er individuelt: én gjest, ett dokument. Fra 1. august 2025 gjelder forskriftsfestede minimumskrav til innholdet, basert på <a href="https://lovdata.no/dokument/SF/forskrift/2006-06-01-570" target="_blank" rel="noopener noreferrer">Forskrift om regulering av utførsel av sportsfiskeprodukter (FOR-2006-06-01-570) § 2</a>.
         </p>
+        <p><strong>Om personen som fører ut fisken:</strong></p>
         <ul>
-          <li>Turistens navn og passnummer</li>
-          <li>Turistfiskevirksomhetens navn og registreringsnummer hos Fiskeridirektoratet</li>
-          <li>Fangstperiode og fangststed</li>
-          <li>Art og vekt for all fisk som skal eksporteres</li>
-          <li>Dato for utstedelse</li>
+          <li>Fullt navn</li>
+          <li>Fødselsdato</li>
+          <li>Bostedsadresse</li>
+        </ul>
+        <p><strong>Om virksomheten som utsteder dokumentet:</strong></p>
+        <ul>
+          <li>Virksomhetens navn</li>
+          <li>Besøksadresse</li>
+          <li>Organisasjonsnummer</li>
+        </ul>
+        <p><strong>Om oppholdet og fisket:</strong></p>
+        <ul>
+          <li>Tidsrom for opphold (fra-dato og til-dato)</li>
+          <li>Fiskeperiode (fra-dato og til-dato)</li>
+          <li>Utstedelsesdato</li>
+        </ul>
+        <p><strong>Om den ansvarlige hos virksomheten:</strong></p>
+        <ul>
+          <li>Navn</li>
+          <li>Kontaktinformasjon</li>
+          <li>Signatur</li>
         </ul>
         <p>
-          Et godkjent rapporteringssystem som export.fish genererer dokumentet automatisk med alle påkrevde felt. Se også: <a href="/blogg/utforselsdokument-fisk-krav/">Krav til utførselsdokument for fisk</a>
+          Dette er minimumskravene. Et godkjent rapporteringssystem som export.fish genererer dokumentet automatisk med alle påkrevde felt.
+        </p>
+        <h2>Aldersgrensen</h2>
+        <p>
+          Personen som er oppført i utførselsdokumentet må være minst 12 år. Det er den faktiske personen som fører fisken over grensen som teller, ikke en voksen i selskapet. For familier der barn under 12 år har fisket kan dette skape utfordringer. Les mer: <a href="/blogg/aldersgrense-turistfiske-12-ar/">Aldersgrensen for turistfiske</a>
         </p>
 
         <h2>Rekkefølgen: rapportering før dokumentet</h2>
@@ -128,6 +149,20 @@ import Layout from '../../layouts/Layout.astro';
         </p>
         <p>
           Med export.fish er dette automatisk: turistene registrerer fangst daglig, bedriften godkjenner ved avreise, og dokumentet genereres umiddelbart. Les mer om <a href="/fangstrapportering-turistfiske/">daglig fangstrapportering</a>.
+        </p>
+
+        <h2>Vanlige feil og hvordan du unngår dem</h2>
+        <p>
+          <strong>Manglende fødselsdato.</strong> Skjer overraskende ofte. Ha et fast felt for fødselsdato i innsjekksrutinen.
+        </p>
+        <p>
+          <strong>Feil tidsrom.</strong> Opphold og fiskeperiode er to ulike felt. Oppholdet er hele leieperioden, fiskeperioden er den perioden det faktisk har vært fisket.
+        </p>
+        <p>
+          <strong>Utsteder dokumentet for tidlig.</strong> Dokumentet er ugyldig hvis det er utstedt før all fangst er rapportert. Hold deg til rekkefølgen: rapportering ferdig, periode lukket, dokument utstedt.
+        </p>
+        <p>
+          <strong>Signatur mangler.</strong> Dokumentet er ikke gyldig uten signatur fra ansvarlig person hos virksomheten.
         </p>
 
         <h2>Grensekontroll og Tolletaten</h2>
