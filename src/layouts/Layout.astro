@@ -136,8 +136,15 @@ const markdownURL = new URL(_mdPathname + '.md', siteUrl).href;
         "operatingSystem": "Web Browser",
         "offers": {
           "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "NOK"
+          "price": "990",
+          "priceCurrency": "NOK",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "990",
+            "priceCurrency": "NOK",
+            "billingDuration": "P1Y",
+            "description": "Årlig abonnement eks. mva. per turistfiskebedrift"
+          }
         },
         "description": "Lovpålagt fangstrapportering for turistfiskebedrifter og fritidsboligeiere som leier ut hytte med båt. Godkjent av Fiskeridirektoratet. Hjelper tyskere og andre turister med å eksportere fisk fra Norge lovlig.",
         "url": "https://eksportfiske.no",
@@ -156,97 +163,16 @@ const markdownURL = new URL(_mdPathname + '.md', siteUrl).href;
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Er dette virkelig godkjent av Fiskeridirektoratet?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ja, export.fish er et godkjent elektronisk rapporteringssystem som fullt ut oppfyller kravene i Forskrift om rapportering av fangst fra turistfiskevirksomhet (2017-07-05-1141). Systemet rapporterer automatisk all nødvendig informasjon til Fiskeridirektoratet på riktig måte."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Hva hvis turistene ikke bruker appen?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Erfaring viser at de fleste turister ønsker å være korrekte i forhold til norsk lov. I tillegg gir fullføring av fiskeperiode tilgang til utførelsesdokument, slik at all dokumentasjon for eksport er tilrettelagt. Brukeravtalen i appen påpeker også at det forventes at all fangst registreres."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Må turistene installere en app?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nei! Export.fish er en progressiv webapp som fungerer direkte i nettleseren. Turistene kan velge å installere den på hjemskjermen for enklere tilgang, men det er helt valgfritt. De trenger bare å åpne lenken du gir dem."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Hvilke språk støttes?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Appen støtter for øyeblikket norsk, engelsk og tysk. Turistene velger språk automatisk basert på telefonens innstillinger, eller kan bytte manuelt i appen."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Hvordan håndteres personvern?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Vi tar personvern på alvor. Export.fish samler kun inn den informasjonen som er nødvendig for fangstrapportering i henhold til Fiskeridirektoratets krav. Turistene registrerer bare fangst - ingen personopplysninger utover det som er påkrevd."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Hva koster det?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Tjenesten koster 990,- NOK per år (eks. mva) per turistfiskebedrift. Du kan teste appen gratis via test-nettstedet, men faktisk rapportering til Fiskeridirektoratet krever en registrert bedriftskonto."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Hvordan fungerer prøveperioden?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Alle nye bedrifter får 1 måned gratis prøveperiode med full tilgang til alle funksjoner. Ingen betalingsforpliktelse i de første 30 dagene. Første faktura sendes automatisk etter 30 dager (990,- NOK eks. mva). Kan avsluttes når som helst via e-post til kontakt@eksportfiske.no."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Kan jeg få et kortere abonnement hvis jeg bare har sporadiske fiskegjester?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Vi tilbyr kun årlig fakturering (990 kr/år eks. mva.). Prisen er lagt lavt for at terskelen for å rapportere korrekt skal være lav, og en enkel abonnementsmodell er det som gjør at vi kan holde den der. Den daglige rapporteringsplikten til Fiskeridirektoratet utløses av at du tar betalt fra gjester som fisker med båt du stiller til disposisjon, og gjelder uavhengig av om du markedsfører deg som turistfiskebedrift eller om gjestene tar med fisk hjem. Abonnementet dekker derfor hele rapporteringsbehovet gjennom året, ikke bare ett enkelt opphold. Er du usikker, kan du starte med prøveperioden (1 måned gratis) og si opp på e-post hvis det ikke passer."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Fungerer appen offline?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Appen krever internettforbindelse for synkronisering, men virker med vanlig mobildekning. Turistene kan registrere fangst når de har mobilsignal - enten på båten (hvis det er dekning) eller når de kommer til land."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Hvor lang tid tar det å sette opp?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Appen er klar til bruk med en gang du har registrert bedriften. Du får en e-post med lenke til dashbordet og QR-koden du deler med turistene. Faktureringen ordnes i bakgrunnen og er ikke en betingelse for tilgang. Turistene kan starte med fangstrapportering umiddelbart, ingen opplæring eller konfigurasjon nødvendig."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Kan jeg bruke appen med flere båter/hytter samtidig?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ja, absolutt! Systemet håndterer flere båter og hytter samtidig under samme turistfiskebedrift. All fangst rapporteres samlet for virksomheten din, uavhengig av hvilken båt eller hytte turistene bruker."
-            }
-          }
-        ]
+        "@type": "WebSite",
+        "name": "Eksportfiske.no",
+        "url": "https://eksportfiske.no",
+        "description": "Godkjent fangstrapporteringssystem for norske turistfiskebedrifter",
+        "inLanguage": "nb",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Eksportfiske.no",
+          "url": "https://eksportfiske.no"
+        }
       }
     </script>
 
@@ -256,12 +182,13 @@ const markdownURL = new URL(_mdPathname + '.md', siteUrl).href;
         "@type": "Organization",
         "name": "Eksportfiske.no",
         "url": "https://eksportfiske.no",
+        "logo": "https://eksportfiske.no/favicon-192x192.png",
         "contactPoint": {
           "@type": "ContactPoint",
           "email": "kontakt@eksportfiske.no",
           "url": "https://eksportfiske.no/kontakt",
           "contactType": "customer service",
-          "availableLanguage": ["Norwegian"]
+          "availableLanguage": ["Norwegian", "English", "German"]
         }
       }
     </script>
