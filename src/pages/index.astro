@@ -21,6 +21,78 @@ import sei from '../assets/sei.png';
   title="Lovpålagt fangstrapportering for hytteutleiere"
   description="Utleie av hytte med båt til turistfiskere? Sjekk reglene for fangstrapportering. Tyskere og andre turister kan eksportere fisk fra Norge med riktig dokumentasjon. Unngå bøter ."
 >
+  <Fragment slot="head">
+    <script type="application/ld+json">{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Er dette virkelig godkjent av Fiskeridirektoratet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, export.fish er et godkjent elektronisk rapporteringssystem som fullt ut oppfyller kravene i Forskrift om rapportering av fangst fra turistfiskevirksomhet (2017-07-05-1141). Systemet rapporterer automatisk all nødvendig informasjon til Fiskeridirektoratet på riktig måte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva hvis turistene ikke bruker appen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Erfaring viser at de fleste turister ønsker å være korrekte i forhold til norsk lov. I tillegg gir fullføring av fiskeperiode tilgang til utførelsesdokument, slik at all dokumentasjon for eksport er tilrettelagt. Brukeravtalen i appen påpeker også at det forventes at all fangst registreres."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Må turistene installere en app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nei. Export.fish er en progressiv webapp som fungerer direkte i nettleseren. Turistene kan velge å installere den på hjemskjermen for enklere tilgang, men det er helt valgfritt. De trenger bare å åpne lenken du gir dem."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvilke språk støttes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Appen støtter norsk, engelsk og tysk. Turistene velger språk automatisk basert på telefonens innstillinger, eller kan bytte manuelt i appen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva koster det?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tjenesten koster 990 NOK per år (eks. mva) per turistfiskebedrift. Alle nye bedrifter får 1 måned gratis prøveperiode med full tilgang til alle funksjoner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan jeg få et kortere abonnement hvis jeg bare har sporadiske fiskegjester?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vi tilbyr kun årlig fakturering (990 kr/år eks. mva.). Prisen er lagt lavt for at terskelen for å rapportere korrekt skal være lav. Den daglige rapporteringsplikten gjelder uavhengig av om du har mange eller få gjester, så abonnementet dekker hele rapporteringsbehovet gjennom året."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Fungerer appen offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Appen krever internettforbindelse for synkronisering, men virker med vanlig mobildekning. Turistene kan registrere fangst når de har mobilsignal, enten på båten eller når de kommer til land."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan jeg bruke appen med flere båter og hytter samtidig?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Systemet håndterer flere båter og hytter samtidig under samme turistfiskebedrift. All fangst rapporteres samlet for virksomheten din, uavhengig av hvilken båt eller hytte turistene bruker."
+          }
+        }
+      ]
+    })}</script>
+  </Fragment>
 
   <!-- Hero Section -->
   <section class="relative pt-52 pb-32 md:pb-40 text-white overflow-hidden" aria-labelledby="hero-heading">

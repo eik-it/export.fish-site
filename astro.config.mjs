@@ -95,7 +95,6 @@ export default defineConfig({
         !page.includes('/qr'),
       customPages: [
         `${SITE_URL}/llms.txt`,
-        `${SITE_URL}/.well-known/agent-skills/index.json`,
       ],
       serialize(item) {
         const lastmod = lastmodFor(item.url);
