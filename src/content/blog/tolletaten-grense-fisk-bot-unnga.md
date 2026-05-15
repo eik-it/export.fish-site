@@ -44,7 +44,7 @@ De fleste overskridelsene skyldes ikke bevisst smugling, men misforståelser og 
 
 **De fordeler fisken mellom biler eller reisefølge uten at dokumentasjonen stemmer.** Å flytte fisk fra en bil til en annen for å skjule mengden er en klassisk feil — og det er ulovlig uavhengig av om den samlede mengden per person er innenfor kvoten.
 
-**De tar med troféfisk.** Troféfisken ble fjernet som unntak fra regelverket allerede i 2018, da Nærings- og fiskeridepartementet fastsatte ny forskrift om turistfiskevirksomheter. Trofékveite og andre store eksemplarer regnes inn i kvoten på lik linje med annen fisk, men mange gjester tror fortsatt at de kan ta med én stor fisk i tillegg.
+**De tar med troféfisk.** Troféfisken ble fjernet som unntak fra regelverket allerede i 2018, da Nærings- og fiskeridepartementet fastsatte ny forskrift om turistfiskevirksomheter. [Trofékveite og andre store eksemplarer regnes inn i kvoten](/blogg/trofefisk-fjernet-turistfiske/) på lik linje med annen fisk, men mange gjester tror fortsatt at de kan ta med én stor fisk i tillegg.
 
 ## Ditt ansvar som utleier — medvirkning er ikke en hypotetisk risiko
 
