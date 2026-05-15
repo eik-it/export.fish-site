@@ -13,6 +13,11 @@ image:
 
 Norge har over 100 000 kilometer kystlinje, hundrevis av innsjøer og vassdrag verdt å nevne, og fiskebestander som varierer dramatisk fra region til region. For en fisketurist betyr det at valg av destinasjon er like viktig som valg av utstyr. Kveite finner du ikke i Glomma, og ørret er sjelden tema i Lofoten om vinteren. Denne guiden gir deg en oversikt over hva de ulike regionene faktisk byr på - hvilke arter, hvilke sesonger og hva slags vertskap som finnes der.
 
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Norges beste fiskedestinasjoner varierer etter art og sesong: Lofoten og Sørøya for storkveite og skrei, Hitra/Frøya for sei og kystfiske, Helgeland for uberørt kystlandskap, og Sørlandet for makrell og krabbe. Uansett destinasjon må utleier være registrert som turistfiskebedrift for at gjestene skal ha rett til utførselskvote. Se <a href="/turistfiske-regler/">gjeldende regler for turistfiske</a> for en samlet oversikt.</p>
+</div>
+
 Det er store forskjeller mellom regionene, og vi har forsøkt å holde oss til det som faktisk er dokumentert og typisk - ikke det som er mulig i et sjeldent unntak.
 
 ## Lofoten og Vesterålen
@@ -136,3 +141,42 @@ Alle regioner har felles nasjonale regler for minstemål og fredningstider, med 
 - [Visit Helgeland](https://visithelgeland.com/no/Fiske/Havfiske-helgeland) - Helgeland kystfiske
 - [Statsforvalteren i Vestland](https://www.statsforvalteren.no/vestland/miljo-og-klima/fiskeforvaltning/) - Sjøfiskeregler Vestlandet
 - [NRK - Sørøya kveitefangster](https://www.nrk.no/tromsogfinnmark/ville-kveitefangster-utenfor-soroya-i-finnmark-_-tok-kveite-pa-209-centimeter-1.14629939) - Dokumentasjon på storkveite ved Sørøya
+
+## Relaterte guider
+
+- [Regler for turistfiske i Norge](/turistfiske-regler/) — regelverk, registreringsplikt og kvoter
+- [Skreifiske i Lofoten: regler og tips](/blogg/skreifiske-lofoten-regler/) — sesongen, sikkerhet og posisjonering som vertskap
+- [Kveitefiske 2026: minstemål, maksmål og sesong](/blogg/kveitefiske-2026-regler/) — alt om de strenge kveitereguleringene
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hvor er Norges beste sted for kveite?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sørøya i Vest-Finnmark regnes som ett av Norges aller beste steder for storkveite. Bestanden i havområdene rundt Sørøya og Lopphavet har vokst de siste tiårene, og fangster på 80-120 kilo er ikke uvanlig. Sesongen er best fra mai og utover, med topp i august og september."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Når er skreisesongen i Lofoten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Skreisesongen i Lofoten varer fra januar til april, med toppen i februar og mars. Skreien er den nordøstarktiske torsken som vandrer fra Barentshavet for å gyte langs sokkelkanten utenfor Lofoten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan turistfiskere ta med seg fisk hjem fra alle norske destinasjoner?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, men bare dersom utleieren er registrert som turistfiskebedrift i Fiskeridirektoratets register. Uten slik registrering har gjestene ingen rett til utførselskvote for fisk, uavhengig av destinasjon. Utførselskvoten er 15 kg per person i 2026."
+      }
+    }
+  ]
+}
+</script>
