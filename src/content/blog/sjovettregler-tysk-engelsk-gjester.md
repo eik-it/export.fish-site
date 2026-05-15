@@ -13,6 +13,11 @@ image:
 
 Tyske og nederlandske gjester er flinke på sjøen. Mange er vant til å ro og padle, noen har båterfaring fra Nordsjøen eller de store innsjøene i Mellom-Europa, men norsk kyst er noe annet. Strøm, skjær, rask vindøkning og plutselig tåke overrasker gjester som ikke kjenner farvannene. Som utleier er det din oppgave å gi dem det de trenger for å ferdes trygt, og sjøvettreglene er et naturlig utgangspunkt.
 
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Sjøvettreglene finnes kun offisielt på norsk, men denne artikkelen gir deg alle ni reglene ferdige på norsk, engelsk og tysk, klar til å printe og henge på hytta. Kombiner med reglene for <a href="/hytteutleie-med-bat-regler/">hytteutleie med båt</a> for en komplett gjestebriefing.</p>
+</div>
+
 Problemet er at sjøvettreglene finnes offisielt bare på norsk. Sjøfartsdirektoratet har ikke en ferdig trykkeklar versjon på engelsk eller tysk. Det betyr at du som utleier enten lar det være, eller du oversetter og lager ditt eget ark. Denne artikkelen gjør jobben for deg.
 
 ## De ni sjøvettreglene på norsk, engelsk og tysk
@@ -79,14 +84,12 @@ Vurder også å inkludere dette i leieavtalen for hytte og båt. En kvittering p
 
 Mange tyske og nederlandske gjester har båtførerbevis fra hjemlandet. Som regel anerkjennes disse i norsk farvann for fritidsbåter under 15 meter, men det er verdt å orientere seg om hva som faktisk gjelder. Se [hva som gjelder for utenlandske båtførerbevis](/blogg/batforerbevis-utenlandske-bevis/) for en gjennomgang av reglene.
 
-## Krysslenker for utleiere
+## Relaterte guider
 
-Sjøvettreglene er én del av et større ansvarsbilde. Disse artiklene henger naturlig sammen:
-
-- [Sjekkliste for leie av hytte med båt](/blogg/leie-hytte-med-bat-sjekkliste/): alt gjestene trenger å vite fra ankomst til avreise
-- [Sikkerhetsutstyr i utleiebåt](/blogg/sikkerhetsutstyr-utleiebat-sjekkliste/): hva loven krever og hva du bør ha i tillegg
-- [Båtførerbevis for utenlandske gjester](/blogg/batforerbevis-utenlandske-bevis/): hvilke bevis som gjelder i norsk farvann
-- [Lovpålagt fangstrapportering for fritidsboligeiere](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/): hva som kreves av deg som utleier
+- [Hytteutleie med båt: regler og plikter](/hytteutleie-med-bat-regler/) — komplett oversikt for utleiere
+- [Sikkerhetsutstyr i utleiebåt](/blogg/sikkerhetsutstyr-utleiebat-sjekkliste/) — hva loven krever og hva du bør ha i tillegg
+- [Båtførerbevis for utenlandske gjester](/blogg/batforerbevis-utenlandske-bevis/) — hvilke bevis som gjelder i norsk farvann
+- [Daglig fangstrapportering](/fangstrapportering-turistfiske/) — slik oppfyller du rapporteringsplikten som utleier
 
 ## Kilder
 
