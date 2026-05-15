@@ -15,6 +15,11 @@ Spørsmålet dukker opp hvert år: har gjesten lov til å ta båten ut alene? De
 
 Som utleier sitter du med ansvaret. Ikke nødvendigvis strafferettslig (det er gjestens ansvar å følge reglene), men praktisk. Setter du nøklene i hånden på noen som ikke har lov til å kjøre, og det går galt, kan det få konsekvenser for deg, ikke minst via forsikringen.
 
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Alle som er født 1. januar 1980 eller senere og skal føre en fritidsbåt med motor over 25 hk eller lengde over 8 meter, trenger båtførerbevis i Norge. EØS-utstedte bevis gjelder, og ICC-sertifikater med kystnavigasjon (herunder tyske og nederlandske) godtas. Sjekk alltid at gjestens bevis faktisk dekker båttypen du leier ut. Les om <a href="/hytteutleie-med-bat-regler/">regler for hytteutleie med båt</a> for en samlet oversikt.</p>
+</div>
+
 Her er en gjennomgang av hva regelverket faktisk sier, hva du som utleier bør sjekke, og hva som gjelder for utenlandske gjester.
 
 ## Hvem trenger båtførerbevis i Norge?
@@ -90,7 +95,7 @@ Det er gjestens ansvar å kjenne til og overholde reglene. Men som utleier er de
 
 ## Bevissjekk er bare ett punkt i innsjekkingen
 
-En god innsjekkingsrutine dekker mer enn bare beviset. Utstyr, nødprosedyrer og kommunikasjon på sjøen hører med. [Sjekklisten for utleie av hytte med båt](/blogg/leie-hytte-med-bat-sjekkliste/) er et godt sted å starte hvis du vil lage en samlet rutine.
+En god innsjekkingsrutine dekker mer enn bare beviset. Utstyr, nødprosedyrer og kommunikasjon på sjøen hører med. [Guiden om hytteutleie med båt](/hytteutleie-med-bat-regler/) er et godt sted å starte hvis du vil lage en samlet rutine.
 
 Husk også at krav til [sikkerhetsutstyr om bord](/blogg/sikkerhetsutstyr-utleiebat-sjekkliste/) er et selvstendig regelverksområde. Bevisplikt og utstyrskrav er to separate ting. Begge gjelder.
 
@@ -105,3 +110,42 @@ Gjestene dine er turistfiskere, og da gjelder [fangstrapporteringsplikten](/blog
 - Sjøfartsdirektoratet: [Internasjonalt båtførersertifikat (ICC)](https://www.sdir.no/fritidsbat/sertifikater/internasjonalt-batforersertifikat/)
 - Sjøfartsdirektoratet: [Høyhastighetsbevis](https://www.sdir.no/fritidsbat/sertifikater/hoyhastighetsbevis/)
 - UNECE: [International Certificates for Operators of Pleasure Craft, Resolution No. 40](https://unece.org/transport/inland-water-transport/international-certificates-operator-pleasure-craft-res-no-40)
+
+## Relaterte guider
+
+- [Hytteutleie med båt: regler og krav](/hytteutleie-med-bat-regler/) — samlet oversikt for utleiere som kombinerer hytte og båt
+- [Sikkerhetsutstyr på utleiebåten](/blogg/sikkerhetsutstyr-utleiebat-sjekkliste/) — påbudt og anbefalt utstyr om bord
+- [Sjøvettreglene på norsk, engelsk og tysk](/blogg/sjovettregler-tysk-engelsk-gjester/) — klar til å printe og henge opp for utenlandske gjester
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Trenger alle gjester båtførerbevis for å bruke utleiebåten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nei. Alle som er født før 1. januar 1980 er unntatt fra bevisplikt og kan kjøre fritidsbåt opp til 15 meter uten bevis. For de som er født 1980 eller senere og skal kjøre båt med motor over 25 hk eller lengde over 8 meter, er bevis påkrevd."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gjelder tyske og nederlandske båtførerbevis i Norge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, som regel. Både Tyskland og Nederland er tilsluttet ICC-ordningen (UNECE resolusjon nr. 40). Et tysk Sportbootführerschein See eller nederlandsk CWO-sertifikat utstedt som ICC med kystnavigasjon godtas i Norge. Kanalsertifikater (CEVNI) uten kystnavigasjon gjelder derimot ikke."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva bør jeg som utleier sjekke angående båtførerbevis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sjekk at båten utløser bevisplikt (størrelse og motoreffekt), be gjester born 1980 eller senere om å vise bevis, og kontroller at beviset dekker båttypen du leier ut. Les forsikringsvilkårene nøye, da de kan stille strengere krav enn loven."
+      }
+    }
+  ]
+}
+</script>
