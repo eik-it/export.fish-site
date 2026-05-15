@@ -1,6 +1,8 @@
-# Vilkår for bruk av export.fish
+# Vilkår for abonnement på export.fish
 
-Velkommen til export.fish. Disse vilkårene regulerer bruken av våre tjenester for fangstrapportering fra turistfiskevirksomhet. Ved å registrere din bedrift og ta i bruk tjenesten aksepterer du disse vilkårene.
+Disse vilkårene regulerer abonnementsforholdet mellom Eksportfiske.no (EIK IT) og turistfiskebedrifter som registrerer seg via eksportfiske.no. Ved å registrere din bedrift og ta i bruk tjenesten aksepterer du disse vilkårene.
+
+**Relatert:** Selve rapporteringsverktøyet export.fish har egne sluttbrukervilkår som regulerer turistens og fiskerens bruk av PWA-en (fangstregistrering, eksportdokumenter osv.). Se [export.fish sine vilkår](https://export.fish/terms) og [personvernerklæring](https://export.fish/privacy) for de detaljene.
 
 ## 1. Tjenestebeskrivelse
 
@@ -31,30 +33,9 @@ Som turistfiskebedrift forplikter du deg til å:
 
 ## 4. Databehandling og personvern
 
-### 4.1 Dataansvar
-Eksportfiske.no er databehandler for registrerte fangstdata. Turistfiskebedriften er dataansvarlig for turistenes kontaktinformasjon.
+Eksportfiske.no behandler personopplysninger i forbindelse med abonnementet (bedriftsinformasjon og kontaktdata) og leveransen av tjenesten. Fullstendig informasjon om hvilke opplysninger som behandles, behandlingsgrunnlag, lagringstid, underleverandører og dine rettigheter etter GDPR finnes i [Personvernerklæringen](/personvern).
 
-### 4.2 Innsamlet informasjon
-Tjenesten samler inn:
-- Bedriftsinformasjon (organisasjonsnummer, navn, kontaktperson).
-- Turistinformasjon (e-postadresse for tilgangskontroll).
-- Fangstdata (art, antall, dato, lokasjon).
-
-### 4.3 Behandlingsgrunnlag
-Data behandles for å oppfylle lovpålagt rapporteringsplikt i henhold til Forskrift om rapportering av fangst fra turistfiskevirksomhet.
-
-### 4.4 Datadeling
-Fangstdata rapporteres automatisk til Fiskeridirektoratet i henhold til lovkrav. Data deles ikke med andre tredjeparter uten ditt samtykke.
-
-### 4.5 Bruk av signatur
-Den håndskrevne signaturen som samles inn under registrering brukes på utførselsdokumentasjon generert av tjenesten. Signaturen vil kun brukes til utstedelse av eksportdokumenter for turister. Annen bruk av signaturen er ikke tillatt.
-
-### 4.6 Brukerrettigheter
-I henhold til GDPR har turistene rett til:
-- Innsyn i egne registrerte data.
-- Retting av uriktige opplysninger.
-- Sletting av data der det ikke foreligger lovpålagt lagringsplikt.
-- Dataportabilitet.
+For personopplysninger som behandles av selve rapporteringsverktøyet (fangstdata, turistinformasjon, signaturer til utførselsdokumentasjon m.m.), se [export.fish sin personvernerklæring](https://export.fish/privacy).
 
 ## 5. Immaterielle rettigheter
 

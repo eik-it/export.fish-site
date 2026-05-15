@@ -1,8 +1,8 @@
 # Personvernerklæring for eksportfiske.no
 
-Denne personvernerklæringen beskriver hvordan markedsføringssiden eksportfiske.no behandler personopplysninger. Siden drives av Eksportfiske.no (EIK IT, org.nr. 993981532).
+Denne personvernerklæringen beskriver hvordan vi behandler personopplysninger samlet inn via markedsføringssiden eksportfiske.no, inkludert skjemainnsendinger og analyseinformasjon. Behandlingsansvarlig er Eksportfiske.no (EIK IT, org.nr. 993981532).
 
-**Merk:** Rapporteringstjenesten export.fish er en separat tjeneste med egen personvernerklæring og egne vilkår. Personopplysninger som behandles inne i export.fish (fangstdata, turistdata, dokumentutstedelse osv.) dekkes ikke av denne erklæringen, men av [export.fish sin personvernerklæring](https://export.fish/privacy) og [vilkår for bruk](https://export.fish/terms).
+**Relatert:** Rapporteringstjenesten export.fish har sin egen [personvernerklæring](https://export.fish/privacy) og [vilkår](https://export.fish/terms) som dekker turistens og fiskerens bruk av PWA-en (fangstdata, eksportdokumenter osv.). Denne erklæringen omhandler kun det som skjer på eksportfiske.no og det som videreformidles til våre systemer som følge av registrering.
 
 ## 1. Behandlingsansvarlig
 
@@ -21,7 +21,7 @@ Når du fyller ut registreringsskjema eller kontaktforespørsel på siden, samle
 - Telefonnummer
 - Andre opplysninger du frivillig deler i meldingsfelt
 
-Disse opplysningene videresendes til rapporteringstjenesten export.fish for videre behandling i henhold til [export.fish sin personvernerklæring](https://export.fish/privacy).
+Disse opplysningene brukes til å besvare henvendelsen din og starte registreringsprosessen for et export.fish-abonnement. Lagring og videre behandling skjer i våre egne backend-systemer (export.fish API) under samme behandlingsansvar.
 
 ### 2.2 Tekniske data og bruk av siden
 - Standard nettleserdata (IP-adresse, nettlesertype, besøkte sider) når du har gitt samtykke til analyseverktøy
@@ -53,31 +53,26 @@ Følgende underleverandører behandler personopplysninger i forbindelse med drif
 
 | Underleverandør | Tjeneste | Dataoverføring |
 |---|---|---|
-| GitHub, Inc. | Hosting av statisk nettside (GitHub Pages) | USA, EU-US Data Privacy Framework |
 | Google LLC | Google Analytics (kun etter samtykke) | USA, EU-US Data Privacy Framework |
 | Meta Platforms Inc. | Meta Pixel (kun etter samtykke) | USA, EU-US Data Privacy Framework |
 
 Hver av leverandørene har egne databehandleravtaler og personvernerklæringer som regulerer deres behandling av personopplysninger. Vi henviser til hver leverandørs vilkår for fullstendige detaljer.
 
-## 6. Videresending til export.fish
-
-Skjemainnsendinger fra eksportfiske.no videresendes direkte til API-et til rapporteringstjenesten export.fish. Eksportfiske.no lagrer ikke selv en kopi av innsendingen ut over det som måtte vises i nettleserloggen din. For hvordan opplysningene behandles videre, se [export.fish sin personvernerklæring](https://export.fish/privacy) og [vilkår](https://export.fish/terms).
-
-## 7. Lagringstid
+## 6. Lagringstid
 
 | Type data | Lagringstid |
 |---|---|
 | Samtykkevalg (`cookie-consent`) | Lagres i nettleseren din til du sletter den manuelt |
-| Skjemainnsendinger | Eksportfiske.no lagrer ingen kopi; videreformidles til export.fish |
+| Skjemainnsendinger | Lagres permanent i våre systemer som del av kundeforholdet |
 | Analyseinformasjon (Google Analytics) | I henhold til Google Analytics standard (14 måneder med mindre vi justerer ned) |
 
-## 8. Sikkerhetstiltak
+## 7. Sikkerhetstiltak
 
 - All trafikk til og fra siden krypteres med HTTPS/TLS
-- Statisk hosting via GitHub Pages med standard sikkerhetstiltak fra GitHub
-- Ingen brukerdatabaser eller sensitive datalagringer på selve siden
+- Statisk hosting med standard sikkerhetstiltak
+- Ingen brukerdatabaser eller sensitive datalagringer på selve markedsføringssiden; persistert data ligger i våre backend-systemer
 
-## 9. Dine rettigheter etter GDPR
+## 8. Dine rettigheter etter GDPR
 
 Som registrert har du følgende rettigheter:
 
@@ -91,7 +86,7 @@ For å benytte dine rettigheter, kontakt oss på [kontakt@eksportfiske.no](mailt
 
 Du har også rett til å klage til **Datatilsynet** hvis du mener behandlingen er i strid med personvernregelverket: [datatilsynet.no](https://www.datatilsynet.no).
 
-## 10. Kontaktinformasjon for personvern
+## 9. Kontaktinformasjon for personvern
 
 For alle spørsmål om personvern og behandling av personopplysninger på eksportfiske.no:
 
