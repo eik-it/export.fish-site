@@ -1,113 +1,43 @@
-# Personvernerklæring for export.fish
+# Personvernerklæring for eksportfiske.no
 
-Denne personvernerklæringen beskriver hvordan Eksportfiske.no (EIK IT, org.nr. 993981532) behandler personopplysninger i forbindelse med tjenesten export.fish.
+Denne personvernerklæringen beskriver hvordan markedsføringssiden eksportfiske.no behandler personopplysninger. Siden drives av Eksportfiske.no (EIK IT, org.nr. 993981532).
 
-## 1. Behandlingsansvarlig og databehandler
+**Merk:** Rapporteringstjenesten export.fish er en separat tjeneste med egen personvernerklæring og egne vilkår. Personopplysninger som behandles inne i export.fish (fangstdata, turistdata, dokumentutstedelse osv.) dekkes ikke av denne erklæringen, men av [export.fish sin personvernerklæring](https://export.fish/privacy) og [vilkår for bruk](https://export.fish/terms).
 
-**Behandlingsansvarlig** for turistfiskebedriftens kontaktinformasjon og virksomhetsdata er turistfiskebedriften selv.
+## 1. Behandlingsansvarlig
 
-**Databehandler** for fangstdata og rapporteringsdata er Eksportfiske.no (EIK IT). Vi behandler disse dataene på vegne av turistfiskebedriften i henhold til databehandleravtale (se punkt 8).
+Eksportfiske.no (EIK IT, org.nr. 993981532) er behandlingsansvarlig for personopplysninger som samles inn via eksportfiske.no.
 
-For spørsmål om behandlingen, kontakt oss på [kontakt@eksportfiske.no](mailto:kontakt@eksportfiske.no).
+Kontakt: [kontakt@eksportfiske.no](mailto:kontakt@eksportfiske.no)
 
-## 2. Behandlingsgrunnlag
+## 2. Hvilke opplysninger samles inn
 
-Personopplysninger behandles på følgende grunnlag etter GDPR art. 6:
+Eksportfiske.no behandler følgende kategorier opplysninger:
 
-- **Art. 6 (1) c — rettslig forpliktelse**: Fangstdata behandles for å oppfylle rapporteringsplikt etter forskrift 20. desember 2017 nr. 2445 om rapportering av fangster fra turistfiskevirksomheter.
-- **Art. 6 (1) b — oppfyllelse av avtale**: Kontaktopplysninger og bedriftsdata behandles for å levere tjenesten i henhold til inngåtte vilkår.
-- **Art. 6 (1) f — berettiget interesse**: Teknisk logging og sikkerhetstiltak for å beskytte tjenestens integritet.
+### 2.1 Skjemainnsendinger
+Når du fyller ut registreringsskjema eller kontaktforespørsel på siden, samler vi inn opplysningene du selv oppgir, typisk:
+- Bedriftsnavn og organisasjonsnummer
+- Kontaktperson og e-postadresse
+- Telefonnummer
+- Andre opplysninger du frivillig deler i meldingsfelt
 
-## 3. Hvilke opplysninger behandles
+Disse opplysningene videresendes til rapporteringstjenesten export.fish for videre behandling i henhold til [export.fish sin personvernerklæring](https://export.fish/privacy).
 
-### 3.1 Turistfiskebedriftens data
-- Navn og kontaktperson
-- Organisasjonsnummer
-- E-postadresse (driftskontakt)
-- Håndskreven signatur (benyttes ved utstedelse av utførselsdokumentasjon)
+### 2.2 Tekniske data og bruk av siden
+- Standard nettleserdata (IP-adresse, nettlesertype, besøkte sider) når du har gitt samtykke til analyseverktøy
+- Lagring av ditt samtykkevalg i nettleserens localStorage (`cookie-consent`)
 
-### 3.2 Turistdata
-- E-postadresse (for tilgangskontroll til rapporteringsapp)
-- Fangstdata per dag: art, antall, dato, fiskeperiode
+## 3. Behandlingsgrunnlag
 
-### 3.3 Tekniske data
-- IP-adresse og nettleserinformasjon (sikkerhet og feilsøking)
-- Innloggingstidspunkter og aktivitetslogg
+- **Art. 6 (1) b — oppfyllelse av avtale / forespørsel:** Skjemainnsendinger behandles for å besvare henvendelsen din eller starte registreringsprosessen.
+- **Art. 6 (1) a — samtykke:** Analyse- og markedsføringskapsler aktiveres kun etter eksplisitt samtykke via cookie-banneret.
+- **Art. 6 (1) f — berettiget interesse:** Drift, sikkerhet og feilsøking av nettsiden.
 
-## 4. Formål med behandlingen
+## 4. Informasjonskapsler og sporing
 
-Opplysningene benyttes til:
-- Daglig rapportering av fangstdata til Fiskeridirektoratet
-- Utstedelse av eksportdokumentasjon for turistene
-- Fakturering og kontraktshåndtering
-- Support og kommunikasjon med registrerte bedrifter
-
-## 5. Lagringstid
-
-| Type data | Lagringstid |
-|---|---|
-| Fangstdata og rapporter | Lagres permanent som referansegrunnlag og dokumentasjon |
-| Bedriftsdata (aktiv konto) | Lagres så lenge kontoen er aktiv |
-| Bedriftsdata (avsluttet konto) | Lagres permanent |
-| Tekniske logger | I henhold til standard retensjon hos Google Cloud Platform; vi sletter ikke logger aktivt |
-
-## 6. Deling av data
-
-Fangstdata rapporteres automatisk til **Fiskeridirektoratet** i henhold til lovkrav. Data deles ikke med andre tredjeparter uten ditt eksplisitte samtykke, med unntak av underleverandørene beskrevet i punkt 7.
-
-## 7. Underleverandører (databehandlere)
-
-Vi benytter følgende underleverandører som behandler personopplysninger på våre vegne:
-
-| Underleverandør | Tjeneste | Dataoverføring |
-|---|---|---|
-| Google Cloud Platform (GCP) | Skyhosting og infrastruktur | EU-region |
-| Supabase | Database og autentisering | EU-region |
-| Mailgun | Transaksjonell e-post | EU-region |
-| Google LLC | Google Analytics (kun etter samtykke) | USA, EU-US Data Privacy Framework |
-| Meta Platforms Inc. | Meta Pixel (kun etter samtykke) | USA, EU-US Data Privacy Framework |
-
-Hver av leverandørene har egne databehandleravtaler og personvernerklæringer som regulerer deres behandling av personopplysninger. Vi henviser til hver leverandørs vilkår for fullstendige detaljer.
-
-## 8. Databehandleravtale
-
-Som databehandler for fangstdata inngår vi databehandleravtale med alle registrerte turistfiskebedrifter. Avtalen regulerer:
-- Formål og omfang for behandlingen
-- Sikkerhetskrav og konfidensialitet
-- Turistfiskebedriftens instruksjonsrett
-- Rutiner ved brudd på personopplysningssikkerheten
-
-Databehandleravtalen er en del av vilkårene du aksepterte ved registrering. Ta kontakt på [kontakt@eksportfiske.no](mailto:kontakt@eksportfiske.no) hvis du ønsker en kopi.
-
-## 9. Sikkerhetstiltak
-
-Vi benytter følgende tekniske og organisatoriske tiltak for å beskytte personopplysningene:
-- Kryptert overføring (HTTPS/TLS) for all kommunikasjon
-- Kryptert lagring av sensitiv data i databasen
-- Tilgangskontroll: kun autorisert personell har tilgang til produksjonsdata
-- Regelmessige sikkerhetsvurderinger
-- Automatiske varsler ved uvanlig aktivitet
-
-## 10. Dine rettigheter etter GDPR
-
-Som registrert har du følgende rettigheter:
-
-- **Innsyn (art. 15)**: Du kan be om innsyn i hvilke opplysninger vi har om deg.
-- **Retting (art. 16)**: Du kan be om at uriktige opplysninger rettes.
-- **Sletting (art. 17)**: Du kan be om sletting av opplysninger der det ikke foreligger lovpålagt lagringsplikt.
-- **Dataportabilitet (art. 20)**: Du kan be om å få utlevert dine data i maskinlesbart format.
-- **Innsigelse (art. 21)**: Du kan protestere mot behandling basert på berettiget interesse.
-
-For å benytte dine rettigheter, kontakt oss på [kontakt@eksportfiske.no](mailto:kontakt@eksportfiske.no). Vi vil svare innen 30 dager.
-
-Du har også rett til å klage til **Datatilsynet** hvis du mener behandlingen er i strid med personvernregelverket: [datatilsynet.no](https://www.datatilsynet.no).
-
-## 11. Informasjonskapsler
-
-Export.fish bruker informasjonskapsler i to kategorier:
+Eksportfiske.no bruker informasjonskapsler i to kategorier:
 
 **Strengt nødvendige (uten samtykke):**
-- Innloggings- og sesjonsinformasjon
 - Lagring av ditt samtykkevalg (`cookie-consent` i nettleserens localStorage)
 
 **Analyse og markedsføring (kun etter samtykke):**
@@ -117,13 +47,55 @@ Når du klikker "Godta" i cookie-banneret, aktiveres:
 
 Vi bruker Google Consent Mode v2, som betyr at all analyse og markedsføring er deaktivert som standard inntil du gir samtykke. Du kan trekke tilbake samtykket når som helst ved å slette `cookie-consent` fra nettleserens localStorage, eller bruke nettleserens funksjon for å slette informasjonskapsler for siden.
 
-Begge analysetjenestene overfører data til USA. Overføringen skjer i henhold til EU-US Data Privacy Framework (DPF), som er en godkjent overføringsmekanisme etter GDPR.
+## 5. Underleverandører
 
-## 12. Kontaktinformasjon for personvern
+Følgende underleverandører behandler personopplysninger i forbindelse med driften av eksportfiske.no:
 
-For alle spørsmål om personvern og behandling av personopplysninger:
+| Underleverandør | Tjeneste | Dataoverføring |
+|---|---|---|
+| GitHub, Inc. | Hosting av statisk nettside (GitHub Pages) | USA, EU-US Data Privacy Framework |
+| Google LLC | Google Analytics (kun etter samtykke) | USA, EU-US Data Privacy Framework |
+| Meta Platforms Inc. | Meta Pixel (kun etter samtykke) | USA, EU-US Data Privacy Framework |
 
-**E-post**: [kontakt@eksportfiske.no](mailto:kontakt@eksportfiske.no)
+Hver av leverandørene har egne databehandleravtaler og personvernerklæringer som regulerer deres behandling av personopplysninger. Vi henviser til hver leverandørs vilkår for fullstendige detaljer.
 
-**Organisasjon**: EIK IT  
-**Organisasjonsnummer**: 993981532
+## 6. Videresending til export.fish
+
+Skjemainnsendinger fra eksportfiske.no videresendes direkte til API-et til rapporteringstjenesten export.fish. Eksportfiske.no lagrer ikke selv en kopi av innsendingen ut over det som måtte vises i nettleserloggen din. For hvordan opplysningene behandles videre, se [export.fish sin personvernerklæring](https://export.fish/privacy) og [vilkår](https://export.fish/terms).
+
+## 7. Lagringstid
+
+| Type data | Lagringstid |
+|---|---|
+| Samtykkevalg (`cookie-consent`) | Lagres i nettleseren din til du sletter den manuelt |
+| Skjemainnsendinger | Eksportfiske.no lagrer ingen kopi; videreformidles til export.fish |
+| Analyseinformasjon (Google Analytics) | I henhold til Google Analytics standard (14 måneder med mindre vi justerer ned) |
+
+## 8. Sikkerhetstiltak
+
+- All trafikk til og fra siden krypteres med HTTPS/TLS
+- Statisk hosting via GitHub Pages med standard sikkerhetstiltak fra GitHub
+- Ingen brukerdatabaser eller sensitive datalagringer på selve siden
+
+## 9. Dine rettigheter etter GDPR
+
+Som registrert har du følgende rettigheter:
+
+- **Innsyn (art. 15):** Du kan be om innsyn i hvilke opplysninger vi har om deg.
+- **Retting (art. 16):** Du kan be om at uriktige opplysninger rettes.
+- **Sletting (art. 17):** Du kan be om sletting av opplysninger der det ikke foreligger lovpålagt lagringsplikt.
+- **Dataportabilitet (art. 20):** Du kan be om å få utlevert dine data i maskinlesbart format.
+- **Innsigelse (art. 21):** Du kan protestere mot behandling basert på berettiget interesse.
+
+For å benytte dine rettigheter, kontakt oss på [kontakt@eksportfiske.no](mailto:kontakt@eksportfiske.no). Vi vil svare innen 30 dager.
+
+Du har også rett til å klage til **Datatilsynet** hvis du mener behandlingen er i strid med personvernregelverket: [datatilsynet.no](https://www.datatilsynet.no).
+
+## 10. Kontaktinformasjon for personvern
+
+For alle spørsmål om personvern og behandling av personopplysninger på eksportfiske.no:
+
+**E-post:** [kontakt@eksportfiske.no](mailto:kontakt@eksportfiske.no)
+
+**Organisasjon:** EIK IT
+**Organisasjonsnummer:** 993981532
