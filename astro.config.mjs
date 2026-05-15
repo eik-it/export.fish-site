@@ -79,11 +79,14 @@ export default defineConfig({
   site: SITE_URL,
   base: '',
 
-  // Redirect old blog post to new landing page
-  // Note: Astro static redirects generate HTML with meta refresh (GitHub Pages compatible)
+  // Redirect old blog posts to new landing pages (meta refresh for GitHub Pages)
   redirects: {
     '/blogg/daglig-fangstrapportering-turistfiske': '/fangstrapportering-turistfiske/',
     '/blogg/daglig-fangstrapportering-turistfiske/': '/fangstrapportering-turistfiske/',
+    '/blogg/utforselsdokument-fisk-krav': '/utforselsdokumentasjon-fisk/',
+    '/blogg/utforselsdokument-fisk-krav/': '/utforselsdokumentasjon-fisk/',
+    '/blogg/leie-hytte-med-bat-sjekkliste': '/hytteutleie-med-bat-regler/',
+    '/blogg/leie-hytte-med-bat-sjekkliste/': '/hytteutleie-med-bat-regler/',
   },
 
   build: {
