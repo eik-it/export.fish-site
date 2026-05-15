@@ -1,7 +1,5 @@
 # Personvernerklæring for export.fish
 
-Sist oppdatert: mai 2026
-
 Denne personvernerklæringen beskriver hvordan Eksportfiske.no (EIK IT, org.nr. 993981532) behandler personopplysninger i forbindelse med tjenesten export.fish.
 
 ## 1. Behandlingsansvarlig og databehandler
@@ -48,10 +46,10 @@ Opplysningene benyttes til:
 
 | Type data | Lagringstid |
 |---|---|
-| Fangstdata og rapporter | Minimum 5 år (lovpålagt arkivplikt) |
-| Bedriftsdata (aktiv konto) | Til kontoen avsluttes |
-| Bedriftsdata (avsluttet konto) | 3 år etter oppsigelse |
-| Tekniske logger | 90 dager |
+| Fangstdata og rapporter | Lagres permanent som referansegrunnlag og dokumentasjon |
+| Bedriftsdata (aktiv konto) | Lagres så lenge kontoen er aktiv |
+| Bedriftsdata (avsluttet konto) | Lagres permanent |
+| Tekniske logger | I henhold til standard retensjon hos Google Cloud Platform; vi sletter ikke logger aktivt |
 
 ## 6. Deling av data
 
@@ -63,10 +61,11 @@ Vi benytter følgende underleverandører som behandler personopplysninger på v�
 
 | Underleverandør | Tjeneste | Dataoverføring |
 |---|---|---|
-| [Hosting-leverandør — oppdateres av behandlingsansvarlig] | Skyhosting og database | Innenfor EØS |
-| [E-postleverandør — oppdateres av behandlingsansvarlig] | Transaksjonell e-post | Innenfor EØS |
+| Google Cloud Platform (GCP) | Skyhosting og infrastruktur | EU-region |
+| Supabase | Database og autentisering | EU-region |
+| Mailgun | Transaksjonell e-post | EU-region |
 
-Alle underleverandører er bundet av databehandleravtale og behandler kun data i samsvar med våre instrukser.
+Hver av leverandørene har egne databehandleravtaler og personvernerklæringer som regulerer deres behandling av personopplysninger. Vi henviser til hver leverandørs vilkår for fullstendige detaljer.
 
 ## 8. Databehandleravtale
 
