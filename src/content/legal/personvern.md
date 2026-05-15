@@ -64,6 +64,8 @@ Vi benytter følgende underleverandører som behandler personopplysninger på v�
 | Google Cloud Platform (GCP) | Skyhosting og infrastruktur | EU-region |
 | Supabase | Database og autentisering | EU-region |
 | Mailgun | Transaksjonell e-post | EU-region |
+| Google LLC | Google Analytics (kun etter samtykke) | USA, EU-US Data Privacy Framework |
+| Meta Platforms Inc. | Meta Pixel (kun etter samtykke) | USA, EU-US Data Privacy Framework |
 
 Hver av leverandørene har egne databehandleravtaler og personvernerklæringer som regulerer deres behandling av personopplysninger. Vi henviser til hver leverandørs vilkår for fullstendige detaljer.
 
@@ -102,7 +104,20 @@ Du har også rett til å klage til **Datatilsynet** hvis du mener behandlingen e
 
 ## 11. Informasjonskapsler
 
-Export.fish bruker nødvendige informasjonskapsler for innlogging og sesjonshåndtering. Vi bruker ikke sporings- eller reklamekapsler uten ditt samtykke. Se vår [cookieinformasjon](#informasjonskapsler) for detaljer.
+Export.fish bruker informasjonskapsler i to kategorier:
+
+**Strengt nødvendige (uten samtykke):**
+- Innloggings- og sesjonsinformasjon
+- Lagring av ditt samtykkevalg (`cookie-consent` i nettleserens localStorage)
+
+**Analyse og markedsføring (kun etter samtykke):**
+Når du klikker "Godta" i cookie-banneret, aktiveres:
+- **Google Analytics** for å forstå hvordan siden brukes
+- **Meta Pixel** for å måle effekten av annonsering på Facebook og Instagram
+
+Vi bruker Google Consent Mode v2, som betyr at all analyse og markedsføring er deaktivert som standard inntil du gir samtykke. Du kan trekke tilbake samtykket når som helst ved å slette `cookie-consent` fra nettleserens localStorage, eller bruke nettleserens funksjon for å slette informasjonskapsler for siden.
+
+Begge analysetjenestene overfører data til USA. Overføringen skjer i henhold til EU-US Data Privacy Framework (DPF), som er en godkjent overføringsmekanisme etter GDPR.
 
 ## 12. Kontaktinformasjon for personvern
 
