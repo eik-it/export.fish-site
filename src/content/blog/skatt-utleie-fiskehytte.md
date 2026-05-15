@@ -13,6 +13,11 @@ image:
 
 Når du leier ut en fiskehytte med båt til turistfiskere, møter du raskt tre forskjellige prosenttall: 12 %, 25 % og 22 %. De handler om ulike ting: MVA-sats på overnatting, MVA-sats på båtutleie og selskapsskatt på overskudd. Det er lett å blande dem, og det kan koste deg penger i begge retninger.
 
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Utleie av fiskehytte ilegges 12 % MVA (overnatting) og 25 % MVA (båtutleie). MVA-plikten inntrer ved over 50 000 kroner i bruttoomsetning siste 12 måneder. Inntekten skattlegges som kapital (22 %) eller næring avhengig av aktivitetsnivå. Se <a href="/hytteutleie-med-bat-regler/">hytteutleie med båt</a> for komplett oversikt over plikter.</p>
+</div>
+
 Denne artikkelen forklarer hva hvert tall betyr, hvordan kapitalinntekt skiller seg fra næringsinntekt, og hvilke grenser som avgjør om du er MVA-pliktig i det hele tatt. Målet er at du skal forstå systemet godt nok til å stille de riktige spørsmålene til regnskapsfører eller Skatteetaten, ikke at artikkelen skal erstatte den samtalen.
 
 ## MVA: tre satser, tre situasjoner
@@ -93,7 +98,7 @@ Hvis du leier ut [uten å ha vurdert om du er MVA-pliktig](/blogg/ma-du-registre
 
 Det er også verdt å tenke på at plattformer som Airbnb rapporterer inntektsdata til Skatteetaten fra og med 2026. Det betyr at inntekter du tidligere kanskje ikke tenkte på som "offisielle", nå vil ligge synlig i skattemyndighetenes systemer.
 
-Har du en [sjekkliste for alt som bør være på plass](/blogg/leie-hytte-med-bat-sjekkliste/) når du leier ut hytte og båt? Det inkluderer ikke bare skatteforhold, men også [lovpålagt fangstrapportering for gjestene dine](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/).
+Har du en [sjekkliste for alt som bør være på plass](/hytteutleie-med-bat-regler/) når du leier ut hytte og båt? Det inkluderer ikke bare skatteforhold, men også [lovpålagt fangstrapportering for gjestene dine](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/).
 
 ---
 
@@ -110,3 +115,43 @@ Denne artikkelen er ment som pedagogisk oversikt og er ikke skatterådgivning. S
 - **Skatteetaten: utleie av bolig**: Regler for kapitalinntekt, bunnfradrag og næringsvurdering. [skatteetaten.no](https://www.skatteetaten.no/person/skatt/hjelp-til-riktig-skatt/bolig-og-eiendeler/utleie/)
 - **Skatteetaten: merverdiavgift og utleie**: Veiledning om MVA-plikt for utleietjenester. [skatteetaten.no](https://www.skatteetaten.no/bedrift-og-organisasjon/avgifter/mva/)
 - **Skatteklagenemndas praksis**: Avgjørelser om næringsvurdering ved Airbnb-utleie. Tilgjengelig via [Lovdata Pro](https://lovdata.no/pro) under Skatteklagenemnda.
+
+## Relaterte guider
+
+- [Hytteutleie med båt: regler og plikter](/hytteutleie-med-bat-regler/) — komplett oversikt for utleiere
+- [Registrering som turistfiskebedrift](/registrering/) — meld virksomheten din og kom i gang
+- [Forsikring for utleiebåt og fiskehytte](/blogg/forsikring-utleiebat-fiskehytte/) — hva du bør sjekke med forsikringsselskapet
+- [DPI-rapportering 2026](/blogg/plattformrapportering-2026-dpi-airbnb/) — Airbnb og Booking.com rapporterer til Skatteetaten
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hvilken MVA-sats gjelder for utleie av fiskehytte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Overnatting i fiskehytte ilegges redusert MVA-sats på 12 % (merverdiavgiftsloven § 5-5). Båtutleie som selges separat ilegges ordinær sats på 25 %. Selger du pakker med begge, bør prisene splittes tydelig i kontrakten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Når er utleiere av fiskehytte MVA-pliktige?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Du plikter å registrere deg i Merverdiavgiftsregisteret når omsetning av MVA-pliktige tjenester overstiger 50 000 kroner i løpet av de siste 12 månedene (merverdiavgiftsloven § 2-1). Det er bruttobeløpet som teller, altså inntekten før kostnader."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Er inntekt fra fiskehytteutleie kapitalinntekt eller næringsinntekt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Det avhenger av aktivitetsnivået. Passiv utleie av én hytte er normalt kapitalinntekt (22 % skatt på nettoinntekten). Driver du aktivt med hyppige gjestebytter, fangstrapportering, båtklargjøring og løpende gjestekontakt, kan Skatteetaten vurdere det som næring, noe som medfører høyere skatt."
+      }
+    }
+  ]
+}
+</script>
