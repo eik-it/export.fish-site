@@ -12,6 +12,11 @@ image:
 
 Fra 1. januar 2026 gjelder et av de strengeste fiskeriforbudene i norsk kysthistorie for Oslofjorden. Tre nullfiskeområder er innført, og i disse sonene er alt fiske og all sanking forbudt gjennom hele året, for alle, uten unntak for arten. For deg som leier ut hytte og båt på Østlandet eller langs Skagerrakkysten, er det avgjørende å kjenne til hva som gjelder, hva som er tillatt utenfor sonene, og hvordan du kan informere gjestene korrekt.
 
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Fra 1. januar 2026 er alt fiske og all sanking forbudt i tre nullfiskeområder i Oslofjorden: indre Oslofjord, Færder og Ytre Hvaler. Torsk er fredet i hele Oslofjorden hele året, og reglene gjelder til og med 31. desember 2035. Les mer om turistfiske-regler på <a href="/turistfiske-regler/">turistfiske-regler-siden</a>.</p>
+</div>
+
 ## Bakgrunn: torskebestanden i Oslofjorden er i kollaps
 
 Situasjonen for kysttorsk i Oslofjorden har forverret seg dramatisk siden 2010-tallet. Havforskningsinstituttet har dokumentert at så mange som syv av ti voksne torsk i Oslofjorden og Skagerrak dør hvert eneste år. Mesteparten av denne dødeligheten skyldes fritidsfiske, etterfulgt av kommersielt fiske og naturlig dødelighet. En slik uttaksrate er ikke forenlig med bærekraftig bestand.
@@ -94,7 +99,7 @@ For utleiere i disse områdene er det viktig å kommunisere tydelig til gjestene
 
 For turistfiskebedrifter lenger sør langs Skagerrakkysten er det bedre spillerom, men også her gjelder det å holde seg oppdatert på gytefeltforbud, minstemål og bærekraftige fiskepraksiser.
 
-Uansett lokasjon gjelder den lovpålagte plikten til [daglig fangstrapportering](/blogg/daglig-fangstrapportering-turistfiske/) for alle registrerte turistfiskebedrifter. Fangst av lovlige arter skal rapporteres daglig per opphold og art, og perioden skal lukkes og godkjennes av utleier før utførselsdokumentasjon kan utstedes.
+Uansett lokasjon gjelder den lovpålagte plikten til [daglig fangstrapportering](/fangstrapportering-turistfiske/) for alle registrerte turistfiskebedrifter. Fangst av lovlige arter skal rapporteres daglig per opphold og art, og perioden skal lukkes og godkjennes av utleier før utførselsdokumentasjon kan utstedes.
 
 ## Finn sonekartene
 
@@ -109,3 +114,43 @@ Det finnes også en nedlastbar plakat fra Fiskeridirektoratet som viser forbudss
 - [Havforskningsinstituttet: Evaluering av tiltak for vern av kysttorsk i sør (2022)](https://www.hi.no/hi/nettrapporter/rapport-fra-havforskningen-2022-48)
 - [Miljødirektoratet: Støtter innstramminger av fiske i Oslofjorden](https://www.miljodirektoratet.no/aktuelt/nyheter/2024/september-2024/stotter-innstramminger-av-fiske-i-oslofjorden/)
 - [Regjeringen: Nullfiskeområder i Oslofjorden trer i kraft 1. januar](https://www.regjeringen.no/no/aktuelt/nullfiskeomrader-i-oslofjorden-trer-i-kraft-1.-januar/id3144208/)
+
+## Relaterte guider
+
+- [Turistfiske-regler: komplett oversikt](/turistfiske-regler/) — minstemål, kvoter og plikter for utleiere
+- [Daglig fangstrapportering](/fangstrapportering-turistfiske/) — slik oppfyller du rapporteringsplikten
+- [Minstemål og fredningstider](/blogg/minstemal-fredningstider-tabell/) — tabell over alle relevante arter
+- [Sesongkalender for turistfiske](/blogg/sesongkalender-turistfiske-norge/) — når og hva kan gjestene fiske
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Er alt fiske forbudt i Oslofjorden fra 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alt fiske og all sanking er forbudt i tre nullfiskeområder: indre Oslofjord, Færder og Ytre Hvaler. Utenfor disse sonene gjelder de alminnelige reglene, men torsk er fredet i hele Oslofjorden hele året."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva er unntak fra nullfiskeforbudet i Oslofjorden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Det eneste generelle unntaket er krabbefiske med snøre for barn. Fiskeridirektoratet kan gi dispensasjon til forskning, fjerning av stillehavsøsters og kystkulturformidling i regi av kommuner eller foreninger."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvilke arter kan turistfiskere fange utenfor nullfiskesonene i Oslofjorden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Utenfor de tre sonene kan gjestene fiske makrell, sei, lyr og krabbe (opptil 10 teiner per person), forutsatt at man overholder minstemål, gytefeltforbud og redskapsbegrensninger som gjelder i det aktuelle området."
+      }
+    }
+  ]
+}
+</script>
