@@ -1,6 +1,6 @@
 ---
 title: "Slik unngår gjestene bot på grensa"
-description: "Tolletaten beslagla 23 tonn fisk i 2025, nesten dobbelt så mye som året før. Slik fungerer kontrollen ved grensa, hva bøtene koster, og hvordan du forbereder gjestene dine."
+description: "Tolletaten beslagla 23 tonn fisk i 2025, dobbelt så mye som året før. Slik fungerer grensekontrollen, hva bøtene koster og hvordan du forbereder gjestene."
 slug: "tolletaten-grense-fisk-bot-unnga"
 guid: "aab498bb-1062-4fa1-a2c9-6acc6bd1bf58"
 pubDate: 2026-05-09T08:00:00.000Z

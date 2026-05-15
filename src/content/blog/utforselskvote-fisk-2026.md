@@ -1,6 +1,6 @@
 ---
 title: "Utførselskvote for fisk i 2026"
-description: "Fra 1.1.2026 er utførselskvoten 15 kg per person, inntil to ganger per kalenderår, og kuttes til 10 kg fra 2027. Slik fungerer reglene for turistfiskebedrifter og hva det betyr for gjestene dine."
+description: "Fra 1.1.2026 er utførselskvoten 15 kg per person, inntil to ganger per kalenderår, kuttes til 10 kg fra 2027. Reglene og hva de betyr for turistfiskebedrifter."
 slug: "utforselskvote-fisk-2026"
 guid: "8b725c20-ef2f-4d28-8731-5a523c4523d7"
 pubDate: 2026-04-27T08:00:00.000Z
