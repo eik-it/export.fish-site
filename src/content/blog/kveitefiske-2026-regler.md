@@ -13,6 +13,11 @@ image:
 
 Kveita er for mange gjester det ultimate målet for en norsk fiskeferie. Stor, sterk og sagnomsust, det er ikke rart at turistfiskebedrifter langs kysten jevnlig tar imot gjester som har planlagt kveitefisket i måneder. Men kveita er også en av de mest regulerte artene i norsk fritids- og turistfiske, og regelverket har de siste årene blitt skjerpet betraktelig. For deg som er utleier, er det din jobb å sørge for at gjestene fisker innenfor det som er lov.
 
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Kveitefiske i 2026 har tre klare regler: minstemål 84 cm, maksmål 200 cm (kveite over 200 cm har utkastpåbud), og totalfredning fra 20. desember til 20. april. Kveite over 200 cm kan ikke eksporteres ut av Norge under noen omstendighet. Les om <a href="/turistfiske-regler/">regler for turistfiske</a> for en samlet oversikt over hva du som utleier må formidle til gjestene.</p>
+</div>
+
 Her er det du trenger å vite om minstemål, maksmål, fredningsperiode og håndtering, og hvorfor reglene er slik de er.
 
 ## Minstemål: 84 cm
@@ -73,7 +78,7 @@ Mange gjester, særlig de som fisker etter kveite for første gang, er ikke klar
 
 Kveite innenfor lovlig størrelse (84–200 cm) kan tas med hjem av gjestene, men det gjelder de samme utførselsreglene som for all annen fisk fra turistfiske. Kveite kan transporteres ut som [en del av den generelle utførselskvoten](/blogg/utforselskvote-fisk-2026/), og du som utleier er ansvarlig for at gjestene har korrekt dokumentasjon ved grensepassering. Mangler du utførselsdokumentasjon i orden, kan det gi problemer, ikke bare for gjestene, men for din bedrift.
 
-Utførselskvoten forutsetter at fangsten er registrert korrekt gjennom [daglig fangstrapportering](/blogg/daglig-fangstrapportering-turistfiske/) i løpet av oppholdet. Det er grunnlaget dokumentasjonen bygger på. Er det hull i rapporteringen, kan du ikke utstede korrekt dokumentasjon ved avreise.
+Utførselskvoten forutsetter at fangsten er registrert korrekt gjennom [daglig fangstrapportering](/fangstrapportering-turistfiske/) i løpet av oppholdet. Det er grunnlaget dokumentasjonen bygger på. Er det hull i rapporteringen, kan du ikke utstede korrekt dokumentasjon ved avreise.
 
 ## Frysing og transport av kveite
 
@@ -96,3 +101,42 @@ Vi mener det er god drift å gå gjennom disse punktene med gjestene som del av 
 - [Høstingsforskriften § 39 (FOR-2021-12-23-3910)](https://lovdata.no/dokument/SF/forskrift/2021-12-23-3910/§39): minstemål, maksmål og fredningsperiode for kveite
 - [Havforskningsinstituttet: Dioksin og PCB i kveite](https://www.hi.no/): faglig grunnlag for 200 cm-regelen
 - [Fiskeridirektoratet: Frednings- og minstemålsregler](https://www.fiskeridir.no/): gjeldende regler for fritids- og turistfiske
+
+## Relaterte guider
+
+- [Regler for turistfiske i Norge](/turistfiske-regler/) — samlet oversikt over minstemål, fredningsperioder og dokumentasjonskrav
+- [Fangstrapportering for turistfiske](/fangstrapportering-turistfiske/) — grunnlaget for utførselsdokumentasjon når gjestene tar kveite hjem
+- [Bærekraftig turistfiske og gjenutsetting av fisk](/blogg/baerekraftig-turistfiske-fang-slipp/) — teknikk og etikk rundt gjenutsetting av storkveite
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hva er minstemålet for kveite i 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kveite minstemål er 84 cm, målt fra snutespiss til enden av den midtre halvdelen av halefinnen. Kveite under dette målet skal settes ut igjen umiddelbart og så skånsomt som mulig."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva er maksmålet for kveite og hva skjer med stor kveite?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kveite over 200 cm skal settes ut (utkastpåbud). Slik fisk kan verken beholdes, slaktes eller eksporteres ut av Norge. Bakgrunnen er at store kveiter inneholder dioksin og PCB over EUs grenseverdier for mattrygghet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Når er kveitefisket forbudt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kveite er totalfredet fra 20. desember til 20. april i hele landet. Fredningsperioden ble utvidet med én måned i 2025 og gjelder nå frem til 20. april, ikke 31. mars som tidligere."
+      }
+    }
+  ]
+}
+</script>
