@@ -65,8 +65,7 @@ Hver av leverandørene har egne databehandleravtaler og personvernerklæringer s
 
 | Type data | Lagringstid |
 |---|---|
-| Bedriftsdata (aktiv konto) | Lagres så lenge kontoen er aktiv |
-| Bedriftsdata (avsluttet konto) | Lagres permanent |
+| Bedriftsdata | Lagres permanent |
 | Håndskreven signatur | Lagres så lenge bedriften har behov for utstedelse av utførselsdokumentasjon; slettes ved skriftlig forespørsel |
 | Samtykkevalg (`cookie-consent`) | Lagres i nettleseren din til du sletter den manuelt |
 | Analyseinformasjon (Google Analytics) | I henhold til Google Analytics standard (14 måneder med mindre vi justerer ned) |
