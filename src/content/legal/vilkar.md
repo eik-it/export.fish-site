@@ -4,7 +4,7 @@ Velkommen til export.fish. Disse vilkårene regulerer bruken av våre tjenester 
 
 ## 1. Tjenestebeskrivelse
 
-Tjenesten er utformet for å støtte etterlevelse av forskrift 5. juli 2017 nr. 1141 om turistfiskevirksomheter og forskrift 20. desember 2017 nr. 2445 om rapportering av fangster fra turistfiskevirksomheter.
+Tjenesten er utformet for å støtte etterlevelse av [FOR-2017-07-05-1141 om turistfiskevirksomheter](https://lovdata.no/dokument/SF/forskrift/2017-07-05-1141) og [FOR-2017-12-20-2445 om rapportering av fangster fra turistfiskevirksomheter](https://lovdata.no/dokument/SF/forskrift/2017-12-20-2445).
 
 Tjenesten omfatter:
 - Webbasert registreringsverktøy for turister (Progressive Web App).
@@ -196,8 +196,8 @@ Tvister søkes løst i minnelighet. Dersom minnelig løsning ikke oppnås, skal 
 
 ### 11.3 Gjeldende forskrifter
 Tjenesten er utformet for å oppfylle:
-- Forskrift 5. juli 2017 nr. 1141 om turistfiskevirksomheter.
-- Forskrift 20. desember 2017 nr. 2445 om rapportering av fangster fra turistfiskevirksomheter.
+- [FOR-2017-07-05-1141 om turistfiskevirksomheter](https://lovdata.no/dokument/SF/forskrift/2017-07-05-1141).
+- [FOR-2017-12-20-2445 om rapportering av fangster fra turistfiskevirksomheter](https://lovdata.no/dokument/SF/forskrift/2017-12-20-2445).
 - Personopplysningsloven og GDPR.
 - Arkivloven.
 - Øvrig relevant lovgivning.
