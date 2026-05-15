@@ -13,6 +13,11 @@ image:
 
 Du har en hytte ved sjøen. Den leier du ut noen uker i sommersesongen via Airbnb, Finn.no eller Vrbo, og gjestene er som regel der for å fiske. Du stiller båten til disposisjon, de kjøper dagligvarer selv og er stort sett selvgående. Det virker som en enkel og grei greie.
 
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Leier du ut hytte med båt til betalende gjester som fisker, driver du trolig en turistfiskebedrift. Det betyr registreringsplikt i Fiskeridirektoratets register, daglig fangstrapportering og utstedelse av utførselsdokumentasjon. Les mer om <a href="/registrering/">hva registreringen innebærer</a> og hva som kreves av deg som Airbnb-vert.</p>
+</div>
+
 Men det er mulig du driver en turistfiskebedrift uten å vite det, og at det medfører plikter du ikke har oppfylt.
 
 Dette er ikke ment som skremsel. Kravene er overkommelige, og mange som allerede leier ut har det meste på plass uten å tenke over det. Poenget er å gi deg et tydelig bilde av hva som faktisk gjelder, slik at du kan ta informerte valg.
@@ -45,7 +50,7 @@ Registrerte turistfiskebedrifter er pålagt å rapportere fangsten gjestene tar.
 
 Rapporteringen skjer daglig i sesongen, og formålet er å gi myndighetene oversikt over uttaket av fisk langs kysten. For deg som utleier betyr det at du bør ha et system for å samle inn fangstopplysninger fra gjestene, for eksempel gjennom en enkel sjekk ved hjemkomst.
 
-En grundig forklaring på hvordan dette fungerer i praksis finner du i [Daglig fangstrapportering i turistfiske](/blogg/daglig-fangstrapportering-turistfiske/).
+En grundig forklaring på hvordan dette fungerer i praksis finner du på [fangstrapportering for turistfiske](/fangstrapportering-turistfiske/).
 
 ---
 
@@ -55,7 +60,7 @@ Utenlandske gjester som ønsker å ta med fisk hjem til sitt hjemland, er underl
 
 Som turistfiskebedrift er det i din interesse at gjestene er kjent med dette. Gjester som forsøker å ta med seg mer enn kvoten tillater, kan få fisken konfiskert ved grensen, og det gir et dårlig inntrykk av bedriften din.
 
-Gjeldende kvoter er beskrevet i [Utførselskvote for fisk 2026](/blogg/utforselskvote-fisk-2026/). Krav til utførselsdokumentasjon er gjennomgått i [Utførselsdokument for fisk](/blogg/utforselsdokument-fisk-krav/).
+Gjeldende kvoter er beskrevet i [Utførselskvote for fisk 2026](/blogg/utforselskvote-fisk-2026/). Krav til utførselsdokumentasjon er gjennomgått på siden om [utførselsdokumentasjon for fisk](/utforselsdokumentasjon-fisk/).
 
 ---
 
@@ -81,7 +86,7 @@ Har du alle disse punktene på plass?
 - **Gi gjestene en enkel briefing** om bruk av båten, lokale forhold og nødnummer
 - **Avtal hjemkomsttid** med gjestene og ha en plan for hva du gjør dersom de er overtid
 
-Mer om sjekklisten for hytte og båtutleie finner du i [Sjekkliste for hytte med båt-utleie](/blogg/leie-hytte-med-bat-sjekkliste/).
+Mer om reglene for hytte og båtutleie finner du i guiden om [hytteutleie med båt](/hytteutleie-med-bat-regler/).
 
 ---
 
@@ -92,3 +97,42 @@ De fleste som leier ut hytte med båt til fisketurister, gjør det fordi de er g
 Kravene er reelle, men de er ikke uoverkommelige. Registreringen er gratis og tar kort tid. Fangstrapporteringen kan gjøres raskt med riktig verktøy. Og ved å ha orden på sikkerhet og forsikring gjør du ikke bare det myndighetene krever, du gjør deg selv og gjestene dine en tjeneste.
 
 Den som driver turistfiskebedrift på en ryddig måte, kan ta imot gjester med godt samvittighet og fokusere på det som faktisk betyr noe: at gjestene får en god opplevelse ved norskekysten.
+
+## Relaterte guider
+
+- [Registrering av turistfiskebedrift](/registrering/) — hva som kreves og hvordan du registrerer deg
+- [Fangstrapportering for turistfiske](/fangstrapportering-turistfiske/) — daglig rapporteringsplikt og godkjente digitale løsninger
+- [Hytteutleie med båt: regler og krav](/hytteutleie-med-bat-regler/) — hva som gjelder når du leier ut hytte og båt til fisketurister
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Driver jeg en turistfiskebedrift når jeg leier ut via Airbnb?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, sannsynligvis. Dersom du tar betalt fra gjester som fisker og stiller båt til disposisjon, er kombinasjonen av betalende gjester, båttilgang og fiske tilstrekkelig til at du faller inn under definisjonen av turistfiskebedrift, uavhengig av hvilken plattform du bruker."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Må jeg registrere meg selv om utleien skjer via Airbnb?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Registrering i Fiskeridirektoratets register er obligatorisk for alle turistfiskebedrifter. Plattformen du bruker for booking er irrelevant for registreringsplikten. Uten registrering er du ikke lovlig i drift som turistfiskebedrift."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva er fangstrapportering og gjelder det for meg?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fangstrapportering er daglig innrapportering av gjestenes fangst til Fiskeridirektoratet. Plikten gjelder alle registrerte turistfiskebedrifter, uavhengig av størrelse. Det gjelder også dager uten fangst (nullfangst)."
+      }
+    }
+  ]
+}
+</script>
