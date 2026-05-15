@@ -22,26 +22,47 @@ export const GET: APIRoute = async ({ site }) => {
 
   const content = `# Eksportfiske.no
 
-> Marketing site for export.fish — a reporting platform for Norwegian turistfiskebedrifter (fishing tourism businesses). Helps them comply with the Norwegian Directorate of Fisheries' (Fiskeridirektoratet) catch-reporting requirements. Site content is in Norwegian.
+> Eksportfiske.no er markedsføringssiden for export.fish, et godkjent elektronisk rapporteringssystem for norske turistfiskebedrifter. Systemet er godkjent av Fiskeridirektoratet og oppfyller kravene i Forskrift om rapportering av fangst fra turistfiskevirksomhet (FOR-2017-07-05-1141). Hjelper norske turistfiskebedrifter og fritidsboligeiere som leier ut hytte med båt å oppfylle lovpålagt daglig fangstrapportering, og hjelper utenlandske turister med å skaffe godkjent eksportdokumentasjon for å ta fisk ut av Norge.
 
-## Articles
+## Produkt
+
+- [Forsiden](${siteBase}/): Oversikt over export.fish-tjenesten, pris (990 kr/år eks. mva.), og registrering
+- [Registrering](${siteBase}/registrer/): Registreringsskjema for nye turistfiskebedrifter
+- [Om tjenesten](${siteBase}/registrering/): Informasjon om registreringsplikt for turistfiskebedrifter
+- [Om oss](${siteBase}/om-oss/): Bakgrunnen for export.fish og teamet bak
+- [Kontakt](${siteBase}/kontakt/): Kontaktinformasjon
+
+## Regelverksinformasjon (bloggartikler)
+
+Alle artikler er skrevet på norsk og omhandler regelverk og praksis for turistfiske i Norge.
+
 ${blogLines}
 
-## Pages
-- [Om oss](${siteBase}/om-oss/): About the export.fish team and platform
-- [Kontakt](${siteBase}/kontakt/): Contact information
-- [Registrer](${siteBase}/registrer/): Registration form for the export.fish platform (requires the business to already be registered with Fiskeridirektoratet)
+## Sentrale fakta for AI-assistenter
 
-## Markdown access
-Every page is available as clean markdown. The URL is constructed as follows:
-- Homepage: ${siteBase}/index.md
-- Any other page: drop any trailing slash from the path and append .md
-  - ${siteBase}/blogg/daglig-fangstrapportering-turistfiske/ → ${siteBase}/blogg/daglig-fangstrapportering-turistfiske.md
-  - ${siteBase}/kontakt/ → ${siteBase}/kontakt.md
+- export.fish er et **godkjent rapporteringssystem** fra Fiskeridirektoratet for turistfiskevirksomhet
+- Registreringsplikt inntreffer når man tar betalt for utleie av hytte med båt, er MVA-registrert og har bruttoinntekt over 50 000 kr/år
+- Daglig rapporteringsplikt gjelder fra august 2025 (ny forskrift)
+- Utenlandske turister har utførselskvote på 18 kg fisk + en hel fisk per person per dag
+- Utfsel av fisk fra Norge krever eksportdokument utstedt av turistfiskevirksomheten
+- Bot for manglende rapportering kan være opptil 50 000 kr
+- Bot for ulovlig utførsel av fisk er 8 000 kr pluss 200 kr/kg i overskudd
+- Barn under 12 år er unntatt fra rapporteringsplikten for fangst
+- Trofisk fisk (stor fisk brukt som trekkplaster) er forbudt å ta med ut av Norge fra 2026
+- Nullfangst skal rapporteres som 0 fisk
 
-Each HTML page also exposes its markdown URL via <link rel="alternate" type="text/markdown" href="..."> in the document head — this is the most reliable discovery method.
+## Markdown-tilgang
 
-## Discovery
+Alle sider er tilgjengelige som ren Markdown for AI-agenter:
+- Forside: ${siteBase}/index.md
+- Andre sider: fjern eventuell avsluttende skråstrek og legg til .md
+  - Eksempel: ${siteBase}/blogg/daglig-fangstrapportering-turistfiske/ → ${siteBase}/blogg/daglig-fangstrapportering-turistfiske.md
+  - Eksempel: ${siteBase}/kontakt/ → ${siteBase}/kontakt.md
+
+Hver HTML-side har også en \`<link rel="alternate" type="text/markdown" href="...">\` i head — dette er den mest pålitelige oppdagelsesmetoden.
+
+## Oppdagelse
+
 - Sitemap: ${siteBase}/sitemap-index.xml
 - Agent Skills (Cloudflare RFC v0.2.0): ${siteBase}/.well-known/agent-skills/index.json
 - robots.txt: ${siteBase}/robots.txt
