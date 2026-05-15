@@ -1,0 +1,187 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getEntry, render } from 'astro:content';
+
+const personvernEntry = await getEntry('legal', 'personvern');
+const { Content } = await render(personvernEntry);
+---
+
+<Layout
+  title="Personvernerklæring — export.fish"
+  description="Personvernerklæring for export.fish. Les om hvilke opplysninger vi behandler, behandlingsgrunnlag, dine rettigheter og sikkerhetstiltak."
+>
+  <!-- Hero Section -->
+  <section class="pt-44 md:pt-52 pb-12 md:pb-16 bg-gradient-to-br from-primary-light via-blue-50 to-white">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="text-center mb-8">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+          Personvernerklæring
+        </h1>
+        <p class="text-base md:text-lg text-gray-600">
+          Sist oppdatert: {new Date().toLocaleDateString('no-NO', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="py-8 md:py-12 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="grid lg:grid-cols-[280px_1fr] gap-8 lg:gap-12">
+        <!-- Sticky Table of Contents -->
+        <aside class="lg:sticky lg:top-28 lg:self-start">
+          <nav class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 md:p-6" aria-label="Innholdsfortegnelse">
+            <h2 class="text-lg font-bold text-gray-900 mb-4 pb-3 border-b border-gray-200">Innhold</h2>
+            <ol class="space-y-2.5 text-sm">
+              <li><a href="#1-behandlingsansvarlig" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">1. Behandlingsansvarlig</a></li>
+              <li><a href="#2-hvilke-opplysninger-samles-inn" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">2. Opplysninger vi samler inn</a></li>
+              <li><a href="#3-behandlingsgrunnlag" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">3. Behandlingsgrunnlag</a></li>
+              <li><a href="#4-informasjonskapsler-og-sporing" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">4. Informasjonskapsler</a></li>
+              <li><a href="#5-underleverandører" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">5. Underleverandører</a></li>
+              <li><a href="#6-lagringstid" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">6. Lagringstid</a></li>
+              <li><a href="#7-sikkerhetstiltak" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">7. Sikkerhetstiltak</a></li>
+              <li><a href="#8-dine-rettigheter-etter-gdpr" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">8. Dine rettigheter</a></li>
+              <li><a href="#9-kontaktinformasjon-for-personvern" class="text-gray-700 hover:text-primary transition-colors font-medium hover:underline block">9. Kontakt</a></li>
+            </ol>
+          </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div>
+          <article class="legal-content bg-white rounded-xl shadow-sm border border-gray-200 p-6 md:p-10 lg:p-12">
+            <Content />
+          </article>
+
+          <div class="mt-8 text-center">
+            <a
+              href="/vilkar"
+              class="inline-flex items-center gap-2 text-primary hover:text-primary-hover font-semibold transition-colors"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+              Les også vilkår for bruk
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .legal-content {
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .legal-content > :global(h1:first-child) {
+    display: none;
+  }
+
+  .legal-content :global(h2) {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111827;
+    margin-top: 3rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #e5e7eb;
+    scroll-margin-top: 120px;
+  }
+
+  .legal-content :global(h2:first-of-type) {
+    margin-top: 0;
+  }
+
+  .legal-content :global(h3) {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    scroll-margin-top: 120px;
+  }
+
+  .legal-content :global(p) {
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+    color: #4b5563;
+  }
+
+  .legal-content :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  .legal-content :global(ul),
+  .legal-content :global(ol) {
+    margin-bottom: 1.5rem;
+    padding-left: 1.75rem;
+    color: #4b5563;
+  }
+
+  .legal-content :global(li) {
+    margin-bottom: 0.625rem;
+    line-height: 1.75;
+  }
+
+  .legal-content :global(li::marker) {
+    color: #2196f3;
+    font-weight: 600;
+  }
+
+  .legal-content :global(strong) {
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .legal-content :global(a) {
+    color: #2196f3;
+    text-decoration: underline;
+    text-decoration-color: #99d3ef;
+    text-underline-offset: 3px;
+    transition: all 0.2s ease;
+  }
+
+  .legal-content :global(a:hover) {
+    color: #1e88e5;
+    text-decoration-color: #2196f3;
+  }
+
+  .legal-content :global(hr) {
+    margin: 2.5rem 0;
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .legal-content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .legal-content :global(th) {
+    background: #f3f4f6;
+    font-weight: 600;
+    text-align: left;
+    padding: 0.625rem 0.875rem;
+    border: 1px solid #e5e7eb;
+    color: #111827;
+  }
+
+  .legal-content :global(td) {
+    padding: 0.625rem 0.875rem;
+    border: 1px solid #e5e7eb;
+    color: #4b5563;
+  }
+
+  .legal-content :global(tr:nth-child(even) td) {
+    background: #f9fafb;
+  }
+
+  .legal-content :global([id]) {
+    scroll-margin-top: 120px;
+  }
+</style>
