@@ -1,0 +1,179 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Utførselsdokumentasjon for fisk fra Norge: krav og sjekkliste"
+  description="Turister som vil ta fisk ut av Norge trenger eksportdokument fra turistfiskevirksomheten. Her er kravene til dokumentet, utførselskvoten og konsekvensene av manglende dokumentasjon."
+>
+  <Fragment slot="head">
+    <script type="application/ld+json">{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hva er utførselskvoten for fisk fra Norge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Utenlandske turister kan ta med inntil 18 kg fisk pluss én hel fisk per person per dag ut av Norge. Kvoten gjelder per person, ikke per gruppe. Alle eksporterte mengder krever eksportdokument fra turistfiskevirksomheten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva er boten for ulovlig utførsel av fisk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tolletaten kan ilegge et gebyr på 8 000 kroner pluss 200 kroner per kilo i overskudd over kvoten. Fisken kan i tillegg beslaglegges."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan eksportdokumentet utstedes før fangsten er rapportert?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nei. Eksportdokumentet kan ikke utstedes før all fangst er rapportert til Fiskeridirektoratet. Rekkefølgen er ikke valgfri: rapportering må komme før dokumentet. Dette er et krav i forskriften."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva må stå på eksportdokumentet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dokumentet må inneholde: turistens navn og passnummer, turistfiskevirksomhetens navn og registreringsnummer, fangstperiode, fangststed, art og vekt for all fisk som skal eksporteres. Et godkjent rapporteringssystem som export.fish genererer dette automatisk."
+          }
+        }
+      ]
+    })}</script>
+    <script type="application/ld+json">{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Hjem", "item": "https://eksportfiske.no/" },
+        { "@type": "ListItem", "position": 2, "name": "Turistfiske regler", "item": "https://eksportfiske.no/turistfiske-regler/" },
+        { "@type": "ListItem", "position": 3, "name": "Utførselsdokumentasjon for fisk", "item": "https://eksportfiske.no/utforselsdokumentasjon-fisk/" }
+      ]
+    })}</script>
+  </Fragment>
+
+  <article class="pt-44 pb-16 bg-white">
+    <div class="max-w-2xl mx-auto px-4">
+
+      <nav class="text-sm text-gray-500 mb-6" aria-label="Brødsmulesti">
+        <ol class="flex items-center gap-2 flex-wrap">
+          <li><a href="/" class="hover:text-primary transition">Hjem</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/turistfiske-regler/" class="hover:text-primary transition">Turistfiske regler</a></li>
+          <li aria-hidden="true">/</li>
+          <li class="text-gray-900 font-medium">Utførselsdokumentasjon</li>
+        </ol>
+      </nav>
+
+      <header class="mb-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-4">
+          Utførselsdokumentasjon for fisk fra Norge
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          Alt turister og turistfiskebedrifter trenger å vite om eksportdokument, utførselskvote og grensekontroll.
+        </p>
+      </header>
+
+      <div class="flex items-start gap-3 bg-green-50 border border-green-200 rounded-xl px-5 py-4 mb-8">
+        <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+          <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-green-800">Godkjent rapporteringssystem fra Fiskeridirektoratet</p>
+          <p class="text-xs text-green-700 mt-0.5">Export.fish utsteder gyldig eksportdokumentasjon automatisk. <a href="https://www.fiskeridir.no/turistfiske/rapportering-for-turistfiskebedrifter" target="_blank" rel="noopener noreferrer" class="underline hover:text-green-900 transition-colors">Se godkjente systemer</a>.</p>
+        </div>
+      </div>
+
+      <div class="article-body text-gray-800 leading-relaxed">
+
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-8">
+          <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+          <p class="text-gray-800">
+            Utenlandske turister som vil ta fisk ut av Norge trenger et eksportdokument utstedt av turistfiskevirksomheten. Dokumentet kan kun utstedes etter at fangsten er rapportert til Fiskeridirektoratet. Kvoten er 18 kg pluss én hel fisk per person per dag. Boten for ulovlig utførsel er 8 000 kroner pluss 200 kroner per kilo i overskudd.
+          </p>
+        </div>
+
+        <h2>Utførselskvoten</h2>
+        <p>
+          Utenlandske turister kan ta med seg inntil 18 kg fisk (sløyd og hodekappet vekt) pluss én hel fisk per person per dag ut av Norge. Kvoten er per person, ikke per gruppe. Overskrides kvoten, kan Tolletaten beslaglegge alt og ilegge gebyr.
+        </p>
+        <p>
+          For 2026 er det også innført forbud mot å ta med trofisk fisk (uvanlig store individer av en art som anses som trekkplaster for turistfiskebedriften) ut av landet. Les mer: <a href="/blogg/trofefisk-fjernet-turistfiske/">Trofisk fisk fjernet fra turistfiske</a>
+        </p>
+
+        <h2>Kravene til eksportdokumentet</h2>
+        <p>
+          Eksportdokumentet er turistens bevis overfor Tolletaten. Det er individuelt: én gjest, ett dokument. Dokumentet må inneholde:
+        </p>
+        <ul>
+          <li>Turistens navn og passnummer</li>
+          <li>Turistfiskevirksomhetens navn og registreringsnummer hos Fiskeridirektoratet</li>
+          <li>Fangstperiode og fangststed</li>
+          <li>Art og vekt for all fisk som skal eksporteres</li>
+          <li>Dato for utstedelse</li>
+        </ul>
+        <p>
+          Et godkjent rapporteringssystem som export.fish genererer dokumentet automatisk med alle påkrevde felt. Se også: <a href="/blogg/utforselsdokument-fisk-krav/">Krav til utførselsdokument for fisk</a>
+        </p>
+
+        <h2>Rekkefølgen: rapportering før dokumentet</h2>
+        <p>
+          Et kritisk krav mange overser: eksportdokumentet kan ikke utstedes før all fangst er rapportert til Fiskeridirektoratet. Dokumentet er ugyldig hvis det er utstedt uten forutgående korrekt rapportering.
+        </p>
+        <p>
+          Med export.fish er dette automatisk: turistene registrerer fangst daglig, bedriften godkjenner ved avreise, og dokumentet genereres umiddelbart. Les mer om <a href="/fangstrapportering-turistfiske/">daglig fangstrapportering</a>.
+        </p>
+
+        <h2>Grensekontroll og Tolletaten</h2>
+        <p>
+          Tolletaten kontrollerer fisk ved grenseoverganger. Turisten som krysser grensen med fisk må selv være til stede, dokumentet må stemme med fisken som medbringes, og kvoten må ikke overskrides. Les mer: <a href="/blogg/tolletaten-grense-fisk-bot-unnga/">Slik unngår gjestene bot på grensa</a>
+        </p>
+
+        <h2>Konsekvenser av manglende dokumentasjon</h2>
+        <p>
+          Uten gyldig eksportdokument har turisten ingen rett til å ta med fisk over grensen. Tolletaten kan:
+        </p>
+        <ul>
+          <li>Beslaglegge all fisk</li>
+          <li>Ilegge gebyr på 8 000 kroner</li>
+          <li>Ilegge tilleggsgebyr på 200 kroner per kilo i overskudd</li>
+        </ul>
+
+      </div>
+    </div>
+  </article>
+
+  <section class="py-16 bg-gradient-to-br from-blue-50 to-slate-50">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        Automatisk eksportdokumentasjon med export.fish
+      </h2>
+      <p class="text-lg text-gray-600 mb-8">
+        Turistene får eksportdokumentene de trenger, automatisk og korrekt, etter hvert opphold. Prøv gratis i 30 dager.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/registrer/" class="bg-primary hover:bg-primary-hover text-white font-semibold px-8 py-4 rounded-lg transition-colors text-center shadow-md hover:shadow-lg">
+          Kom i gang gratis
+        </a>
+        <a href="/registrering" class="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-4 rounded-lg transition-colors text-center">
+          Les om registrering
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .article-body :global(h2) { font-size: 1.5rem; font-weight: 700; color: #111827; margin-top: 2.5rem; margin-bottom: 1rem; line-height: 1.3; }
+  .article-body :global(p) { margin-bottom: 1.25rem; line-height: 1.75; }
+  .article-body :global(ul) { padding-left: 1.5rem; margin-bottom: 1.25rem; list-style-type: disc; }
+  .article-body :global(li) { margin-bottom: 0.5rem; line-height: 1.75; }
+  .article-body :global(a) { color: #2196f3; text-decoration: underline; text-underline-offset: 2px; }
+  .article-body :global(a:hover) { color: #1e88e5; }
+</style>

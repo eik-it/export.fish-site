@@ -79,6 +79,12 @@ export default defineConfig({
   site: SITE_URL,
   base: '',
 
+  // Redirect old blog post to new landing page (meta refresh for GitHub Pages)
+  redirects: {
+    '/blogg/utforselsdokument-fisk-krav': '/utforselsdokumentasjon-fisk/',
+    '/blogg/utforselsdokument-fisk-krav/': '/utforselsdokumentasjon-fisk/',
+  },
+
   build: {
     inlineStylesheets: 'auto',
   },
