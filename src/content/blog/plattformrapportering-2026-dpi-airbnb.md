@@ -13,6 +13,11 @@ image:
 
 Mange hytteutleiere har de siste årene levd med en viss usikkerhet: hva vet egentlig Skatteetaten om inntektene fra Airbnb-bookinger, og hvor nøye er de? Fra 1. januar 2026 er svaret enkelt: de vet det samme som plattformen. Airbnb, Booking.com og Vrbo er nå pålagt å rapportere transaksjoner direkte til norske skattemyndigheter. Det er denne ordningen som kalles DPI, eller Digital Platform Information.
 
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Fra 1. januar 2026 rapporterer Airbnb, Booking.com og Vrbo transaksjoner direkte til Skatteetaten (DPI/DAC7). For deg som leier ut hytte og båt betyr dette at inntektene er kjent for skattemyndighetene uavhengig av hva du selv oppgir. Sjekk at selvangivelsen stemmer, og vurder <a href="/registrering/">registrering som turistfiskebedrift</a> hvis du driver sammensatt utleie.</p>
+</div>
+
 For deg som leier ut hytte, med eller uten båt, betyr det at grunnlaget for skatteligningen ikke lenger bare er hva du selv oppgir. Plattformene sender dataene. Det er allerede gjort. Spørsmålet er om selvangivelsen din stemmer overens.
 
 ## Hva er DPI, og hvor kommer det fra?
@@ -57,7 +62,7 @@ Effekten er enkel å forstå: sporbarhet. Inntekter du har mottatt via plattform
 
 Hytteutleie er i utgangspunktet skattepliktig inntekt. Det finnes fritak for utleie av egen primær- eller fritidsbolig under visse betingelser, men disse fritagene gjelder ikke ubetinget og er avhengig av botid, bruk og beløp. Hvis du er i tvil om hva som gjelder for din situasjon, er det nå mer presserende enn før å få klarhet.
 
-For deg som allerede [leier ut hytte med båt](/blogg/leie-hytte-med-bat-sjekkliste/) og kanskje driver nær grensen til det som defineres som næringsvirksomhet, kan dette også ha konsekvenser for om du bør vurdere [registrering som turistfiskebedrift](/blogg/ma-du-registrere-turistfiskebedrift/) og hva det innebærer av fangstrapportering og andre plikter.
+For deg som allerede [leier ut hytte med båt](/hytteutleie-med-bat-regler/) og kanskje driver nær grensen til det som defineres som næringsvirksomhet, kan dette også ha konsekvenser for om du bør vurdere [registrering som turistfiskebedrift](/blogg/ma-du-registrere-turistfiskebedrift/) og hva det innebærer av fangstrapportering og andre plikter.
 
 ## Kombinasjonen hytteutleie og turistfiske
 
@@ -91,3 +96,43 @@ Det som har endret seg fra 1. januar 2026 er ikke skattelovgivningen, men Skatte
 - [Regjeringen.no: Prop. 1 LS (2023–2024) – DAC7-implementering](https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20232024/id3004006/)
 - [EU-kommisjonen: DAC7 – Council Directive 2021/514](https://taxation-customs.ec.europa.eu/taxation/administrative-cooperation/dac7_en)
 - [OECD: Model Rules for Reporting by Platform Operators (MRDP)](https://www.oecd.org/tax/exchange-of-tax-information/model-rules-for-reporting-by-platform-operators-with-respect-to-sellers-in-the-sharing-and-gig-economy.htm)
+
+## Relaterte guider
+
+- [Registrering som turistfiskebedrift](/registrering/) — meld virksomheten din og kom i gang
+- [Daglig fangstrapportering](/fangstrapportering-turistfiske/) — slik oppfyller du rapporteringsplikten
+- [Hytteutleie med båt: regler og plikter](/hytteutleie-med-bat-regler/) — komplett oversikt for utleiere
+- [Hytteutleiekontrakt med båt](/blogg/hytteutleiekontrakt-bat-mal/) — hva kontrakten bør regulere
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hva er DPI-rapportering og hvem er det relevant for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DPI (Digital Platform Information) er den norske implementeringen av EU-direktivet DAC7. Fra 1. januar 2026 er Airbnb, Booking.com og Vrbo pålagt å rapportere transaksjoner direkte til norske skattemyndigheter. Det er relevant for alle som leier ut hytte, båt eller tilleggstjenester via disse plattformene."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvilke transaksjoner rapporteres til Skatteetaten via DPI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DPI dekker leie av fast eiendom (hytter, leiligheter), personlige tjenester, salg av varer og utleie av transportmidler inkludert båter. Inntekter under 30 transaksjoner og totalt under 2 000 euro per år per plattform faller utenfor rapporteringsplikten for den plattformen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva bør hytteutleiere gjøre nå etter innføringen av DPI-rapportering?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gå gjennom selvangivelsen for 2023, 2024 og 2025, last ned transaksjonshistorikk fra plattformene og sammenlign med hva du har oppgitt. Er det avvik, gjennomfør frivillig retting. Kontakt regnskapsfører ved tvil, særlig hvis du driver nær grensene for næringsvirksomhet."
+      }
+    }
+  ]
+}
+</script>
