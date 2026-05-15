@@ -1,0 +1,84 @@
+# Manuell Facebook-post for et eksisterende blogginnlegg.
+#
+# Brukes når en artikkel er publisert til Pages, men deploy.yml ikke fikk
+# postet den til Facebook (typisk når deploy ble trigget via workflow_dispatch
+# eller når detect-blog-changes ikke fant artikkelen i diffen).
+#
+# Henter title/description/og:image direkte fra den live siden, så artikkelen
+# må være deployet før denne kjøres.
+
+name: Manual Social Post
+
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: 'Blog slug (uten /blogg/ prefix). Eks: trofefisk-fjernet-turistfiske'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post to Facebook Page
+        env:
+          FB_PAGE_ID: "1006728832532796"
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          SLUG: ${{ inputs.slug }}
+        run: |
+          if [ -z "${FB_PAGE_TOKEN}" ]; then
+            echo "FB_PAGE_TOKEN ikke konfigurert — avbryter."
+            exit 1
+          fi
+
+          HOST="eksportfiske.no"
+          URL="https://${HOST}/blogg/${SLUG}/"
+
+          echo "Henter metadata fra ${URL}..."
+          PAGE_HTML=$(curl -sf --max-time 15 "${URL}")
+          if [ -z "${PAGE_HTML}" ]; then
+            echo "Fant ikke siden ${URL}. Er slug riktig og artikkelen deployet?"
+            exit 1
+          fi
+
+          TITLE=$(echo "${PAGE_HTML}" | grep -oP '(?<=<meta property="og:title" content=")[^"]+' | head -1)
+          DESCRIPTION=$(echo "${PAGE_HTML}" | grep -oP '(?<=<meta property="og:description" content=")[^"]+' | head -1)
+          OG_IMAGE=$(echo "${PAGE_HTML}" | grep -oP '(?<=<meta property="og:image" content=")[^"]+' | head -1)
+
+          echo "Title:       ${TITLE}"
+          echo "Description: ${DESCRIPTION}"
+          echo "og:image:    ${OG_IMAGE}"
+
+          CAPTION=$(printf '%s\n\n%s\n\n%s' "${TITLE}" "${DESCRIPTION}" "${URL}")
+
+          if [ -n "${OG_IMAGE}" ]; then
+            echo "Poster foto-innlegg..."
+            HTTP_STATUS=$(curl -s -o /tmp/fb_response.json -w "%{http_code}" \
+              -X POST "https://graph.facebook.com/v21.0/${FB_PAGE_ID}/photos" \
+              --data-urlencode "url=${OG_IMAGE}" \
+              --data-urlencode "caption=${CAPTION}" \
+              -d "access_token=${FB_PAGE_TOKEN}")
+          else
+            echo "Ingen og:image — faller tilbake til lenke-innlegg."
+            HTTP_STATUS=$(curl -s -o /tmp/fb_response.json -w "%{http_code}" \
+              -X POST "https://graph.facebook.com/v21.0/${FB_PAGE_ID}/feed" \
+              --data-urlencode "message=${CAPTION}" \
+              --data-urlencode "link=${URL}" \
+              -d "access_token=${FB_PAGE_TOKEN}")
+          fi
+
+          echo "HTTP status: ${HTTP_STATUS}"
+          echo "Response:"
+          cat /tmp/fb_response.json; echo
+
+          POST_ID=$(jq -r '.id // ""' /tmp/fb_response.json 2>/dev/null || echo "")
+          if [ -n "${POST_ID}" ]; then
+            echo "Facebook-post opprettet. Post ID: ${POST_ID}"
+          else
+            echo "Posten kan ha feilet — ingen 'id' i response."
+            exit 1
+          fi

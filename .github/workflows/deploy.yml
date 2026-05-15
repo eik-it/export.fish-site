@@ -79,7 +79,7 @@ jobs:
   detect-blog-changes:
     needs: deploy
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
     outputs:
       prev_sha: ${{ steps.detect.outputs.prev_sha }}
       blog_slugs: ${{ steps.detect.outputs.blog_slugs }}
@@ -148,7 +148,7 @@ jobs:
   indexnow:
     needs: detect-blog-changes
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
     steps:
       - name: Ping IndexNow
         continue-on-error: true
@@ -294,7 +294,7 @@ jobs:
   social-post:
     needs: detect-blog-changes
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       BLOG_SLUGS: ${{ needs.detect-blog-changes.outputs.new_blog_slugs }}
