@@ -15,6 +15,11 @@ image:
 
 Mange som leier ut hytte og båt til fisketurister tror de er godt dekket gjennom den vanlige hytteforsikringen og båtforsikringen. Så dukker det opp en skade, og det viser seg at forsikringsselskapet ikke dekker fordi utleie aldri ble meldt inn. Det er ikke unntak; det er mønsteret. Forsikringsselskaper skiller systematisk mellom privat bruk og utleie, og særlig mellom korttidsutleie til venner og kommersiell utleie til betalende gjester.
 
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Vanlig hytteforsikring og båtforsikring dekker som regel ikke kommersiell utleie med mindre du melder fra til selskapet. Overstiger inntektene 50 000 kroner eller er du MVA-registrert, kan du trenge næringsforsikring. Meld alltid inn utleie skriftlig, og sjekk om du trenger <a href="/registrering/">registrering som turistfiskebedrift</a>.</p>
+</div>
+
 Denne artikkelen hjelper deg å forstå forskjellene: hva vanlig hytteforsikring og båtforsikring normalt dekker, hvor dekningen stanser, og hva du bør spørre forsikringsselskapet ditt om.
 
 ## Hytteforsikring: hva gjelder ved utleie?
@@ -83,7 +88,7 @@ Det er også verdt å tenke gjennom hva leieavtalen bør regulere for at forsikr
 
 Forsikringsbehovet henger sammen med det skattemessige og næringsrettslige bildet. Skattestatusen din påvirker om du regnes som næringsdrivende eller privatperson, og det igjen påvirker hvilken forsikring du trenger. Tilsvarende gjelder [50 000-kronergrensen for turistfiskebedrifter](/blogg/50000-kr-grensen-turistfiskebedrift/): krysser du den terskelen og er registrert, endres kravene til deg som utleier på flere plan, inkludert [lovpålagt fangstrapportering](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/) og forsikring.
 
-Sjekklisten for [leie av hytte med båt](/blogg/leie-hytte-med-bat-sjekkliste/) gir et praktisk startpunkt for hva du bør ha på plass som utleier, og forsikring er ett av de sentrale punktene der.
+Sjekklisten for [leie av hytte med båt](/hytteutleie-med-bat-regler/) gir et praktisk startpunkt for hva du bør ha på plass som utleier, og forsikring er ett av de sentrale punktene der.
 
 ## Praktisk: dette bør du gjøre
 
@@ -99,3 +104,43 @@ Sjekklisten for [leie av hytte med båt](/blogg/leie-hytte-med-bat-sjekkliste/) 
 - [Finans Norge](https://www.finansnorge.no): bransjeorganisasjon for norske forsikringsselskaper; gir veiledning om vilkår og praksis
 - [Sjøfartsdirektoratet: Utredning om sikkerhet ved utleie av fritidsfartøy (2021)](https://www.sdir.no): gjennomgang av ansvar, krav og sikkerhet ved kommersiell båtutleie
 - Gjensidige, If, Tryg, Fremtind: vilkår og informasjonssider for hytteforsikring og utleieforsikring (sjekk gjeldende vilkår direkte hos hvert selskap)
+
+## Relaterte guider
+
+- [Hytteutleie med båt: regler og plikter](/hytteutleie-med-bat-regler/) — komplett oversikt for utleiere
+- [Sikkerhetsutstyr i utleiebåt](/blogg/sikkerhetsutstyr-utleiebat-sjekkliste/) — påbudt utstyr og hva du bør ha i tillegg
+- [Registrering som turistfiskebedrift](/registrering/) — meld virksomheten din og kom i gang
+- [Daglig fangstrapportering](/fangstrapportering-turistfiske/) — slik oppfyller du rapporteringsplikten
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Dekker vanlig hytteforsikring utleie til fisketurister?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ikke automatisk. De fleste forsikringsselskaper krever at du melder inn utleie mot betaling. Gjør du ikke det, risikerer du redusert erstatning eller avslag ved en skade. Meld alltid inn utleie skriftlig til selskapet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Trenger jeg næringsforsikring for utleie av hytte og båt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Det avhenger av omfanget. Overstiger inntektene 50 000 kroner per år eller er du MVA-registrert, regnes dette gjerne som næringsvirksomhet av forsikringsselskapene, og vanlig privat utleieforsikring strekker ikke til."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Er ansvarsforsikring påbudt for utleiebåter i Norge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nei, ansvarsforsikring er ikke lovpålagt for fritidsbåter. Likevel kan du som eier holdes erstatningsansvarlig dersom en gjest skader seg fordi båten ikke var i forsvarlig stand. Ansvarsforsikring anbefales sterkt for alle som leier ut båt."
+      }
+    }
+  ]
+}
+</script>
