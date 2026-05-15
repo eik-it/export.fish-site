@@ -54,13 +54,13 @@ Følgende underleverandører behandler personopplysninger i forbindelse med drif
 | Underleverandør | Tjeneste | Dataoverføring |
 |---|---|---|
 | Google Cloud Platform (GCP) | Skyhosting og infrastruktur for backend | EU-region |
-| Supabase | Database og autentisering | EU-region |
-| Mailgun | Transaksjonell e-post (varsler) | EU-region |
+| Database- og autentiseringsleverandør | Lagring av kontodata og pålogging | EU-region |
+| E-postleverandør | Transaksjonell e-post (varsler) | EU-region |
 | Fiken | Fakturering og regnskap (kundedata, fakturadata) | Norge |
 | Google LLC | Google Analytics (kun etter samtykke) | USA, EU-US Data Privacy Framework |
 | Meta Platforms Inc. | Meta Pixel (kun etter samtykke) | USA, EU-US Data Privacy Framework |
 
-Hver av leverandørene har egne databehandleravtaler og personvernerklæringer som regulerer deres behandling av personopplysninger. Vi henviser til hver leverandørs vilkår for fullstendige detaljer.
+Fullstendig oversikt over navngitte underleverandører kan fås ved henvendelse til [kontakt@eksportfiske.no](mailto:kontakt@eksportfiske.no). Hver av leverandørene har egne databehandleravtaler og personvernerklæringer som regulerer deres behandling av personopplysninger.
 
 ## 6. Lagringstid
 
