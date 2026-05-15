@@ -74,7 +74,7 @@ En stor andel av gjestene ved norske turistfiskebedrifter kommer fra tyskspråkl
 
 Tolletatens rekordbeslag i 2025, med færre saker men nesten dobbelt så mye fisk i kilo som året før, handler om organisert miljøkriminalitet og ikke om gjennomsnittsfamilien som fisker sei i Nordland. Men den økte kontrollen treffer alle som passerer grensa med fisk, og gjester som ikke er forberedt, betaler prisen. Som utleier kan du ikke forhindre alle feil. Det du kan gjøre er å fjerne de vanligste feilkildene gjennom tydelig informasjon, god dokumentasjonsflyt og en [fangstrapportering](/blogg/daglig-fangstrapportering-turistfiske/) som holder orden gjennom hele sesongen.
 
-Det er ikke mer enn gjestene trenger for å komme trygt hjem — med fisken.
+Det er ikke mer enn gjestene trenger for å komme trygt hjem, med fisken. Se vår [sjekkliste for avreisedagen](/blogg/for-gjesten-reiser-hjem-sjekkliste/) for en samlet gjennomgang av de fem punktene som oftest skaper trøbbel ved grensen.
 
 ## Kilder
 

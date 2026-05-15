@@ -96,7 +96,7 @@ Utførselskvoten er ikke noe du kan håndtere med en lapp i hytta. Den krever at
 
 Virksomheten din må være [registrert som turistfiskebedrift](/blogg/ma-du-registrere-turistfiskebedrift/) for at gjestene i det hele tatt skal ha utførselsrett. Det er grunnmuren alt annet hviler på. Er du usikker på om du er registrert, er det enkleste å sjekke direkte i Fiskeridirektoratets register.
 
-Utførselsdokumentasjonen er din oppgave — og den er bare mulig å utstede riktig hvis rapporteringen er gjort løpende. Det hjelper lite å ha gode intensjoner om du sitter med manglende fangstdager i siste liten. Planlegger du sesongen med dette som utgangspunkt, er mye av arbeidet allerede gjort.
+Utførselsdokumentasjonen er din oppgave — og den er bare mulig å utstede riktig hvis rapporteringen er gjort løpende. Det hjelper lite å ha gode intensjoner om du sitter med manglende fangstdager i siste liten. Planlegger du sesongen med dette som utgangspunkt, er mye av arbeidet allerede gjort. Se også vår [sjekkliste for avreisedagen](/blogg/for-gjesten-reiser-hjem-sjekkliste/) for en praktisk gjennomgang av de fem punktene du bør kontrollere før gjestene kjører.
 
 ## Kilder
 
