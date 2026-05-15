@@ -13,6 +13,11 @@ image:
 
 Du har nettopp registrert deg som turistfiskebedrift, eller vurderer å gjøre det. Du vet at det finnes noe som heter fangstrapportering, men er usikker på hva det egentlig innebærer i praksis. Hvilke fiskearter gjelder det? Hvor ofte må du rapportere? Og hva skjer de dagene gjestene ikke får fisk?
 
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Registrerte turistfiskebedrifter plikter å rapportere gjestenes fangst av seks arter (torsk, sei, kveite, uer, steinbit, hyse) daglig per opphold, også dager uten fangst. Fra 2022 kreves godkjent digital løsning. Se komplett veiledning på <a href="/fangstrapportering-turistfiske/">fangstrapportering for turistfiske</a>.</p>
+</div>
+
 Denne guiden gir deg det du trenger for å komme i gang, uten unødvendig fagspråk.
 
 ## Hva er fangstrapportering, og hvorfor finnes det?
@@ -56,7 +61,7 @@ Svaret er enkelt: daglig. FOR-2017-07-05-1141 § 3 er tydelig på at turistfiske
 
 Det betyr ikke én gang i uken, ikke ved utsjekk, og ikke "når du husker det". Det betyr én rapport per dag per opphold, for hver art som er fanget. Har gjestene fisket tre dager, skal det ligge tre daglige rapporter i systemet.
 
-Dette er også grunnen til at [daglig fangstrapportering](/blogg/daglig-fangstrapportering-turistfiske/) i praksis krever en rutine, ikke bare gode intensjoner. En lapp på kjøkkenbordet holder sjelden gjennom en hel fiskeuke, særlig ikke hvis du har overlappende opphold eller gjester som snakker lite norsk.
+Dette er også grunnen til at [daglig fangstrapportering](/fangstrapportering-turistfiske/) i praksis krever en rutine, ikke bare gode intensjoner. En lapp på kjøkkenbordet holder sjelden gjennom en hel fiskeuke, særlig ikke hvis du har overlappende opphold eller gjester som snakker lite norsk.
 
 ## Hva med dager uten fangst?
 
@@ -112,3 +117,43 @@ Eksportfiske.no er bygget for nettopp denne situasjonen: gjestene registrerer fa
 
 - [Forskrift om rapportering av fangster fra turistfiskevirksomheter (FOR-2017-12-20-2445)](https://lovdata.no/dokument/SF/forskrift/2017-12-20-2445). Fastsetter pliktige arter og krav om maskinlesbar rapportering.
 - [Forskrift om turistfiskevirksomheter (FOR-2017-07-05-1141)](https://lovdata.no/dokument/SF/forskrift/2017-07-05-1141). §§ 3–4 om daglig rapporteringsplikt og informasjonsplikt overfor gjester.
+
+## Relaterte guider
+
+- [Fangstrapportering for turistfiske](/fangstrapportering-turistfiske/) — komplett veiledning og regelverksoversikt
+- [Godkjent rapporteringssystem](/godkjent-rapporteringssystem-turistfiske/) — hva digitale systemer må oppfylle
+- [Registrering som turistfiskebedrift](/registrering/) — kom i gang med virksomheten din
+- [Utførselsdokumentasjon](/utforselsdokumentasjon-fisk/) — slik utsteder du utførselsdokument til gjestene
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hvilke fiskearter er pliktig å rapportere for turistfiskebedrifter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Forskriften lister seks pliktige arter: torsk, sei, kveite, uer, steinbit og hyse. Fangst av disse artene skal rapporteres daglig per opphold. Andre arter trenger ikke rapporteres etter denne forskriften."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Skal nullfangst rapporteres for turistfiskebedrifter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Forskriften er eksplisitt: fisketurer uten fangst av de nevnte artene skal også rapporteres. Hull i rapporteringen gjør at perioden ikke kan godkjennes, og dermed kan du ikke utstede utførselsdokumentasjon."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan man fortsatt bruke papirskjema for fangstrapportering?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nei. Fra 1. januar 2022 krever regelverket at fangstrapportering skjer via digitale systemer godkjent av Fiskeridirektoratet. Papirskjema er ikke lenger tilstrekkelig."
+      }
+    }
+  ]
+}
+</script>
