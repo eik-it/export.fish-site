@@ -69,3 +69,7 @@ schedule:
   - date: "2026-06-14"
     pr: 237
     title: "Bærekraftig turistfiske"
+
+  - date: "2026-06-16"
+    pr: 279
+    title: "Driver du Airbnb-utleie til turistfiskere? Dette gjelder deg"
