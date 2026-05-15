@@ -13,6 +13,11 @@ image:
 
 Avreisedagen kan bli kaotisk. Gjestene pakker biler, leter etter sko og spør om veien til grensen, gjerne samtidig som du skal ta imot neste gjest. Da er det lett å la den siste gjennomgangen skli. Denne artikkelen er laget for å hjelpe deg å gjøre avreisedagen ryddig, for gjestenes skyld og din egen.
 
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Før gjesten reiser hjem må du kontrollere fem ting: at fangsten er rapportert for alle fiskedager (inkludert nullfangst), at utførselsdokumentasjon er utstedt til riktig person, at mengden er innenfor 15 kg per person, at fiskerne er minst 12 år, og at fisken faktisk ble fanget av den som bærer den. Alt dette forutsetter at <a href="/fangstrapportering-turistfiske/">fangstrapporteringen</a> er komplett og godkjent før gjesten kjører.</p>
+</div>
+
 Sjekklisten nedenfor dekker de fem punktene som oftest skaper trøbbel ved grensekontrollen. Gå gjennom dem med gjestene, eller bruk dem som en intern gjennomgang kvelden før avreise.
 
 ---
@@ -21,7 +26,7 @@ Sjekklisten nedenfor dekker de fem punktene som oftest skaper trøbbel ved grens
 
 Det viktigste spørsmålet å stille seg: er det registrert fangst for alle dager i oppholdet, inkludert dagene uten fisk?
 
-[Daglig fangstrapportering](/blogg/daglig-fangstrapportering-turistfiske/) er lovpålagt etter forskrift 20. desember 2017 nr. 2445. Det holder ikke å samle opp rapportering til siste dag. Har gjestene fisket fem dager, skal det foreligge fem rapporter, også dager med nullfangst. [Nullfangst skal rapporteres](/blogg/nullfangst-turistfiske-ma-det-rapporteres/) på lik linje med all annen fangst.
+[Daglig fangstrapportering](/fangstrapportering-turistfiske/) er lovpålagt etter forskrift 20. desember 2017 nr. 2445. Det holder ikke å samle opp rapportering til siste dag. Har gjestene fisket fem dager, skal det foreligge fem rapporter, også dager med nullfangst. [Nullfangst skal rapporteres](/blogg/nullfangst-turistfiske-ma-det-rapporteres/) på lik linje med all annen fangst.
 
 Mangler én dag, stopper kjeden opp. Da kan du ikke avslutte fiskeperioden, og da kan du ikke utstede eksportdokumentasjon. Det er den vanligste årsaken til stressede avreisesituasjoner.
 
@@ -39,7 +44,7 @@ Dokumentet skal inneholde:
 - Oppholdsperiode og fiskeperiode
 - Utstedelsesdato og ansvarlig persons underskrift
 
-Personen som er navngitt på dokumentet må selv være til stede ved grensepasseringen. Tolletaten godtar ikke at noen bringer med fisk på vegne av en som ikke er med i bilen. Er det tre fiskere i gruppen, trenger alle tre hvert sitt dokument. Les mer om [hva eksportdokumentasjon krever](/blogg/utforselsdokument-fisk-krav/).
+Personen som er navngitt på dokumentet må selv være til stede ved grensepasseringen. Tolletaten godtar ikke at noen bringer med fisk på vegne av en som ikke er med i bilen. Er det tre fiskere i gruppen, trenger alle tre hvert sitt dokument. Les mer om [hva utførselsdokumentasjon krever](/utforselsdokumentasjon-fisk/).
 
 **Hva du sjekker:** Gå gjennom listen over registrerte fiskere i export.fish og kontroller at alle som skal ta med fisk hjem har et eget dokument knyttet til sin e-postadresse.
 
@@ -98,3 +103,50 @@ For deg som bruker [export.fish](/registrer/) er den praktiske gjennomgangen kor
 - [Fiskeridirektoratet: Utførselskvote og turistfiskebedrifter](https://www.fiskeridir.no/turistfiske/utfoersel-av-fisk) — 12-årsgrense, registrert turistfiskebedrift som vilkår
 - [Toll.no: Utførsel av fisk](https://www.toll.no/no/varer/mat-og-drikke/fisk/) — kvoter og dokumentasjonskrav ved grensepassering
 - [Forskrift 20. desember 2017 nr. 2445](https://lovdata.no/dokument/SF/forskrift/2017-12-20-2445) — daglig rapporteringsplikt
+
+## Relaterte guider
+
+- [Fangstrapportering for turistfiske](/fangstrapportering-turistfiske/) — alt om daglig fangstrapportering og godkjente systemer
+- [Utførselsdokumentasjon for fisk](/utforselsdokumentasjon-fisk/) — krav og prosedyrer for eksportdokumenter
+- [Nullfangst i turistfiske](/blogg/nullfangst-turistfiske-ma-det-rapporteres/) — hvorfor dager uten fangst også må rapporteres
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Må nullfangst rapporteres før gjesten reiser hjem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Daglig fangstrapportering er lovpålagt for alle fiskedager i oppholdet, inkludert dager uten fangst. Mangler én dag, kan du ikke avslutte perioden eller utstede eksportdokumentasjon."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan gjesten ta med fisk på vegne av noen som ikke var på turen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nei. Utførselskvoten er personlig og gjelder kun fisk personen selv har fisket hos en registrert turistfiskebedrift. Kjøpt fisk eller fisk fanget av andre er ikke dekket av turistfiskekvoten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva er aldersgrensen for utførselskvote?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Utførselskvoten gjelder bare for personer som har fylt 12 år. Barn under 12 år kan ikke registreres for egen utførselskvote, uavhengig av om de har deltatt i fisket."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvor mye fisk kan gjestene ta med hjem i 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Utførselskvoten i 2026 er 15 kg fisk eller fiskeprodukter per person, inntil to ganger per kalenderår. Fra 1. januar 2027 reduseres kvoten til 10 kg. Kvoten gjelder per person, ikke per gruppe."
+      }
+    }
+  ]
+}
+</script>
