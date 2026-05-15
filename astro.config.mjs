@@ -79,6 +79,13 @@ export default defineConfig({
   site: SITE_URL,
   base: '',
 
+  // Redirect old blog post to new landing page
+  // Note: Astro static redirects generate HTML with meta refresh (GitHub Pages compatible)
+  redirects: {
+    '/blogg/daglig-fangstrapportering-turistfiske': '/fangstrapportering-turistfiske/',
+    '/blogg/daglig-fangstrapportering-turistfiske/': '/fangstrapportering-turistfiske/',
+  },
+
   build: {
     inlineStylesheets: 'auto',
   },
