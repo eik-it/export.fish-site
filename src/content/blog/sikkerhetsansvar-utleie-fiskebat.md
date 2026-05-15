@@ -4,6 +4,7 @@ description: "Som utleier av fiskebåt har du et ansvar for sikkerhetsutstyr, gj
 slug: "sikkerhetsansvar-utleie-fiskebat"
 guid: "bd574ba1-df9b-410f-afcf-3ade22a890a7"
 pubDate: 2026-05-12T08:00:00.000Z
+updatedDate: 2026-05-15T00:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
@@ -12,6 +13,11 @@ image:
 ---
 
 Natt til 11. mai 2026 mistet tre turister livet da en leiebåt kantret utenfor Smøla i Møre og Romsdal. Årsaken til ulykken er under etterforskning, og politiet har foreløpig ikke konkludert. Vi vet ikke hva som gikk galt.
+
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Som utleier av fiskebåt plikter du å sørge for forsvarlig utstyr, tydelig gjestebriefing og en klar beredskapsrutine. Se den fullstendige <a href="/hytteutleie-med-bat-regler/">sjekklisten for hytteutleie med båt</a> for en gjennomgang av alle krav.</p>
+</div>
 
 Det vi vet, er at ulykker skjer, og at de rammer hardt, både dem det gjelder og lokalsamfunnene rundt. For deg som leier ut båt til fiskegjester, er det naturlig å spørre seg: har jeg gjort det jeg kan?
 
@@ -117,7 +123,7 @@ Sjekk følgende med ditt forsikringsselskap:
 
 Forskjellen mellom kasko og ansvarsforsikring er vesentlig: ansvarsforsikring dekker skade på andre, kasko dekker skade på din egen båt. En leietaker som kjører på en stein vil koste deg dyrt uten kasko.
 
-Les gjerne gjennom vår sjekkliste for [hytte med båt-utleie](/blogg/leie-hytte-med-bat-sjekkliste/), der forsikringspunktene er gjennomgått i detalj.
+Les gjerne gjennom vår sjekkliste for [hytteutleie med båt](/hytteutleie-med-bat-regler/), der forsikringspunktene er gjennomgått i detalj.
 
 ---
 
@@ -137,3 +143,41 @@ Det handler om respekt for gjestene, for farvannene og for det ansvaret som føl
 - **Sjøfartsdirektoratet**: Fritidsbåt og sikkerhet, https://www.sdir.no/fritidsbat/
 - **Redningsselskapet**: Sjøsikkerhet og beredskap, redningsselskapet.no
 - **Lov om fritids- og småbåter (småbåtloven)** § 23a, Lovdata
+
+## Relaterte guider
+
+- [Hytteutleie med båt](/hytteutleie-med-bat-regler/) — sjekkliste og krav for lovlig utleie med båt
+- [Turistfiske regler](/turistfiske-regler/) — komplett oversikt over regelverket for registrerte virksomheter
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hva er ansvaret mitt som utleier av fiskebåt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Som utleier plikter du å sørge for at båten er i forsvarlig stand, at sikkerhetsutstyr er til stede og kontrollert, og at gjestene er informert om båten, lokale forhold og nødprosedyrer. Det er ikke tilstrekkelig å henge vestene på plass, du har et aktivt aktsomhetsansvar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Er ordinær båtforsikring gyldig ved utleie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nei, som regel ikke. En ordinær båtforsikring er vanligvis ikke gyldig når båten brukes av betalende leietakere. Du bør sjekke med forsikringsselskapet om du trenger utvidelse for ansvar, kasko og redningskostnader ved utleie."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva gjør jeg dersom en båt er overtid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ha en fast beredskapsrutine: ta kontakt etter 30 minutter, varsle noen med lokal kjennskap etter 1 time uten svar, og ring Redningsselskapet (02016) eller Hovedredningssentralen (120) ved fortsatt manglende kontakt. Avtal alltid forventet hjemkomsttid med gjestene ved avgang."
+      }
+    }
+  ]
+}
+</script>

@@ -4,6 +4,7 @@ description: "Nullfangst skaper ofte usikkerhet i turistfiskedriften. Her får d
 slug: "nullfangst-turistfiske-ma-det-rapporteres"
 guid: "a21b343d-7a06-47d8-800e-4846f9f0af88"
 pubDate: 2026-04-23T05:51:21.000Z
+updatedDate: 2026-05-15T00:00:00.000Z
 author: "Kim Eik"
 image:
   src: "./images/nullfangst-turistfiske-ma-det-rapporteres.webp"
@@ -14,6 +15,11 @@ tags: []
 Gjesten kom inn uten fisk. Kanskje var det mye vind, kanskje bet ikke seien, eller kanskje de bare tok en kort kveldstur. Det er nettopp her mange utleiere stopper opp og lurer: Hva gjør vi med nullfangst — dager uten fangst — skal de rapporteres, og i så fall hvordan?
 
 Det korte svaret er at det ikke holder å bare registrere de dagene det faktisk blir tatt fisk. Regelverket krever daglig fangstrapportering for hele fiskeperioden, og du må også ha kontroll på dagene der resultatet er null. For deg som [leier ut én hytte og én båt](/blogg/ma-du-registrere-turistfiskebedrift/), er dette ikke bare et spørsmål om papirarbeid. Det handler om å ha orden i driften, kunne utstede riktig utførselsdokumentasjon og slippe usikkerhet i etterkant.
+
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Ja, nullfangst skal rapporteres. Reglene for <a href="/fangstrapportering-turistfiske/">fangstrapportering for turistfiske</a> krever daglig registrering for hele fiskeperioden, også dager uten fangst. Mangler en dag, kan ikke fiskeperioden lukkes og utførselsdokumentasjon ikke utstedes.</p>
+</div>
 
 ## Hvorfor nullfangst skaper trøbbel
 
@@ -27,7 +33,7 @@ Derfor er nullfangst ikke en bagatell. Det er en del av dokumentasjonen på at r
 
 I praktisk drift betyr nullfangst at gjestene har vært ute på fisketur innenfor et opphold, men at det ikke er tatt fisk som skal føres som fangst den dagen. Det viktige er ikke bare sluttresultatet i fryseboksen. Det viktige er at turen har funnet sted, og at virksomheten din har en sammenhengende rapportering for hele fiskeperioden.
 
-Regelverket krever daglig fangstrapportering, og det er periodelukkingen kombinert med utleiers godkjenning som utløser utførselsdokumentasjonen. Det betyr at du trenger en rutine som fanger opp alle dager i oppholdet - også de uten fangst. Les mer om [daglig rapportering](/blogg/daglig-fangstrapportering-turistfiske/) og hva det innebærer i praksis.
+Regelverket krever [fangstrapportering for turistfiske](/fangstrapportering-turistfiske/), og det er periodelukkingen kombinert med utleiers godkjenning som utløser utførselsdokumentasjonen. Det betyr at du trenger en rutine som fanger opp alle dager i oppholdet, også de uten fangst.
 
 Det betyr ikke at du må gjøre dette tungvint. Tvert imot. Poenget er å gjøre det enkelt nok til at det faktisk blir gjort hver dag.
 
@@ -70,7 +76,7 @@ Den beste rutinen er den som tåler en travel lørdag, en sen innsjekk og gjeste
 
 Det som fungerer best for små utleiere, er en enkel flyt der gjestene registrerer selv, dag for dag, og der du har oversikt over hva som er sendt inn og hva som mangler. Når rapporteringen skjer fortløpende, blir nullfangst bare en normal del av driften. Ikke et problem du oppdager for sent.
 
-Det er nettopp derfor vi har bygget [eksportfiske.no](https://eksportfiske.no/registrer/) slik vi selv ville brukt det som utleiere. Du deler en subdomene-lenke eller QR-kode med gjestene ved innsjekk. Gjesten oppretter fiskeperioden, oppgir e-postadressen sin og får en unik lenke til sitt eget dashbord - der kan de registrere fangst på norsk, engelsk eller tysk. Du beholder kontrollen, ser hva som mangler, og dokumentasjonen er klar når perioden er godkjent. Turistene gjør jobben, og du får enklere drift uten å gi slipp på oversikten.
+Det er nettopp derfor vi har bygget [eksportfiske.no](https://eksportfiske.no/registrer/) slik vi selv ville brukt det som utleiere. Du deler en subdomene-lenke eller QR-kode med gjestene ved innsjekk. Gjesten oppretter fiskeperioden, oppgir e-postadressen sin og får en unik lenke til sitt eget dashbord, der kan de registrere fangst på norsk, engelsk eller tysk. Du beholder kontrollen, ser hva som mangler, og dokumentasjonen er klar når perioden er godkjent. Turistene gjør jobben, og du får enklere drift uten å gi slipp på oversikten.
 
 ## Hva bør du si til gjestene?
 
@@ -87,3 +93,41 @@ Nullfangst virker lite viktig helt til du trenger en fullstendig rapportkjede. D
 For noen utleiere vil dette fortsatt løses med en veldig enkel daglig rutine. For andre, særlig hvis du har to båter, hyppige bytter eller mange utenlandske gjester, blir et digitalt opplegg nesten nødvendig. Det er ikke fordi driften din er stor. Det er fordi hukommelse og lapper ikke skalerer særlig godt, selv i liten skala.
 
 Så neste gang gjesten sier "vi fikk ingenting i dag", tenk ikke at dagen kan strykes. Tenk at dagen også skal med. Det er ofte der den rolige hverdagen begynner.
+
+## Relaterte guider
+
+- [Fangstrapportering for turistfiske](/fangstrapportering-turistfiske/) — komplett oversikt over daglig rapporteringsplikt
+- [Bot for turistfiske-rapportering](/blogg/bot-for-turistfiske-rapportering/) — hva skjer ved manglende rapportering
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Skal nullfangst rapporteres i turistfiske?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Regelverket krever daglig fangstrapportering for hele fiskeperioden, også dager uten fangst. Mangler en dag, kan fiskeperioden ikke lukkes og utførselsdokumentasjon ikke utstedes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva er forskjellen på nullfangst og ingen tur?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nullfangst betyr at båten var ute til fiske, men at det ikke ble tatt fangst den dagen. Ingen tur betyr at båten ikke var i bruk til fiske. Kun nullfangst-dager der båten faktisk var i bruk skal inkluderes i fiskeperioden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva skjer hvis nullfangst ikke rapporteres?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Manglende rapportering gjør at fiskeperioden ikke kan lukkes korrekt, og utførselsdokumentasjon kan ikke utstedes. Det øker risikoen for avvik og kan utløse tilsyn fra Fiskeridirektoratet."
+      }
+    }
+  ]
+}
+</script>

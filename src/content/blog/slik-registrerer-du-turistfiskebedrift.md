@@ -4,6 +4,7 @@ description: "Steg-for-steg-guide til registrering av turistfiskebedrift hos Fis
 slug: "slik-registrerer-du-turistfiskebedrift"
 guid: "c83d1d64-ef1f-4f53-94d9-858a8c8acea2"
 pubDate: 2026-05-01T08:00:00.000Z
+updatedDate: 2026-05-15T00:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
@@ -14,6 +15,11 @@ image:
 Mange utleiere som leier ut hytte og båt til fisketurister vet at de bør registrere seg, men vet ikke helt hvor de begynner. Informasjonen om Fiskeridirektoratets register for turistfiskebedrifter er spredt mellom Lovdata, fiskeridir.no og Brønnøysundregistrene, og mange starter sesongen uten å ha fått papirene på plass. Det er synd, fordi selve registreringen er enklere enn folk tror, og fordi den er inngangsporten til alt annet: utførselskvote for gjestene, rapporteringsplikt og en legitim drift innenfor regelverket.
 
 Denne artikkelen tar deg gjennom hva du trenger, hva du sender inn, og hva som skjer etter at du er registrert.
+
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Du registrerer turistfiskebedrift ved å sende søknad til Fiskeridirektoratet med organisasjonsnummer, opplysninger om fartøy og ledelse, og bekreftelse på rapporteringsplikt. Se mer om hva som kreves på siden om å <a href="/registrering">registrere turistfiskebedrift</a> og hvilke <a href="/turistfiske-regler/">turistfiske regler</a> som gjelder etter registrering.</p>
+</div>
 
 ## Hvem må registrere, og hvem kan gjøre det frivillig?
 
@@ -59,7 +65,7 @@ I praksis betyr det:
 - Rapporten for oppholdet må være godkjent av deg som utleier før utførselsdokument kan utstedes til gjesten
 - Dager uten fangst skal også dekkes, se vår gjennomgang av [nullfangst og hva som faktisk kreves](/blogg/nullfangst-turistfiske-ma-det-rapporteres/)
 
-For mange er det nettopp dette punktet som overrasker. Registreringen er enkel. Det er rutinene rundt [daglig fangstrapportering](/blogg/daglig-fangstrapportering-turistfiske/) som krever et gjennomtenkt opplegg. Vi har sett mange utleiere som er korrekt registrert, men der hverdagen glipper fordi de ikke har et system som fungerer for utenlandske gjester som ikke kan norsk. Les mer om hva dette konkret innebærer for [fritidsboligeiere og utleiere](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/).
+For mange er det nettopp dette punktet som overrasker. Registreringen er enkel. Det er rutinene rundt [fangstrapportering for turistfiske](/fangstrapportering-turistfiske/) som krever et gjennomtenkt opplegg. Vi har sett mange utleiere som er korrekt registrert, men der hverdagen glipper fordi de ikke har et system som fungerer for utenlandske gjester som ikke kan norsk. Les mer om hva dette konkret innebærer for [fritidsboligeiere og utleiere](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/).
 
 ## Offentlig register og innsyn
 
@@ -91,7 +97,7 @@ Mange bruker unødvendig lang tid fordi de ikke har all informasjon tilgjengelig
 
 Har du alt dette klart, er selve søknaden grei å fylle ut. Det tar som regel ikke mer enn 15–20 minutter.
 
-Sjekkliste for utleiere som vil gjøre alt riktig fra start finner du i [leie-hytte-med-båt-sjekklisten](/blogg/leie-hytte-med-bat-sjekkliste/). Utførsel av fisk for gjestene forutsetter at du også kjenner kravene til [utførselsdokumentasjon](/blogg/utforselsdokument-fisk-krav/). Familier med barn reiser egne spørsmål, se gjennomgangen av [aldersgrense i turistfiske](/blogg/aldersgrense-turistfiske-12-ar/).
+Sjekkliste for utleiere som vil gjøre alt riktig fra start finner du i vår gjennomgang av [hytteutleie med båt regler](/hytteutleie-med-bat-regler/). Utførsel av fisk for gjestene forutsetter at du også kjenner kravene til [utførselsdokumentasjon for fisk](/utforselsdokumentasjon-fisk/). Familier med barn reiser egne spørsmål, se gjennomgangen av [aldersgrense i turistfiske](/blogg/aldersgrense-turistfiske-12-ar/).
 
 Vi mener at registreringen er det enkle trinnet. Det er det som kommer etterpå, rutinene, rapporteringen og dokumentasjonen, som avgjør om driften faktisk holder mål i sesongen. Men du må ha registreringen på plass for å komme i gang. Og du kan ikke vente til første gjest banker på døra.
 
@@ -100,3 +106,8 @@ Vi mener at registreringen er det enkle trinnet. Det er det som kommer etterpå,
 - [Forskrift om turistfiskevirksomheter (FOR-2017-07-05-1141)](https://lovdata.no/dokument/SF/forskrift/2017-07-05-1141), Lovdata
 - [Registrering av turistfiskebedrift](https://www.fiskeridir.no/turistfiske/registrering-av-turistfiskebedrift), Fiskeridirektoratet
 - [Enhetsregisteret og Foretaksregisteret](https://www.brreg.no/), Brønnøysundregistrene
+
+## Relaterte guider
+
+- [Registrere turistfiskebedrift](/registrering) — mer om hva som skjer etter registrering
+- [Turistfiske regler](/turistfiske-regler/) — komplett oversikt over regelverket
