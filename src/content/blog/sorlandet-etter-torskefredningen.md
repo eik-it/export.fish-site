@@ -15,6 +15,11 @@ Det er ikke unaturlig at mange turistfiskeverter på Sørlandet kjenner på en t
 
 Det er det ikke nødvendigvis. Det er en omstilling, og Sørlandet har mer å tilby enn det mange husker.
 
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Torsk er totalfredet i Skagerrak og tre nullfiskeområder stenger deler av Oslofjorden fra 2026. For turistfiskeverter på Sørlandet finnes det gode alternativer: makrell fra juni til september, sei, lyr, krabbe og hummer i sesongen. Rapporteringsplikten og reglene for <a href="/fangstrapportering-turistfiske/">fangstrapportering</a> gjelder uendret, uavhengig av hvilke arter gjestene fisker.</p>
+</div>
+
 ## Hva er faktisk forbudt?
 
 Torsk er totalfredet i Skagerrak. Det betyr at ingen, verken yrkesfiskere eller turistfiskere, lovlig kan fiske torsk i havområdet fra Telemark og sørover langs kysten til grensen mot Sverige. Fredninga gjelder hele året, ikke bare i gyteperioden.
@@ -57,13 +62,13 @@ Det første skrittet er å slutte å beklage seg. Gjestene reagerer på tone. En
 
 Familiemarkedet er det viktigste å ta vare på. Familier med barn er ikke primært ute etter torsk, de er ute etter opplevelse, mestring og natur. En god dag på sjøen med makrell og krabber er en familiehøydepunkt. Bruk det i markedsføringen. Vis bilder av barn som holder krabbe. Beskriv makrellfisket som lett tilgjengelig og morsomt for alle.
 
-Sett det ikke-kvote-fokuserte aspektet i sentrum. Torsk kom med kvote-angst og kompleks dokumentasjon, se [daglig fangstrapportering](/blogg/daglig-fangstrapportering-turistfiske/) og [utførselsregler](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/). For mange gjester er et fiskeopplegg uten store krav til dokumentasjon og kvotekontroll faktisk frigjørende. Makrell, krabbe og sjøørret gir en enklere opplevelse, og det er en verdi, ikke en mangel.
+Sett det ikke-kvote-fokuserte aspektet i sentrum. Torsk kom med kvote-angst og kompleks dokumentasjon, se [fangstrapportering for turistfiske](/fangstrapportering-turistfiske/) og [utførselsregler](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/). For mange gjester er et fiskeopplegg uten store krav til dokumentasjon og kvotekontroll faktisk frigjørende. Makrell, krabbe og sjøørret gir en enklere opplevelse, og det er en verdi, ikke en mangel.
 
 Vurder å bygge sesongpakker: makrellen om sommeren, hummeren om høsten, og lakseelva for de som ønsker noe mer ekslusivt. Et slikt tilbud er ikke et dårligere alternativ til torskefiske, det er et bredere og mer helårlig produkt.
 
 ## Rapportering og dokumentasjon endres ikke
 
-Selv om artene endres, gjelder [kravene til daglig fangstrapportering](/blogg/daglig-fangstrapportering-turistfiske/) fortsatt. All fangst skal rapporteres per opphold og art, og det er dette grunnlaget som muliggjør [utførselsdokumentasjon](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/) for gjester som ønsker å ta med seg fisk hjem. Det endres ikke av at arten skifter fra torsk til makrell.
+Selv om artene endres, gjelder [kravene til daglig fangstrapportering](/fangstrapportering-turistfiske/) fortsatt. All fangst skal rapporteres per opphold og art, og det er dette grunnlaget som muliggjør [utførselsdokumentasjon](/blogg/lovpalagt-fangstrapportering-fritidsboligeiere/) for gjester som ønsker å ta med seg fisk hjem. Det endres ikke av at arten skifter fra torsk til makrell.
 
 Har du ikke rukket å [registrere virksomheten din](/blogg/ma-du-registrere-turistfiskebedrift/) som turistfiskebedrift, er nå et godt tidspunkt. Uten registrering mangler gjestene utførselskvote for all fisk, uavhengig av art. Det er et konkret tap av verdi for gjestene, og dermed for deg.
 
@@ -93,3 +98,42 @@ Sørlandet er ikke blitt et dårligere fiskested. Det har blitt et annerledes fi
 - Regjeringen.no: Nullfiskeområder i Oslofjorden trer i kraft 1. januar 2026, tre soner (Indre Oslofjord, Færder, Ytre Hvaler)
 - Havforskningsinstituttet: Bestandsstatus for kysttorsk i Skagerrak og Oslofjorden
 - Visit Sørlandet: Fisketilbud og fiskearter langs sørlandskysten
+
+## Relaterte guider
+
+- [Regler for turistfiske i Norge](/turistfiske-regler/) — regelverk, fredningsbestemmelser og hva som gjelder langs hele kysten
+- [Fangstrapportering for turistfiske](/fangstrapportering-turistfiske/) — daglig rapporteringsplikt gjelder uendret etter torskefredningen
+- [Nullfiskeområder i Oslofjorden 2026](/blogg/torskefredning-oslofjorden-2026/) — de tre forbudssonene og hva de betyr for utleiere
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Er torskefisket forbudt på hele Sørlandet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Torsk er totalfredet i Skagerrak fra Telemark til grensen mot Sverige. I tillegg er tre nullfiskeområder i Oslofjorden innført fra 1. januar 2026. Sørlandskysten vest for Lindesnes er ikke omfattet av de samme forbuda, men torskefredningen i Skagerrak gjelder i disse farvannene."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva kan turistfiskere fange på Sørlandet etter torskefredningen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Makrell fra juni til september, sei, lyr og krabbe er tilgjengelig i store deler av regionen. Hummer kan fiskes fra 1. oktober til 30. november. Ferskvannsfiske etter laks og ørret i elver som Mandalselva er også et alternativ for gjester som ønsker et annet fiskeopplegg."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gjelder fangstrapporteringsplikten fortsatt når man fisker makrell i stedet for torsk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Rapporteringsplikten for registrerte turistfiskebedrifter gjelder uavhengig av hvilke arter gjestene fisker. Makrell og andre arter som ikke er på pliktig-rapporterlisten utløser ikke selve artsplikten, men du bør likevel ha orden på dokumentasjonen for eventuell utførsel."
+      }
+    }
+  ]
+}
+</script>
