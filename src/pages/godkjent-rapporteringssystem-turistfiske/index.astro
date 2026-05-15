@@ -1,0 +1,169 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Godkjent rapporteringssystem for turistfiske | export.fish"
+  description="Hva betyr det at et rapporteringssystem er godkjent av Fiskeridirektoratet? Hvem kan godkjenne, hvilke krav stilles, og hvorfor er godkjenning obligatorisk for turistfiskebedrifter."
+>
+  <Fragment slot="head">
+    <script type="application/ld+json">{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hva betyr det at et rapporteringssystem er godkjent av Fiskeridirektoratet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Et godkjent system oppfyller alle tekniske og funksjonelle krav i Forskrift om rapportering av fangst fra turistfiskevirksomhet (FOR-2017-07-05-1141). Det betyr at systemet kan sende fangstdata i riktig format til Fiskeridirektoratets API, at data er komplett og korrekt, og at systemet kan utstede gyldig eksportdokumentasjon."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Er det obligatorisk å bruke et godkjent rapporteringssystem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Turistfiskebedrifter kan ikke oppfylle rapporteringsplikten med et egenutviklet system eller manuell rapportering. Fiskeridirektoratet krever bruk av et elektronisk system som er godkjent i henhold til forskriften."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Er export.fish godkjent av Fiskeridirektoratet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Export.fish er et godkjent elektronisk rapporteringssystem for turistfiskevirksomhet i henhold til FOR-2017-07-05-1141. Systemet rapporterer automatisk all nødvendig informasjon til Fiskeridirektoratets API og utsteder gyldig eksportdokumentasjon."
+          }
+        }
+      ]
+    })}</script>
+    <script type="application/ld+json">{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Hjem", "item": "https://eksportfiske.no/" },
+        { "@type": "ListItem", "position": 2, "name": "Turistfiske regler", "item": "https://eksportfiske.no/turistfiske-regler/" },
+        { "@type": "ListItem", "position": 3, "name": "Godkjent rapporteringssystem", "item": "https://eksportfiske.no/godkjent-rapporteringssystem-turistfiske/" }
+      ]
+    })}</script>
+  </Fragment>
+
+  <article class="pt-44 pb-16 bg-white">
+    <div class="max-w-2xl mx-auto px-4">
+
+      <nav class="text-sm text-gray-500 mb-6" aria-label="Brødsmulesti">
+        <ol class="flex items-center gap-2 flex-wrap">
+          <li><a href="/" class="hover:text-primary transition">Hjem</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/turistfiske-regler/" class="hover:text-primary transition">Turistfiske regler</a></li>
+          <li aria-hidden="true">/</li>
+          <li class="text-gray-900 font-medium">Godkjent rapporteringssystem</li>
+        </ol>
+      </nav>
+
+      <header class="mb-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-4">
+          Godkjent rapporteringssystem for turistfiske
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          Hva betyr "godkjent av Fiskeridirektoratet", hvilke krav stilles til systemet, og hvorfor er det obligatorisk å bruke et slikt system?
+        </p>
+      </header>
+
+      <div class="flex items-start gap-3 bg-green-50 border border-green-200 rounded-xl px-5 py-4 mb-8">
+        <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+          <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-green-800">Export.fish er godkjent av Fiskeridirektoratet</p>
+          <p class="text-xs text-green-700 mt-0.5">
+            Oppfyller alle krav i FOR-2017-07-05-1141.
+            <a href="https://www.fiskeridir.no/turistfiske/rapportering-for-turistfiskebedrifter" target="_blank" rel="noopener noreferrer" class="underline hover:text-green-900 transition-colors">Se godkjente systemer</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="article-body text-gray-800 leading-relaxed">
+
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-8">
+          <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+          <p class="text-gray-800">
+            Et godkjent rapporteringssystem for turistfiske er et elektronisk system som er verifisert av Fiskeridirektoratet til å oppfylle alle krav i forskriften om fangstrapportering. Bruk av et slikt system er obligatorisk for turistfiskebedrifter. Det er ikke tillatt å rapportere manuelt eller bruke egenutviklede løsninger som ikke er godkjent.
+          </p>
+        </div>
+
+        <h2>Hva er kravet i forskriften?</h2>
+        <p>
+          Forskrift om rapportering av fangst fra turistfiskevirksomhet (FOR-2017-07-05-1141) krever at turistfiskebedrifter rapporterer fangst via et godkjent elektronisk system. Kravet ble innført for å sikre pålitelig og verifiserbar data om fiskeuttaket fra norske farvann.
+        </p>
+        <p>
+          Fra 1. august 2025 skjerpes kravet: rapporteringen skal skje daglig, ikke periodisk. Les mer om <a href="/fangstrapportering-turistfiske/">daglig fangstrapportering for turistfiske</a>.
+        </p>
+
+        <h2>Hva kjennetegner et godkjent system?</h2>
+        <p>Et godkjent system for turistfiske må:</p>
+        <ul>
+          <li>Sende fangstdata i riktig format til Fiskeridirektoratets API</li>
+          <li>Registrere alle påkrevde felter: art, antall, vekt per fiskedag</li>
+          <li>Håndtere nullfangst korrekt</li>
+          <li>Utstede gyldig eksportdokumentasjon etter at rapportering er bekreftet</li>
+          <li>Sikre at eksportdokument ikke kan utstedes uten forutgående rapportering</li>
+        </ul>
+
+        <h2>Hvorfor er godkjenning obligatorisk?</h2>
+        <p>
+          Fiskeridirektoratet trenger verifiserbar data om fiskeuttaket for å forvalte bestandene. Et godkjent system garanterer at dataene som sendes inn holder tilstrekkelig kvalitet og at rekkefølgekravet (rapportering før eksportdokument) overholdes.
+        </p>
+        <p>
+          For turistene er dette også viktig: eksportdokumentet de trenger for å ta fisk ut av Norge er kun gyldig når det er utstedt av et godkjent system basert på bekreftet rapportering. Les mer: <a href="/utforselsdokumentasjon-fisk/">Utførselsdokumentasjon for fisk</a>
+        </p>
+
+        <h2>Export.fish: godkjent for alle krav</h2>
+        <p>
+          Export.fish er et godkjent elektronisk rapporteringssystem som dekker hele flyten:
+        </p>
+        <ul>
+          <li>Turistene registrerer fangst daglig i appen (norsk, engelsk, tysk)</li>
+          <li>Automatisk daglig rapportering til Fiskeridirektoratets API</li>
+          <li>Håndterer nullfangst automatisk</li>
+          <li>Utsteder godkjent eksportdokumentasjon etter bedriftens godkjenning</li>
+          <li>Ingen installasjon nødvendig: progressiv webapp for alle enheter</li>
+        </ul>
+        <p>
+          For en full oversikt over reglene, se vår <a href="/turistfiske-regler/">guide til turistfiske regler</a>.
+        </p>
+
+      </div>
+    </div>
+  </article>
+
+  <section class="py-16 bg-gradient-to-br from-blue-50 to-slate-50">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        Kom i gang med et godkjent system
+      </h2>
+      <p class="text-lg text-gray-600 mb-8">
+        Export.fish er klar til bruk fra dag én. Prøv gratis i 30 dager.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/registrer/" class="bg-primary hover:bg-primary-hover text-white font-semibold px-8 py-4 rounded-lg transition-colors text-center shadow-md hover:shadow-lg">
+          Kom i gang gratis
+        </a>
+        <a href="/registrering" class="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-4 rounded-lg transition-colors text-center">
+          Les om registrering
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .article-body :global(h2) { font-size: 1.5rem; font-weight: 700; color: #111827; margin-top: 2.5rem; margin-bottom: 1rem; line-height: 1.3; }
+  .article-body :global(p) { margin-bottom: 1.25rem; line-height: 1.75; }
+  .article-body :global(ul) { padding-left: 1.5rem; margin-bottom: 1.25rem; list-style-type: disc; }
+  .article-body :global(li) { margin-bottom: 0.5rem; line-height: 1.75; }
+  .article-body :global(a) { color: #2196f3; text-decoration: underline; text-underline-offset: 2px; }
+  .article-body :global(a:hover) { color: #1e88e5; }
+</style>
