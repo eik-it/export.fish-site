@@ -4,6 +4,7 @@ description: "Fra 1.1.2026 er utførselskvoten 15 kg per person, inntil to gange
 slug: "utforselskvote-fisk-2026"
 guid: "8b725c20-ef2f-4d28-8731-5a523c4523d7"
 pubDate: 2026-04-27T08:00:00.000Z
+updatedDate: 2026-05-15T00:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
@@ -14,6 +15,11 @@ image:
 Når gjestene dine pakker bilen for hjemreise, er utførselskvoten gjerne det siste spørsmålet de stiller. Og det er ofte da det haster mest å ha riktig svar. Fra 1. januar 2026 er kvoten 15 kg fisk per person, inntil to ganger per kalenderår, og den faller til 10 kg fra 1. januar 2027. For deg som driver [registrert turistfiskebedrift](/blogg/ma-du-registrere-turistfiskebedrift/) er det nødvendig å kjenne disse grensene, fordi det er du som utsteder dokumentasjonen gjestene trenger ved grensepassering.
 
 Reglene er hjemlet i FOR-2006-06-01-570 (forskrift om utførselsregulering av fisk og fiskevarer fra sportsfiske), senest endret ved FOR-2025-07-02-1401, som trådte i kraft 1. januar 2026.
+
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Utførselskvoten for fisk er 15 kg per person i 2026, inntil to ganger per kalenderår. Den reduseres til 10 kg fra 2027. Gjestene trenger et utførselsdokument fra din registrerte turistfiskebedrift, og dokumentet kan ikke utstedes uten at fangsten er rapportert. Les mer om de fullstendige <a href="/turistfiske-regler/">turistfiske reglene</a>.</p>
+</div>
 
 ## Hva er utførselskvoten i 2026?
 
@@ -43,7 +49,7 @@ Tidligere var det mulig å ta med trofefisk — altså særlig store eller repre
 
 ## Hva krever utførselsdokumentasjonen?
 
-Gjestene kan ikke bare dukke opp i grensekontrollen med fisk og forklare muntlig hvor de har vært. De trenger et skriftlig dokument fra turistfiskebedriften. Og det dokumentet kan ikke utstedes før [fangsten er rapportert til Fiskeridirektoratet](/blogg/daglig-fangstrapportering-turistfiske/).
+Gjestene kan ikke bare dukke opp i grensekontrollen med fisk og forklare muntlig hvor de har vært. De trenger et skriftlig dokument fra turistfiskebedriften. Og det dokumentet kan ikke utstedes før [fangsten er rapportert til Fiskeridirektoratet](/fangstrapportering-turistfiske/).
 
 Dokumentet skal minimum inneholde:
 
@@ -55,7 +61,7 @@ Dokumentet skal minimum inneholde:
 
 Personen som er navngitt på dokumentet må selv være til stede når fisken passerer grensen. Dokumentet kan ikke brukes av en annen person.
 
-Rapportering er altså en forutsetning for dokumentasjon — og dokumentasjon er en forutsetning for lovlig utførsel. [Daglig fangstrapportering](/blogg/daglig-fangstrapportering-turistfiske/) er ikke en formalitet du ordner ved utsjekk, men en løpende plikt som legger grunnlaget for hele kjeden. Mangler det én fangstdag, kan du ikke avslutte perioden — og da kan du heller ikke utstede dokumentet.
+Rapportering er altså en forutsetning for dokumentasjon — og dokumentasjon er en forutsetning for lovlig utførsel. [Fangstrapportering for turistfiske](/fangstrapportering-turistfiske/) er ikke en formalitet du ordner ved utsjekk, men en løpende plikt som legger grunnlaget for hele kjeden. Mangler det én fangstdag, kan du ikke avslutte perioden — og da kan du heller ikke utstede dokumentet.
 
 ## Dokumentasjonskjeden: hvorfor rekkefølgen er avgjørende
 
@@ -69,7 +75,7 @@ Har gjestene glemt å registrere én dag midt i oppholdet, stopper hele kjeden o
 
 Alt over kvoten regnes som fiskesmugling, og bøtesatsen er 8 000 kroner pluss 200 kroner per kilo fisk. I 2024 beslagla Tolletaten over 13 tonn fisk som var forsøkt smuglet ut av landet — nesten dobbelt av foregående år. Kontrollen er reell, og den rammer gjester fra alle land.
 
-For deg som utleier er det avgjørende at dokumentasjonen er på plass før gjestene kjører. En situasjon der gjestene stoppes i grensekontrollen med ufullstendig eller manglende dokumentasjon er ubehagelig for alle parter — og det preger totalinntrykket av oppholdet. En [god rutine for daglig fangstrapportering](/blogg/daglig-fangstrapportering-turistfiske/) er det eneste som gjør det mulig å levere dokumentasjon uten stressede siste-minutt-situasjoner. [Bøter for manglende rapportering](/blogg/bot-for-turistfiske-rapportering/) kan også ramme bedriften direkte.
+For deg som utleier er det avgjørende at dokumentasjonen er på plass før gjestene kjører. En situasjon der gjestene stoppes i grensekontrollen med ufullstendig eller manglende dokumentasjon er ubehagelig for alle parter — og det preger totalinntrykket av oppholdet. En [god rutine for fangstrapportering for turistfiske](/fangstrapportering-turistfiske/) er det eneste som gjør det mulig å levere dokumentasjon uten stressede siste-minutt-situasjoner. [Bøter for manglende rapportering](/blogg/bot-for-turistfiske-rapportering/) kan også ramme bedriften direkte.
 
 ## Praktisk: Slik informerer du gjestene
 
@@ -107,3 +113,41 @@ Utførselsdokumentasjonen er din oppgave — og den er bare mulig å utstede rik
 - [Nye krav i turistfisket fra 1. august – Fiskeridirektoratet](https://www.fiskeridir.no/nyheter/nye-krav-i-turistfisket-fra-1.august) — Nyhetsartikkel som forklarer endringene som trådte i kraft 1. august 2025: daglig rapporteringsplikt, aldersgrense 12 år og skjerpede dokumentasjonskrav.
 
 - [Fiskekvote når du reiser fra Norge – Tolletaten](https://www.toll.no/no/varer/fisk/kvote) — Tolletatens praktiske veiledning for reisende om hva som kreves ved grensepassering, og hva som skjer hvis kvoten overskrides.
+
+## Relaterte guider
+
+- [Turistfiske regler](/turistfiske-regler/) — komplett oversikt over kvoter, rapporteringsplikt og regelverk
+- [Fangstrapportering for turistfiske](/fangstrapportering-turistfiske/) — daglig rapporteringsplikt og praksis
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hva er utførselskvoten for fisk i 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Utførselskvoten er 15 kg fisk per person, inntil to ganger per kalenderår fra 1. januar 2026. Fra 1. januar 2027 reduseres kvoten til 10 kg. Kvoten gjelder kun for gjester hos registrerte turistfiskebedrifter, og barn under 12 år har ingen kvote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva kreves for å ta med fisk ut av Norge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gjesten trenger et utførselsdokument fra en registrert turistfiskebedrift. Dokumentet kan ikke utstedes uten at fangsten er rapportert til Fiskeridirektoratet. Fisken må medbringes personlig av den navngitte personen ved grensepassering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Teller trofefisk mot utførselskvoten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Trofefisk-tillegget ble avviklet fra 1. august 2025. All fisk, uansett størrelse, teller mot den ordinære kvoten på 15 kg. Det finnes ikke lenger noe eget unntak for store eksemplarer."
+      }
+    }
+  ]
+}
+</script>

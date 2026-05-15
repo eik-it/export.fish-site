@@ -4,6 +4,7 @@ description: "Trofefisk-tillegget er fjernet fra utførselskvoten. Dette betyr e
 slug: "trofefisk-fjernet-turistfiske"
 guid: "904fba5b-f1a6-42b3-a2a7-bd567d11bacf"
 pubDate: 2026-05-15T08:00:00.000Z
+updatedDate: 2026-05-15T00:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
@@ -12,6 +13,11 @@ image:
 ---
 
 En stor kveite er for mange fisketurister drømmefangsten. En meter og åtti, kanskje over to. Bildet på kaia, historien som fortelles i årevis. Det er nettopp denne fangsten som har skapt mest forvirring etter at regelverket for turistfiske ble strammet inn fra 1. august 2025.
+
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Trofefisk-tillegget er fjernet. Stor kveite og andre trofeer regnes nå inn i den ordinære utførselskvoten på 15 kg per person. Det finnes ikke lenger et separat unntak. Se <a href="/turistfiske-regler/">turistfiske reglene</a> for komplett oversikt over gjeldende kvoteregler.</p>
+</div>
 
 For det som tidligere kaltes "trofefisken" (altså en ekstra stor fisk du kunne ta med deg hjem uavhengig av vekt) finnes ikke lenger som eget tillegg til utførselskvoten. Regelen er fjernet. Fisken teller nå mot den ordinære kvoten på lik linje med all annen fisk du tar med ut av landet.
 
@@ -29,7 +35,7 @@ Utførselskvoten som gjelder fra 1. januar 2026 er 15 kg fisk eller fiskeprodukt
 
 Det er bare mulig å utføre fisk dersom fisket har foregått hos en [registrert turistfiskebedrift](/blogg/ma-du-registrere-turistfiskebedrift/). Gjestene må kunne dokumentere dette ved grensepasseringen. Tolletaten kontrollerer, og bøtene er høye: 8 000 kroner pluss 200 kroner per kilo ulovlig utført fisk.
 
-En stor kveite på la oss si 40 kg vil altså spise opp kvoten fullstendig og langt utover. Gjesten kan ikke ta med fisken hjem, ikke fordi det er forbudt å fange den, men fordi [utførselskvoten](/blogg/utforselskvote-fisk-2026/) setter en hard grense for hva som kan krysses over grensen.
+En stor kveite på la oss si 40 kg vil altså spise opp kvoten fullstendig og langt utover. Gjesten kan ikke ta med fisken hjem, ikke fordi det er forbudt å fange den, men fordi [utførselskvoten for fisk i 2026](/blogg/utforselskvote-fisk-2026/) setter en hard grense for hva som kan krysses over grensen.
 
 ## Utkastpåbudet du kanskje ikke visste om
 
@@ -43,7 +49,7 @@ Havforskningsinstituttet fraråder dessuten å dra stor kveite opp i fartøyet. 
 
 Dette er et punkt mange turistfiskebedrifter opplever at gjestene misforstår: det å fange en fisk er ikke det samme som å ha rett til å ta den med hjem.
 
-En gjest kan fullt lovlig fange en stor kveite. Fangsten skal registreres og rapporteres daglig som del av [fangstrapporteringen](/blogg/daglig-fangstrapportering-turistfiske/). Men "fanget" betyr ikke "utørt". For å ta fisk med over grensen må fisken ligge innenfor utførselskvoten, som nå er 15 kg. En kveite på 35 kg kan dermed tas til land og spises på stedet, men ikke fraktes ut av landet.
+En gjest kan fullt lovlig fange en stor kveite. Fangsten skal registreres og rapporteres daglig som del av [fangstrapporteringen for turistfiske](/fangstrapportering-turistfiske/). Men "fanget" betyr ikke "utørt". For å ta fisk med over grensen må fisken ligge innenfor utførselskvoten, som nå er 15 kg. En kveite på 35 kg kan dermed tas til land og spises på stedet, men ikke fraktes ut av landet.
 
 Det er dette skillet som er viktig å kommunisere til gjestene på forhånd, ikke etter at de har fisket. En gjest som har planlagt å ta hjem en stor kveite, og som ikke vet om utførselskvoten, vil bli skuffet på kaia, og det er ikke en god avslutning på et opphold. Les mer om hva som faktisk kreves ved grensen hos [Tolletaten](/blogg/tolletaten-grense-fisk-bot-unnga/).
 
@@ -62,11 +68,11 @@ Det enkleste er å ta det opp ved ankomst. Du trenger ikke gå gjennom alle para
 - All fisk du tar med ut av landet teller mot én kvote på 15 kg per person. Det gjelder også stor kveite.
 - Kveite over 200 cm skal settes tilbake i sjøen. Det er et miljøregelverk, ikke noe vi bestemmer.
 - Fisk du fanger og spiser her er ikke begrenset på samme måte som det du tar med hjem.
-- Vi utsteder utførselsdokumentasjon basert på rapportert fangst. Uten rapportering, ingen dokumentasjon.
+- Vi utsteder utørselsdokumentasjon basert på rapportert fangst. Uten rapportering, ingen dokumentasjon.
 
 Mange tyske gjester er vant til at det finnes unntak for spesielt store fisk, det er en naturlig antagelse å ha med seg. Derfor hjelper det å si det direkte: det finnes ikke lenger et slikt unntak i norsk regelverk.
 
-Har du gjester som fisker mye og planlegger å ta med seg hjem det de kan, er det lurt å hjelpe dem med å tenke gjennom hva som er realistisk. En uke med tre fiskere som tar 15 kg hver er 45 kg, og det er krav om [daglig fangstregistrering](/blogg/daglig-fangstrapportering-turistfiske/) og [nullfangst-rapportering](/blogg/nullfangst-turistfiske-ma-det-rapporteres/) for alle dager i perioden.
+Har du gjester som fisker mye og planlegger å ta med seg hjem det de kan, er det lurt å hjelpe dem med å tenke gjennom hva som er realistisk. En uke med tre fiskere som tar 15 kg hver er 45 kg, og det er krav om daglig [fangstrapportering for turistfiske](/fangstrapportering-turistfiske/) og [nullfangst-rapportering](/blogg/nullfangst-turistfiske-ma-det-rapporteres/) for alle dager i perioden.
 
 ## Minstemål-tabellen er din venn
 
@@ -90,3 +96,41 @@ Det er en regelendring med god begrunnelse. Det betyr ikke at det nødvendigvis 
 - [Fiskeridirektoratet: Utførselskvote og fiskesmugling](https://www.fiskeridir.no/turistfiske/fiskesmugling-og-utfoersel): bekrefter at trofefisk ikke kan utføres i tillegg til ordinær kvote
 - [Havforskningsinstituttet: Svært høye nivåer av uønskede stoffer i kveite over 100 kilo](https://www.hi.no/hi/nyheter/2017/04/svert-hoye-nivaer-av-uonskede-stoffer-i-kveite-over-100-kilo_-men-lave-nivaer-i-mindre-kveiter), grunnlaget for utkastpåbud ved 200 cm
 - [Havforskningsinstituttet: Kveite i norsk sone, kvoteråd 2026](https://www.hi.no/hi/radgivning/kvoterad/2026/kveite-i-norsk-sone): bestandsstatus og anbefalt totalkvote
+
+## Relaterte guider
+
+- [Turistfiske regler](/turistfiske-regler/) — komplett oversikt over kvoteregler og dokumentasjonskrav
+- [Utførselskvote for fisk i 2026](/blogg/utforselskvote-fisk-2026/) — gjeldende kvoter og hvem som kan utføre fisk
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Kan gjester fortsatt ta med seg en trofékveite hjem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nei. Trofefisk-tillegget er fjernet fra 1. august 2025. Stor kveite teller nå mot den ordinære utførselskvoten på 15 kg per person, og det finnes ikke lenger noe separat unntak for trofeer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva er utførselskvoten for turistfiske i 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Utførselskvoten er 15 kg fisk eller fiskeprodukter per person, inntil to ganger per kalenderår. Fra 1. januar 2027 reduseres den til 10 kg. Kvoten gjelder kun for gjester hos registrerte turistfiskebedrifter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan man fange stor kveite selv om den ikke kan tas med hjem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, man kan fange kveite innenfor minstemål (84 cm) og maksmål (200 cm). Fangsten kan spises på stedet. Men kveite over 200 cm skal settes tilbake på grunn av miljøgifter og utkastpåbud. Det er forskjell på retten til å fange og retten til å utføre fisken over grensen."
+      }
+    }
+  ]
+}
+</script>

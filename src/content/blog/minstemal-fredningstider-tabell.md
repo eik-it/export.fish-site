@@ -4,6 +4,7 @@ description: "Komplett oversikt over minstemål og fredningstider for fiskearter
 slug: "minstemal-fredningstider-tabell"
 guid: "b3f7c2a1-8e4d-4f9b-a6d3-12e845c09f73"
 pubDate: 2026-05-11T08:00:00.000Z
+updatedDate: 2026-05-15T00:00:00.000Z
 author: "Kim Eik"
 tags: []
 image:
@@ -12,6 +13,11 @@ image:
 ---
 
 Vet du hva som gjelder for torsken der du fisker? Reglene varierer med sone, art og årstid, og det er ikke alltid intuitivt hvor grensen går. Denne artikkelen samler minstemål og fredningstider for de viktigste artene for fritidsfiskere i Norge, basert på gjeldende Høstingsforskrift (FOR-2021-12-23-3910). Bruk den som et praktisk oppslagsverk i planleggingen av sesongen.
+
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Minstemål varierer per art og sone: torsk er 44 cm nord for 62°N (utenfor 4 nm), kveite er 84 cm i hele landet. For turistfiskebedrifter gjelder de samme artene som må inkluderes i <a href="/fangstrapportering-turistfiske/">fangstrapportering for turistfiske</a>. Les de fullstendige <a href="/turistfiske-regler/">turistfiske reglene</a> for kvoter og dokumentasjonskrav.</p>
+</div>
 
 ## Soneskillet ved 62°N
 
@@ -89,13 +95,13 @@ I disse områdene er alt fiske forbudt hele året, for både fritidsfiskere og y
 
 Tiltaket er begrunnet med den alvorlige tilstanden i Oslofjorden, der bestander av torsk og andre bunnfiskarter er kraftig redusert etter tiår med press fra forurensning, habitatødeleggelse og overfiske.
 
-For turistfiskebedrifter som har gjester som planlegger å fiske i Oslofjord-området, er det viktig å informere om disse restriksjonene tidlig i oppholdet. Gjester som ikke kjenner reglene kan ubevisst bryte dem, og ansvaret for informasjon er i praksis delt mellom utleier og gjest. Les mer om [daglig fangstrapportering og reglene som gjelder for turistfiskebedrifter](/blogg/daglig-fangstrapportering-turistfiske/).
+For turistfiskebedrifter som har gjester som planlegger å fiske i Oslofjord-området, er det viktig å informere om disse restriksjonene tidlig i oppholdet. Gjester som ikke kjenner reglene kan ubevisst bryte dem, og ansvaret for informasjon er i praksis delt mellom utleier og gjest. Les mer om [fangstrapportering for turistfiske](/fangstrapportering-turistfiske/) og hva som gjelder for rapporteringspliktige virksomheter.
 
 ## Torsk i Skagerrak og Oslofjorden
 
 Torsken i Skagerrak og Oslofjorden har vært totalfredet siden 2019 for fritidsfiskere. Fredningen ble innført da bestanden kollapset, og gjelder fra og med Telemark og inn i Oslofjorden. Nullfiskeområdene som trådte i kraft 1. januar 2026 er en ytterligere innskjerping av dette regimet.
 
-Fritidsfiskere som planlegger turer til [kysten sør for 62°N](/blogg/sesongkalender-turistfiske-norge/) bør merke seg at torskefredningen er streng og håndheves aktivt. For turistfiskebedrifter langs Skagerrakkysten og i Oslofjorden endrer nullfiskeområdene forutsetningene for hva gjester kan fiske. Se vår gjennomgang av [torskefredningen i Oslofjorden](/blogg/torskefredning-oslofjorden-2026/) for detaljer.
+Fritidsfiskere som planlegger turer til [kysten sør for 62°N](/blogg/sesongkalender-turistfiske-norge/) bør merke seg at torskefredningen er streng og håndheves aktivt. For turistfiskebedrifter langs Skagerrakkysten og i Oslofjorden endrer nullfiskeområdene forutsetningene for hva gjester kan fiske.
 
 ## Kveite: regler du bør kjenne til før sesong
 
@@ -103,7 +109,7 @@ Kveite er en av de mest ettertraktede artene for turistfiskere langs norskekyste
 
 ## Hva med artene uten minstemål?
 
-Sei og makrell har ikke fastsatt minstemål for fritidsfiskere. Det betyr ikke at de er uten regulering, utførselskvotene setter fortsatt grenser for hvor mye du kan ta med ut av landet, og for turistfiskebedrifter er all fangst uansett art omfattet av [fangstrapporteringsplikten](/blogg/daglig-fangstrapportering-turistfiske/).
+Sei og makrell har ikke fastsatt minstemål for fritidsfiskere. Det betyr ikke at de er uten regulering, utførselskvotene setter fortsatt grenser for hvor mye du kan ta med ut av landet, og for turistfiskebedrifter er all fangst uansett art omfattet av [fangstrapportering for turistfiske](/fangstrapportering-turistfiske/).
 
 Sei er en viktig byttedyr-art for kveite og andre rovfisker, og bestandene følges nøye. Selv om det per 2026 ikke er minstemål for fritidsfiskere, kan dette endre seg. Det er generelt god praksis å sette tilbake undermåls eller liten fisk uavhengig av om loven krever det.
 
@@ -129,3 +135,41 @@ Sjekk alltid Fiskeridirektoratets offisielle sider eller Lovdata for oppdatert i
 - **Fiskeridirektoratet: Minstemål i fritidsfiske**: [fiskeridir.no/Fritidsfiske/Minstemaal](https://www.fiskeridir.no/Fritidsfiske/Minstemaal)
 - **Fiskeridirektoratet: Vern av kysttorsk i sør**: [fiskeridir.no/Fritidsfiske/Artar/vern-av-kysttorsk-i-sor](https://www.fiskeridir.no/Fritidsfiske/Artar/vern-av-kysttorsk-i-sor)
 - **Miljødirektoratet: Oslofjorden tiltaksplan**: [miljodirektoratet.no/ansvarsomrader/vann-hav-og-kyst/oslofjorden](https://www.miljodirektoratet.no/ansvarsomrader/vann-hav-og-kyst/vann-hav-kyst-forvaltning/oslofjorden/)
+
+## Relaterte guider
+
+- [Turistfiske regler](/turistfiske-regler/) — komplett oversikt over kvoter, fredninger og krav
+- [Fangstrapportering for turistfiske](/fangstrapportering-turistfiske/) — hva som skal rapporteres per art
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hva er minstemålet for torsk i Norge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Minstemålet for torsk er 44 cm nord for 62°N utenfor 4 nautiske mil, 55 cm innenfor 4 nm, og 40 cm sør for 62°N. I Skagerrak og Oslofjorden (til og med Telemark) er torsk totalfredet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Når er kveite fredet i Norge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nord for 62°N er kveite fredet fra 20. desember til 20. april (gytefredning). Sør for 62°N er kveite totalfredet hele året for fritidsfiskere. Kveite over 200 cm skal alltid settes tilbake, uavhengig av sone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gjelder minstemål for rapportering i turistfiske?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Fisk under minstemål skal settes tilbake og ikke rapporteres som fangst. For turistfiskebedrifter skal all lovlig fangst rapporteres daglig per art. Feil artsnavn eller størrelser kan skape problemer ved kontroll."
+      }
+    }
+  ]
+}
+</script>

@@ -4,6 +4,7 @@ description: "Må du registrere turistfiskebedrift? Få klar oversikt over regle
 slug: "ma-du-registrere-turistfiskebedrift"
 guid: "a4381f64-11f4-475b-8170-2da75d0ded64"
 pubDate: 2026-04-21T08:37:06.000Z
+updatedDate: 2026-05-15T00:00:00.000Z
 author: "Kim Eik"
 image:
   src: "./images/ma-du-registrere-turistfiskebedrift.webp"
@@ -14,6 +15,11 @@ tags: []
 Hvis du leier ut hytte og båt til utenlandske gjester som kommer for å fiske, er spørsmålet ikke teoretisk. Må du registrere turistfiskebedrift, eller holder det å drive vanlig utleie? For mange utleiere er dette punktet der en enkel biinntekt plutselig blir et spørsmål om rapportering, eksportdokumentasjon og ansvar overfor myndighetene.
 
 Vi har selv stått i dette. Det korte svaret er at det kommer an på hvordan utleien din er organisert og hva du faktisk tilbyr — men de fleste undervurderer hvor fort de havner innenfor regelverket når båt og fisketurister er en tydelig del av tilbudet.
+
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Du må registrere turistfiskebedrift hvis du er MVA-registrert, har minst 50 000 kr bruttoinntekt fra sjøbasert turistfiske, og disponerer båt for gjestene. Under terskelen er registrering frivillig. Les mer om <a href="/turistfiske-regler/">turistfiske regler</a> og hva <a href="/registrering">registrering</a> innebærer i praksis.</p>
+</div>
 
 ## Når må du registrere turistfiskebedrift?
 
@@ -29,7 +35,7 @@ For utleiere som har utenlandske gjester er frivillig registrering som regel det
 
 ## Det er ikke bare registreringen som avgjør
 
-Registrering er inngangen til flere plikter: [daglig fangstrapportering](/blogg/daglig-fangstrapportering-turistfiske/) til Fiskeridirektoratet, korrekt eksportdokumentasjon, og rutiner som faktisk fungerer i hverdagen. Det er her vi ser flest ryke uti — ikke på selve registreringen, men på oppfølgingen etterpå.
+Registrering er inngangen til flere plikter: [fangstrapportering for turistfiske](/fangstrapportering-turistfiske/) til Fiskeridirektoratet, korrekt eksportdokumentasjon, og rutiner som faktisk fungerer i hverdagen. Det er her vi ser flest ryke uti — ikke på selve registreringen, men på oppfølgingen etterpå.
 
 Det holder med noen få gjester, flere språk og hektiske utsjekker før kontrollen glipper. Et papirskjema i resepsjonen, en SMS eller en muntlig bekreftelse fra gjesten er sjelden godt nok når rapporteringen skal være daglig og eksportdokumentasjonen må være korrekt.
 
@@ -90,3 +96,41 @@ Hvis du sitter med spørsmålet _må jeg registrere turistfiskebedrift_, er du s
 - [Forskrift om overtredelsesgebyr mv. etter havressursloven (FOR-2011-12-20-1437)](https://lovdata.no/dokument/SF/forskrift/2011-12-20-1437) — satser for overtredelsesgebyr, opp til 100 000 kr
 - [Fiskeridirektoratet: Fiskesmugling og utførsel](https://www.fiskeridir.no/turistfiske/fiskesmugling-og-utfoersel) — bøtesatser ved ulovlig utførsel (8 000 kr grunnbøte + 200 kr/kg), fastsatt av Riksadvokaten
 - [Forskrift om utførselsregulering av fisk og fiskevarer fra sportsfiske (FOR-2006-06-01-570)](https://lovdata.no/dokument/SF/forskrift/2006-06-01-570) — utførselskvote og vilkår for registrerte turistfiskebedrifter
+
+## Relaterte guider
+
+- [Registrere turistfiskebedrift](/registrering) — hva skjer etter at du er registrert
+- [Turistfiske regler](/turistfiske-regler/) — komplett oversikt over regelverket
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Når må du registrere turistfiskebedrift?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Registrering er lovpålagt når alle tre vilkår er oppfylt: du er MVA-registrert, har bruttoinntekt på minst 50 000 kr per år fra sjøbasert turistfiske, og disponerer båt for gjestene. Under terskelen er registrering frivillig."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva skjer hvis jeg ikke registrerer turistfiskebedrift?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gjestene dine mister utførselskvoten og kan ikke lovlig ta med fisk ut av Norge. Manglende registrering der plikt foreligger er et regelverksbrudd og kan medføre overtredelsesgebyr."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan jeg registrere turistfiskebedrift frivillig?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Frivillig registrering er mulig for virksomheter med organisasjonsnummer og båt, selv om du ikke er MVA-registrert eller over 50 000 kr. Det gir gjestene utførselskvote på 15 kg per person."
+      }
+    }
+  ]
+}
+</script>

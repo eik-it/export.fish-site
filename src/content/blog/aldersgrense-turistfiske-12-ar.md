@@ -4,6 +4,7 @@ description: "Lurer du på hva aldersgrensen betyr i turistfiske? Her får du en
 slug: "aldersgrense-turistfiske-12-ar"
 guid: "ac241f34-2165-4e8d-abde-605a5b2f6866"
 pubDate: 2026-04-25T06:06:19.000Z
+updatedDate: 2026-05-15T00:00:00.000Z
 author: "Kim Eik"
 image:
   src: "./images/aldersgrense-turistfiske-12-ar.webp"
@@ -12,6 +13,11 @@ tags: []
 ---
 
 Spørsmålet om aldersgrense i turistfiske dukker gjerne opp rett før familien skal reise hjem: kan barnet stå oppført på utførselsdokumentasjonen sammen med de voksne, eller gjelder det andre regler? For deg som leier ut hytte og båt er dette ikke bare et småspørsmål. Det påvirker hvordan du informerer gjestene, og hvordan du unngår misforståelser i det øyeblikket familien spør deg om svar.
+
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Aldersgrensen på 12 år gjelder for utførselskvoten, ikke for retten til å fiske. Barn under 12 år kan delta i fisket, men kan ikke stå som kvoteperson på utørselsdokumentasjonen. Dette er ett av de viktige <a href="/turistfiske-regler/">turistfiske reglene</a> du bør informere gjestene om ved ankomst.</p>
+</div>
 
 ## Det direkte svaret: hva 12-årsgrensen faktisk regulerer
 
@@ -31,7 +37,7 @@ For deg som utleier betyr dette at du bør informere gjester med barn tidlig i o
 
 ## Rapportering og hvem som "teller"
 
-At 10-åringen ikke kan bruke utførselskvoten, betyr ikke at fangsten forsvinner. All fangst under oppholdet skal [rapporteres daglig](/blogg/daglig-fangstrapportering-turistfiske/) per opphold og art, uavhengig av hvem som holdt fiskestangen. Det er den samlede fangsten per opphold som rapporteres — ikke fordelt på individuelle fiskere.
+At 10-åringen ikke kan bruke utførselskvoten, betyr ikke at fangsten forsvinner. All fangst under oppholdet skal rapporteres [daglig som del av fangstrapporteringen for turistfiske](/fangstrapportering-turistfiske/) per opphold og art, uavhengig av hvem som holdt fiskestangen. Det er den samlede fangsten per opphold som rapporteres — ikke fordelt på individuelle fiskere.
 
 Utfordringen er at kvoten beregnes per person ved utreise. Hvis familien ønsker å ta med 60 kg fisk hjem, og bare tre av fire kan bruke kvoten, setter det en reell grense for hva de faktisk kan eksportere. Det er et praktisk spørsmål som gjestene bør tenke på i god tid — ikke kvelden før avreise.
 
@@ -54,3 +60,41 @@ Når rapporteringen går daglig og strukturert, og aldersopplysningene er regist
 - [Forskrift om utførselsregulering av fisk og fiskevarer fra sportsfiske § 2 (FOR-2006-06-01-570)](https://lovdata.no/dokument/SF/forskrift/2006-06-01-570) — aldersgrense 12 år for utførselskvote, ikraft 1. august 2025 (jf. endringsforskrift FOR-2025-07-01-1395)
 - [Fiskeridirektoratet: Fiskesmugling og utførsel](https://www.fiskeridir.no/turistfiske/fiskesmugling-og-utfoersel) — om utførselskvoten og alderskrav
 - [Forskrift om turistfiskevirksomheter (FOR-2017-07-05-1141)](https://lovdata.no/dokument/SF/forskrift/2017-07-05-1141) — rapporteringsplikt og dokumentasjonskrav
+
+## Relaterte guider
+
+- [Turistfiske regler](/turistfiske-regler/) — komplett oversikt over kvoter og dokumentasjonskrav
+- [Utførselskvote for fisk i 2026](/blogg/utforselskvote-fisk-2026/) — kvoteregler og hvem som kan utføre fisk
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hva er aldersgrensen for å ta med fisk ut av Norge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aldersgrensen er 12 år. Kun personer som har fylt 12 år kan stå som kvoteperson på utørselsdokumentasjonen. Barn under 12 år kan delta i fisket, men fangsten deres må fordeles på andre familiemedlemmer over 12 år."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan barn under 12 år fiske i turistfiske?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Det er ingen aldersgrense for å delta i selve fiskeaktiviteten. Aldersgrensen på 12 år gjelder kun retten til å bruke utførselskvoten ved grensepassering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva skjer med fangsten til et barn under 12 år?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fangsten registreres som del av den samlede fangsten for oppholdet. Ved utreise må fangsten fordeles på kvotepersoner som har fylt 12 år. Barnet kan ikke selv stå oppført på utørselsdokumentet."
+      }
+    }
+  ]
+}
+</script>
