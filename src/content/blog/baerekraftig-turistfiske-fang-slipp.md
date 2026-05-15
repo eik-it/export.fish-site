@@ -15,6 +15,11 @@ Regelverket strammes inn år for år. Utførselskvoten er redusert fra 15 til 10
 
 Bærekraft i turistfiske handler ikke om å moralisere over gjestene. Det handler om å tilby en opplevelse som tåler fremtida, og kommunisere dette tydelig til gjester som allerede er på utkikk etter nettopp det.
 
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Bærekraftig turistfiske handler om å tilby opplevelsen, ikke bare uttaket. Korrekt gjenutsetting av storkveite gir 80-95 prosent overlevelsesrate, og kveite over 200 cm skal alltid settes ut. For europeiske gjester er bærekraft et kvalitetsargument. Les mer om <a href="/turistfiske-regler/">gjeldende regler for turistfiske</a> og hvordan du kan kombinere ansvarlig drift med god forretning.</p>
+</div>
+
 ## Hvorfor reglene strammes inn
 
 Bestandene er under press. Torsk i Oslofjorden er fredet fordi bestanden kollapset. [Kveite er underlagt utvidede fredningstider og strengere regler](/blogg/kveitefiske-2026-regler/). Havforskningsinstituttet dokumenterer at mange kystnære bestander ikke tåler samme uttak som for ti år siden.
@@ -72,7 +77,7 @@ Det beste er å knytte det til sesongen og fisken, ikke til paragrafer. "Vi er i
 
 [Sesongkalenderen for turistfiske i Norge](/blogg/sesongkalender-turistfiske-norge/) gir god oversikt over hvilke arter som er aktuelle når og hvor, et nyttig verktøy for å sette fisket inn i riktig kontekst for gjestene.
 
-Gjester som er informert om hvorfor reglene eksisterer, er også mer tilbøyelige til å rapportere fangsten korrekt gjennom [den daglige fangstrapporteringen](/blogg/daglig-fangstrapportering-turistfiske/) og å forstå hva utførselsdokumentasjonen krever. Bærekraftssamtalen og compliance-samtalen er to sider av samme sak.
+Gjester som er informert om hvorfor reglene eksisterer, er også mer tilbøyelige til å rapportere fangsten korrekt gjennom [den daglige fangstrapporteringen](/fangstrapportering-turistfiske/) og å forstå hva utførselsdokumentasjonen krever. Bærekraftssamtalen og compliance-samtalen er to sider av samme sak.
 
 ## Norges posisjon i et europeisk marked
 
@@ -95,3 +100,42 @@ Vi mener det er fullt mulig å bygge et attraktivt turistfisketilbud på en plat
 - Havforskningsinstituttet: bestandsstatus og gjenutsettingsoverlevelse for marine arter
 - Norges Jeger- og Fiskerforbund (NJFF): retningslinjer for fang og slipp i sportsfiske
 - Fiskeridirektoratet: gjeldende regelverk for turistfiske, utførselskvote og fredningsbestemmelser
+
+## Relaterte guider
+
+- [Regler for turistfiske i Norge](/turistfiske-regler/) — fredningsbestemmelser, minstemål og kvoteregler
+- [Kveitefiske 2026: minstemål, maksmål og sesong](/blogg/kveitefiske-2026-regler/) — detaljert gjennomgang av kveitereguleringene som bærekraftpolitikk
+- [Turistfiske på Sørlandet etter torskefredningen](/blogg/sorlandet-etter-torskefredningen/) — eksempel på omstilling fra torsk til bærekraftige alternativer
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hva er korrekt teknikk for gjenutsetting av kveite?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kveite bør ikke tas om bord, men holdes langs båtsida. Bruk barbless krok, klippe linen om kroken sitter dypt, og la fisken hvile ved boatside til den aktivt svømmer vekk. Korrekt gjennomført gjenutsetting gir 80-95 prosent overlevelsesrate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Må kveite over 200 cm alltid settes ut?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Kveite over 200 cm er underlagt utkastpåbud og kan verken beholdes, slaktes eller eksporteres. Regelen er begrunnet i folkehelse: ca. 60 prosent av kveiter over 120 kg inneholder dioksin og PCB over EUs grenseverdier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvorfor er bærekraft et salgsargument for norske fisketurismebedrifter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Europeiske gjester, særlig fra Tyskland, Østerrike og Sveits, er vant til en moden bærekraftsdiskurs i friluftsliv og fiske. Å tilby tydelig gjenutsettingspolitikk og kvotebevissthet er ikke en begrensning, men et kvalitetsargument som differensierer bedriften i et konkurranseutsatt marked."
+      }
+    }
+  ]
+}
+</script>
