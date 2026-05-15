@@ -15,6 +15,11 @@ Utenfor Henningsvær er det mørkt langt utpå morgenen i januar. Vinden kommer 
 
 Skreifiske i Lofoten er ikke bare en fiskeopplevelse. Det er en av de mest særpregede vinteropplevelsene Europa har å by på, og markedet for det begynner å forstå det.
 
+<div class="not-prose my-6 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
+  <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Kort svar</p>
+  <p class="text-gray-800">Skreisesongen i Lofoten varer fra januar til april, med topp i februar og mars. For turistfiskevertskap betyr det strenge sikkerhetskrav i vinterforhold, tydelig gjesteinformasjon og rapporteringsrutiner i orden. Gjestene forventer utførselsdokumentasjon ved avreise, noe som krever komplett <a href="/fangstrapportering-turistfiske/">fangstrapportering</a> for hele oppholdet. Les om <a href="/turistfiske-regler/">regler for turistfiske</a> for å ha alt på plass før sesongen.</p>
+</div>
+
 ## Hva er skrei, og hvorfor Lofoten?
 
 Skrei er ikke en egen art, men en bestand av nordøstarktisk torsk som skiller seg genetisk og atferdsmessig fra kysttorsken. Mens kysttorsken lever relativt stedbundet langs kysten gjennom hele livet, foretar skreien en lang vandring: den tilbringer oppveksten i Barentshavet, og returnerer som voksen fisk til gyteområdene utenfor Lofoten, Vesterålen og Troms. Det er nettopp denne vandringsinstinkten som gjør skreien så forutsigbar og fangbar i et begrenset tidsvindu.
@@ -98,3 +103,42 @@ Skreisesongen er krevende å drifte, men den er unik. Det er ikke mange steder i
 - Havforskningsinstituttet – skreibestand og migrasjon (havforskningsinstituttet.no)
 - Fiskeridirektoratet – turistfiskeregelverk (fiskeridir.no)
 - Visit Lofoten – sesong og reiselivsinformasjon (visitlofoten.no)
+
+## Relaterte guider
+
+- [Regler for turistfiske i Norge](/turistfiske-regler/) — registrering, rapportering og dokumentasjonskrav
+- [Fangstrapportering for turistfiske](/fangstrapportering-turistfiske/) — slik holder du rapporteringen i orden gjennom skreisesongen
+- [Kveitefiske 2026: minstemål, maksmål og sesong](/blogg/kveitefiske-2026-regler/) — parallelle regler for kveite som bifangst under skreisesongen
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Når er skreisesongen i Lofoten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Skreisesongen varer fra januar til april, med topp i februar og mars. Skreien vandrer fra Barentshavet for å gyte langs sokkelkanten utenfor Lofoten og er konsentrert og fangbar i dette tidsvinduet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva er de viktigste sikkerhetskravene for vertskap under skreisesongen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vinterfiske i Lofoten stiller høyere krav enn sommerdrift: båtdekk fryser til, dagslys er begrenset (5-6 timer i januar), og vindstyrken kan øke brått. Overlevelsesdrakter bør være tilgjengelige ved fiske i åpen sjø, og gjester uten erfaring i norsk vintervær trenger tydelig informasjon om vær og farvann."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan skreiegjester ta med fisk hjem etter oppholdet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, men utleier må være registrert som turistfiskebedrift og ha komplett fangstrapportering for hele oppholdet. Uten godkjent rapportering kan ikke utførselsdokumentasjon utstedes. Utførselskvoten er 15 kg per person i 2026."
+      }
+    }
+  ]
+}
+</script>
