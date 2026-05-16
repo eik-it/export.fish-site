@@ -26,6 +26,9 @@ pnpm-debug.log*
 # direnv
 .direnv/
 
+# Claude Code agent worktrees (nested git repos, must never be committed)
+.claude/worktrees/
+
 # playwright
 test-results/
 playwright-report/
