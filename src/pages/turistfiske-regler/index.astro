@@ -7,7 +7,7 @@ import Layout from '../../layouts/Layout.astro';
   description="Regelverket for turistfiske i Norge: registreringsplikt, daglig fangstrapportering, utførselskvote, eksportdokumenter og bøter. Oppdatert for 2025."
 >
   <Fragment slot="head">
-    <script type="application/ld+json">{JSON.stringify({
+    <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
@@ -44,15 +44,15 @@ import Layout from '../../layouts/Layout.astro';
           }
         }
       ]
-    })}</script>
-    <script type="application/ld+json">{JSON.stringify({
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Hjem", "item": "https://eksportfiske.no/" },
         { "@type": "ListItem", "position": 2, "name": "Turistfiske regler", "item": "https://eksportfiske.no/turistfiske-regler/" }
       ]
-    })}</script>
+    })} />
   </Fragment>
 
   <article class="pt-44 pb-16 bg-white">

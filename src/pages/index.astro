@@ -22,7 +22,7 @@ import sei from '../assets/sei.png';
   description="Leier du ut hytte med båt? Lovpålagt daglig fangstrapportering til Fiskeridirektoratet. export.fish er godkjent system. Prøv gratis i 30 dager."
 >
   <Fragment slot="head">
-    <script type="application/ld+json">{JSON.stringify({
+    <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
@@ -91,7 +91,7 @@ import sei from '../assets/sei.png';
           }
         }
       ]
-    })}</script>
+    })} />
   </Fragment>
 
   <!-- Hero Section -->
