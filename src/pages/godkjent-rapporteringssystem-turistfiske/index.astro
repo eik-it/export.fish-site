@@ -7,7 +7,7 @@ import Layout from '../../layouts/Layout.astro';
   description="Hva betyr det at et rapporteringssystem er godkjent av Fiskeridirektoratet? Krav, godkjenningsprosess og hvorfor det er obligatorisk."
 >
   <Fragment slot="head">
-    <script type="application/ld+json">{JSON.stringify({
+    <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
@@ -36,8 +36,8 @@ import Layout from '../../layouts/Layout.astro';
           }
         }
       ]
-    })}</script>
-    <script type="application/ld+json">{JSON.stringify({
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -45,7 +45,7 @@ import Layout from '../../layouts/Layout.astro';
         { "@type": "ListItem", "position": 2, "name": "Turistfiske regler", "item": "https://eksportfiske.no/turistfiske-regler/" },
         { "@type": "ListItem", "position": 3, "name": "Godkjent rapporteringssystem", "item": "https://eksportfiske.no/godkjent-rapporteringssystem-turistfiske/" }
       ]
-    })}</script>
+    })} />
   </Fragment>
 
   <article class="pt-44 pb-16 bg-white">
