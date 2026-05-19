@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { MINIFINDER } from '../../data/minifinder';
 ---
 
 <Layout
@@ -114,6 +115,79 @@ import Layout from '../../layouts/Layout.astro';
         </a>
       </div>
 
+      <!-- Minifinder partnerfordel-kort -->
+      <div class="mt-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-lg border border-blue-200 p-8 md:p-10">
+        <div class="flex flex-col md:flex-row md:items-start gap-5">
+          <!-- Ikon -->
+          <div class="flex-shrink-0 flex flex-col items-center md:items-start gap-2">
+            <div class="inline-flex items-center gap-1.5 bg-blue-100 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-full">
+              Partnerfordel
+            </div>
+            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Innhold -->
+          <div class="flex-1">
+            <h2 class="text-xl font-bold text-gray-900 mb-2">
+              GPS-sporing for båten, med {MINIFINDER.discountPercent}% rabatt
+            </h2>
+            <p class="text-gray-700 text-sm leading-relaxed mb-3">
+              Som eksportfiske.no-kunde får du en eksklusiv rabattkode for {MINIFINDER.discountPercent}% rabatt på hele Minifinder-sortimentet. Vi anbefaler {MINIFINDER.boatProducts.join(' og ')} for båt. Tyverisikring og sanntidssporing direkte på telefonen.
+            </p>
+
+            <!-- Standard tilstand: rabattkoden kommer på e-post -->
+            <div id="minifinder-pending" class="bg-white rounded-lg border border-blue-200 px-4 py-3 mb-5">
+              <p class="text-sm text-gray-600">Rabattkoden får du tilsendt på e-post når du har fullført registreringen.</p>
+            </div>
+
+            <!-- Registrert tilstand: rabattkoden vises (injisert via JS) -->
+            <div id="minifinder-registrert" class="hidden mb-5">
+              <p class="text-xs font-semibold text-gray-600 mb-2">Som ny kunde, her er din rabattkode for {MINIFINDER.discountPercent}% rabatt på Minifinder:</p>
+              <div class="bg-white rounded-lg border border-blue-200 px-4 py-3 inline-block mb-3">
+                <p class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-0.5">Din rabattkode</p>
+                <p id="minifinder-kode" class="text-xl font-mono font-bold text-primary tracking-widest"></p>
+                <p class="text-xs text-gray-500 mt-0.5">Gjelder hele Minifinder-sortimentet</p>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-3">
+                <a
+                  id="minifinder-link"
+                  href="#"
+                  target="_blank"
+                  rel="sponsored noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+                >
+                  Gå til Minifinder
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+                <a
+                  href="/mine-medlemsfordeler"
+                  class="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-primary border border-primary font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+                >
+                  Se alle medlemsfordeler
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <a
+              href="/partnere/minifinder"
+              class="text-sm text-primary hover:text-primary-hover font-medium underline"
+            >
+              Les mer om partnerfordelen
+            </a>
+          </div>
+        </div>
+      </div>
+
       <!-- Contact info -->
       <div class="mt-12 text-center">
         <p class="text-gray-600 mb-6">
@@ -133,7 +207,7 @@ import Layout from '../../layouts/Layout.astro';
   </section>
 </Layout>
 
-<script>
+<script define:vars={{ discountCode: MINIFINDER.discountCode, minifinderUrl: MINIFINDER.getUrlWithUtm('takk-side') }}>
   const urlParams = new URLSearchParams(window.location.search);
   const type = urlParams.get('type');
 
@@ -148,5 +222,16 @@ import Layout from '../../layouts/Layout.astro';
     if (subtitle) subtitle.textContent = 'Takk for at du valgte export.fish. Kontoen din er klar til bruk.';
     if (interestContent) interestContent.classList.add('hidden');
     if (registrertContent) registrertContent.classList.remove('hidden');
+
+    // Injiser rabattkoden via JS fra MINIFINDER-konstanten — koden skal ikke finnes i statisk HTML
+    const kodeEl = document.getElementById('minifinder-kode');
+    const linkEl = document.getElementById('minifinder-link');
+    const pendingEl = document.getElementById('minifinder-pending');
+    const registrertMinifinderEl = document.getElementById('minifinder-registrert');
+
+    if (kodeEl) kodeEl.textContent = discountCode;
+    if (linkEl) linkEl.href = minifinderUrl;
+    if (pendingEl) pendingEl.classList.add('hidden');
+    if (registrertMinifinderEl) registrertMinifinderEl.classList.remove('hidden');
   }
 </script>

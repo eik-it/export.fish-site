@@ -102,7 +102,8 @@ export default defineConfig({
       filter: (page) =>
         !page.includes('/registrer/takk') &&
         !page.includes('/registrer/ny-kunde') &&
-        !page.includes('/qr'),
+        !page.includes('/qr') &&
+        !page.includes('/mine-medlemsfordeler'),
       customPages: [
         `${SITE_URL}/llms.txt`,
       ],
