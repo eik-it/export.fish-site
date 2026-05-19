@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { MINIFINDER } from '../../data/minifinder';
 ---
 
 <Layout
@@ -112,6 +113,65 @@ import Layout from '../../layouts/Layout.astro';
           </svg>
           Følg oss på Facebook
         </a>
+      </div>
+
+      <!-- Minifinder partnerfordel-kort -->
+      <div class="mt-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-lg border border-blue-200 p-8 md:p-10">
+        <div class="flex flex-col md:flex-row md:items-start gap-5">
+          <!-- Ikon -->
+          <div class="flex-shrink-0 flex flex-col items-center md:items-start gap-2">
+            <div class="inline-flex items-center gap-1.5 bg-blue-100 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-full">
+              Partnerfordel
+            </div>
+            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Innhold -->
+          <div class="flex-1">
+            <h2 class="text-xl font-bold text-gray-900 mb-2">
+              GPS-sporing for båten, med {MINIFINDER.discountPercent}% rabatt
+            </h2>
+            <p class="text-gray-700 text-sm leading-relaxed mb-3">
+              Som ny export.fish-kunde får du {MINIFINDER.discountPercent}% rabatt på hele Minifinder-sortimentet. Vi anbefaler {MINIFINDER.boatProducts.join(' og ')} for båt. Tyverisikring og sanntidssporing direkte på telefonen.
+            </p>
+
+            <!-- Rabattkode -->
+            <div class="bg-white rounded-lg border border-blue-200 px-4 py-3 mb-5 inline-block">
+              <p class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-0.5">Din rabattkode</p>
+              <p class="text-xl font-mono font-bold text-primary tracking-widest">{MINIFINDER.discountCode}</p>
+              <p class="text-xs text-gray-500 mt-0.5">Oppgi koden i kassen på minifinder.com</p>
+            </div>
+
+            <!-- CTAer -->
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a
+                href="/partnere/minifinder"
+                class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+              >
+                Les mer om tilbudet
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <a
+                href={MINIFINDER.getUrlWithUtm('takk-side')}
+                target="_blank"
+                rel="sponsored noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-primary border border-primary font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+              >
+                Gå til Minifinder
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Contact info -->
