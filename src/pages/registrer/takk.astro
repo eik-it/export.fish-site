@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { MINIFINDER } from '../../data/minifinder';
+import NewsletterSignup from '../../components/NewsletterSignup.astro';
 ---
 
 <Layout
@@ -113,6 +114,11 @@ import { MINIFINDER } from '../../data/minifinder';
           </svg>
           Følg oss på Facebook
         </a>
+      </div>
+
+      <!-- Nyhetsbrev -->
+      <div class="mt-8">
+        <NewsletterSignup variant="full" />
       </div>
 
       <!-- Minifinder partnerfordel-kort -->
