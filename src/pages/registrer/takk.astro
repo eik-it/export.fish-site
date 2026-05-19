@@ -207,7 +207,7 @@ import { MINIFINDER } from '../../data/minifinder';
   </section>
 </Layout>
 
-<script>
+<script define:vars={{ discountCode: MINIFINDER.discountCode, minifinderUrl: MINIFINDER.getUrlWithUtm('takk-side') }}>
   const urlParams = new URLSearchParams(window.location.search);
   const type = urlParams.get('type');
 
@@ -223,14 +223,14 @@ import { MINIFINDER } from '../../data/minifinder';
     if (interestContent) interestContent.classList.add('hidden');
     if (registrertContent) registrertContent.classList.remove('hidden');
 
-    // Injiser rabattkoden via JS — koden skal ikke finnes i statisk HTML
+    // Injiser rabattkoden via JS fra MINIFINDER-konstanten — koden skal ikke finnes i statisk HTML
     const kodeEl = document.getElementById('minifinder-kode');
-    const linkEl = document.getElementById('minifinder-link') as HTMLAnchorElement | null;
+    const linkEl = document.getElementById('minifinder-link');
     const pendingEl = document.getElementById('minifinder-pending');
     const registrertMinifinderEl = document.getElementById('minifinder-registrert');
 
-    if (kodeEl) kodeEl.textContent = 'eksportfiske2026';
-    if (linkEl) linkEl.href = 'https://minifinder.com?utm_source=eksportfiske.no&utm_medium=takk-side&utm_campaign=minifinder';
+    if (kodeEl) kodeEl.textContent = discountCode;
+    if (linkEl) linkEl.href = minifinderUrl;
     if (pendingEl) pendingEl.classList.add('hidden');
     if (registrertMinifinderEl) registrertMinifinderEl.classList.remove('hidden');
   }
