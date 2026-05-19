@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const apiBaseUrl = import.meta.env.PUBLIC_API_BASE_URL ?? 'https://api.eksportfiske.no';
+---
+
+<Layout
+  title="Bekrefter påmelding - Eksportfiske.no"
+  description="Bekrefter nyhetsbrev-påmelding"
+  noindex
+>
+  <section class="pt-52 pb-16 bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen">
+    <div class="container mx-auto px-4 max-w-2xl text-center">
+      <div class="mb-6">
+        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
+          <svg class="w-8 h-8 text-blue-600 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+        </div>
+      </div>
+      <h1 class="text-2xl font-bold text-gray-900 mb-2">Bekrefter påmelding...</h1>
+      <p class="text-gray-600">Du videresendes automatisk.</p>
+      <noscript>
+        <p class="mt-4 text-gray-600">
+          Har du slått av JavaScript? <a id="confirm-link" href="#" class="text-primary underline">Klikk her for å bekrefte påmeldingen.</a>
+        </p>
+      </noscript>
+    </div>
+  </section>
+</Layout>
+
+<script define:vars={{ apiBaseUrl }}>
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get('token') ?? '';
+    const confirmUrl = `${apiBaseUrl}/v1/newsletter/confirm?token=${encodeURIComponent(token)}`;
+
+    // Update noscript fallback link
+    const fallbackLink = document.getElementById('confirm-link');
+    if (fallbackLink) fallbackLink.setAttribute('href', confirmUrl);
+
+    // Redirect immediately
+    window.location.replace(confirmUrl);
+  })();
+</script>

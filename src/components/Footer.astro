@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import logo from '../assets/logo.png';
+import NewsletterSignup from './NewsletterSignup.astro';
 ---
 
 <footer id="kontakt" class="bg-gray-900 text-gray-300 py-12 sm:py-16">
@@ -82,6 +83,11 @@ import logo from '../assets/logo.png';
           </li>
         </ul>
       </div>
+    </div>
+
+    <!-- Newsletter signup -->
+    <div class="border-t border-gray-800 pt-8 mb-8">
+      <NewsletterSignup variant="compact" />
     </div>
 
     <!-- Bottom Bar -->

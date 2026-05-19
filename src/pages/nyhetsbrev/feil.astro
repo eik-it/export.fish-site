@@ -1,0 +1,67 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import NewsletterSignup from '../../components/NewsletterSignup.astro';
+---
+
+<Layout
+  title="Bekreftelseslenke ikke gyldig - Eksportfiske.no"
+  description="Noe gikk galt med nyhetsbrev-bekreftelsen. Meld deg på igjen."
+  noindex
+>
+  <section class="pt-52 pb-16 bg-gradient-to-br from-orange-50 to-orange-100">
+    <div class="container mx-auto px-4 max-w-2xl text-center">
+      <div class="mb-6">
+        <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
+          <svg class="w-10 h-10 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+          </svg>
+        </div>
+      </div>
+      <h1 id="error-title" class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Noe gikk galt</h1>
+      <p id="error-message" class="text-xl text-gray-600 max-w-xl mx-auto">
+        Bekreftelseslenken er ikke gyldig. Prøv å melde deg på igjen.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 text-primary hover:underline text-sm"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Tilbake til forsiden
+        </a>
+      </div>
+      <div class="mt-4">
+        <p class="text-sm font-semibold text-gray-700 mb-4 text-center">Meld deg på nyhetsbrevet igjen</p>
+        <NewsletterSignup variant="full" />
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const reason = params.get('reason') ?? '';
+
+    const titleEl = document.getElementById('error-title');
+    const messageEl = document.getElementById('error-message');
+
+    if (!titleEl || !messageEl) return;
+
+    if (reason === 'expired') {
+      titleEl.textContent = 'Bekreftelseslenken har utløpt';
+      messageEl.textContent = 'Bekreftelseslenken har utløpt. Be om en ny ved å melde deg på igjen.';
+    } else if (reason === 'invalid') {
+      titleEl.textContent = 'Ugyldig bekreftelseslenke';
+      messageEl.textContent = 'Bekreftelseslenken er ugyldig. Sjekk at du klikket på riktig lenke, eller meld deg på på nytt.';
+    }
+    // Default text already set in HTML
+  })();
+</script>

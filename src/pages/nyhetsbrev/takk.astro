@@ -1,0 +1,58 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Du er påmeldt nyhetsbrevet - Eksportfiske.no"
+  description="Takk for påmeldingen til nyhetsbrevet fra Eksportfiske.no"
+  noindex
+>
+  <section class="pt-52 pb-16 bg-gradient-to-br from-blue-50 to-blue-100">
+    <div class="container mx-auto px-4 max-w-2xl text-center">
+      <div class="mb-6">
+        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto">
+          <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Du er nå påmeldt!</h1>
+      <p class="text-xl text-gray-600 max-w-xl mx-auto">
+        Du vil få neste nyhetsbrev sendt til e-posten din.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-xl mx-auto px-4 text-center">
+      <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 md:p-12">
+        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Velkommen til nyhetsbrevet</h2>
+        <p class="text-gray-600 mb-2">
+          Du får regelendringer, tips og nye funksjoner fra Eksportfiske direkte i innboksen.
+        </p>
+        <p class="text-sm text-gray-500 mb-8">
+          Du kan melde deg av når som helst via lenken nederst i hver e-post.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a
+            href="/"
+            class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+          >
+            Tilbake til forsiden
+          </a>
+          <a
+            href="/blogg/"
+            class="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-primary border border-primary font-semibold py-3 px-6 rounded-lg transition-colors"
+          >
+            Les bloggen
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
