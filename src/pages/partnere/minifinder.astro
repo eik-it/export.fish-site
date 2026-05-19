@@ -30,7 +30,7 @@ const schema = {
 
 <Layout
   title="GPS-sporing for båt med 10% rabatt"
-  description="10% rabatt på Minifinder GPS-sporing for båt. Som eksportfiske.no-kunde bruker du kode eksportfiske2026 i kassen. Xtreme og Xero anbefales for båt."
+  description="Eksklusiv kundefordel: 10% rabatt på Minifinder GPS-sporing for båt. Xtreme og Xero anbefales for båt. Bli kunde hos eksportfiske.no for å låse opp rabatten."
 >
   <Fragment slot="head">
     <script type="application/ld+json">{JSON.stringify(schema)}</script>
@@ -102,58 +102,47 @@ const schema = {
     </div>
   </section>
 
-  <!-- Rabattkode-blokk -->
+  <!-- Lås opp rabatten -->
   <section class="py-16 bg-white">
     <div class="max-w-2xl mx-auto px-4">
 
       <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-        Din rabattkode
+        Lås opp rabatten som eksportfiske.no-kunde
       </h2>
-      <p class="text-gray-600 mb-8">
-        Bruk koden i kassen på minifinder.com for å få 10% rabatt.
+      <p class="text-gray-600 mb-8 leading-relaxed">
+        Rabattkoden er en eksklusiv fordel for våre kunder. Når du registrerer turistfiskebedriften
+        din hos oss får du tilsendt rabattkoden og tilgang til alle medlemsfordeler.
       </p>
 
-      <!-- Kode-blokk -->
-      <div class="bg-primary-light border border-primary-pale rounded-xl p-8 text-center">
-        <p class="text-sm text-gray-600 mb-3 font-medium uppercase tracking-wide">
-          Din rabattkode
-        </p>
-        <div class="text-3xl md:text-4xl font-bold text-primary tracking-widest mb-6" id="discount-code">
-          eksportfiske2026
-        </div>
-        <button
-          id="copy-btn"
-          class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-          aria-label="Kopier rabattkode til utklippstavle"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-          </svg>
-          <span id="copy-label">Kopier kode</span>
-        </button>
-      </div>
-
-      <p class="text-sm text-gray-500 mt-6 leading-relaxed">
-        Rabattkoden virker forresten på alle Minifinder sine produkter, fra båtsporing til kjæledyrhalsbånd.
+      <p class="text-sm text-gray-500 mb-10 leading-relaxed">
+        Koden virker forresten på alle Minifinder sine produkter, fra båtsporing til kjæledyrhalsbånd.
         Så om du har andre behov er koden like gyldig der.
       </p>
 
-      <!-- CTA -->
-      <div class="mt-10">
+      <!-- CTA: registrer -->
+      <div class="bg-primary-light border border-primary-pale rounded-xl p-8 text-center">
+        <h3 class="text-xl font-bold text-gray-900 mb-3">
+          Bli kunde og få rabattkoden
+        </h3>
+        <p class="text-gray-600 mb-6">
+          Det er gratis å registrere interesse, og du får tilgang til rabattkoden etter at
+          registreringen er fullført.
+        </p>
         <a
-          href={partnerUrl}
-          target="_blank"
-          rel="noopener noreferrer sponsored"
+          href="/registrer"
           class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-semibold px-8 py-4 rounded-lg transition-colors shadow-md hover:shadow-lg"
         >
-          Gå til minifinder.com
+          Registrer turistfiskebedriften din
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
         </a>
       </div>
+
+      <p class="text-sm text-gray-500 mt-8 text-center">
+        Allerede kunde? Du finner rabattkoden under medlemsfordelene dine.
+      </p>
 
     </div>
   </section>
@@ -242,31 +231,3 @@ const schema = {
   </section>
 
 </Layout>
-
-<script>
-  const btn = document.getElementById('copy-btn');
-  const label = document.getElementById('copy-label');
-  const code = document.getElementById('discount-code')?.textContent?.trim() ?? 'eksportfiske2026';
-
-  btn?.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(code);
-      if (label) {
-        label.textContent = 'Kopiert!';
-        setTimeout(() => {
-          label.textContent = 'Kopier kode';
-        }, 2000);
-      }
-    } catch {
-      // Fallback: selekter teksten for manuell kopiering
-      const el = document.getElementById('discount-code');
-      if (el) {
-        const range = document.createRange();
-        range.selectNodeContents(el);
-        const sel = window.getSelection();
-        sel?.removeAllRanges();
-        sel?.addRange(range);
-      }
-    }
-  });
-</script>
