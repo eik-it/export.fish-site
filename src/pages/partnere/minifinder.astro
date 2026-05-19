@@ -1,0 +1,273 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { MINIFINDER } from '../../data/minifinder';
+
+const partnerUrl = MINIFINDER.getUrlWithUtm('partner_page');
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Minifinder GPS-sporing for båt',
+  description:
+    'GPS-sporing og alarmsystem for båt. Xtreme og Xero er Minifinderss anbefalte produkter for båteiere. Eksportfiske.no-kunder får 10% rabatt.',
+  brand: {
+    '@type': 'Brand',
+    name: 'Minifinder',
+  },
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'NOK',
+    availability: 'https://schema.org/InStock',
+    url: partnerUrl,
+    priceValidUntil: '2026-12-31',
+    seller: {
+      '@type': 'Organization',
+      name: 'Minifinder',
+      url: 'https://minifinder.com',
+    },
+  },
+};
+---
+
+<Layout
+  title="GPS-sporing for båt med 10% rabatt | Minifinder-tilbud for turistfiskebedrifter"
+  description="10% rabatt på Minifinder GPS-sporing for båt. Som eksportfiske.no-kunde bruker du kode eksportfiske2026 i kassen. Xtreme og Xero anbefales for båt."
+>
+  <Fragment slot="head">
+    <script type="application/ld+json">{JSON.stringify(schema)}</script>
+  </Fragment>
+
+  <!-- Hero -->
+  <section class="pt-44 pb-16 bg-white">
+    <div class="max-w-2xl mx-auto px-4">
+
+      <div class="inline-block bg-primary-light text-primary text-sm font-semibold px-3 py-1 rounded-full mb-6">
+        Partnerfordel
+      </div>
+
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        GPS-sporing for båten din, med 10% rabatt
+      </h1>
+
+      <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+        Vi har inngått samarbeid med Minifinder, og som kunde hos eksportfiske.no får du
+        10% rabatt på alle Minifinder sine produkter. GPS-sporing gir deg ro i sjelen,
+        enten båten ligger ved brygga eller er ute med gjester.
+      </p>
+
+      <a
+        href={partnerUrl}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        class="inline-block bg-primary hover:bg-primary-hover text-white font-semibold px-8 py-4 rounded-lg transition-colors shadow-md hover:shadow-lg"
+      >
+        Se Minifinder sine produkter
+      </a>
+    </div>
+  </section>
+
+  <!-- Produktanbefalinger -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-2xl mx-auto px-4">
+
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+        Anbefalte produkter for båt
+      </h2>
+      <p class="text-gray-600 mb-10">
+        Minifinder har to produkter som passer godt for deg som leier ut båt til turister.
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+
+        <!-- Xtreme -->
+        <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+          <div class="text-primary font-bold text-lg mb-2">Minifinder Xtreme</div>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Robust GPS-tracker beregnet for båt og marin bruk. Vanntett konstruksjon,
+            lang batteritid og sanntidssporing via mobilapp. Ideell for deg som vil ha
+            oversikt over båten hele sesongen, uten å tenke på vedlikehold.
+          </p>
+        </div>
+
+        <!-- Xero -->
+        <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+          <div class="text-primary font-bold text-lg mb-2">Minifinder Xero</div>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Kompakt og fleksibel tracker med enkel montering. God for mindre båter
+            eller som ekstra sikkerhet i tillegg til eksisterende utstyr. Gir deg
+            varsling direkte på telefonen om båten beveger seg uventet.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Rabattkode-blokk -->
+  <section class="py-16 bg-white">
+    <div class="max-w-2xl mx-auto px-4">
+
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        Din rabattkode
+      </h2>
+      <p class="text-gray-600 mb-8">
+        Bruk koden i kassen på minifinder.com for å få 10% rabatt.
+      </p>
+
+      <!-- Kode-blokk -->
+      <div class="bg-primary-light border border-primary-pale rounded-xl p-8 text-center">
+        <p class="text-sm text-gray-600 mb-3 font-medium uppercase tracking-wide">
+          Din eksklusive rabattkode
+        </p>
+        <div class="text-3xl md:text-4xl font-bold text-primary tracking-widest mb-6" id="discount-code">
+          eksportfiske2026
+        </div>
+        <button
+          id="copy-btn"
+          class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+          aria-label="Kopier rabattkode til utklippstavle"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+          <span id="copy-label">Kopier kode</span>
+        </button>
+      </div>
+
+      <p class="text-sm text-gray-500 mt-6 leading-relaxed">
+        Rabattkoden virker forresten på alle Minifinder sine produkter, fra båtsporing til kjæledyrhalsbånd.
+        Så om du har andre behov er koden like gyldig der.
+      </p>
+
+      <!-- CTA -->
+      <div class="mt-10">
+        <a
+          href={partnerUrl}
+          target="_blank"
+          rel="noopener noreferrer sponsored"
+          class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-semibold px-8 py-4 rounded-lg transition-colors shadow-md hover:shadow-lg"
+        >
+          Gå til minifinder.com
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Hvorfor GPS-sporing -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-2xl mx-auto px-4">
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">
+        Hvorfor GPS-sporing er smart for deg som leier ut båt
+      </h2>
+
+      <div class="space-y-6">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-primary-light rounded-full flex items-center justify-center mt-0.5">
+            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-1">Vet alltid hvor båten er</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Sanntidssporing betyr at du kan sjekke posisjonen uansett hvor du er,
+              direkte fra telefonen.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-primary-light rounded-full flex items-center justify-center mt-0.5">
+            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-1">Varsling ved uventet bevegelse</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Får du en alarm midt på natten fordi båten beveger seg fra brygga, kan du
+              raskt avgjøre om det er vind og dårlig fortøyning, eller noe verre.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-primary-light rounded-full flex items-center justify-center mt-0.5">
+            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-1">Dokumentasjon ved tyveri</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Historikk over båtens posisjon gjør det langt enklere å jobbe med politiet
+              og forsikringsselskapet om noe skulle skje.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Siste CTA -->
+  <section class="py-16 bg-white">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">
+        Klar til å sikre båten din?
+      </h2>
+      <p class="text-gray-600 mb-8">
+        Gå til minifinder.com, velg produktet som passer deg, og bruk koden
+        <strong class="text-primary">eksportfiske2026</strong> i kassen for 10% rabatt.
+      </p>
+      <a
+        href={partnerUrl}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-semibold px-8 py-4 rounded-lg transition-colors shadow-md hover:shadow-lg"
+      >
+        Se alle Minifinder-produkter
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  const btn = document.getElementById('copy-btn');
+  const label = document.getElementById('copy-label');
+  const code = document.getElementById('discount-code')?.textContent?.trim() ?? 'eksportfiske2026';
+
+  btn?.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(code);
+      if (label) {
+        label.textContent = 'Kopiert!';
+        setTimeout(() => {
+          label.textContent = 'Kopier kode';
+        }, 2000);
+      }
+    } catch {
+      // Fallback: selekter teksten for manuell kopiering
+      const el = document.getElementById('discount-code');
+      if (el) {
+        const range = document.createRange();
+        range.selectNodeContents(el);
+        const sel = window.getSelection();
+        sel?.removeAllRanges();
+        sel?.addRange(range);
+      }
+    }
+  });
+</script>
