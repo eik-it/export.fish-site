@@ -19,7 +19,6 @@ const schema = {
     priceCurrency: 'NOK',
     availability: 'https://schema.org/InStock',
     url: partnerUrl,
-    priceValidUntil: '2026-12-31',
     seller: {
       '@type': 'Organization',
       name: 'Minifinder',
@@ -30,7 +29,7 @@ const schema = {
 ---
 
 <Layout
-  title="GPS-sporing for båt med 10% rabatt | Minifinder-tilbud for turistfiskebedrifter"
+  title="GPS-sporing for båt med 10% rabatt"
   description="10% rabatt på Minifinder GPS-sporing for båt. Som eksportfiske.no-kunde bruker du kode eksportfiske2026 i kassen. Xtreme og Xero anbefales for båt."
 >
   <Fragment slot="head">
@@ -117,7 +116,7 @@ const schema = {
       <!-- Kode-blokk -->
       <div class="bg-primary-light border border-primary-pale rounded-xl p-8 text-center">
         <p class="text-sm text-gray-600 mb-3 font-medium uppercase tracking-wide">
-          Din eksklusive rabattkode
+          Din rabattkode
         </p>
         <div class="text-3xl md:text-4xl font-bold text-primary tracking-widest mb-6" id="discount-code">
           eksportfiske2026
