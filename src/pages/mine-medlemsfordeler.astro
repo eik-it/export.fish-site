@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { MINIFINDER } from '../data/minifinder';
+---
+
+<Layout
+  title="Mine medlemsfordeler - eksportfiske.no"
+  description="Dine eksklusive kundefordeler som eksportfiske.no-kunde."
+  noindex
+  nosnippet
+>
+  <!-- Hero -->
+  <section class="pt-52 pb-12 bg-gradient-to-br from-blue-50 to-blue-100">
+    <div class="container mx-auto px-4 max-w-3xl text-center">
+      <div class="inline-flex items-center gap-2 bg-primary-light text-primary text-sm font-semibold px-3 py-1 rounded-full mb-6">
+        Kun for kunder
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Mine medlemsfordeler
+      </h1>
+      <p class="text-lg text-gray-600 max-w-xl mx-auto">
+        Her finner du dine eksklusive fordeler som eksportfiske.no-kunde. Fordelene gjelder så lenge du er aktiv kunde.
+      </p>
+    </div>
+  </section>
+
+  <!-- Fordeler -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+
+      <!-- Minifinder-fordel -->
+      <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-lg border border-blue-200 p-8 md:p-10">
+        <div class="flex flex-col md:flex-row md:items-start gap-5">
+          <!-- Ikon og badge -->
+          <div class="flex-shrink-0 flex flex-col items-center md:items-start gap-2">
+            <div class="inline-flex items-center gap-1.5 bg-blue-100 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-full">
+              Partnerfordel
+            </div>
+            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Innhold -->
+          <div class="flex-1">
+            <h2 class="text-xl font-bold text-gray-900 mb-2">
+              GPS-sporing for båten, med {MINIFINDER.discountPercent}% rabatt
+            </h2>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4">
+              Som eksportfiske.no-kunde får du eksklusiv {MINIFINDER.discountPercent}% rabatt på hele Minifinder-sortimentet. Vi anbefaler {MINIFINDER.boatProducts.join(' og ')} for båt. Tyverisikring, posisjonsdeling og sanntidssporing direkte på telefonen.
+            </p>
+            <p class="text-gray-500 text-xs mb-5">
+              Koden virker på alle Minifinder sine produkter, fra båtsporing til kjæledyrhalsbånd.
+            </p>
+
+            <!-- Rabattkode-boks -->
+            <div class="bg-white rounded-xl border border-blue-200 px-5 py-4 mb-6 inline-block">
+              <p class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Din rabattkode</p>
+              <p class="text-2xl font-mono font-bold text-primary tracking-widest">{MINIFINDER.discountCode}</p>
+              <p class="text-xs text-gray-500 mt-1">Gjelder hele Minifinder-sortimentet</p>
+            </div>
+
+            <!-- Kopier-knapp og ekstern CTA -->
+            <div class="flex flex-col sm:flex-row gap-3">
+              <button
+                id="kopier-kode"
+                type="button"
+                class="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+                data-kode={MINIFINDER.discountCode}
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                </svg>
+                <span id="kopier-tekst">Kopier kode</span>
+              </button>
+              <a
+                href={MINIFINDER.getUrlWithUtm('mine-medlemsfordeler')}
+                target="_blank"
+                rel="sponsored noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+              >
+                Gå til Minifinder
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flere fordeler kommer -->
+      <div class="mt-8 bg-gray-50 rounded-xl border border-gray-200 p-6 text-center">
+        <p class="text-gray-500 text-sm">
+          Vi jobber med å legge til flere kundefordeler. Følg med her for oppdateringer.
+        </p>
+      </div>
+
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const btn = document.getElementById('kopier-kode') as HTMLButtonElement | null;
+  const tekst = document.getElementById('kopier-tekst');
+
+  if (btn && tekst) {
+    btn.addEventListener('click', async () => {
+      const kode = btn.dataset.kode ?? '';
+      try {
+        await navigator.clipboard.writeText(kode);
+        tekst.textContent = 'Kopiert!';
+        setTimeout(() => { tekst.textContent = 'Kopier kode'; }, 2000);
+      } catch {
+        // Fallback for eldre nettlesere
+        tekst.textContent = 'Kode: ' + kode;
+      }
+    });
+  }
+</script>

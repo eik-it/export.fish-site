@@ -137,39 +137,53 @@ import { MINIFINDER } from '../../data/minifinder';
               GPS-sporing for båten, med {MINIFINDER.discountPercent}% rabatt
             </h2>
             <p class="text-gray-700 text-sm leading-relaxed mb-3">
-              Som ny export.fish-kunde får du {MINIFINDER.discountPercent}% rabatt på hele Minifinder-sortimentet. Vi anbefaler {MINIFINDER.boatProducts.join(' og ')} for båt. Tyverisikring og sanntidssporing direkte på telefonen.
+              Som eksportfiske.no-kunde får du en eksklusiv rabattkode for {MINIFINDER.discountPercent}% rabatt på hele Minifinder-sortimentet. Vi anbefaler {MINIFINDER.boatProducts.join(' og ')} for båt. Tyverisikring og sanntidssporing direkte på telefonen.
             </p>
 
-            <!-- Rabattkode -->
-            <div class="bg-white rounded-lg border border-blue-200 px-4 py-3 mb-5 inline-block">
-              <p class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-0.5">Din rabattkode</p>
-              <p class="text-xl font-mono font-bold text-primary tracking-widest">{MINIFINDER.discountCode}</p>
-              <p class="text-xs text-gray-500 mt-0.5">Oppgi koden i kassen på minifinder.com</p>
+            <!-- Standard tilstand: rabattkoden kommer på e-post -->
+            <div id="minifinder-pending" class="bg-white rounded-lg border border-blue-200 px-4 py-3 mb-5">
+              <p class="text-sm text-gray-600">Rabattkoden får du tilsendt på e-post når du har fullført registreringen.</p>
             </div>
 
-            <!-- CTAer -->
-            <div class="flex flex-col sm:flex-row gap-3">
-              <a
-                href="/partnere/minifinder"
-                class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
-              >
-                Les mer om tilbudet
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-              </a>
-              <a
-                href={MINIFINDER.getUrlWithUtm('takk-side')}
-                target="_blank"
-                rel="sponsored noopener noreferrer"
-                class="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-primary border border-primary font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
-              >
-                Gå til Minifinder
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                </svg>
-              </a>
+            <!-- Registrert tilstand: rabattkoden vises (injisert via JS) -->
+            <div id="minifinder-registrert" class="hidden mb-5">
+              <p class="text-xs font-semibold text-gray-600 mb-2">Som ny kunde, her er din rabattkode for {MINIFINDER.discountPercent}% rabatt på Minifinder:</p>
+              <div class="bg-white rounded-lg border border-blue-200 px-4 py-3 inline-block mb-3">
+                <p class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-0.5">Din rabattkode</p>
+                <p id="minifinder-kode" class="text-xl font-mono font-bold text-primary tracking-widest"></p>
+                <p class="text-xs text-gray-500 mt-0.5">Gjelder hele Minifinder-sortimentet</p>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-3">
+                <a
+                  id="minifinder-link"
+                  href="#"
+                  target="_blank"
+                  rel="sponsored noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+                >
+                  Gå til Minifinder
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+                <a
+                  href="/mine-medlemsfordeler"
+                  class="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-primary border border-primary font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+                >
+                  Se alle medlemsfordeler
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
             </div>
+
+            <a
+              href="/partnere/minifinder"
+              class="text-sm text-primary hover:text-primary-hover font-medium underline"
+            >
+              Les mer om partnerfordelen
+            </a>
           </div>
         </div>
       </div>
@@ -208,5 +222,16 @@ import { MINIFINDER } from '../../data/minifinder';
     if (subtitle) subtitle.textContent = 'Takk for at du valgte export.fish. Kontoen din er klar til bruk.';
     if (interestContent) interestContent.classList.add('hidden');
     if (registrertContent) registrertContent.classList.remove('hidden');
+
+    // Injiser rabattkoden via JS — koden skal ikke finnes i statisk HTML
+    const kodeEl = document.getElementById('minifinder-kode');
+    const linkEl = document.getElementById('minifinder-link') as HTMLAnchorElement | null;
+    const pendingEl = document.getElementById('minifinder-pending');
+    const registrertMinifinderEl = document.getElementById('minifinder-registrert');
+
+    if (kodeEl) kodeEl.textContent = 'eksportfiske2026';
+    if (linkEl) linkEl.href = 'https://minifinder.com?utm_source=eksportfiske.no&utm_medium=takk-side&utm_campaign=minifinder';
+    if (pendingEl) pendingEl.classList.add('hidden');
+    if (registrertMinifinderEl) registrertMinifinderEl.classList.remove('hidden');
   }
 </script>

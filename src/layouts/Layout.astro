@@ -12,6 +12,7 @@ interface Props {
   title: string;
   description?: string;
   noindex?: boolean;
+  nosnippet?: boolean;
   suppressCanonical?: boolean;
   ogImage?: ImageMetadata;
   ogImageAlt?: string;
@@ -23,6 +24,7 @@ const {
   title,
   description = 'Enkel fangstrapportering for turistfiskebedrifter',
   noindex = false,
+  nosnippet = false,
   suppressCanonical = false,
   ogImage: customOgImage,
   ogImageAlt,
@@ -67,7 +69,8 @@ const markdownURL = new URL(_mdPathname + '.md', siteUrl).href;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {noindex && !nosnippet && <meta name="robots" content="noindex, nofollow" />}
+    {nosnippet && <meta name="robots" content="noindex, nofollow, nosnippet" />}
 
     <!-- Site verification -->
     <meta name="msvalidate.01" content="89A5E32210CB1F235C34A3037A868B1C" />
